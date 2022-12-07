@@ -1,4 +1,2 @@
-# nix-config
-
-## NixOS configurations
+# NixOS configurations
 ##### A New Hope 
