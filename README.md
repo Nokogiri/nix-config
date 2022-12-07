@@ -1,2 +1,2 @@
 # NixOS configurations
-##### A New Hope 
+##### A New Hope :shipit: 
