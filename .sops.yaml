@@ -1,0 +1,17 @@
+keys:
+  - &users:
+    - &nokogiri age1p23sw99dhmtlyku9vpc77s452tkhpvagmjwetk5m8cmx3u5ldfjq6qmja5
+
+  - &hosts:
+    - &calvin age1cf896thek5up8ghqqgxw9twz4ssrf8z200a350uhjafmp7s4kdjsrncxk6
+    - &homeassistant age1xp5hezyj8l8heum9gzmdve9hnuv2l7vxy3xa6gnze28zqk2pwpkswn5l9u
+    - &mowteng age1d7u73tcpugy3293l38a5ucpdw6whd30ewdtcl8g96lau06kgsa4qvvqlq4
+
+creation_rules:
+  - path_regex: hosts/common/secrets.ya?ml$
+    key_groups:
+      - age:
+        - *calvin
+        - *homeassistant
+        - *mowteng
+        - *nokogiri
