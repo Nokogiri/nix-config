@@ -12,4 +12,5 @@
     ../common/optional/quietboot.nix
     ../common/optionql/systemd-boot.nix
 
-  ]; 
+  ];
+}

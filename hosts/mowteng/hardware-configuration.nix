@@ -19,12 +19,10 @@
       patch = ./patches/d3cold.patch;
     }];
     loader.efi.efiSysMountPoint = "/boot";
-    plymouth = {
-      enable = true;
-    };
+    plymouth = { enable = true; };
     supportedFilesystems = [ "zfs" ];
   };
-  
+
   fileSystems = {
     "/" = {
       device = "mowteng/system/root";
@@ -72,5 +70,25 @@
   swapDevices =
     [{ device = "/dev/disk/by-uuid/b6b88dbb-ad22-4746-ba8a-a1c32b3a184f"; }];
 
+  hardware = {
+    cpu.amd.updateMicrocode =
+      lib.mkDefault config.hardware.enableRedistributableFirmware;
+    enableRedistributableFirmware = true;
+    bluetooth.enable = true;
 
+    opengl = {
+      driSupport = lib.mkDefault true;
+      driSupport32Bit = lib.mkDefault true;
+    };
+
+    sensor.iio.enable = true;
+    uinput.enable = true;
+    xpadneo.enable = true;
+
+  };
+  services.zfs = {
+    autoScrub.enable = true;
+    trim.enable = true;
+  };
+  sound.enable = true;
 }
