@@ -1,0 +1,6 @@
+{
+  programs.mako = {
+    enable = true;
+  };
+}
+

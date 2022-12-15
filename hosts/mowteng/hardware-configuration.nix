@@ -1,4 +1,4 @@
-{
+{ lib, config, ... }: {
   boot = {
     extraModprobeConfig = ''
       options hid_xpadneo ff_connect_notify=0 quirks=30:03:c8:25:e8:80+32
@@ -82,4 +82,6 @@
     trim.enable = true;
   };
   sound.enable = true;
+
+  nixpkgs.hostPlatform.system = "x86_64-linux";
 }

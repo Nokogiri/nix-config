@@ -1,12 +1,14 @@
 # System configuration for my laptop
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, lib, ... }: {
   imports = [
     inputs.hardware.nixosModules.common-cpu-amd
     inputs.hardware.nixosModules.common-gpu-amd
     inputs.hardware.nixosModules.common-pc-ssd
 
+    ./hardware-configuration.nix
+
     ../common/global
-    ../common/users/nokogiri
+    ../common/users/nokogiri.nix
 
     ../common/optional/avahi.nix
 
@@ -49,7 +51,7 @@
   programs = {
     light.enable = true;
     dconf.enable = true;
-    gnupg.enable = true;
+    gnupg.agent.enable = true;
     kdeconnect.enable = true;
     tmux.enable = true;
   };
@@ -68,4 +70,5 @@
     latitude = 50.9787;
     longitude = 11.03283;
   };
+  system.stateVersion = "22.05";
 }

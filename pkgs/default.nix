@@ -4,4 +4,5 @@
 { pkgs ? (import ../nixpkgs.nix) { } }:
 {
   # example = pkgs.callPackage ./example { };
+  plymouth-spinner-monochrome = pkgs.callPackage ./plymouth-spinner-monochrome { };
 }
