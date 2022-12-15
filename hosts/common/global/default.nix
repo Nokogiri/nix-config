@@ -3,10 +3,12 @@
   imports = [
     #inputs.impermanence.nixosModules.impermanence
     inputs.home-manager.nixosModules.home-manager
+    ./doas.nix
     ./locale.nix
     ./nix.nix
     ./openssh.nix
     ./sops.nix
+    ./systemd-network.nix
     ./zsh.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 

@@ -8,11 +8,21 @@
     ../common/global
     ../common/users/nokogiri
 
+    ../common/optional/avahi.nix
+
     ../common/optional/pipewire.nix
     ../common/optional/quietboot.nix
-    ../common/optionql/systemd-boot.nix
+    ../common/optional/sane.nix
+    ../common/optional/systemd-boot.nix
+    ../common/optional/wireless.nix
 
+    ./services/tlp.nix
   ];
+
+  networking = {
+    hostName = "mowteng";
+    hostId = "05fc191c";
+  };
 
   boot = {
     cleanTmpDir = true;
@@ -23,6 +33,7 @@
       patch = ./patches/d3cold.patch;
     }];
   };
+
   services.logind = {
     lidSwitch = "suspend";
     lidSwitchExternalPower = "lock";
