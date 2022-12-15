@@ -23,13 +23,13 @@
 
   systemd.network.networks."25-wireless" = {
     matchConfig.Name = [ "wl*" ];
-      DHCP = "yes";
-      dhcpV4Config = {
-        RouteMetric = 20;
-        UseDNS = true;
-        UseRoutes = true;
-        UseDomains = true;
-      };
+    DHCP = "yes";
+    dhcpV4Config = {
+      RouteMetric = 20;
+      UseDNS = true;
+      UseRoutes = true;
+      UseDomains = true;
+    };
   };
 }
 
