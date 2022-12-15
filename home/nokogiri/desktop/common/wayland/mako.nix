@@ -1,6 +1,2 @@
-{
-  programs.mako = {
-    enable = true;
-  };
-}
+{ programs.mako = { enable = true; }; }
 
