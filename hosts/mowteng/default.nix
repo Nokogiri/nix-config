@@ -53,7 +53,6 @@
     dconf.enable = true;
     gnupg.agent.enable = true;
     kdeconnect.enable = true;
-    tmux.enable = true;
   };
 
   powerManagement = {

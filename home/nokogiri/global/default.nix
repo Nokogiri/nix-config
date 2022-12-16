@@ -23,6 +23,7 @@
   programs = {
     home-manager.enable = true;
     git.enable = true;
+    tmux.enable = true;
   };
   home = {
     username = lib.mkDefault "misterio";
