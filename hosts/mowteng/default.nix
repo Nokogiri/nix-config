@@ -19,6 +19,7 @@
     ../common/optional/wireless.nix
 
     ./services/tlp.nix
+    ./services/wireguard.nix
   ];
 
   networking = {
