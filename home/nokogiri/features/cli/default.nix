@@ -12,7 +12,7 @@
     fd # Better find
     httpie # Better curl
     jq # JSON pretty printer and manipulator
-    trekscii # Cute startrek cli printer
+    #trekscii # Cute startrek cli printer
 
     rnix-lsp # Nix LSP
     nixfmt # Nix formatter
@@ -20,7 +20,7 @@
     nix-direnv
     nix-top
     nix-tree
-    pix-pin
+    nix-pin
     nix-zsh-completions
   ];
 }
