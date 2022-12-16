@@ -1,6 +1,7 @@
-{ pkgs, ... }:
-{
-    home.packages = with pkgs; [
+{ pkgs, ... }: {
+  imports = [ ./bat.nix ./git.nix ./ranger.nix ./ssh.nix ./starship.nix ];
+
+  home.packages = with pkgs; [
     comma # Install and run programs by sticking a , before them
     #distrobox # Nice escape hatch, integrates docker images with my environment
 

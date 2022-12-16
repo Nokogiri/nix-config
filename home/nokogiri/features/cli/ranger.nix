@@ -1,3 +1,1 @@
-{ pkgs, ... }: {
-  home.packages = with pkgs; [ ranger ];
-}
+{ pkgs, ... }: { home.packages = with pkgs; [ ranger ]; }
