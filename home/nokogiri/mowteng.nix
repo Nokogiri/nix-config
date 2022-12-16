@@ -1,0 +1,7 @@
+{ inputs, pgks, ... }: {
+  imports = [
+    ./global
+
+  ];
+
+}
