@@ -6,4 +6,7 @@
   plymouth-spinner-monochrome =
     pkgs.callPackage ./plymouth-spinner-monochrome { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
+  catppuccin-gtk-frappe-teal =
+    pkgs.callPackage ./catppuccin-gtk-frappe-teal { };
+  colloid-cursors = pkgs.callPackage ./colloid-cursors { };
 }

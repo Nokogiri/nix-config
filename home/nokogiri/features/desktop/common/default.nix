@@ -1,1 +1,1 @@
-{ imports = [ ./kdeconnect.nix ./spotify.nix ]; }
+{ imports = [ ./gtk.nix ./kdeconnect.nix ./spotify.nix ]; }

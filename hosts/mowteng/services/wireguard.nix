@@ -1,5 +1,4 @@
-{config, ...}:
-{
+{ config, ... }: {
   sops.secrets."wg_private/mowteng" = {
     sopsFile = ../../common/secrets.yaml;
     neededForUsers = true;
