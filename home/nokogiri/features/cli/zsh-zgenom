@@ -1,0 +1,47 @@
+# -------------------------------------------------------------------------------------------------
+# -*- mode: sh; sh-indentation: 2; indent-tabs-mode: nil; sh-basic-offset: 2; -*-
+# vim: ft=zsh sw=2 ts=2 et foldmethod=marker
+# -------------------------------------------------------------------------------------------------
+
+ZGEN_DIR=$HOME/.cache/zsh/plugs
+
+ZGEN_SRC=~/.cache/zsh/zgenom
+
+if [[ ! -f "$ZGEN_SRC"/zgenom.zsh ]]; then
+  git clone https://github.com/jandamm/zgenom.git "$ZGEN_SRC"
+fi
+
+source "$ZGEN_SRC"/zgenom.zsh
+
+load-up-plugin-list() {
+  zgenom load ohmyzsh/ohmyzsh plugins/fzf
+  zgenom load ohmyzsh/ohmyzsh lib/key-bindings.zsh
+  zgenom load Aloxaf/fzf-tab
+
+  zgenom load zdharma-continuum/fast-syntax-highlighting
+  zgenom load zsh-users/zsh-history-substring-search
+  
+  # Set keystrokes for substring searching
+  zmodload zsh/terminfo
+  bindkey "$terminfo[kcuu1]" history-substring-search-up
+  bindkey "$terminfo[kcud1]" history-substring-search-down
+
+  zgenom load chisui/zsh-nix-shell
+  
+  zgenom save
+
+  zgenom compile $ZGEN_DIR
+}
+
+get_file_modification_time() {
+  modified_time=$(stat -c %Y "$1" 2> /dev/null) || modified_time=0
+  echo "${modified_time}"
+}
+
+if ! zgen saved; then
+  load-up-plugin-list
+fi
+
+if [ $(get_file_modification_time ~/.zgenom-setup) -gt  $(get_file_modification_time ${ZGEN_DIR}/init.zsh) ]; then
+  load-up-plugin-list
+fi
