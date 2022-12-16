@@ -1,3 +1,4 @@
+{pkgs, ...}:
 {
   programs = {
     git = {
@@ -6,7 +7,7 @@
       userName = "nokogiri";
       userEmail = "nokogiri@gefjon.org";
       signing = {
-        signByDefault = yes;
+        signByDefault = true;
         key = "3064C39BEA915CE6";
       };
       diff-so-fancy.enable = true;
