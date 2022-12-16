@@ -26,7 +26,7 @@
     tmux.enable = true;
   };
   home = {
-    username = lib.mkDefault "misterio";
+    username = lib.mkDefault "nokogiri";
     homeDirectory = lib.mkDefault "/home/${config.home.username}";
     stateVersion = lib.mkDefault "22.05";
   };
