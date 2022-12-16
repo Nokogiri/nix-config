@@ -9,4 +9,5 @@
   catppuccin-gtk-frappe-teal =
     pkgs.callPackage ./catppuccin-gtk-frappe-teal { };
   colloid-cursors = pkgs.callPackage ./colloid-cursors { };
+  pass-wofi = pkgs.callPackage ./pass-wofi { };
 }

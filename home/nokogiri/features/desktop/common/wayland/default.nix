@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  imports = [ ./gammastep.nix ./kitty.nix ./mako.nix ];
+  imports = [ ./gammastep.nix ./kitty.nix ./mako.nix ./wofi.nix ];
 
   home.packages = with pkgs; [
     avizo

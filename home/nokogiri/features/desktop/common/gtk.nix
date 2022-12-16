@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, config, ... }: {
   home.packages = with pkgs;
     [
       (pkgs.writeTextFile {
@@ -11,9 +11,9 @@
         in ''
           export XDG_DATA_DIRS=${datadir}:$XDG_DATA_DIRS
           gnome_schema=org.gnome.desktop.interface
-          gsettings set $gnome_schema gtk-theme 'Catppuccin-Frappe-Teal'
-          gsettings set $gnome_schema icon-theme 'Colloid-teal-dark'
-          gsettings set $gnome_schema cursor-theme 'Colloid-dark-Cursors'
+          gsettings set $gnome_schema gtk-theme '${config.gtk.theme.name}'
+          gsettings set $gnome_schema icon-theme '${config.gtk.iconTheme.name}'
+          gsettings set $gnome_schema cursor-theme '${config.gtk.cursorTheme.name}'
         '';
       })
     ];
