@@ -31,7 +31,7 @@
   };
 
   programs.fuse.userAllowOther = true;
-
+  programs.git.enable = true;
   hardware.enableRedistributableFirmware = true;
 
   # Increase open file limit for sudoers

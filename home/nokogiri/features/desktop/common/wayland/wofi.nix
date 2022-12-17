@@ -9,10 +9,8 @@ let
   pass = config.programs.password-store.package;
   passEnabled = config.programs.password-store.enable;
   pass-wofi = pkgs.pass-wofi.override { inherit pass; };
-in
-{
-  home.packages = [ wofi ] ++
-    (lib.optional passEnabled pass-wofi);
+in {
+  home.packages = [ wofi ] ++ (lib.optional passEnabled pass-wofi);
 
   xdg.configFile."wofi/config".text = ''
     image_size=48

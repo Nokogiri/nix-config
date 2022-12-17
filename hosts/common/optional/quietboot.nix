@@ -14,7 +14,7 @@
         })
       ];
     };
-    loader.timeout = 0;
+    loader.timeout = 10;
     kernelParams = [
       "quiet"
       "splash"

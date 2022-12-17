@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   imports = [
     ./bat.nix
+    ./fzf.nix
     ./git.nix
     ./lsd.nix
     ./ranger.nix

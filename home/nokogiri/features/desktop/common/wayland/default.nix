@@ -11,6 +11,8 @@
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qt5ct
     slurp
+    swayidle
+    swaylock-effects
     wl-clipboard
     wlr-randr
   ];
