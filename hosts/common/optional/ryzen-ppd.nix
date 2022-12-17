@@ -1,5 +1,4 @@
-{pkgs, ...}:
-{
+{ pkgs, ... }: {
   environment.systemPackages = with pkgs; [ ryzen-ppd ];
 
   environment.etc."ryzen-ppd.ini".text = ''

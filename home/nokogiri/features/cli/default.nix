@@ -16,6 +16,8 @@
 
     bc # Calculator
     bottom # System viewer
+    btop # same
+    dfc # better df
     ncdu # TUI disk usage
     exa # Better ls
     ripgrep # Better grep

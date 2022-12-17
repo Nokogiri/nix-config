@@ -11,7 +11,7 @@
     ../common/users/nokogiri.nix
 
     ../common/optional/avahi.nix
-
+    ../common/optional/fonts.nix
     ../common/optional/pipewire.nix
     ../common/optional/quietboot.nix
     ../common/optional/ryzen-ppd.nix
