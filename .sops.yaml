@@ -8,7 +8,7 @@ keys:
     - &mowteng age1d7u73tcpugy3293l38a5ucpdw6whd30ewdtcl8g96lau06kgsa4qvvqlq4
 
 creation_rules:
-  - path_regex: hosts/common/secrets.ya?ml$
+  - path_regex: nixos/common/secrets.ya?ml$
     key_groups:
       - age:
         - *calvin
