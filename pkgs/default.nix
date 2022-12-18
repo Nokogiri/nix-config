@@ -3,8 +3,7 @@
 
 { pkgs ? (import ../nixpkgs.nix) { } }: {
   # example = pkgs.callPackage ./example { };
-  plymouth-spinner-monochrome =
-    pkgs.callPackage ./plymouth-spinner-monochrome { };
+  plymouth-spinner-monochrome = pkgs.callPackage ./plymouth-spinner-monochrome { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
   catppuccin-gtk-frappe-teal =
     pkgs.callPackage ./catppuccin-gtk-frappe-teal { };
