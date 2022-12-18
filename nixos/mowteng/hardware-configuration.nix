@@ -66,7 +66,6 @@
     cpu.amd.updateMicrocode =
       lib.mkDefault config.hardware.enableRedistributableFirmware;
     enableRedistributableFirmware = true;
-    bluetooth.enable = true;
 
     opengl = {
       driSupport = lib.mkDefault true;

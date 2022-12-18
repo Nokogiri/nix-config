@@ -16,6 +16,7 @@
     };
     loader.timeout = 10;
     kernelParams = [
+      "fbcon=nodefer"
       "quiet"
       "splash"
       "boot.shell_on_fail"

@@ -21,6 +21,7 @@
     ../common/global
 
     ../common/optional/avahi.nix
+    ../common/optional/bluetooth.nix
     ../common/optional/desktop.nix
     ../common/optional/fonts.nix
     ../common/optional/pipewire.nix
@@ -61,23 +62,23 @@
     };
   };
 
-#  nix = {
-    # This will add each flake input as a registry
-    # To make nix3 commands consistent with your flake
-#    registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
+  #  nix = {
+  # This will add each flake input as a registry
+  # To make nix3 commands consistent with your flake
+  #    registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
 
-    # This will additionally add your inputs to the system's legacy channels
-    # Making legacy nix commands consistent as well, awesome!
-#    nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}")
-#      config.nix.registry;
+  # This will additionally add your inputs to the system's legacy channels
+  # Making legacy nix commands consistent as well, awesome!
+  #    nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}")
+  #      config.nix.registry;
 
-#    settings = {
-#      # Enable flakes and new 'nix' command
-#      experimental-features = "nix-command flakes";
-#      # Deduplicate and optimize nix store
-#      auto-optimise-store = true;
-#    };
-#  };
+  #    settings = {
+  #      # Enable flakes and new 'nix' command
+  #      experimental-features = "nix-command flakes";
+  #      # Deduplicate and optimize nix store
+  #      auto-optimise-store = true;
+  #    };
+  #  };
 
   # FIXME: Add the rest of your current configuration
 
@@ -143,6 +144,7 @@
     passwordAuthentication = false;
   };
 
+  services.upower.enable = true;
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "22.05";
 }

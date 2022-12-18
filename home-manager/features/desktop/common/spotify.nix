@@ -12,7 +12,10 @@ in {
 
     #enabledCustomApps = with spicetify-nix.pkgSets.${pkgs.system}.apps; [ lyrics-plus ];
     enabledCustomApps = with spicePkgs.apps; [ marketplace lyrics-plus ];
-    enabledExtensions = 
-    with spicePkgs.extensions; [ shuffle hidePodcasts fullAppDisplay ];
+    enabledExtensions = with spicePkgs.extensions; [
+      shuffle
+      hidePodcasts
+      fullAppDisplay
+    ];
   };
 }

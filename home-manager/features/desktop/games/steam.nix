@@ -23,9 +23,9 @@
           ];
       };
     };
-    programs.steam = {
-      enable = true;
-      remotePlay.openFirewlall = true;
-      dedicatedServer.openFirewall = true;
-    };
-  }
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewlall = true;
+    dedicatedServer.openFirewall = true;
+  };
+}

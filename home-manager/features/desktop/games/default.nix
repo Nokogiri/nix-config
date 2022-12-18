@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   home.packages = with pkgs; [
 
     # general
@@ -25,7 +24,6 @@
     rpcs3
     ryujinx
     yuzu-mainline
-
 
   ];
 }

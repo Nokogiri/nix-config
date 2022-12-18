@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   imports = [
     ./firefox.nix
     ./gtk.nix
@@ -9,9 +8,5 @@
     ./spotify.nix
   ];
 
-  home.packages = with pkgs; [
-    lxqt.pavucontrol-qt
-    libnotify
-    xdg_utils
-  ];
+  home.packages = with pkgs; [ lxqt.pavucontrol-qt libnotify xdg_utils ];
 }

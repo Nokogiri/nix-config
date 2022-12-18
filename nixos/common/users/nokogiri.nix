@@ -29,13 +29,13 @@ in {
     packages = [ pkgs.home-manager ];
   };
 
-#  sops.secrets.nokogiri-password = {
-#    sopsFile = ../secrets.yaml;
-#    neededForUsers = true;
-#  };
+  #  sops.secrets.nokogiri-password = {
+  #    sopsFile = ../secrets.yaml;
+  #    neededForUsers = true;
+  #  };
 
-#  home-manager.users.nokogiri =
-#    import ../../../home/nokogiri/${config.networking.hostName}.nix;
+  #  home-manager.users.nokogiri =
+  #    import ../../../home/nokogiri/${config.networking.hostName}.nix;
 
   services.geoclue2.enable = true;
   security.pam.services = { swaylock = { }; };
