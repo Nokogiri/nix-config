@@ -18,7 +18,7 @@
     "/" = {
       device = "mowteng/system/root";
       fsType = "zfs";
-      options = [ "zfsutil" "X-mount.mkdir" ];
+      options = [ "zfsutil" "noatime" "X-mount.mkdir" ];
     };
     "/tmp" = {
       device = "mowteng/system/tmp";
@@ -33,7 +33,7 @@
     "/nix" = {
       device = "mowteng/local/nix";
       fsType = "zfs";
-      options = [ "zfsutil" "X-mount.mkdir" ];
+      options = [ "zfsutil" "noatime" "X-mount.mkdir" ];
     };
     "/var/lib" = {
       device = "mowteng/system/var/lib";
