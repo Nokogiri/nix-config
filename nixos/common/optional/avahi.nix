@@ -3,9 +3,7 @@
   services.avahi = {
     enable = true;
     hostName = config.networking.hostName;
-    extraServiceFiles = {
-      ssh = "${pkgs.avahi}/etc/avahi/services/ssh.service";
-    };
+    extraServiceFiles = { ssh = "${pkgs.avahi}/etc/avahi/services/ssh.service"; };
     nssmdns = true;
     openFirewall = true;
     publish = {

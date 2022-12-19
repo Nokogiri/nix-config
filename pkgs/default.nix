@@ -6,6 +6,8 @@
   catppuccin-gtk-frappe-teal = pkgs.callPackage ./catppuccin-gtk-frappe-teal { };
   colloid-cursors = pkgs.callPackage ./colloid-cursors { };
   heroic = pkgs.callPackage ./heroic { };
+  mailctl = pkgs.callPackage ./mailctl { };
+  nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   pass-wofi = pkgs.callPackage ./pass-wofi { };
   plymouth-spinner-monochrome = pkgs.callPackage ./plymouth-spinner-monochrome { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };

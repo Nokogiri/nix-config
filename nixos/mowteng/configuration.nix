@@ -24,6 +24,7 @@
     ../common/optional/bluetooth.nix
     ../common/optional/desktop.nix
     ../common/optional/fonts.nix
+    ../common/optional/libvirt.nix
     ../common/optional/pipewire.nix
     ../common/optional/quietboot.nix
     ../common/optional/ryzen-ppd.nix
@@ -35,6 +36,7 @@
     ../common/users/nokogiri.nix
 
     ./services/tlp.nix
+    ./services/udisks.nix
     ./services/wireguard.nix
   ];
 

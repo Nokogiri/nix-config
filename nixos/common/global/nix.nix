@@ -27,7 +27,7 @@
 
     # Map registries to channels
     # Very useful when using legacy commands
-    nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}")
-      config.nix.registry;
+    nixPath =
+      lib.mapAttrsToList (key: value: "${key}=${value.to.path}") config.nix.registry;
   };
 }

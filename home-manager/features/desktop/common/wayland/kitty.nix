@@ -82,8 +82,7 @@
         listen_on = "unix:/tmp/kitty";
         update_check_interval = 0;
         startup_session = true;
-        clipboard_control =
-          "write-clipboard write-primary read-clipboard read-primary";
+        clipboard_control = "write-clipboard write-primary read-clipboard read-primary";
         #term = "xterm-kitty";
 
         # Window settings

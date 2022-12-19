@@ -8,9 +8,7 @@
         FastConnectable = true;
         Experimental = true;
       };
-      Policy = {
-        AutoEnable = true;
-      };
+      Policy = { AutoEnable = true; };
     };
   };
   systemd.services.bluetooth.serviceConfig.ExecStart =

@@ -1,12 +1,5 @@
-{ lib
-, mkYarnPackage
-, fetchFromGitHub
-, gitUpdater
-, makeWrapper
-, electron
-, gogdl
-, legendary-gl
-}:
+{ lib, mkYarnPackage, fetchFromGitHub, gitUpdater, makeWrapper, electron, gogdl
+, legendary-gl }:
 
 mkYarnPackage rec {
   pname = "heroic-unwrapped";
@@ -23,14 +16,13 @@ mkYarnPackage rec {
   yarnLock = ./yarn.lock;
   yarnNix = ./yarn.nix;
 
-  nativeBuildInputs = [
-    makeWrapper
-  ];
+  nativeBuildInputs = [ makeWrapper ];
 
   DISABLE_ESLINT_PLUGIN = "true";
 
   postBuild = let
-    yarnCmd = "yarn --offline --frozen-lockfile --ignore-engines --ignore-scripts --lockfile ${yarnLock}";
+    yarnCmd =
+      "yarn --offline --frozen-lockfile --ignore-engines --ignore-scripts --lockfile ${yarnLock}";
   in ''
     rm deps/heroic/node_modules
     ln -s ../../node_modules deps/heroic/
@@ -42,8 +34,7 @@ mkYarnPackage rec {
 
   # --disable-gpu-compositing is to work around upstream bug
   # https://github.com/electron/electron/issues/32317
-  postInstall = let
-    deps = "$out/libexec/heroic/deps/heroic";
+  postInstall = let deps = "$out/libexec/heroic/deps/heroic";
   in ''
     rm -rf "${deps}/public/bin" "${deps}/build/bin"
     mkdir -p "${deps}/build/bin/linux"
@@ -61,9 +52,7 @@ mkYarnPackage rec {
     ln -s "${deps}/flatpak/com.heroicgameslauncher.hgl.png" "$out/share/icons/hicolor/512x512/apps"
   '';
 
-  passthru.updateScript = gitUpdater {
-    rev-prefix = "v";
-  };
+  passthru.updateScript = gitUpdater { rev-prefix = "v"; };
 
   meta = with lib; {
     description = "A Native GOG and Epic Games Launcher for Linux, Windows and Mac";

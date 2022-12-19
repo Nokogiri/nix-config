@@ -187,8 +187,7 @@ in {
         "${cfg.modifier}+Ctrl+m" = "exec grimshot save window";
 
         # mylock
-        "${cfg.modifier}+l" =
-          "exec ${config.home.homeDirectory}/.local/bin/mylock";
+        "${cfg.modifier}+l" = "exec ${config.home.homeDirectory}/.local/bin/mylock";
         "${cfg.modifier}+Shift+l" =
           "exec ${config.home.homeDirectory}/.local/bin/mylock at-home-mode";
         "${cfg.modifier}+Ctrl+l" =
@@ -198,9 +197,7 @@ in {
       };
       menu = "\${pkgs.wofi}/bin/wofi --show drun";
       modifier = "Mod4";
-      output = {
-        "*" = { bg = "${config.xdg.configHome}/wallpaper/wall-01.png fill"; };
-      };
+      output = { "*" = { bg = "${config.xdg.configHome}/wallpaper/wall-01.png fill"; }; };
       seat = {
         "*" = {
           xcursor_theme = "${config.gtk.cursorTheme.name}";

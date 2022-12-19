@@ -3,7 +3,6 @@
 {
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
-      mpv = mpv.override { scripts = [ pkgs.mpvScripts.mpris ]; };
       steam = steam.override {
         extraPkgs = pkgs:
           with pkgs; [
@@ -23,9 +22,5 @@
           ];
       };
     };
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewlall = true;
-    dedicatedServer.openFirewall = true;
-  };
+  home.packages = with pkgs; [ steam ];
 }

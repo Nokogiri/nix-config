@@ -21,6 +21,9 @@
     iio-sensor-proxy
     sshfs-fuse
 
+    #
+    mailctl
+
     bc # Calculator
     bottom # System viewer
     btop # same

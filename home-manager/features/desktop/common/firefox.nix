@@ -6,11 +6,13 @@ in {
   programs.firefox = {
     enable = true;
     extensions = with addons; [
+      vimium-c
       ublock-origin
       stylus
       #onetab
       netflix-1080p
       gopass-bridge
+      ff2mpv
       darkreader
     ];
     profiles.nokogiri = {

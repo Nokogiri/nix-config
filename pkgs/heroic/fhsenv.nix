@@ -1,53 +1,54 @@
-{ lib
-, buildFHSUserEnv
-, heroic-unwrapped
-, extraPkgs ? pkgs: [ ]
-, extraLibraries ? pkgs: [ ]
-}:
+{ lib, buildFHSUserEnv, heroic-unwrapped, extraPkgs ? pkgs: [ ]
+, extraLibraries ? pkgs: [ ] }:
 
 buildFHSUserEnv {
   name = "heroic";
 
   runScript = "heroic";
 
-  targetPkgs = pkgs: with pkgs; [
-    heroic-unwrapped
-    curl
-    gawk
-    gnome.zenity
-    plasma5Packages.kdialog
-    mangohud
-    nettools
-    opencl-headers
-    p7zip
-    perl
-    psmisc
-    python3
-    which
-    xorg.xrandr
-    zstd
-  ] ++ extraPkgs pkgs;
+  targetPkgs = pkgs:
+    with pkgs;
+    [
+      heroic-unwrapped
+      curl
+      gawk
+      gnome.zenity
+      plasma5Packages.kdialog
+      mangohud
+      nettools
+      opencl-headers
+      p7zip
+      perl
+      psmisc
+      python3
+      which
+      xorg.xrandr
+      zstd
+    ] ++ extraPkgs pkgs;
 
   multiPkgs = let
-    xorgDeps = pkgs: with pkgs.xorg; [
-      libpthreadstubs
-      libSM
-      libX11
-      libXaw
-      libxcb
-      libXcomposite
-      libXcursor
-      libXdmcp
-      libXext
-      libXi
-      libXinerama
-      libXmu
-      libXrandr
-      libXrender
-      libXv
-      libXxf86vm
-    ];
-  in pkgs: with pkgs; [
+    xorgDeps = pkgs:
+      with pkgs.xorg; [
+        libpthreadstubs
+        libSM
+        libX11
+        libXaw
+        libxcb
+        libXcomposite
+        libXcursor
+        libXdmcp
+        libXext
+        libXi
+        libXinerama
+        libXmu
+        libXrandr
+        libXrender
+        libXv
+        libXxf86vm
+      ];
+  in pkgs:
+  with pkgs;
+  [
     alsa-lib
     bash
     cairo
@@ -96,8 +97,7 @@ buildFHSUserEnv {
     vulkan-loader
     wayland
     zlib
-  ] ++ xorgDeps pkgs
-    ++ extraLibraries pkgs;
+  ] ++ xorgDeps pkgs ++ extraLibraries pkgs;
 
   extraInstallCommands = ''
     mkdir -p $out/share
