@@ -4,6 +4,10 @@ let cfg = config.wayland.windowManager.sway.config;
 in {
   wayland.windowManager.sway = {
     enable = true;
+    wrapperFeatures = {
+      base = true;
+      gtk = true;
+    };
     config = {
       assigns = {
         "1" = [{ app_id = "kitty"; }];
@@ -25,7 +29,14 @@ in {
         ];
         "9" = [{ class = "Com.github.johnfactotum.Foliate"; }];
       };
-      bars = [ ];
+      bars = [
+        {
+          id = "1";
+          command = "${pkgs.waybar}/bin/waybar";
+          position = "top";
+          mode = "dock";
+        }
+      ];
       colors = {
         background = "#ffffff";
         focused = {
@@ -197,7 +208,7 @@ in {
       };
       menu = "\${pkgs.wofi}/bin/wofi --show drun";
       modifier = "Mod4";
-      output = { "*" = { bg = "${config.xdg.configHome}/wallpaper/wall-01.png fill"; }; };
+      output = { "*" = { bg = "${config.xdg.configHome}/wallpaper/wall-03.png fill"; }; };
       seat = {
         "*" = {
           xcursor_theme = "${config.gtk.cursorTheme.name}";

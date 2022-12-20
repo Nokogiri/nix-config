@@ -36,6 +36,7 @@
 
     ../common/users/nokogiri.nix
 
+    ./services/firewall.nix
     ./services/tlp.nix
     ./services/wireguard.nix
   ];
@@ -88,6 +89,11 @@
   powerManagement = {
     cpuFreqGovernor = "ondemand";
     powertop.enable = false;
+  };
+
+  programs = {
+    light.enable = true;
+    mtr.enable = true;
   };
 
   location = {
