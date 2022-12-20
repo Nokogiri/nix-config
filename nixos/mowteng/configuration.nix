@@ -51,9 +51,7 @@
       #   });
       # })
     ];
-    config = {
-      allowUnfree = true;
-    };
+    config = { allowUnfree = true; };
   };
 
   networking = {

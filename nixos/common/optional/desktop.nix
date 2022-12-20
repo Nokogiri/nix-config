@@ -1,6 +1,10 @@
-{
+{ pkgs, ... }: {
   programs = { dconf.enable = true; };
 
+  #programs.firefox = {
+  #enable = true;
+  #nativeMessagingHosts.ff2mpv = true;
+  #};
   services = {
     dbus.enable = true;
     gnome.gnome-keyring.enable = true;
