@@ -14,7 +14,7 @@
         })
       ];
     };
-    loader.timeout = 10;
+    loader.timeout = 0;
     kernelParams = [
       "fbcon=nodefer"
       "quiet"

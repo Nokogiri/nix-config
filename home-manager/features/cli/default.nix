@@ -44,5 +44,6 @@
     nix-tree
     nix-pin
     nix-zsh-completions
+    nix-stray-roots
   ];
 }

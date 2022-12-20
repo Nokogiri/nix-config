@@ -65,20 +65,17 @@
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     enableRedistributableFirmware = true;
 
-    opengl = {
-      driSupport = lib.mkDefault true;
-      driSupport32Bit = lib.mkDefault true;
-    };
-
     sensor.iio.enable = true;
     uinput.enable = true;
     xpadneo.enable = true;
 
   };
+
   services.zfs = {
     autoScrub.enable = true;
     trim.enable = true;
   };
+
   sound.enable = true;
 
   nixpkgs.hostPlatform = "x86_64-linux";

@@ -13,7 +13,7 @@
 
   environment.etc."ryzen-ppd.ini".text = ''
     [ryzenadj]
-    limits = ["stapm_limit", "fast_limit", "slow_limit", "apu_slow_limit", "tctl_temp", "ap>
+    limits = ["stapm_limit", "fast_limit", "slow_limit", "apu_slow_limit", "tctl_temp", "apu_skin_temp_limit"]
     monitor = fast_limit
     [profiles]
     battery     = [ 9000,  8800,  8800, 12000, 60, 45 ]

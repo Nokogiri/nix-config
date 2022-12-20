@@ -32,23 +32,17 @@
     ../common/optional/steam.nix
     ../common/optional/systemd-boot.nix
     ../common/optional/wireless.nix
+    ../common/optional/xdg-portal.nix
 
     ../common/users/nokogiri.nix
 
     ./services/tlp.nix
-    ./services/udisks.nix
     ./services/wireguard.nix
   ];
 
   nixpkgs = {
-    # You can add overlays here
     overlays = [
-      # If you want to use overlays your own flake exports (from overlays dir):
-      # outputs.overlays.modifications
       outputs.overlays.additions
-
-      # Or overlays exported from other flakes:
-      # neovim-nightly-overlay.overlays.default
 
       # Or define it inline, for example:
       # (final: prev: {
@@ -57,34 +51,11 @@
       #   });
       # })
     ];
-    # Configure your nixpkgs instance
     config = {
-      # Disable if you don't want unfree packages
       allowUnfree = true;
     };
   };
 
-  #  nix = {
-  # This will add each flake input as a registry
-  # To make nix3 commands consistent with your flake
-  #    registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
-
-  # This will additionally add your inputs to the system's legacy channels
-  # Making legacy nix commands consistent as well, awesome!
-  #    nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}")
-  #      config.nix.registry;
-
-  #    settings = {
-  #      # Enable flakes and new 'nix' command
-  #      experimental-features = "nix-command flakes";
-  #      # Deduplicate and optimize nix store
-  #      auto-optimise-store = true;
-  #    };
-  #  };
-
-  # FIXME: Add the rest of your current configuration
-
-  # TODO: Set your hostname
   networking = {
     hostName = "mowteng";
     hostId = "05fc191c";
@@ -107,6 +78,15 @@
     linuxKernel.packages.linux_lqx.cpupower
   ];
 
+  hardware = {
+    opengl = {
+      enable = true;
+      extraPackages = with pkgs; [ amdvlk ];
+      driSupport = true;
+      driSupport32Bit = true;
+    };
+  };
+
   powerManagement = {
     cpuFreqGovernor = "ondemand";
     powertop.enable = false;
@@ -116,37 +96,7 @@
     latitude = 50.9787;
     longitude = 11.03283;
   };
-  # TODO: This is just an example, be sure to use whatever bootloader you prefer
-  boot.loader.systemd-boot.enable = true;
 
-  # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
-  users.users = {
-    # FIXME: Replace with your username
-    nokogiri = {
-      # TODO: You can set an initial password for your user.
-      # If you do, you can skip setting a root password by passing '--no-root-passwd' to nixos-install.
-      # Be sure to change it (using passwd) after rebooting!
-      #initialPassword = "correcthorsebatterystaple";
-      isNormalUser = true;
-      openssh.authorizedKeys.keys = [
-        # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
-      ];
-      # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
-      extraGroups = [ "wheel" ];
-    };
-  };
-
-  # This setups a SSH server. Very important if you're setting up a headless system.
-  # Feel free to remove if you don't need it.
-  services.openssh = {
-    enable = true;
-    # Forbid root login through SSH.
-    permitRootLogin = "no";
-    # Use keys only. Remove if you want to SSH using password (not recommended)
-    passwordAuthentication = false;
-  };
-
-  services.upower.enable = true;
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "22.05";
 }

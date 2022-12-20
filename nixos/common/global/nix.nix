@@ -1,4 +1,4 @@
-{ pkgs, inputs, lib, config, ... }: {
+{ pkgs, inputs, lib, config, outputs, ... }: {
   nix = {
     settings = {
       substituters = [
@@ -21,13 +21,14 @@
       dates = "weekly";
     };
 
-    # Add each flake input as a registry
-    # To make nix3 commands consistent with the flake
+    # This will add each flake input as a registry
+    # To make nix3 commands consistent with your flake
     registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
 
-    # Map registries to channels
-    # Very useful when using legacy commands
+    # This will additionally add your inputs to the system's legacy channels
+    # Making legacy nix commands consistent as well, awesome!
     nixPath =
       lib.mapAttrsToList (key: value: "${key}=${value.to.path}") config.nix.registry;
+
   };
 }

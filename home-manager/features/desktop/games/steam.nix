@@ -22,5 +22,5 @@
           ];
       };
     };
-  home.packages = with pkgs; [ steam ];
+  home.packages = with pkgs; [ steam steam-run ];
 }

@@ -6,9 +6,12 @@ in {
   programs.firefox = {
     enable = true;
     extensions = with addons; [
-      vimium-c
+      vimium
       ublock-origin
+      tree-style-tab
       stylus
+      sponsorblock
+      refined-github
       #onetab
       netflix-1080p
       gopass-bridge
@@ -25,7 +28,7 @@ in {
         "browser.startup.homepage" = "https://start.duckduckgo.com";
         "identity.fxaccounts.enabled" = true;
         "privacy.trackingprotection.enabled" = true;
-        "dom.security.https_only_mode" = true;
+        "dom.security.https_only_mode" = false;
         #"signon.rememberSignons" = false;
         "browser.topsites.blockedSponsors" = ''["amazon"]'';
         "browser.shell.checkDefaultBrowser" = false;

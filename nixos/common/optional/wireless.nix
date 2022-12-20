@@ -5,7 +5,7 @@
     neededForUsers = true;
   };
 
-  networking.dhcpcd.enable = false;
+  networking.dhcpcd.enable = true;
 
   networking.wireless = {
     enable = true;
@@ -23,15 +23,15 @@
   };
   users.groups.network = { };
 
-  systemd.network.networks."25-wireless" = {
-    matchConfig.Name = [ "wl*" ];
-    DHCP = "yes";
-    dhcpV4Config = {
-      RouteMetric = 20;
-      UseDNS = true;
-      UseRoutes = true;
-      UseDomains = true;
-    };
-  };
+  #  systemd.network.networks."25-wireless" = {
+  #    matchConfig.Name = [ "wl*" ];
+  #    DHCP = "yes";
+  #    dhcpV4Config = {
+  #      RouteMetric = 20;
+  #      UseDNS = true;
+  #      UseRoutes = true;
+  #      UseDomains = true;
+  #    };
+  #  };
 }
 
