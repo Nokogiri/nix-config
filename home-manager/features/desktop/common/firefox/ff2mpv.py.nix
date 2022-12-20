@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   home.file.".local/bin/ff2mpv.py" = {
     executable = true;
     text = ''
@@ -14,7 +14,7 @@
       def main():
           message = get_message()
           url = message.get("url")
-          args = ["mpv", "--no-terminal", "--", url]
+          args = ["${pkgs.mpv}/bin/mpv", "--no-terminal", "--", url]
           kwargs = {}
           subprocess.Popen(args, **kwargs)
 

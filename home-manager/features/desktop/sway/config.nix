@@ -4,6 +4,11 @@ let cfg = config.wayland.windowManager.sway.config;
 in {
   wayland.windowManager.sway = {
     enable = true;
+    extraSessionCommands = ''
+      export XDG_SESSION_TYPE=wayland
+      export XDG_SESSION_DESKTOP=sway
+      export XDG_CURRENT_DESKTOP=sway
+    '';
     wrapperFeatures = {
       base = true;
       gtk = true;
@@ -29,14 +34,12 @@ in {
         ];
         "9" = [{ class = "Com.github.johnfactotum.Foliate"; }];
       };
-      bars = [
-        {
-          id = "1";
-          command = "${pkgs.waybar}/bin/waybar";
-          position = "top";
-          mode = "dock";
-        }
-      ];
+      bars = [{
+        id = "1";
+        command = "${pkgs.waybar}/bin/waybar";
+        position = "top";
+        mode = "dock";
+      }];
       colors = {
         background = "#ffffff";
         focused = {

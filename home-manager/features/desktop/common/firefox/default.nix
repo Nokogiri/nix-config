@@ -3,10 +3,7 @@
 let addons = inputs.firefox-addons.packages.${pkgs.system};
 in {
 
-  imports = [
-    ./ff2mpv.json.nix
-    ./ff2mpv.py.nix
-  ];
+  imports = [ ./ff2mpv.json.nix ./ff2mpv.py.nix ];
 
   programs.firefox = {
     enable = true;
