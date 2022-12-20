@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   imports = [
-    ./firefox.nix
+    ./firefox
     ./gtk.nix
     ./kdeconnect.nix
     ./mpv.nix

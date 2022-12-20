@@ -2,55 +2,11 @@
 
 let addons = inputs.firefox-addons.packages.${pkgs.system};
 in {
-  home.file = {
-    ".mozilla/native-messaging-hosts/ff2mpv.json".text = ''
-      {
-        "name": "ff2mpv",
-        "description": "ff2mpv's external manifest",
-        "path": "/home/nokogiri/.local/bin/ff2mpv.py",
-        "type": "stdio",
-        "allowed_extensions": ["ff2mpv@yossarian.net"]
-      }
-    '';
-    ".local/bin/ff2mpv.py".executable = true;
-    ".local/bin/ff2mpv.py".text = ''
-      #!/usr/bin/env python3
 
-      import json
-      import os
-      import platform
-      import struct
-      import sys
-      import subprocess
-
-      def main():
-          message = get_message()
-          url = message.get("url")
-          args = ["mpv", "--no-terminal", "--", url]
-          kwargs = {}
-          subprocess.Popen(args, **kwargs)
-
-          send_message("ok")
-
-      def get_message():
-          raw_length = sys.stdin.buffer.read(4)
-          if not raw_length:
-              return {}
-          length = struct.unpack("@I", raw_length)[0]
-          message = sys.stdin.buffer.read(length).decode("utf-8")
-          return json.loads(message)
-
-      def send_message(message):
-          content = json.dumps(message).encode("utf-8")
-          length = struct.pack("@I", len(content))
-          sys.stdout.buffer.write(length)
-          sys.stdout.buffer.write(content)
-          sys.stdout.buffer.flush()
-
-      if __name__ == "__main__":
-          main()
-    '';
-  };
+  imports = [
+    ./ff2mpv.json.nix
+    ./ff2mpv.py.nix
+  ];
 
   programs.firefox = {
     enable = true;
