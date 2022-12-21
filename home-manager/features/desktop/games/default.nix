@@ -11,6 +11,14 @@
     prismlauncher
     steam
 
+    # native packaged games
+
+    zeroad
+    gzdoom
+    RBDOOM-3-BFG
+    vkquake
+    yquake2-all-games
+
     # emulation
     cemu
     libretro.beetle-pce-fast

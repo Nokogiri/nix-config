@@ -7,7 +7,6 @@
         extraPkgs = pkgs:
           with pkgs; [
             libgdiplus
-            firefox
             gamescope
             mangohud
             xorg.libXcursor

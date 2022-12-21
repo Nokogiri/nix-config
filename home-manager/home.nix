@@ -19,7 +19,7 @@
     overlays = [
       # If you want to use overlays your own flake exports (from overlays dir):
       # outputs.overlays.modifications
-      # outputs.overlays.additions
+      outputs.overlays.additions
 
       # Or overlays exported from other flakes:
       # neovim-nightly-overlay.overlays.default

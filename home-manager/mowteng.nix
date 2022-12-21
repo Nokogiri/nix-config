@@ -7,7 +7,8 @@
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example
 
-    ./global
+    #./global
+    ./features/cli
     ./features/desktop/common
     ./features/desktop/games
     ./features/desktop/sway
