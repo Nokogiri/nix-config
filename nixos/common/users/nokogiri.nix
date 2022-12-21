@@ -10,6 +10,7 @@ in {
     shell = pkgs.zsh;
     extraGroups = [ "wheel" "video" "audio" ] ++ ifTheyExist [
       "network"
+      "networkmanager"
       "wireshark"
       "i2c"
       "mysql"

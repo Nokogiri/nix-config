@@ -39,7 +39,7 @@
 
     ./services/firewall.nix
     ./services/tlp.nix
-    ./services/wireguard.nix
+    #./services/wireguard.nix
   ];
 
   nixpkgs = {
