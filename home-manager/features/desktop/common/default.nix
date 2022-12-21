@@ -11,6 +11,7 @@
   ];
 
   home.sessionVariables = {
+    BROWSER = "${pkgs.firefox}/bin/firefox";
     TDESKTOP_DISABLE_GTK_INTEGRATION = "1";
     CLUTTER_BACKEND = "wayland";
     BEMENU_BACKEND = "wayland";

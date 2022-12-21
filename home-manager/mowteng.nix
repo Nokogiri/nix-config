@@ -30,6 +30,7 @@
 
       # Or overlays exported from other flakes:
       inputs.neovim-nightly-overlay.overlay
+      inputs.nix-gaming.overlays.default
       #neovim-nightly-overlay.overlays.default
 
       # Or define it inline, for example:

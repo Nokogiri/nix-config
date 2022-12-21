@@ -1,6 +1,6 @@
 { pkgs, ... }: {
 
-  imports = [ ./steam.nix ];
+  imports = [ ./steam.nix ./wine.nix ];
   home.packages = with pkgs; [
 
     # general

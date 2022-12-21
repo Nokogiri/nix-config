@@ -31,6 +31,9 @@
     # nvim nächtlicherweise
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
+    # wine-ge 
+    nix-gaming.url = github:fufexan/nix-gaming;
+
     # emcas pgtk
     emacs-overlay.url = "github:nix-community/emacs-overlay";
 
