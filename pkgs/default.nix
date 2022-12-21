@@ -10,5 +10,6 @@
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   pass-wofi = pkgs.callPackage ./pass-wofi { };
   plymouth-spinner-monochrome = pkgs.callPackage ./plymouth-spinner-monochrome { };
+  RBDOOM-3-BFG = pkgs.callPackage ./RBDOOM-3-BFG { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
 }
