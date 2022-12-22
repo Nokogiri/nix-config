@@ -69,6 +69,7 @@
   exec=swaybg -i /home/nokogiri/.config/wallpaper/wall-03.png --mode fill
   exec-once=mako
   exec-once=swayidle -w
+  exec-once=wl-paste --watch cliphist store
 
   # Mouse binding
   bindm=SUPER,mouse:272,movewindow
@@ -83,6 +84,7 @@
 
   bind=SUPER,p,exec,wofi -S drun -x 10 -y 10 -W 25% -H 60%
   bind=SUPER,d,exec,wofi -S run
+  bind=SUPER,i,exec,cliphist list | fuzzel -d -w 96 | cliphist decode | wl-copy
   bind=,Scroll_Lock,exec,pass-wofi # fn+k
   bind=,XF86Calculator,exec,pass-wofi # fn+f12
 
@@ -242,5 +244,5 @@
   bind=SUPERSHIFT,f11,movetoworkspacesilent,21
   bind=SUPERSHIFT,f12,movetoworkspacesilent,22
 
-  blurls=waybar
+  #blurls=waybar
 ''
