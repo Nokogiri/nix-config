@@ -1,7 +1,7 @@
-{config, ...}:
+{ config, ... }:
 let inherit (config.colorscheme) colors kind;
-in{ 
-  programs.mako = { 
+in {
+  programs.mako = {
     enable = true;
     iconPath = "${config.gtk.iconTheme.package}/share/icons/Colloid-teal-dark";
     #    font = "${config.fontProfiles.regular.family} 12";
@@ -14,6 +14,6 @@ in{
     backgroundColor = "#${colors.base00}dd";
     borderColor = "#${colors.base03}dd";
     textColor = "#${colors.base05}dd";
-  };  
+  };
 }
 

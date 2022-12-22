@@ -83,7 +83,7 @@
   bind=SUPER,b,exec,firefox
 
   bind=SUPER,p,exec,wofi -S drun -x 10 -y 10 -W 25% -H 60%
-  bind=SUPER,d,exec,wofi -S run
+  bind=SUPER,d,exec,hyprfuzzel
   bind=SUPER,i,exec,cliphist list | fuzzel -d -w 96 | cliphist decode | wl-copy
   bind=,Scroll_Lock,exec,pass-wofi # fn+k
   bind=,XF86Calculator,exec,pass-wofi # fn+f12
@@ -106,8 +106,8 @@
   bind=,XF86MonBrightnessUp,exec,light -A 5
   bind=,XF86MonBrightnessDown,exec,light -U 5
 
-  bind=,XF86AudioNext,exec,playerctl next
-  bind=,XF86AudioPrev,exec,playerctl previous
+  bind=ALT,XF86AudioRaiseVolume,exec,playerctl next
+  bind=ALT,XF86AudioLowerVolume,exec,playerctl previous
   bind=,XF86AudioPlay,exec,playerctl play-pause
   bind=,XF86AudioStop,exec,playerctl stop
   bind=ALT,XF86AudioNext,exec,playerctld shift
@@ -115,9 +115,9 @@
   bind=ALT,XF86AudioPlay,exec,systemctl --user restart playerctld
   bind=SUPER,XF86AudioPlay,exec,$TERMINAL $SHELL -ic lyrics
 
-  bind=,XF86AudioRaiseVolume,exec,pactl set-sink-volume @DEFAULT_SINK@ +5%
-  bind=,XF86AudioLowerVolume,exec,pactl set-sink-volume @DEFAULT_SINK@ -5%
-  bind=,XF86AudioMute,exec,pactl set-sink-mute @DEFAULT_SINK@ toggle
+  bind=,XF86AudioRaiseVolume,exec,volumectl +
+  bind=,XF86AudioLowerVolume,exec,volumectl -
+  bind=,XF86AudioMute,exec,volumectl %
 
   bind=SHIFT,XF86AudioMute,exec,pactl set-source-mute @DEFAULT_SOURCE@ toggle
   bind=,XF86AudioMicMute,exec,pactl set-source-mute @DEFAULT_SOURCE@ toggle

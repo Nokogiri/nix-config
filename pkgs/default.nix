@@ -9,6 +9,7 @@
   heroic = pkgs.callPackage ./heroic { };
   mailctl = pkgs.callPackage ./mailctl { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
+  pass-fuzzel = pkgs.callPackage ./pass-fuzzel { };
   pass-wofi = pkgs.callPackage ./pass-wofi { };
   plymouth-spinner-monochrome =
     pkgs.callPackage ./plymouth-spinner-monochrome { };
