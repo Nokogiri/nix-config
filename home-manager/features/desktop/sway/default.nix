@@ -4,5 +4,8 @@ in {
   imports = [ ./config.nix ../common ../common/wayland ../wallpaper ];
 
   home.packages = with pkgs; [ swaybg ];
-  programs.waybar.enable = true;
+  programs.waybar.systemd = {
+    enable = true;
+    target = "sway-session.target";
+  };
 }

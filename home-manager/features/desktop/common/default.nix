@@ -24,7 +24,6 @@
   };
 
   home.packages = with pkgs; [
-    lxqt.pavucontrol-qt
     libnotify
     (let
       python-packages-plus = python-packages:
@@ -41,6 +40,7 @@
         ];
       python-with-packages-plus = python3.withPackages python-packages-plus;
     in python-with-packages-plus)
+    xournalpp
     xdg_utils
   ];
 }

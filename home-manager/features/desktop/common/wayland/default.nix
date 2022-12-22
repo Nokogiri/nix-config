@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  imports = [ ./gammastep.nix ./kitty.nix ./mako.nix ./wofi.nix ];
+  imports = [ ./gammastep.nix ./kitty.nix ./mako.nix ./waybar.nix ./wofi.nix ];
 
   home.packages = with pkgs; [
     avizo
@@ -16,8 +16,14 @@
     wl-clipboard
     wlr-randr
   ];
+
   home.sessionVariables = {
     MOZ_ENABLE_WAYLAND = true;
+    QT_QPA_PLATFORM = "wayland";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
+  };
+
+  systemd.user.sessionVariables = {
     QT_QPA_PLATFORM = "wayland";
     QT_QPA_PLATFORMTHEME = "qt5ct";
   };

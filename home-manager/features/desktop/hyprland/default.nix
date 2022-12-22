@@ -1,5 +1,8 @@
-{ lib, inputs, ... }: {
-  imports = [ inputs.hyprland.homeManagerModules.default ];
+{ lib, inputs, pkgs, config, ... }: {
+  imports = [ ../common
+              ../common/wayland
+              ../wallpaper
+    inputs.hyprland.homeManagerModules.default ];
 
   programs = {
     fish.loginShellInit = ''
@@ -19,12 +22,26 @@
     '';
   };
 
+  nixpkgs.config.packageOverrides = pkgs: {
+    waybar = pkgs.waybar.override {
+      jackSupport = false;
+      mpdSupport = false;
+      sndioSupport = false;
+    };
+  };
+
+  programs.waybar.package = pkgs.waybar.overrideAttrs
+    (oa: { mesonFlags = (oa.mesonFlags or [ ]) ++ [ "-Dexperimental=true" ]; });
+
   programs.waybar = {
-    enable = true;
     systemd = {
       enable = true;
       target = "hyprland-session.target";
     };
+  };
+  systemd.user.sessionVariables = {
+    PATH =
+      "/usr/bin:/run/current-system/sw/bin:/home/nokogiri/.nix-profile/bin:${pkgs.hyprland}/bin";
   };
 
   wayland.windowManager.hyprland = {

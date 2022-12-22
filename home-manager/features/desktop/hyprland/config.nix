@@ -65,7 +65,7 @@
   }
 
   # Startup
-  #exec-once=waybar
+  exec-once=waybar
   exec=swaybg -i /home/nokogiri/.config/wallpaper/wall-03.png --mode fill
   exec-once=mako
   exec-once=swayidle -w

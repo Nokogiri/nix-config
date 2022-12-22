@@ -34,12 +34,12 @@ in {
         ];
         "9" = [{ class = "Com.github.johnfactotum.Foliate"; }];
       };
-      bars = [{
-        id = "1";
-        command = "${pkgs.waybar}/bin/waybar";
-        position = "top";
-        mode = "dock";
-      }];
+      bars = [ ]; # {
+      #  id = "1";
+      #  command = "${pkgs.waybar-hyprland}/bin/waybar";
+      #  position = "top";
+      #  mode = "dock";
+      #}];
       colors = {
         background = "#ffffff";
         focused = {

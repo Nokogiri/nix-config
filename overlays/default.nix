@@ -21,5 +21,8 @@
       # Add term option, rename de to desktop, add scheme option
       patches = (oldAttrs.patches or [ ]) ++ [ ./pfetch.patch ];
     });
+    waybar = prev.waybar.overrideAttrs (oldAttrs: rec {
+      patches = (oldAttrs.patches or [ ]) ++ [ ./waybar-hyprland.patch ];
+    });
   };
 }
