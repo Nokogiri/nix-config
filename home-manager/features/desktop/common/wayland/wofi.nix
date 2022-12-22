@@ -14,7 +14,7 @@ in {
 
   xdg.configFile."wofi/config".text = ''
     image_size=48
-    columns=3
+    columns=1
     allow_images=true
     insensitive=true
 

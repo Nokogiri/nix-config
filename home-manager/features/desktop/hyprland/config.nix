@@ -79,9 +79,9 @@
   bind=SUPER,w,exec,makoctl dismiss
   bind=SUPER,v,exec,$TERMINAL $SHELL -ic nvim
   bind=SUPER,m,exec,$TERMINAL $SHELL -ic neomutt
-  bind=SUPER,b,exec,qutebrowser
+  bind=SUPER,b,exec,firefox
 
-  bind=SUPER,x,exec,wofi -S drun -x 10 -y 10 -W 25% -H 60%
+  bind=SUPER,p,exec,wofi -S drun -x 10 -y 10 -W 25% -H 60%
   bind=SUPER,d,exec,wofi -S run
   bind=,Scroll_Lock,exec,pass-wofi # fn+k
   bind=,XF86Calculator,exec,pass-wofi # fn+f12
