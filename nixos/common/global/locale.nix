@@ -8,7 +8,8 @@
       LC_PAPER = lib.mkDefault "de_DE.UTF-8";
       LC_TIME = lib.mkDefault "de_DE.UTF-8";
     };
-    supportedLocales = lib.mkDefault [ "en_US.UTF-8/UTF-8" "de_DE.UTF-8/UTF-8" ];
+    supportedLocales =
+      lib.mkDefault [ "en_US.UTF-8/UTF-8" "de_DE.UTF-8/UTF-8" ];
   };
   time.timeZone = lib.mkDefault "Europe/Berlin";
 }

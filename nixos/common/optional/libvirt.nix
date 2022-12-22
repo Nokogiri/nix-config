@@ -4,5 +4,9 @@
     onBoot = "ignore";
     onShutdown = "shutdown";
   };
-  environment.systemPackages = with pkgs; [ virt-manager virt-manager-qt virt-top ];
+  environment.systemPackages = with pkgs; [
+    virt-manager
+    virt-manager-qt
+    virt-top
+  ];
 }

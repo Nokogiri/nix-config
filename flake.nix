@@ -32,7 +32,7 @@
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
     # wine-ge 
-    nix-gaming.url = github:fufexan/nix-gaming;
+    nix-gaming.url = "github:fufexan/nix-gaming";
 
     # emcas pgtk
     emacs-overlay.url = "github:nix-community/emacs-overlay";
@@ -98,9 +98,9 @@
         mowteng = nixpkgs.lib.nixosSystem {
           modules = [ ./nixos/mowteng/configuration.nix ]
             ++ (builtins.attrValues nixosModules);
-            specialArgs = { inherit inputs outputs; };
-          };
+          specialArgs = { inherit inputs outputs; };
         };
+      };
 
       # Standalone home-manager configuration entrypoint
       # Available through 'home-manager --flake .#your-username@your-hostname'

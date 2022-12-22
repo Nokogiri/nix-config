@@ -4,6 +4,7 @@
     ./fzf.nix
     ./git.nix
     ./lsd.nix
+    ./pfetch.nix
     ./ranger.nix
     ./ssh.nix
     ./starship.nix
@@ -24,7 +25,7 @@
     #
     mailctl
 
-    neofetch 
+    neofetch
     bc # Calculator
     bottom # System viewer
     btop # same

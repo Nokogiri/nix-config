@@ -35,8 +35,8 @@ in {
   #    neededForUsers = true;
   #  };
 
-    #home-manager.users.nokogiri =
-    #  import ../../../home-manager/mowteng.nix;
+  #home-manager.users.nokogiri =
+  #  import ../../../home-manager/mowteng.nix;
 
   services.geoclue2.enable = true;
   security.pam.services = { swaylock = { }; };

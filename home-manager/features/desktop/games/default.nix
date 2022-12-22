@@ -13,11 +13,11 @@
 
     # native packaged games
 
-    zeroad
+    #zeroad
     gzdoom
     #RBDOOM-3-BFG
-    vkquake
-    yquake2-all-games
+    #vkquake
+    #yquake2-all-games
 
     # emulation
     cemu

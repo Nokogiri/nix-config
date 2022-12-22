@@ -1,4 +1,5 @@
-{ lib, fetchFromGitHub, stdenv, cmake, ffmpeg, openal, SDL2, vulkan-headers, vulkan-loader }:
+{ lib, fetchFromGitHub, stdenv, cmake, ffmpeg, openal, SDL2, vulkan-headers
+, vulkan-loader }:
 stdenv.mkDerivation rec {
   name = "RBDOOM-3-BFG";
   version = "1.4.0";
@@ -18,7 +19,7 @@ stdenv.mkDerivation rec {
     mkdir build
     cd build
     cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DSDL2=ON -DUSE_VULKAN=ON -DSPIRV_SHADERC=OFF ../neo
-    '';
+  '';
 
   #buildPhase = ''
   #  mkdir build
@@ -29,7 +30,7 @@ stdenv.mkDerivation rec {
   installPhase = ''
     mkdir -p $out/bin
     install RBDoom3BFG $out/bin/RBDoom3BFG
-    '';
+  '';
 
   enableParallelBuilding = true;
 

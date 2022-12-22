@@ -1,7 +1,8 @@
 { pkgs, inputs, config, ... }: {
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
-      colloid-icon-theme = colloid-icon-theme.override { colorVariants = [ "teal" ]; };
+      colloid-icon-theme =
+        colloid-icon-theme.override { colorVariants = [ "teal" ]; };
     };
   home.packages = with pkgs;
     [

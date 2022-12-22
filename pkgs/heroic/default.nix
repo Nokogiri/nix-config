@@ -55,7 +55,8 @@ mkYarnPackage rec {
   passthru.updateScript = gitUpdater { rev-prefix = "v"; };
 
   meta = with lib; {
-    description = "A Native GOG and Epic Games Launcher for Linux, Windows and Mac";
+    description =
+      "A Native GOG and Epic Games Launcher for Linux, Windows and Mac";
     homepage = "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher";
     license = licenses.gpl3Only;
     maintainers = with maintainers; [ aidalgol ];

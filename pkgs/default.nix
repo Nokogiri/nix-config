@@ -3,13 +3,15 @@
 
 { pkgs ? (import ../nixpkgs.nix) { } }: {
   # example = pkgs.callPackage ./example { };
-  catppuccin-gtk-frappe-teal = pkgs.callPackage ./catppuccin-gtk-frappe-teal { };
+  catppuccin-gtk-frappe-teal =
+    pkgs.callPackage ./catppuccin-gtk-frappe-teal { };
   colloid-cursors = pkgs.callPackage ./colloid-cursors { };
   heroic = pkgs.callPackage ./heroic { };
   mailctl = pkgs.callPackage ./mailctl { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   pass-wofi = pkgs.callPackage ./pass-wofi { };
-  plymouth-spinner-monochrome = pkgs.callPackage ./plymouth-spinner-monochrome { };
+  plymouth-spinner-monochrome =
+    pkgs.callPackage ./plymouth-spinner-monochrome { };
   RBDOOM-3-BFG = pkgs.callPackage ./RBDOOM-3-BFG { };
   RBDOOM-3-BFG-vk = pkgs.callPackage ./RBDOOM-3-BFG-vk { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };

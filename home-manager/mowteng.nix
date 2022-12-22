@@ -27,7 +27,7 @@
     # You can add overlays here
     overlays = [
       # If you want to use overlays your own flake exports (from overlays dir):
-      # outputs.overlays.modifications
+      outputs.overlays.modifications
       outputs.overlays.additions
 
       # Or overlays exported from other flakes:
@@ -63,7 +63,7 @@
   #home.packages = with pkgs; [ steam ];
 
   # Enable home-manager and git
-  programs = { 
+  programs = {
     home-manager.enable = true;
     git.enable = true;
     gpg.enable = true;

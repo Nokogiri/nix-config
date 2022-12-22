@@ -1,4 +1,5 @@
-{ lib, fetchFromGitHub, stdenv, cmake, ffmpeg, openal, SDL2, libGLU, libGL, zlib, glew, libjpeg, libpng, rapidjson }:
+{ lib, fetchFromGitHub, stdenv, cmake, ffmpeg, openal, SDL2, libGLU, libGL, zlib
+, glew, libjpeg, libpng, rapidjson }:
 stdenv.mkDerivation rec {
   name = "RBDOOM-3-BFG";
   version = "1.4.0";
@@ -11,8 +12,9 @@ stdenv.mkDerivation rec {
     sha256 = "sha256-r/dvTirgFXdBJ+Gjl6zpHoGCTPoo0tRmOCV9oCdnltI=";
   });
 
-  nativeBuildInputs = [ cmake ffmpeg libjpeg];
-  buildInputs = [ ffmpeg SDL2 openal zlib glew libjpeg libpng libGLU libGL rapidjson ];
+  nativeBuildInputs = [ cmake ffmpeg libjpeg ];
+  buildInputs =
+    [ ffmpeg SDL2 openal zlib glew libjpeg libpng libGLU libGL rapidjson ];
 
   configurePhase = ''
     mkdir build
@@ -29,7 +31,7 @@ stdenv.mkDerivation rec {
     -DUSE_SYSTEM_LIBGLEW=ON \
     -DUSE_SYSTEM_RAPIDJSON=ON \
     ../neo
-    '';
+  '';
 
   #buildPhase = ''
   #  mkdir build
@@ -40,7 +42,7 @@ stdenv.mkDerivation rec {
   installPhase = ''
     mkdir -p $out/bin
     install RBDoom3BFG $out/bin/RBDoom3BFG
-    '';
+  '';
 
   enableParallelBuilding = true;
 
