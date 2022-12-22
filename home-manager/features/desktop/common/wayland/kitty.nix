@@ -1,5 +1,8 @@
 {
   xdg.configFile."kitty/tab_bar.py".source = ./kitty-tab_bar.py;
+  home.sessionVariables = {
+    TERMINAL = "kitty";
+  };
   programs = {
     kitty = {
       enable = true;

@@ -225,6 +225,7 @@ in {
         }
         { command = "wl-paste --watch cliphist store"; }
         { command = "avizo-service"; }
+        { command = "nm-applet --indicator"; }
       ];
       terminal = "kitty";
       window = { border = 1; };

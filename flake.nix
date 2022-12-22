@@ -81,19 +81,26 @@
 
       # NixOS configuration entrypoint
       # Available through 'nixos-rebuild --flake .#your-hostname'
-      nixosConfigurations = let
-        mkHost = system: hostname:
-          nixpkgs.lib.nixosSystem {
-            #pkgs = packages.${system};#legacyPackages.${system};
-            modules = [ ./nixos/${hostname}/configuration.nix ]
-              ++ (builtins.attrValues nixosModules);
+      #nixosConfigurations = let
+      #  mkHost = system: hostname:
+      #    nixpkgs.lib.nixosSystem {
+      #      #pkgs = packages.${system};#legacyPackages.${system};
+      #      modules = [ ./nixos/${hostname}/configuration.nix ]
+      #        ++ (builtins.attrValues nixosModules);
+      #        specialArgs = { inherit inputs outputs; };
+      #    };
+      #in {
+      #  calvin = mkHost "x86_64-linux" "calvin";
+      #  homeassistant = mkHost "x86_64-linux" "homeassistant";
+      #  mowteng = mkHost "x86_64-linux" "mowteng";
+      #};
+      nixosConfigurations = {
+        mowteng = nixpkgs.lib.nixosSystem {
+          modules = [ ./nixos/mowteng/configuration.nix ]
+            ++ (builtins.attrValues nixosModules);
             specialArgs = { inherit inputs outputs; };
           };
-      in {
-        calvin = mkHost "x86_64-linux" "calvin";
-        homeassistant = mkHost "x86_64-linux" "homeassistant";
-        mowteng = mkHost "x86_64-linux" "mowteng";
-      };
+        };
 
       # Standalone home-manager configuration entrypoint
       # Available through 'home-manager --flake .#your-username@your-hostname'

@@ -15,7 +15,7 @@
 
     zeroad
     gzdoom
-    RBDOOM-3-BFG
+    #RBDOOM-3-BFG
     vkquake
     yquake2-all-games
 

@@ -1,4 +1,4 @@
-{ lib, fetchFromGitHub, stdenv, cmake, ffmpeg, openal, SDL2, libGLU, libGL, zlib, glew, libjpeg, libpng, rapidjson }:
+{ lib, fetchFromGitHub, stdenv, cmake, ffmpeg, openal, SDL2, vulkan-headers, vulkan-loader }:
 stdenv.mkDerivation rec {
   name = "RBDOOM-3-BFG";
   version = "1.4.0";
@@ -11,24 +11,13 @@ stdenv.mkDerivation rec {
     sha256 = "sha256-r/dvTirgFXdBJ+Gjl6zpHoGCTPoo0tRmOCV9oCdnltI=";
   });
 
-  nativeBuildInputs = [ cmake ffmpeg libjpeg];
-  buildInputs = [ ffmpeg SDL2 openal zlib glew libjpeg libpng libGLU libGL rapidjson ];
+  nativeBuildInputs = [ cmake vulkan-headers ];
+  buildInputs = [ ffmpeg SDL2 openal vulkan-loader ];
 
   configurePhase = ''
     mkdir build
     cd build
-    cmake -G "Unix Makefiles" \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DONATIVE=ON \
-    -DSDL2=ON \
-    -DFFMPEG=OFF \
-    -DBINKDEC=ON \
-    -DUSE_SYSTEM_ZLIB=ON \
-    -DUSE_SYSTEM_LIBPNG=ON \
-    -DUSE_SYSTEM_LIBJPEG=OFF \
-    -DUSE_SYSTEM_LIBGLEW=ON \
-    -DUSE_SYSTEM_RAPIDJSON=ON \
-    ../neo
+    cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DSDL2=ON -DUSE_VULKAN=ON -DSPIRV_SHADERC=OFF ../neo
     '';
 
   #buildPhase = ''

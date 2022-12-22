@@ -24,6 +24,7 @@
     #
     mailctl
 
+    neofetch 
     bc # Calculator
     bottom # System viewer
     btop # same
@@ -35,6 +36,7 @@
     #httpie # Better curl
     jq # JSON pretty printer and manipulator
     #trekscii # Cute startrek cli printer
+    tealdeer
 
     rnix-lsp # Nix LSP
     nixfmt # Nix formatter

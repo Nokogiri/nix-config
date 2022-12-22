@@ -11,6 +11,7 @@
     ./features/cli
     ./features/desktop/common
     ./features/desktop/games
+    ./features/desktop/hyprland
     ./features/desktop/sway
     ./features/desktop/wireless
 
@@ -32,6 +33,7 @@
       # Or overlays exported from other flakes:
       inputs.neovim-nightly-overlay.overlay
       inputs.nix-gaming.overlays.default
+      #inputs.hyprland.nixosModules.default
       #neovim-nightly-overlay.overlays.default
 
       # Or define it inline, for example:
@@ -61,11 +63,14 @@
   #home.packages = with pkgs; [ steam ];
 
   # Enable home-manager and git
-  programs.home-manager.enable = true;
-  programs.git.enable = true;
-  programs.gpg.enable = true;
-  programs.neovim.enable = true;
-  programs.password-store.enable = true;
+  programs = { 
+    home-manager.enable = true;
+    git.enable = true;
+    gpg.enable = true;
+    neovim.enable = true;
+    password-store.enable = true;
+  };
+
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 

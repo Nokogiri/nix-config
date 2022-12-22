@@ -1,5 +1,5 @@
 # This file (and the global directory) holds config that i use on all hosts
-{ lib, inputs, ... }: {
+{ lib, inputs, outputs, ... }: {
   imports = [
     #inputs.impermanence.nixosModules.impermanence
     inputs.home-manager.nixosModules.home-manager
@@ -10,7 +10,7 @@
     ./sops.nix
     ./systemd-network.nix
     ./zsh.nix
-  ]; # ++ (builtins.attrValues outputs.nixosModules);
+  ];# ++ (builtins.attrValues outputs.nixosModules);
 
   home-manager = {
     useUserPackages = true;
