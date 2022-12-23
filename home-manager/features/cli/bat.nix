@@ -1,5 +1,5 @@
 { pkgs, ... }:{
-  xdg.configFile."themes/Catppuccin-frappe.tmTheme".source =
+  xdg.configFile."bat/themes/Catppuccin-frappe.tmTheme".source =
     ./bat-Catppuccin-frappe.tmTheme;
   programs.bat = {
     enable = true;
