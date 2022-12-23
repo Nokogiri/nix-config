@@ -65,7 +65,7 @@
   }
 
   # Startup
-  exec-once=waybar
+  #exec-once=waybar
   exec=swaybg -i /home/nokogiri/.config/wallpaper/wall-03.png --mode fill
   exec-once=mako
   exec-once=swayidle -w
@@ -103,8 +103,8 @@
   bind=ALT,Print,exec,grimblast --notify copy area
 
   # Keyboard controls (brightness, media, sound, etc)
-  bind=,XF86MonBrightnessUp,exec,light -A 5
-  bind=,XF86MonBrightnessDown,exec,light -U 5
+  bind=,XF86MonBrightnessUp,exec,lightctl +
+  bind=,XF86MonBrightnessDown,exec,lightctl -
 
   bind=ALT,XF86AudioRaiseVolume,exec,playerctl next
   bind=ALT,XF86AudioLowerVolume,exec,playerctl previous

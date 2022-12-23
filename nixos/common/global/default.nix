@@ -22,7 +22,7 @@
     #  "/persist".directories = [ "/var/lib/systemd" "/var/log" "/srv" ];
     #};
     enableAllTerminfo = true;
-    pathsToLink = [ "/share/nix-direnv" "/share/zsh" ];
+    pathsToLink = [ "/share/nix-direnv" "/share/zsh" "/share/bash-completion" ];
   };
 
   programs.fuse.userAllowOther = true;

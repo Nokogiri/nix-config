@@ -1,6 +1,6 @@
 { inputs, outputs, lib, pkgs, config, ... }: {
-  imports = [ inputs.nix-colors.homeManagerModule ../features/cli ];
+  imports = [ ../features/cli ];
 
-  colorScheme = inputs.nix-colors.lib-core.schemeFromYAML "cool-scheme"
+  colorScheme = inputs.nix-colors.lib-core.schemeFromYAML "catppuccin-frappe"
     (builtins.readFile ./frappe.yaml);
 }
