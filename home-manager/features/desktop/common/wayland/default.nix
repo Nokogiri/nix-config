@@ -20,6 +20,7 @@
     swaybg
     swayidle
     swaylock-effects
+    swww
     wl-clipboard
     wlr-randr
   ];

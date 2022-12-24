@@ -12,10 +12,6 @@
     inputs.hardware.nixosModules.common-gpu-amd
     inputs.hardware.nixosModules.common-pc-ssd
 
-    # You can also split up your configuration and import pieces of it here:
-    # ./users.nix
-
-    # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
 
     ../common/global
@@ -37,8 +33,6 @@
     ../common/users/nokogiri.nix
 
     ./services
-    #./services/firewall.nix
-    #./services/tlp.nix
   ];
 
   nixpkgs = {
