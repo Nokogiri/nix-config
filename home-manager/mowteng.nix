@@ -10,8 +10,8 @@
     ./global
     ./features/desktop/common
     ./features/desktop/games
-    ./features/desktop/hyprland
-    #./features/desktop/sway
+    #./features/desktop/hyprland
+    ./features/desktop/sway
     #./features/desktop/wireless
 
     # Or modules exported from other flakes (such as nix-colors):
