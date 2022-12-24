@@ -1,4 +1,4 @@
-{ pkgs, ... }:{
+{ pkgs, ... }: {
   xdg.configFile."bat/themes/Catppuccin-frappe.tmTheme".source =
     ./bat-Catppuccin-frappe.tmTheme;
   programs.bat = {

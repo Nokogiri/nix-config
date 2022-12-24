@@ -1,5 +1,13 @@
 { config, pkgs, ... }: {
-  imports = [ ./avizo.nix ./fuzzel.nix ./gammastep.nix ./kitty.nix ./mako.nix ./waybar.nix ./wofi.nix ];
+  imports = [
+    ./avizo.nix
+    ./fuzzel.nix
+    ./gammastep.nix
+    ./kitty.nix
+    ./mako.nix
+    ./waybar.nix
+    ./wofi.nix
+  ];
 
   home.packages = with pkgs; [
     cliphist

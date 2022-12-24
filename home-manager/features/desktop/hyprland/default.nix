@@ -6,9 +6,7 @@
     inputs.hyprland.homeManagerModules.default
   ];
 
-  home.packages = [
-    pkgs.hyprpaper
-  ];
+  home.packages = [ pkgs.hyprpaper ];
 
   programs = {
     fish.loginShellInit = ''

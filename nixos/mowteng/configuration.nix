@@ -35,7 +35,7 @@
     ../common/optional/xdg-portal.nix
 
     ../common/users/nokogiri.nix
-    
+
     ./services
     #./services/firewall.nix
     #./services/tlp.nix
