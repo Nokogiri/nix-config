@@ -6,6 +6,10 @@
     inputs.hyprland.homeManagerModules.default
   ];
 
+  home.packages = [
+    pkgs.hyprpaper
+  ];
+
   programs = {
     fish.loginShellInit = ''
       if test (tty) = "/dev/tty1"

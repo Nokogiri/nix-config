@@ -1,8 +1,7 @@
 { config, pkgs, ... }: {
-  imports = [ ./fuzzel.nix ./gammastep.nix ./kitty.nix ./mako.nix ./waybar.nix ./wofi.nix ];
+  imports = [ ./avizo.nix ./fuzzel.nix ./gammastep.nix ./kitty.nix ./mako.nix ./waybar.nix ./wofi.nix ];
 
   home.packages = with pkgs; [
-    avizo
     cliphist
     glib.bin
     grim
@@ -10,6 +9,7 @@
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qt5ct
     slurp
+    swaybg
     swayidle
     swaylock-effects
     wl-clipboard

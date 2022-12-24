@@ -24,6 +24,7 @@
   };
 
   home.packages = with pkgs; [
+    gimp
     libnotify
     (let
       python-packages-plus = python-packages:

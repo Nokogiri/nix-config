@@ -34,10 +34,13 @@
     bottom # System viewer
     btop # same
     dfc # better df
+    mediainfo
     ncdu # TUI disk usage
     exa # Better ls
     ripgrep # Better grep
     fd # Better find
+    file
+    #toybox # toying around
     #httpie # Better curl
     jq # JSON pretty printer and manipulator
     #trekscii # Cute startrek cli printer
