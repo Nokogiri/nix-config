@@ -35,9 +35,10 @@
     ../common/optional/xdg-portal.nix
 
     ../common/users/nokogiri.nix
-
-    ./services/firewall.nix
-    ./services/tlp.nix
+    
+    ./services
+    #./services/firewall.nix
+    #./services/tlp.nix
   ];
 
   nixpkgs = {
