@@ -44,19 +44,10 @@
 
   boot = {
     cleanTmpDir = true;
-    extraModulePackages = [ pkgs.linuxPackages_lqx.zenpower ];
-    kernelPackages = pkgs.linuxPackages_lqx;
-    kernelPatches = [{
-      name = "d3cold-fix";
-      patch = ./patches/d3cold.patch;
-    }];
   };
-
-  environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
 
   environment.systemPackages = with pkgs; [
     lm_sensors
-    linuxKernel.packages.linux_lqx.cpupower
   ];
 
   hardware = {
@@ -76,7 +67,6 @@
 
   programs = {
     light.enable = true;
-    mtr.enable = true;
   };
 
   location = {
