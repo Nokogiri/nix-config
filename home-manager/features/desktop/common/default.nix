@@ -7,6 +7,7 @@
     ./pavucontrol.nix
     ./playerctl.nix
     ./spotify.nix
+    ./udiskie.nix
     ./youtube.nix
   ];
 
@@ -41,6 +42,7 @@
         ];
       python-with-packages-plus = python3.withPackages python-packages-plus;
     in python-with-packages-plus)
+    wezterm
     xournalpp
     xdg_utils
   ];

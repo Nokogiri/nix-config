@@ -45,6 +45,7 @@
     jq # JSON pretty printer and manipulator
     #trekscii # Cute startrek cli printer
     tealdeer
+    ps_mem
 
     rnix-lsp # Nix LSP
     nixfmt # Nix formatter

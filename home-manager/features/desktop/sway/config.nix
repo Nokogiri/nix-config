@@ -84,6 +84,8 @@ in {
           { app_id = "pavucontrol"; }
           { app_id = "retroarch"; }
           { app_id = ".blueman-manager-wrapped"; }
+          { app_id = "nm-connection-editor"; }
+          { app_id = "org.kde.kdeconnect-indicator"; }
           { title = "File Operation Progress"; }
         ];
         modifier = "Mod4";
@@ -182,6 +184,8 @@ in {
         "${cfg.modifier}+Shift+minus" = "move scratchpad";
         "${cfg.modifier}+minus" = "scratchpad show";
 
+        # sway-prop
+        "${cfg.modifier}+Shift+i" = "exec sway-prop";
         # Apps
         ###
         # brightness
@@ -212,9 +216,9 @@ in {
       };
       menu = "\${pkgs.wofi}/bin/wofi --show drun";
       modifier = "Mod4";
-      output = {
-        "*" = { bg = "${config.xdg.configHome}/wallpaper/wall-03.png fill"; };
-      };
+      #output = {
+      #  "*" = { bg = "${config.xdg.configHome}/wallpaper/wall-03.png fill"; };
+      #};
       seat = {
         "*" = {
           xcursor_theme = "${config.gtk.cursorTheme.name}";
