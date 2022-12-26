@@ -8,7 +8,6 @@
     ./nix.nix
     ./openssh.nix
     ./sops.nix
-    ./systemd-network.nix
     ./zsh.nix
   ]; # ++ (builtins.attrValues outputs.nixosModules);
 

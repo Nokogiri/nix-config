@@ -1,6 +1,6 @@
 {
   systemd.network = {
-    enable = false;
+    enable = true;
     wait-online = {
       timeout = 20;
       anyInterface = true;

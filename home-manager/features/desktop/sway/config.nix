@@ -145,7 +145,7 @@ in {
 
         # container layouts
         "${cfg.modifier}+s" = "layout stacking";
-        "${cfg.modifier}+w" = "layout tabbed";
+        "${cfg.modifier}+g" = "layout tabbed";
         "${cfg.modifier}+e" = "layout toggle split";
 
         # floating
@@ -186,6 +186,8 @@ in {
 
         # sway-prop
         "${cfg.modifier}+Shift+i" = "exec sway-prop";
+
+        "${cfg.modifier}+w" = "exec makoctl dismiss";
         # Apps
         ###
         # brightness

@@ -1,4 +1,4 @@
-{stdenv, rustPlatform, fetchFromGitHub, lib,pkg-config, libxkbcommon }:
+{ stdenv, rustPlatform, fetchFromGitHub, lib, pkg-config, libxkbcommon }:
 rustPlatform.buildRustPackage rec {
   pname = "swww";
   version = "v0.6.0";
@@ -17,7 +17,7 @@ rustPlatform.buildRustPackage rec {
   doCheck = false;
   meta = with lib; {
     description = "A Solution to your Wayland Wallpaper Woes";
-   homepage = "https://github.com/Horus645/swww";
+    homepage = "https://github.com/Horus645/swww";
     license = licenses.gpl3;
     maintainers = [ maintainers.nokogiri ];
   };
