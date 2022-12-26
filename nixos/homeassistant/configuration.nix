@@ -9,7 +9,7 @@
 
     # Or modules from other flakes (such as nixos-hardware):
     inputs.hardware.nixosModules.common-cpu-intel
-    #inputs.hardware.nixosModules.common-gpu-amd
+    inputs.hardware.nixosModules.common-gpu-intel
     inputs.hardware.nixosModules.common-pc-ssd
 
     ./hardware-configuration.nix
@@ -17,6 +17,9 @@
     ../common/global
 
     ../common/optional/avahi.nix
+    ../common/optional/docker.nix
+    ../common/optional/docker-zfs.nix
+    ../common/optional/grub-efi.nix
     #../common/optional/libvirt.nix
     ../common/users/nokogiri.nix
 
@@ -38,8 +41,8 @@
   };
 
   networking = {
-    hostName = "mowteng";
-    hostId = "05fc191c";
+    hostName = "homeassistant";
+    hostId = "2d3a30d6";
   };
 
   boot = {
@@ -47,14 +50,16 @@
   };
 
   environment.systemPackages = with pkgs; [
+    brightnessctl
     lm_sensors
+    rclone
+    sshfs-fuse
+    udisks
   ];
 
   hardware = {
     opengl = {
       enable = true;
-      #extraPackages = with pkgs; [ amdvlk ];
-
       driSupport = true;
       driSupport32Bit = true;
     };
@@ -66,7 +71,10 @@
   };
 
   programs = {
+    gnupg.agent.enable = true;
     light.enable = true;
+    mtr.enable = true;
+    ssh.startAgent = true;
   };
 
   location = {

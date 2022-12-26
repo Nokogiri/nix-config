@@ -1,4 +1,4 @@
-# This is just an example, you should generate yours with nixos-generate-config and put it in here.
+{lib, config, ...}:# This is just an example, you should generate yours with nixos-generate-config and put it in here.
 {
 
   boot = {
@@ -102,7 +102,6 @@
       lib.mkDefault config.hardware.enableRedistributableFirmware;
     enableRedistributableFirmware = true;
     bluetooth.enable = false;
-    opengl.extraPackages = with pkgs; [ vaapiIntel ];
   };
   # Set your system kind (needed for flakes)
   nixpkgs.hostPlatform = "x86_64-linux";

@@ -15,7 +15,7 @@
     #./features/desktop/wireless
 
     # Or modules exported from other flakes (such as nix-colors):
-    #inputs.nix-colors.homeManagerModules.default
+    inputs.nix-colors.homeManagerModules.default
 
     #inputs.spicetify-nix.homeManagerModule
     # You can also split up your configuration and import pieces of it here:

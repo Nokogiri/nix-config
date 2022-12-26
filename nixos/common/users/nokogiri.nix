@@ -39,5 +39,5 @@ in {
   #  import ../../../home-manager/mowteng.nix;
 
   services.geoclue2.enable = true;
-  security.pam.services = { swaylock = { }; };
+  #security.pam.services = { swaylock = { }; };
 }

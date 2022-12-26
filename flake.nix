@@ -104,7 +104,7 @@
 
       nixosConfigurations = {
         homeassistant = nixpkgs.lib.nixosSystem {
-          modules = [ ./nixos/mowteng/configuration.nix ]
+          modules = [ ./nixos/homeassistant/configuration.nix ]
             ++ (builtins.attrValues nixosModules);
           specialArgs = { inherit inputs outputs; };
         };
