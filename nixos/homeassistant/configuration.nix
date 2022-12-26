@@ -20,6 +20,7 @@
     ../common/optional/docker.nix
     ../common/optional/docker-zfs.nix
     ../common/optional/grub-efi.nix
+    ../common/optional/systemd-network.nix
     #../common/optional/libvirt.nix
     ../common/users/nokogiri.nix
 
@@ -76,6 +77,8 @@
     mtr.enable = true;
     ssh.startAgent = true;
   };
+
+  services.logind.lidSwitch = "ignore";
 
   location = {
     latitude = 50.9787;
