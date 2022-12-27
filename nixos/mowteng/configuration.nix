@@ -69,6 +69,7 @@
   environment.systemPackages = with pkgs; [
     lm_sensors
     linuxKernel.packages.linux_lqx.cpupower
+    exfatprogs
   ];
 
   hardware = {
