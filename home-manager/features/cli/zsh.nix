@@ -14,6 +14,7 @@
       initExtra = ''
         source $ZDOTDIR/zgenom-setup
 
+        export PATH=$PATH:$HOME/.local/bin
         export COMPLETION_WAITING_DOTS="true"
 
         setopt correct

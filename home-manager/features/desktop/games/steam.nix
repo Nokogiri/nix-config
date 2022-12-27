@@ -19,6 +19,9 @@
             stdenv.cc.cc.lib
             libkrb5
             keyutils
+            gst_all_1.gst-plugins-good
+            gst_all_1.gst-plugins-ugly
+            gst_all_1.gst-plugins-bad
           ];
       };
     };

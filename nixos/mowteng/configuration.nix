@@ -30,6 +30,7 @@
     ../common/optional/steam.nix
     ../common/optional/systemd-boot.nix
     ../common/optional/systemd-network.nix
+    ../common/optional/systemd-wireguard.nix
     ../common/optional/wireless-iwd.nix
     ../common/optional/xdg-portal.nix
 
@@ -55,6 +56,7 @@
   networking = {
     hostName = "mowteng";
     hostId = "05fc191c";
+    enableIPv6 = false;
   };
 
   boot = {
