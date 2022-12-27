@@ -1,7 +1,1 @@
-{
-  virtualisation = {
-    docker = {
-      storageDriver = "zfs";
-    };
-  };
-}
+{ virtualisation = { docker = { storageDriver = "zfs"; }; }; }

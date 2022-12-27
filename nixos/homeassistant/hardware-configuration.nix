@@ -1,4 +1,5 @@
-{lib, config, ...}:# This is just an example, you should generate yours with nixos-generate-config and put it in here.
+{ lib, config, ...
+}: # This is just an example, you should generate yours with nixos-generate-config and put it in here.
 {
 
   boot = {

@@ -1,1 +1,4 @@
-{ imports = [ ./firewall.nix ./nginx.nix ./systemd-network.nix ./wireguard.nix ]; }
+{
+  imports =
+    [ ./firewall.nix ./nginx.nix ./systemd-network.nix ./wireguard.nix ];
+}

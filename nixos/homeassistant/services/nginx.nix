@@ -1,7 +1,8 @@
 {
-  sops.secrets.ovh_dns = { 
+  sops.secrets.ovh_dns = {
     sopsFile = ../../common/secrets.yaml;
-    owner = "acme"; };
+    owner = "acme";
+  };
 
   security.acme = {
     acceptTerms = true;
