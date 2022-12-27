@@ -14,7 +14,7 @@
   systemd.network.netdevs."90-wireguard" = {
     netdevConfig = {
       Kind = "wireguard";
-      Name = "wg0";
+      Name = "calvin";
     };
     wireguardConfig = {
       PrivateKeyFile = config.sops.secrets."wg_private/homeassistant".path;
@@ -32,7 +32,7 @@
   };
 
   systemd.network.networks."90-wireguard" = {
-      matchConfig.Name = "wg0";
+      matchConfig.Name = "calvin";
       address = [ "10.200.200.2/24" ];
       dns = [ "10.200.200.1" ];
       routes = [{
