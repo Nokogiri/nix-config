@@ -56,7 +56,6 @@
   networking = {
     hostName = "mowteng";
     hostId = "05fc191c";
-    enableIPv6 = false;
   };
 
   boot = {

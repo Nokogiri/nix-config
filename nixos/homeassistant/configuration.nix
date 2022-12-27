@@ -21,6 +21,7 @@
     ../common/optional/docker-zfs.nix
     ../common/optional/grub-efi.nix
     ../common/optional/systemd-network.nix
+    ../common/optional/systemd-wireguard.nix
     #../common/optional/libvirt.nix
     ../common/users/nokogiri.nix
 
