@@ -1,9 +1,10 @@
 { pkgs, config, ... }: {
 
-  networking.firewall.allowedUDPPorts = [ 5353 ];
+  #networking.firewall.allowedUDPPorts = [ 5353 ];
   services.avahi = {
     enable = true;
-    hostName = config.networking.hostName;
+    #interfaces = [ "wlan0" ];
+    hostName = "${config.networking.hostName}";
     extraServiceFiles = {
       ssh = "${pkgs.avahi}/etc/avahi/services/ssh.service";
     };
