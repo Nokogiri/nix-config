@@ -1,7 +1,7 @@
 { config, ... }: {
   systemd.network.networks."90-wireguard" = {
     matchConfig.Name = "calvin";
-    address = [ "10.200.200.2/24" ];
+    address = [ "10.200.200.3/24" ];
     dns = [ "10.200.200.1" ];
     routes = [{
       routeConfig = {

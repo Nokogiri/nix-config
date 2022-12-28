@@ -17,7 +17,8 @@
       Name = "calvin";
     };
     wireguardConfig = {
-      PrivateKeyFile = config.sops.secrets."wg_private/${config.networking.hostName}".path;
+      PrivateKeyFile =
+        config.sops.secrets."wg_private/${config.networking.hostName}".path;
       ListenPort = 51872;
     };
     wireguardPeers = [{
@@ -25,7 +26,8 @@
         AllowedIPs = [ "10.200.200.0/24" "::/1" ];
         Endpoint = "46.38.240.252:51871";
         PersistentKeepalive = 25;
-        PresharedKeyFile = config.sops.secrets."wg_psk/${config.networking.hostName}".path;
+        PresharedKeyFile =
+          config.sops.secrets."wg_psk/${config.networking.hostName}".path;
         PublicKey = "IqYGE/5SPmMPEs0us6ZkH5RlePZ2KJDpGxBgjCBnQno=";
       };
     }];
@@ -35,7 +37,7 @@
   #  matchConfig.Name = "calvin";
   #  address = [ "10.200.200.2/24" ];
   #  dns = [ "10.200.200.1" ];
-   # routes = [{
+  # routes = [{
   #    routeConfig = {
   #      Destination = "10.200.200.0/24";
   #      Scope = "link";

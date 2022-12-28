@@ -21,7 +21,6 @@
     ../common/optional/desktop.nix
     ../common/optional/fonts.nix
     #../common/optional/libvirt.nix
-    #../common/optional/networkmanager.nix
     ../common/optional/pipewire.nix
     ../common/optional/quietboot.nix
     ../common/optional/resolved.nix

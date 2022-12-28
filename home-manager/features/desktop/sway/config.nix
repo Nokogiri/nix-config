@@ -185,7 +185,7 @@ in {
         "${cfg.modifier}+minus" = "scratchpad show";
 
         # sway-prop
-        "${cfg.modifier}+Shift+i" = "exec sway-prop";
+        "${cfg.modifier}+Shift+i" = "exec /home/nokogiri/.local/bin/sway-prop";
 
         "${cfg.modifier}+w" = "exec makoctl dismiss";
         # Apps
