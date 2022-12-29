@@ -26,7 +26,7 @@
   ];
 
   home.sessionVariables = {
-    MOZ_ENABLE_WAYLAND = true;
+    MOZ_ENABLE_WAYLAND = 1;
     QT_QPA_PLATFORM = "wayland;xcb";
     QT_QPA_PLATFORMTHEME = "qt5ct";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";

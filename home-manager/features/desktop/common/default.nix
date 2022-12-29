@@ -16,8 +16,6 @@
     TDESKTOP_DISABLE_GTK_INTEGRATION = "1";
     CLUTTER_BACKEND = "wayland";
     BEMENU_BACKEND = "wayland";
-    MOZ_ENABLE_WAYLAND = "1";
-    QT_QPA_PLATFORM = "wayland-egl";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     SDL_VIDEODRIVER = "wayland";
     NO_AT_BRIDGE = "1";
