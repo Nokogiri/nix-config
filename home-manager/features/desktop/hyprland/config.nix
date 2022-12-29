@@ -1,6 +1,6 @@
 ''
   general {
-    main_mod=SUPER
+    #main_mod=SUPER
     gaps_in=15
     gaps_out=20
     border_size=2.7
@@ -9,6 +9,7 @@
     cursor_inactive_timeout=4
   }
 
+  monitor=eDP-1,preferred,auto,1
   decoration {
     active_opacity=0.88
     inactive_opacity=0.68
@@ -60,13 +61,23 @@
   input {
     kb_layout=us
     touchpad {
-      disable_while_typing=false
+      disable_while_typing=true
     }
   }
 
+  device:wacom-hid-49c8-finger {
+      output=eDP-1
+      #transform=1
+    }
+  device:wacom-hid-49c8-pen {
+    output=eDP-1
+    #transform=1
+  }
+  
+
   # Startup
   #exec-once=waybar
-  exec=swaybg -i /home/nokogiri/.config/wallpaper/wall-05.png --mode fill
+  #exec=swaybg -i /home/nokogiri/.config/wallpaper/wall-05.png --mode fill
   exec-once=mako
   exec-once=swayidle -w
   exec-once=wl-paste --watch cliphist store

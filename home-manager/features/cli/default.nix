@@ -29,7 +29,7 @@
     ponymix
     iio-sensor-proxy
     sshfs-fuse
-
+    pciutils
     #
     mailctl
 
