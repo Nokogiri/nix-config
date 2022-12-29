@@ -25,7 +25,7 @@
     };
 
     # hyprland
-    hyprland.url = "github:hyprwm/hyprland/v0.17.0beta";
+    hyprland.url = "github:hyprwm/hyprland";
     hyprwm-contrib.url = "github:hyprwm/contrib";
 
     # nvim nächtlicherweise
