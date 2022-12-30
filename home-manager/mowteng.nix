@@ -57,6 +57,7 @@
   };
 
   home.packages = with pkgs; [
+    google-chrome
     squeekboard
   ];
   # Add stuff for your user as you see fit:

@@ -67,17 +67,19 @@
 
   device:wacom-hid-49c8-finger {
       output=eDP-1
-      #transform=1
+      enabled=true
     }
   device:wacom-hid-49c8-pen {
     output=eDP-1
-    #transform=1
+    enabled=true
   }
   
 
   # Startup
   #exec-once=waybar
   #exec=swaybg -i /home/nokogiri/.config/wallpaper/wall-05.png --mode fill
+  exec-once=swww init
+  exec-once=swww img ~/.local/share/wallpaper/Jupiter.webp --transition-step 128 --transition-fps 60 --transition-type outer --transition-pos top-left
   exec-once=mako
   exec-once=swayidle -w
   exec-once=wl-paste --watch cliphist store

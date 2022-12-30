@@ -14,7 +14,6 @@ in {
       stylus
       sponsorblock
       refined-github
-      #onetab
       netflix-1080p
       gopass-bridge
       ff2mpv
