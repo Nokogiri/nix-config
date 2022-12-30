@@ -5,8 +5,9 @@
   # example = pkgs.callPackage ./example { };
   catppuccin-gtk-frappe-teal =
     pkgs.callPackage ./catppuccin-gtk-frappe-teal { };
-  colloid-cursors = pkgs.callPackage ./colloid-cursors { };
-  heroic = pkgs.callPackage ./heroic { };
+    colloid-cursors = pkgs.callPackage ./colloid-cursors { };
+  heroic-unwrapped = pkgs.callPackage ./heroic { };  
+  heroic = pkgs.callPackage ./heroic/fhsenv.nix { };
   mailctl = pkgs.callPackage ./mailctl { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   pass-fuzzel = pkgs.callPackage ./pass-fuzzel { };
