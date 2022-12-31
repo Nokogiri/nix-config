@@ -10,8 +10,9 @@
     ./global
     ./features/desktop/common
     ./features/desktop/games
-    ./features/desktop/hyprland
-    #./features/desktop/sway
+    ./features/helix
+    #./features/desktop/hyprland
+    ./features/desktop/sway
 
     # Or modules exported from other flakes (such as nix-colors):
     inputs.nix-colors.homeManagerModules.default
@@ -56,10 +57,7 @@
     homeDirectory = "/home/nokogiri";
   };
 
-  home.packages = with pkgs; [
-    google-chrome
-    squeekboard
-  ];
+  #home.packages = with pkgs; [ ];
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
   #home.packages = with pkgs; [ steam ];

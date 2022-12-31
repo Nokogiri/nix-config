@@ -73,7 +73,7 @@
     output=eDP-1
     enabled=true
   }
-  
+
 
   # Startup
   #exec-once=waybar
