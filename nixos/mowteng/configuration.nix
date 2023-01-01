@@ -20,7 +20,7 @@
     ../common/optional/bluetooth.nix
     ../common/optional/desktop.nix
     ../common/optional/fonts.nix
-    #../common/optional/libvirt.nix
+    ../common/optional/networkmanager.nix
     ../common/optional/pipewire.nix
     ../common/optional/quietboot.nix
     ../common/optional/resolved.nix
@@ -28,9 +28,6 @@
     ../common/optional/sane.nix
     ../common/optional/steam.nix
     ../common/optional/systemd-boot.nix
-    ../common/optional/systemd-network.nix
-    ../common/optional/systemd-wireguard.nix
-    ../common/optional/wireless-iwd.nix
     ../common/optional/xdg-portal.nix
 
     ../common/users/nokogiri.nix

@@ -5,7 +5,7 @@
     neededForUsers = true;
   };
 
-  networking.dhcpcd.enable = true;
+  #networking.dhcpcd.enable = true;
 
   networking.wireless = {
     enable = true;

@@ -232,7 +232,7 @@
   bind=SUPERSHIFT,9,movetoworkspacesilent,09
 
   windowrulev2 = workspace 3 silent,class:^(mpv)$
-  windowrulev2 = fullscreen,nofullscreenrequest,opaque,noblur,forceinput,class:^(.gamescope-wrapped)$
+  #windowrulev2 = fullscreen,opaque,noblur,forceinput,class:^(.gamescope-wrapped)$
   windowrulev2 = workspace 7 silent,class:^(Spotify)$
   #blurls=waybar
 ''
