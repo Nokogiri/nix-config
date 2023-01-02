@@ -8,6 +8,7 @@
   colloid-cursors = pkgs.callPackage ./colloid-cursors { };
   heroic-unwrapped = pkgs.callPackage ./heroic { };
   heroic = pkgs.callPackage ./heroic/fhsenv.nix { };
+  iio-sensor-proxy = pkgs.callPackage ./iio-sensor-proxy { };
   mailctl = pkgs.callPackage ./mailctl { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   pass-fuzzel = pkgs.callPackage ./pass-fuzzel { };
