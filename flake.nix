@@ -25,8 +25,8 @@
     };
 
     # hyprland
-    hyprland.url = "github:hyprwm/hyprland";
-    hyprwm-contrib.url = "github:hyprwm/contrib";
+    #hyprland.url = "github:hyprwm/hyprland";
+    #hyprwm-contrib.url = "github:hyprwm/contrib";
 
     # nvim nächtlicherweise
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
