@@ -18,6 +18,7 @@
     #RBDOOM-3-BFG
     #vkquake
     #yquake2-all-games
+    zeroad
 
     # emulation
     cemu
