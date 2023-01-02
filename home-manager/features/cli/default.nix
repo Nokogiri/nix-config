@@ -25,7 +25,7 @@
     gopass
     pamixer
     ponymix
-    iio-sensor-proxy
+    #iio-sensor-proxy
     sshfs-fuse
     pciutils
     #

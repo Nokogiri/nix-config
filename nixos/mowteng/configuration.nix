@@ -28,6 +28,8 @@
     ../common/optional/sane.nix
     ../common/optional/steam.nix
     ../common/optional/systemd-boot.nix
+    #../common/optional/systemd-network.nix
+    #../common/optional/wireless-iwd.nix
     ../common/optional/xdg-portal.nix
 
     ../common/users/nokogiri.nix
@@ -62,6 +64,10 @@
       name = "d3cold-fix";
       patch = ./patches/d3cold.patch;
     }];
+    kernelParams = [
+      "acpi_os_name=\"Windows 2015\""
+      "acpi_osi=\"Windows 2015\""
+    ];
   };
 
   environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
@@ -87,6 +93,7 @@
     powertop.enable = false;
   };
 
+  services.fwupd.enable = true;
   programs = {
     light.enable = true;
     mtr.enable = true;
