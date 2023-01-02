@@ -1,1 +1,1 @@
-{ pkgs, ... }: { home.packages = with pkgs; [ pavucontrol ]; }
+{ pkgs, ... }: { home.packages = with pkgs; [ lxqt.pavucontrol-qt ]; }

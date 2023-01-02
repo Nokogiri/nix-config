@@ -62,10 +62,8 @@
       name = "d3cold-fix";
       patch = ./patches/d3cold.patch;
     }];
-    kernelParams = [
-      "acpi_os_name=\"Windows 2015\""
-      "acpi_osi=\"Windows 2015\""
-    ];
+    kernelParams =
+      [ ''acpi_os_name="Windows 2015"'' ''acpi_osi="Windows 2015"'' ];
   };
 
   environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";

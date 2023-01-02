@@ -1,7 +1,1 @@
-{
-  imports = [
-    ./tmpfiles.nix
-    ./tlp.nix
-    ./firewall.nix
- ];
-}
+{ imports = [ ./tmpfiles.nix ./tlp.nix ./firewall.nix ]; }

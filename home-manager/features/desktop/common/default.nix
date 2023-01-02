@@ -23,7 +23,6 @@
   };
 
   home.packages = with pkgs; [
-    gimp
     libnotify
     (let
       python-packages-plus = python-packages:
@@ -40,8 +39,6 @@
         ];
       python-with-packages-plus = python3.withPackages python-packages-plus;
     in python-with-packages-plus)
-    udiskie
-    wezterm
     xournalpp
     xdg_utils
   ];
