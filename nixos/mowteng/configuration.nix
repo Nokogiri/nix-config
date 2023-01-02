@@ -28,8 +28,6 @@
     ../common/optional/sane.nix
     ../common/optional/steam.nix
     ../common/optional/systemd-boot.nix
-    #../common/optional/systemd-network.nix
-    #../common/optional/wireless-iwd.nix
     ../common/optional/xdg-portal.nix
 
     ../common/users/nokogiri.nix
