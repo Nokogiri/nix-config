@@ -1,17 +1,9 @@
-# This is your home-manager configuration file
-# Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
-
 { inputs, outputs, lib, config, pkgs, ... }: {
-  # You can import other home-manager modules here
   imports = [
-    # If you want to use modules your own flake exports (from modules/home-manager):
-    # outputs.homeManagerModules.example
-
     ./global
     ./features/desktop/common
     ./features/desktop/games
     ./features/helix
-    #./features/desktop/hyprland
     ./features/desktop/sway
 
     # Or modules exported from other flakes (such as nix-colors):
@@ -57,10 +49,7 @@
     homeDirectory = "/home/nokogiri";
   };
 
-  #home.packages = with pkgs; [ ];
-  # Add stuff for your user as you see fit:
-  # programs.neovim.enable = true;
-  #home.packages = with pkgs; [ steam ];
+  home.packages = with pkgs; [ transmission-remote-gtk ];
 
   # Enable home-manager and git
   programs = {

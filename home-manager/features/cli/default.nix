@@ -5,6 +5,7 @@
     ./fzf.nix
     ./git.nix
     ./lsd.nix
+    ./nix-index.nix
     ./pfetch.nix
     ./ranger.nix
     ./ssh.nix
