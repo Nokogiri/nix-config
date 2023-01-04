@@ -56,8 +56,8 @@
 
   boot = {
     cleanTmpDir = true;
-    extraModulePackages = [ pkgs.linuxPackages_lqx.zenpower ];
-    kernelPackages = pkgs.linuxPackages_lqx;
+    extraModulePackages = [ pkgs.linuxPackages_zen.zenpower ];
+    kernelPackages = pkgs.linuxPackages_zen;
     kernelPatches = [{
       name = "d3cold-fix";
       patch = ./patches/d3cold.patch;
@@ -70,7 +70,7 @@
 
   environment.systemPackages = with pkgs; [
     lm_sensors
-    linuxKernel.packages.linux_lqx.cpupower
+    linuxKernel.packages.linux_zen.cpupower
     exfatprogs
   ];
 

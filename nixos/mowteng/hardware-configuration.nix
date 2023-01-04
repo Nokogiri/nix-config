@@ -9,44 +9,49 @@
       options usb-storage quirks=090c:1000:,152d:0578:u,0bc2:2322:u
     '';
     initrd = {
-      availableKernelModules = [ "nvme" "xhci_pci" "ahci" "sd_mod" ];
+      availableKernelModules = [ "nvme" "xhci_pci" "ahci" ];
       kernelModules = [ "amd_pstate" "amdgpu" "mt7921e" ];
     };
-    kernelModules = [ "kvm-amd" "zenpower" "msr" ];
+    kernelModules = [ "kvm-amd" "zenpower" ];
     loader.efi.efiSysMountPoint = "/boot";
-    supportedFilesystems = [ "zfs" ];
+    supportedFilesystems = [ "btrfs" ];
   };
 
   fileSystems = {
-    "/" = {
-      device = "mowteng/system/root";
-      fsType = "zfs";
-      options = [ "zfsutil" "noatime" "X-mount.mkdir" ];
+  "/" =
+    { device = "/dev/disk/by-uuid/faaa7f5b-84cb-4fe4-b204-4089702f8dc8";
+      fsType = "btrfs";
+      options = [ "subvol=root" "compress=zstd:6" ];
     };
-    "/tmp" = {
-      device = "mowteng/system/tmp";
-      fsType = "zfs";
-      options = [ "zfsutil" "X-mount.mkdir" ];
+
+    "/nix" =
+    { device = "/dev/disk/by-uuid/faaa7f5b-84cb-4fe4-b204-4089702f8dc8";
+      fsType = "btrfs";
+      options = [ "subvol=nix" "compress=zstd:6" "noatime" ];
     };
-    "/home" = {
-      device = "mowteng/data/home";
-      fsType = "zfs";
-      options = [ "zfsutil" "X-mount.mkdir" ];
+
+    "/home" =
+    { device = "/dev/disk/by-uuid/623581cb-fdde-420b-ab2b-c2a0a8228fe4";
+      fsType = "btrfs";
+      options = [ "subvol=home" "compress=zstd:6" ];
     };
-    "/nix" = {
-      device = "mowteng/local/nix";
-      fsType = "zfs";
-      options = [ "zfsutil" "noatime" "X-mount.mkdir" ];
+
+    "/home/Games" =
+    { device = "/dev/disk/by-uuid/623581cb-fdde-420b-ab2b-c2a0a8228fe4";
+      fsType = "btrfs";
+      options = [ "subvol=games" "compress=zstd:6" ];
     };
-    "/var/lib" = {
-      device = "mowteng/system/var/lib";
-      fsType = "zfs";
-      options = [ "zfsutil" "X-mount.mkdir" ];
+
+    "/var/lib" =
+    { device = "/dev/disk/by-uuid/faaa7f5b-84cb-4fe4-b204-4089702f8dc8";
+      fsType = "btrfs";
+      options = [ "subvol=var/lib" ];
     };
-    "/var/log" = {
-      device = "mowteng/system/var/log";
-      fsType = "zfs";
-      options = [ "zfsutil" "X-mount.mkdir" ];
+
+    "/var/log" =
+    { device = "/dev/disk/by-uuid/faaa7f5b-84cb-4fe4-b204-4089702f8dc8";
+      fsType = "btrfs";
+      options = [ "subvol=var/log" ];
     };
     "/boot" = {
       device = "/dev/disk/by-uuid/67B9-6ED6";
