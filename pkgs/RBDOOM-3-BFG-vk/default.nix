@@ -1,5 +1,13 @@
-{ lib, fetchFromGitHub, stdenv, cmake, ffmpeg, openal, SDL2, vulkan-headers
-, vulkan-loader }:
+{ lib
+, fetchFromGitHub
+, stdenv
+, cmake
+, ffmpeg
+, openal
+, SDL2
+, vulkan-headers
+, vulkan-loader
+}:
 stdenv.mkDerivation rec {
   name = "RBDOOM-3-BFG";
   version = "1.4.0";

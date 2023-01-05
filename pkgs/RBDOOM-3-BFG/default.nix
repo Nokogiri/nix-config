@@ -1,5 +1,18 @@
-{ lib, fetchFromGitHub, stdenv, cmake, ffmpeg, openal, SDL2, libGLU, libGL, zlib
-, glew, libjpeg, libpng, rapidjson }:
+{ lib
+, fetchFromGitHub
+, stdenv
+, cmake
+, ffmpeg
+, openal
+, SDL2
+, libGLU
+, libGL
+, zlib
+, glew
+, libjpeg
+, libpng
+, rapidjson
+}:
 stdenv.mkDerivation rec {
   name = "RBDOOM-3-BFG";
   version = "1.4.0";

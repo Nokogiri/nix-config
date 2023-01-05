@@ -1,5 +1,18 @@
-{ lib, stdenv, fetchFromGitLab, gettext, libtool, glib, gtk3, gtk-doc, libgudev
-, pkg-config, systemd, meson, polkit, ninja }:
+{ lib
+, stdenv
+, fetchFromGitLab
+, gettext
+, libtool
+, glib
+, gtk3
+, gtk-doc
+, libgudev
+, pkg-config
+, systemd
+, meson
+, polkit
+, ninja
+}:
 
 stdenv.mkDerivation rec {
   pname = "iio-sensor-proxy";
