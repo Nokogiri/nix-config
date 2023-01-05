@@ -17,7 +17,7 @@
     CLUTTER_BACKEND = "wayland";
     BEMENU_BACKEND = "wayland";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-    SDL_VIDEODRIVER = "wayland";
+   # SDL_VIDEODRIVER = "wayland";
     NO_AT_BRIDGE = "1";
     WINIT_UNIX_BACKEND = "wayland";
   };

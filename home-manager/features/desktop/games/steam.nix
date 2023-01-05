@@ -17,6 +17,7 @@
             libpulseaudio
             libvorbis
             stdenv.cc.cc.lib
+            SDL2
             libkrb5
             keyutils
             gst_all_1.gst-plugins-good

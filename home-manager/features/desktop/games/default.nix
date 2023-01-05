@@ -8,6 +8,7 @@
     gamescope
     heroic
     mangohud
+    portmod
     prismlauncher
     steam
 
@@ -15,6 +16,7 @@
 
     #zeroad
     gzdoom
+    openmw
     #RBDOOM-3-BFG
     #vkquake
     #yquake2-all-games

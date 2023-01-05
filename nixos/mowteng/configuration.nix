@@ -63,7 +63,7 @@
       patch = ./patches/d3cold.patch;
     }];
     kernelParams =
-      [ ''acpi_os_name="Windows 2015"'' ''acpi_osi="Windows 2015"'' ];
+      [ "amd_pstate=passive" ];
   };
 
   environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
@@ -71,6 +71,7 @@
   environment.systemPackages = with pkgs; [
     lm_sensors
     linuxKernel.packages.linux_zen.cpupower
+    linuxKernel.packages.linux_zen.turbostat
     exfatprogs
   ];
 
@@ -100,6 +101,9 @@
     longitude = 11.03283;
   };
 
+  services.logind.extraConfig = ''
+    RuntimeDirectorySize=8G
+  '';
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "22.05";
 }

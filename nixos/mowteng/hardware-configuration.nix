@@ -10,7 +10,7 @@
     '';
     initrd = {
       availableKernelModules = [ "nvme" "xhci_pci" "ahci" ];
-      kernelModules = [ "amd_pstate" "amdgpu" "mt7921e" ];
+      kernelModules = [ "amdgpu" "mt7921e" ];
     };
     kernelModules = [ "kvm-amd" "zenpower" ];
     loader.efi.efiSysMountPoint = "/boot";
