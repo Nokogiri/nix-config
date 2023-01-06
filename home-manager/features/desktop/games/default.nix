@@ -14,12 +14,15 @@
 
     # native packaged games
 
-    #zeroad
+    zeroad
+    eduke32
     gzdoom
     openmw
     #RBDOOM-3-BFG
-    #vkquake
-    #yquake2-all-games
+    solarus
+    sm64ex
+    vkquake
+    yquake2-all-games
     zeroad
 
     # emulation

@@ -1,5 +1,6 @@
 { pkgs, ... }:
-  let udisks-automounter = pkgs.writeShellScriptBin {
+let
+  udisks-automounter = pkgs.writeShellScriptBin {
     name = "udisks-automount";
     runtimeInputs = with pkgs; [ udisks systemd ];
     text = ''
@@ -26,8 +27,6 @@ in {
       ExecStart = "%h/.nix-profile/bin/udisks-automount";
       Restart = "on-failure";
     };
-    Install = {
-      WantedBy = [ "default.target" ];
-    };
+    Install = { WantedBy = [ "default.target" ]; };
   };
 }

@@ -62,8 +62,7 @@
       name = "d3cold-fix";
       patch = ./patches/d3cold.patch;
     }];
-    kernelParams =
-      [ "amd_pstate=passive" ];
+    kernelParams = [ "amd_pstate=passive" ];
   };
 
   environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";

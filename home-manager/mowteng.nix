@@ -3,6 +3,7 @@
     ./global
     ./features/desktop/common
     ./features/desktop/games
+    ./features/desktop/media
     ./features/helix
     ./features/desktop/sway
 

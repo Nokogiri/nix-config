@@ -18,38 +18,38 @@
   };
 
   fileSystems = {
-  "/" =
-    { device = "/dev/disk/by-uuid/faaa7f5b-84cb-4fe4-b204-4089702f8dc8";
+    "/" = {
+      device = "/dev/disk/by-uuid/faaa7f5b-84cb-4fe4-b204-4089702f8dc8";
       fsType = "btrfs";
       options = [ "subvol=root" "compress=zstd:6" ];
     };
 
-    "/nix" =
-    { device = "/dev/disk/by-uuid/faaa7f5b-84cb-4fe4-b204-4089702f8dc8";
+    "/nix" = {
+      device = "/dev/disk/by-uuid/faaa7f5b-84cb-4fe4-b204-4089702f8dc8";
       fsType = "btrfs";
       options = [ "subvol=nix" "compress=zstd:6" "noatime" ];
     };
 
-    "/home" =
-    { device = "/dev/disk/by-uuid/623581cb-fdde-420b-ab2b-c2a0a8228fe4";
+    "/home" = {
+      device = "/dev/disk/by-uuid/623581cb-fdde-420b-ab2b-c2a0a8228fe4";
       fsType = "btrfs";
       options = [ "subvol=home" "compress=zstd:6" ];
     };
 
-    "/home/Games" =
-    { device = "/dev/disk/by-uuid/623581cb-fdde-420b-ab2b-c2a0a8228fe4";
+    "/home/Games" = {
+      device = "/dev/disk/by-uuid/623581cb-fdde-420b-ab2b-c2a0a8228fe4";
       fsType = "btrfs";
       options = [ "subvol=games" "compress=zstd:6" ];
     };
 
-    "/var/lib" =
-    { device = "/dev/disk/by-uuid/faaa7f5b-84cb-4fe4-b204-4089702f8dc8";
+    "/var/lib" = {
+      device = "/dev/disk/by-uuid/faaa7f5b-84cb-4fe4-b204-4089702f8dc8";
       fsType = "btrfs";
       options = [ "subvol=var/lib" ];
     };
 
-    "/var/log" =
-    { device = "/dev/disk/by-uuid/faaa7f5b-84cb-4fe4-b204-4089702f8dc8";
+    "/var/log" = {
+      device = "/dev/disk/by-uuid/faaa7f5b-84cb-4fe4-b204-4089702f8dc8";
       fsType = "btrfs";
       options = [ "subvol=var/log" ];
     };
