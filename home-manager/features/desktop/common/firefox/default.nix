@@ -5,6 +5,9 @@ in {
 
   imports = [ ./ff2mpv.json.nix ./ff2mpv.py.nix ];
 
+nixpkgs.config.allowUnfreePredicate = addons: builtins.elem (lib.getName addons) [
+             addons.onetab
+           ];
   programs.firefox = {
     enable = true;
     extensions = with addons; [
@@ -14,6 +17,7 @@ in {
       stylus
       sponsorblock
       refined-github
+#      onetab
       netflix-1080p
       gopass-bridge
       ff2mpv
