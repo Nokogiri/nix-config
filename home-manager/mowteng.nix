@@ -6,6 +6,7 @@
     ./features/desktop/media
     ./features/helix
     ./features/desktop/sway
+    #./features/desktop/hyprland
 
     # Or modules exported from other flakes (such as nix-colors):
     inputs.nix-colors.homeManagerModules.default
@@ -23,7 +24,7 @@
       outputs.overlays.additions
 
       # Or overlays exported from other flakes:
-      inputs.neovim-nightly-overlay.overlay
+      #inputs.neovim-nightly-overlay.overlay
       inputs.nix-gaming.overlays.default
       #inputs.hyprland.nixosModules.default
       #neovim-nightly-overlay.overlays.default
@@ -41,7 +42,7 @@
       allowUnfree = true;
       # Workaround for https://github.com/nix-community/home-manager/issues/2942
       allowUnfreePredicate = (_: true);
-    };
+   };
   };
 
   # TODO: Set your username

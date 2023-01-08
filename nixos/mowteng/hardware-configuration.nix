@@ -67,13 +67,20 @@
     };
   };
 
-  swapDevices =
-    [{ device = "/dev/disk/by-uuid/b6b88dbb-ad22-4746-ba8a-a1c32b3a184f"; }];
+  swapDevices = [{
+    device = "/dev/disk/by-uuid/b6b88dbb-ad22-4746-ba8a-a1c32b3a184f";
+    priority = 100;
+  }];
+
+  zramSwap = {
+    enable = true;
+    priority = 5;
+  };
 
   hardware = {
-    cpu.amd.updateMicrocode =
-      lib.mkDefault config.hardware.enableRedistributableFirmware;
-    enableRedistributableFirmware = true;
+    cpu.amd.updateMicrocode = true;
+      #lib.mkDefault config.hardware.enableRedistributableFirmware;
+    #enableRedistributableFirmware = true;
 
     sensor.iio.enable = true;
     uinput.enable = true;

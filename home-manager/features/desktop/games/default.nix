@@ -22,6 +22,7 @@
     solarus
     sm64ex
     vkquake
+    yquake2
     yquake2-all-games
     zeroad
 
