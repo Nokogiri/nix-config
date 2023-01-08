@@ -1,10 +1,6 @@
 { pkgs, ... }:
 {
-  #home.file.".local/bin/udisksd" = {
-  #  source = ./udisksd;
-  #  executable = true;
-  #};
-  home.packages = with pkgs; [
+ home.packages = with pkgs; [
     (pkgs.writeTextFile {
       name = "udisksd";
       destination = "/bin/udisksd";
