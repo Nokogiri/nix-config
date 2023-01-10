@@ -1,6 +1,7 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
     ./global
+    ./features/cli/nix-stuff.nix
     ./features/desktop/common
     ./features/desktop/games
     ./features/desktop/media

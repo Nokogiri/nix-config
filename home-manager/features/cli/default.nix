@@ -47,13 +47,6 @@
     tealdeer
     ps_mem
 
-    rnix-lsp # Nix LSP
-    nixfmt # Nix formatter
-    nix-diff
-    nix-direnv
-    nix-top
-    nix-tree
-    nix-pin
     nix-zsh-completions
     nix-stray-roots
   ];
