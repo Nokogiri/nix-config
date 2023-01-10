@@ -30,7 +30,7 @@
       outputs.overlays.additions
 
       # Or overlays exported from other flakes:
-      inputs.neovim-nightly-overlay.overlay
+      #inputs.neovim-nightly-overlay.overlay
       #inputs.nix-gaming.overlays.default
       #inputs.hyprland.nixosModules.default
       #neovim-nightly-overlay.overlays.default
