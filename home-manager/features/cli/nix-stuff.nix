@@ -4,7 +4,7 @@
     rnix-lsp
     nixfmt
     nix-diff
-    nix0direnv
+    nix-direnv
     nix-top
     nix-tree
     nix-pin
