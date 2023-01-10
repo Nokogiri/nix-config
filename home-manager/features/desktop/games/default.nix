@@ -8,6 +8,7 @@
     gamescope
     heroic
     mangohud
+    moonlight-qt
     portmod
     prismlauncher
     steam
@@ -28,6 +29,8 @@
 
     # emulation
     cemu
+    dolphin-emu-beta
+    #dolphin-emu-primehack
     libretro.beetle-pce-fast
     libretro.beetle-psx
     libretro.beetle-psx-hw
@@ -37,6 +40,7 @@
     libretro.mupen64plus
     libretro.parallel-n64
     libretro.snes9x
+    pcsx2
     ppsspp
     rpcs3
     ryujinx

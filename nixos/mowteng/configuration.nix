@@ -56,21 +56,22 @@
 
   boot = {
     cleanTmpDir = true;
-    extraModulePackages = [ pkgs.linuxPackages_zen.zenpower ];
-    kernelPackages = pkgs.linuxPackages_zen;
-    kernelPatches = [{
-      name = "d3cold-fix";
-      patch = ./patches/d3cold.patch;
-    }];
+    extraModulePackages = with config.boot.kernelPackages; [ zenpower cpupower turbostat ];
+    kernelPackages = pkgs.linuxPackages_latest;
+    #kernelPatches = [{
+    #  name = "d3cold-fix";
+    #  patch = ./patches/d3cold.patch;
+    #}];
     kernelParams = [ "amd_pstate=passive" ];
   };
 
   environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
 
   environment.systemPackages = with pkgs; [
+    amdctl
     lm_sensors
-    linuxKernel.packages.linux_zen.cpupower
-    linuxKernel.packages.linux_zen.turbostat
+    #linuxKernel.packages.linux_latest.cpupower
+    #linuxKernel.packages.linux_latest.turbostat
     exfatprogs
   ];
 

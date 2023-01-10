@@ -16,9 +16,10 @@
   home.sessionVariables = { PATH = "$PATH:$HOME/.local/bin"; };
 
   home.packages = with pkgs; [
-    comma # Install and run programs by sticking a , before them
+    #comma # Install and run programs by sticking a , before them
     #distrobox # Nice escape hatch, integrates docker images with my environment
 
+    tmux
     # archive stuff
     unzip
     unrar
@@ -26,15 +27,11 @@
     gopass
     pamixer
     ponymix
-    #iio-sensor-proxy
     sshfs-fuse
-    pciutils
-    #
     mailctl
 
     neofetch
     bc # Calculator
-    bottom # System viewer
     btop # same
     dfc # better df
     mediainfo
@@ -44,7 +41,7 @@
     fd # Better find
     file
     #toybox # toying around
-    #httpie # Better curl
+    httpie # Better curl
     jq # JSON pretty printer and manipulator
     #trekscii # Cute startrek cli printer
     tealdeer

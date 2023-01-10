@@ -3,6 +3,7 @@
 
 { pkgs ? (import ../nixpkgs.nix) { } }: {
   # example = pkgs.callPackage ./example { };
+  amdctl = pkgs.callPackage ./amdctl { };
   catppuccin-gtk-frappe-teal =
     pkgs.callPackage ./catppuccin-gtk-frappe-teal { };
   colloid-cursors = pkgs.callPackage ./colloid-cursors { };
