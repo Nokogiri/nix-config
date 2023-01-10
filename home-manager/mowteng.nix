@@ -24,6 +24,7 @@
       outputs.overlays.modifications
       outputs.overlays.additions
 
+
       # Or overlays exported from other flakes:
       #inputs.neovim-nightly-overlay.overlay
       inputs.nix-gaming.overlays.default
