@@ -7,6 +7,7 @@
     ./pavucontrol.nix
     ./playerctl.nix
     ./spotify.nix
+    ./thunderbird.nix
     ./udisks.nix
     ./youtube.nix
   ];
