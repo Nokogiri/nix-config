@@ -55,15 +55,9 @@
     lm_sensors
     rclone
     sshfs-fuse
-    udisks
   ];
 
   hardware = {
-    opengl = {
-      enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
-    };
   };
 
   powerManagement = {
@@ -74,7 +68,7 @@
   programs = {
     gnupg.agent.enable = true;
     light.enable = true;
-    mtr.enable = true;
+    #mtr.enable = true;
     ssh.startAgent = true;
   };
 
