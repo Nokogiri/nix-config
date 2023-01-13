@@ -55,9 +55,9 @@
 
   boot = {
     cleanTmpDir = true;
-    extraModulePackages = with config.boot.kernelPackages; [  ];
+    extraModulePackages = with config.boot.kernelPackages; [ ];
     kernelPackages = pkgs.linuxPackages_lqx;
- };
+  };
 
   #environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
 
@@ -66,7 +66,6 @@
     exfatprogs
     ntfs3g
   ];
-
   hardware = {
     nvidia = {
       package = config.boot.kernelPackages.nvidiaPackages.stable;
@@ -103,10 +102,8 @@
     layout = "us";
     xkbVariant = "";
   };
-  
-  programs = {
-    mtr.enable = true;
-  };
+
+  programs = { mtr.enable = true; };
 
   location = {
     latitude = 50.9787;

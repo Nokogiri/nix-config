@@ -56,7 +56,11 @@
 
   boot = {
     cleanTmpDir = true;
-    extraModulePackages = with config.boot.kernelPackages; [ zenpower cpupower turbostat ];
+    extraModulePackages = with config.boot.kernelPackages; [
+      zenpower
+      cpupower
+      turbostat
+    ];
     kernelPackages = pkgs.linuxPackages_latest;
     #kernelPatches = [{
     #  name = "d3cold-fix";

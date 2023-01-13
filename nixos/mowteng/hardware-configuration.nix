@@ -79,7 +79,7 @@
 
   hardware = {
     cpu.amd.updateMicrocode = true;
-      #lib.mkDefault config.hardware.enableRedistributableFirmware;
+    #lib.mkDefault config.hardware.enableRedistributableFirmware;
     #enableRedistributableFirmware = true;
 
     sensor.iio.enable = true;

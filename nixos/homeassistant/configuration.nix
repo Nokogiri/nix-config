@@ -57,8 +57,7 @@
     sshfs-fuse
   ];
 
-  hardware = {
-  };
+  hardware = { };
 
   powerManagement = {
     cpuFreqGovernor = "ondemand";
