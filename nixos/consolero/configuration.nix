@@ -68,7 +68,10 @@
   ];
 
   hardware = {
-    nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+    nvidia = {
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      modesetting.enable = true;
+    };
     opengl = {
       enable = true;
       #extraPackages = with pkgs; [ amdvlk ];
@@ -84,6 +87,23 @@
   };
 
   services.fwupd.enable = true;
+
+  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.displayManager.autoLogin.enable = true;
+  services.xserver.displayManager.autoLogin.user = "nokogiri";
+  # Enable the X11 windowing system.
+  services.xserver.enable = true;
+
+  # Enable the KDE Plasma Desktop Environment.
+  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.desktopManager.plasma5.enable = true;
+
+  # Configure keymap in X11
+  services.xserver = {
+    layout = "us";
+    xkbVariant = "";
+  };
+  
   programs = {
     mtr.enable = true;
   };

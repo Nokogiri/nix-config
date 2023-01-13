@@ -110,6 +110,14 @@
         };
       };
 
+      nixosCOnfigurations = {
+        consolero = nixpkgs.lib.nixosSystem {
+          modules = [ ./nixos/consolero/configuration.nix ]
+          ++ (builtins.attrValues nixosModules);
+          specialArgs = { inherit inputs outputs; };
+        };
+      };
+
       # Standalone home-manager configuration entrypoint
       # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
@@ -131,6 +139,18 @@
           modules = [
             # > Our main home-manager configuration file <
             ./home-manager/homeassistant.nix
+          ];
+        };
+      };
+
+      homeConfigurations = {
+        "nokogiri@consolero" = home-manager.lib.homeManagerConfiguration {
+          pkgs =
+            nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [
+            # > Our main home-manager configuration file <
+            ./home-manager/consolero.nix
           ];
         };
       };

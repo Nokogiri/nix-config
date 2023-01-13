@@ -10,9 +10,9 @@
     '';
     initrd = {
       availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
-      kernelModules = [ "amdgpu" "mt7921e" ];
+      kernelModules = [ ];
     };
-    kernelModules = [ "kvm-intel" "" ];
+    kernelModules = [ "kvm-intel" ];
     loader.efi.efiSysMountPoint = "/boot";
     supportedFilesystems = [ "ext4" "btrfs" ];
   };
