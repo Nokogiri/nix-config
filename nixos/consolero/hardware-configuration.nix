@@ -28,6 +28,12 @@
       device = "/dev/disk/by-uuid/20D6-91CA";
       fsType = "vfat";
     };
+  "/data/" = 
+  {
+    device = "/dev/disk/by-uuid/83cd5d9e-e809-40db-a077-677a724d6c63";
+    fsType = "btrfs";
+    options = [ "compress=zstd:9" ];
+  };
   };
 
   swapDevices = [{
