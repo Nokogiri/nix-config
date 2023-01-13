@@ -1,7 +1,6 @@
 { pkgs, ... }: {
   imports = [
     ./firefox
-    ./gtk.nix
     ./kdeconnect.nix
     ./mpv.nix
     ./pavucontrol.nix

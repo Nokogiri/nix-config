@@ -4,6 +4,7 @@
     ./features/cli/nix-stuff.nix
     ./features/desktop/common
     ./features/desktop/games
+    ./features/desktop/gtk.nix
     ./features/desktop/media
     ./features/helix
     ./features/desktop/sway
