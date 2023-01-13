@@ -61,11 +61,7 @@
 
   #environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
 
-  environment.systemPackages = with pkgs; [
-    lm_sensors
-    exfatprogs
-    ntfs3g
-  ];
+  environment.systemPackages = with pkgs; [ lm_sensors exfatprogs ntfs3g ];
   hardware = {
     nvidia = {
       package = config.boot.kernelPackages.nvidiaPackages.stable;
