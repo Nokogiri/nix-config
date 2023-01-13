@@ -15,18 +15,18 @@
 
     # native packaged games
 
-    zeroad
+    #zeroad
+    airshipper # veloren
     eduke32
     gzdoom
     openmw
     #RBDOOM-3-BFG
-    solarus
+    #solarus
     sm64ex
-    vkquake
-    yquake2
-    yquake2-all-games
-    zeroad
-
+    #vkquake
+    #yquake2
+    #yquake2-all-games
+    
     # emulation
     cemu
     dolphin-emu-beta
