@@ -1,1 +1,1 @@
-{ imports = [ ./steamcontroller.nix ./tmpfiles.nix ./tlp.nix ./firewall.nix ]; }
+{ imports = [ ./steamcontroller.nix ./tmpfiles.nix ./firewall.nix ]; }
