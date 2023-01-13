@@ -110,7 +110,7 @@
         };
       };
 
-      nixosCOnfigurations = {
+      nixosConfigurations = {
         consolero = nixpkgs.lib.nixosSystem {
           modules = [ ./nixos/consolero/configuration.nix ]
           ++ (builtins.attrValues nixosModules);

@@ -13,7 +13,7 @@
       kernelModules = [ ];
     };
     kernelModules = [ "kvm-intel" ];
-    loader.efi.efiSysMountPoint = "/boot";
+    loader.efi.efiSysMountPoint = "/boot/efi";
     supportedFilesystems = [ "ext4" "btrfs" ];
   };
 
@@ -27,10 +27,12 @@
     { device = "/dev/disk/by-uuid/20D6-91CA";
       fsType = "vfat";
     };
+  };
 
   swapDevices =
     [ { device = "/dev/disk/by-uuid/3f477dfb-975d-4e45-abbc-d9729c89a70c";
-        priority = 90; }
+        priority = 90; 
+        }
     ];
   zramSwap = {
     enable = true;
@@ -38,7 +40,7 @@
   };
 
   hardware = {
-    hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+    cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     enableRedistributableFirmware = true;
     uinput.enable = true;
     xpadneo.enable = true;
