@@ -53,7 +53,7 @@
     homeDirectory = "/home/nokogiri";
   };
 
-  home.packages = with pkgs; [ transmission-remote-gtk ];
+  home.packages = with pkgs; [ gparted ];
 
   # Enable home-manager and git
   programs = {
