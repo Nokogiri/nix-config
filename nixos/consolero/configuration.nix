@@ -55,14 +55,15 @@
 
   boot = {
     cleanTmpDir = true;
-    extraModulePackages = with config.boot.kernelPackages; [ ];
-    kernelPackages = pkgs.linuxPackages_lqx;
+    extraModulePackages = with config.boot.kernelPackages; [  ];
+    kernelPackages = pkgs.linuxPackages_latest;
   };
 
   #environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
 
   environment.systemPackages = with pkgs; [ lm_sensors exfatprogs ntfs3g ];
   hardware = {
+    wirelessRegulatoryDatabase = true;
     nvidia = {
       package = config.boot.kernelPackages.nvidiaPackages.stable;
       modesetting.enable = true;

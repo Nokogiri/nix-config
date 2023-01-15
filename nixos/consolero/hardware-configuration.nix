@@ -33,6 +33,11 @@
       fsType = "btrfs";
       options = [ "compress=zstd:9" ];
     };
+    "/data/DATA1.5TB1" = {
+      device = "/dev/disk/by-uuid/ba6897f8-523d-4666-91ea-126b070f6595";
+      fsType = "btrfs";
+      options = [ "compress=zstd:9" ];
+    };
   };
 
   swapDevices = [{

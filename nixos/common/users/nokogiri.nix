@@ -21,6 +21,7 @@ in {
       "deluge"
       "jellyfin"
       "uinput"
+      "rtkit"
     ];
 
     openssh.authorizedKeys.keys = [
