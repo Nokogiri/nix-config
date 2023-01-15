@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   networking.networkmanager = {
-    #wifi.backend = "iwd";
+    wifi.backend = "iwd";
+    wifi.powersave = false;
     enable = true;
     logLevel = "ERR";
   };
