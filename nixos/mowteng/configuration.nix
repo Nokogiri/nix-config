@@ -74,16 +74,13 @@
   environment.systemPackages = with pkgs; [
     amdctl
     lm_sensors
-    #linuxKernel.packages.linux_latest.cpupower
-    #linuxKernel.packages.linux_latest.turbostat
     exfatprogs
-  ];
+    ];
 
   hardware = {
     opengl = {
       enable = true;
-      #extraPackages = with pkgs; [ amdvlk ];
-
+      extraPackages = with pkgs; [ amdvlk ];
       driSupport = true;
       driSupport32Bit = true;
     };
@@ -95,6 +92,7 @@
   };
 
   services.fwupd.enable = true;
+
   programs = {
     light.enable = true;
     mtr.enable = true;
