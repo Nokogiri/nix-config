@@ -29,6 +29,7 @@
     
     # emulation
     cemu
+    citra-canary
     dolphin-emu-beta
     #dolphin-emu-primehack
     libretro.beetle-pce-fast
@@ -36,10 +37,13 @@
     libretro.beetle-psx-hw
     libretro.beetle-supergrafx
     libretro.dolphin
+    libretro.flycast
     libretro.mgba
     libretro.mupen64plus
     libretro.parallel-n64
+    libretro.play
     libretro.snes9x
+    libretro.swanstation
     pcsx2
     ppsspp
     rpcs3

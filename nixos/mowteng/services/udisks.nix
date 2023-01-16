@@ -19,6 +19,9 @@
           "/dev/disk/by-uuid/4042086d-7f6b-4aa0-8e7b-c7cab0a83d8b" = {
             defaults = "compress-force=zstd:6";
           };
+          "/dev/disk/by-uuid/935542df-25dc-492a-ba08-8b5ee7d5d285" = {
+            defaults = "compress-force=zstd:9";
+          };
         };
       };
     };

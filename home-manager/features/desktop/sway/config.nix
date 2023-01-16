@@ -86,7 +86,9 @@ in {
           { app_id = ".blueman-manager-wrapped"; }
           { app_id = "nm-connection-editor"; }
           { app_id = "org.kde.kdeconnect-indicator"; }
+          { app_id = "mpv"; }
           { title = "File Operation Progress"; }
+          
         ];
         modifier = "Mod4";
       };

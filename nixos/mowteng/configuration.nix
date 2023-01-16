@@ -92,7 +92,7 @@
   };
 
   services.fwupd.enable = true;
-
+  services.flatpak.enable = true;
   programs = {
     light.enable = true;
     mtr.enable = true;
