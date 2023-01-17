@@ -67,9 +67,9 @@
       };
       #localVariables = { POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD = true; };
       #oh-my-zsh = { enable = true; };
-      profileExtra = ''
-        export XDG_DATA_DIRS:$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share
-      '';
+      #profileExtra = ''
+      #  export XDG_DATA_DIRS=$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share
+      #'';
       shellAliases = {
         sys = "doas systemctl";
         sysu = "systemctl --user";
