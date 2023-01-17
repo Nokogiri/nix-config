@@ -61,7 +61,7 @@
 
   #environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
 
-  environment.systemPackages = with pkgs; [ lm_sensors exfatprogs ntfs3g ];
+  environment.systemPackages = with pkgs; [ lm_sensors exfatprogs nvtop-nvidia ];
   hardware = {
     wirelessRegulatoryDatabase = true;
     nvidia = {
