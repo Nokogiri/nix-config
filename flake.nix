@@ -9,7 +9,7 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    # TODO: Add any other flake you might need
+    # Hardware?
     hardware.url = "github:nixos/nixos-hardware";
 
     # secret stuff
@@ -23,16 +23,6 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # hyprland
-    #hyprland.url = "github:hyprwm/hyprland";
-    #hyprwm-contrib.url = "github:hyprwm/contrib";
-
-    # nvim nächtlicherweise
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-
-    # wine-ge 
-    nix-gaming.url = "github:fufexan/nix-gaming";
 
     # emcas pgtk
     emacs-overlay.url = "github:nix-community/emacs-overlay";

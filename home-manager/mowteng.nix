@@ -8,7 +8,6 @@
     ./features/desktop/media
     ./features/helix
     ./features/desktop/sway
-    #./features/desktop/hyprland
 
     # Or modules exported from other flakes (such as nix-colors):
     inputs.nix-colors.homeManagerModules.default
@@ -27,11 +26,6 @@
 
 
       # Or overlays exported from other flakes:
-      #inputs.neovim-nightly-overlay.overlay
-      inputs.nix-gaming.overlays.default
-      #inputs.hyprland.nixosModules.default
-      #neovim-nightly-overlay.overlays.default
-
       # Or define it inline, for example:
       # (final: prev: {
       #   hi = final.hello.overrideAttrs (oldAttrs: {

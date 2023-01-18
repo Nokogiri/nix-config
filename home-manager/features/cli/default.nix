@@ -13,7 +13,10 @@
     ./zsh.nix
   ];
 
-  home.sessionVariables = { PATH = "$PATH:$HOME/.local/bin"; };
+  home.sessionVariables = { 
+    PATH = "$PATH:$HOME/.local/bin";
+    EDITOR = "${pkgs.helix}/bin/hx";
+  };
 
   home.packages = with pkgs; [
     #comma # Install and run programs by sticking a , before them
