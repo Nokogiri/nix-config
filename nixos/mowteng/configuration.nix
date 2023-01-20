@@ -80,7 +80,7 @@
   hardware = {
     opengl = {
       enable = true;
-      extraPackages = with pkgs; [ amdvlk ];
+      extraPackages = with pkgs; [ amdvlk vaapiVdpau ];
       driSupport = true;
       driSupport32Bit = true;
     };
@@ -90,6 +90,11 @@
     cpuFreqGovernor = "ondemand";
     powertop.enable = false;
   };
+
+  #services.xserver.enable = true;
+  #services.xserver.displayManager.sddm.enable = true;
+  #services.xserver.desktopManager.plasma5.enable = true;
+  #services.power-profiles-daemon.enable = false;
 
   services.fwupd.enable = true;
   services.flatpak.enable = true;

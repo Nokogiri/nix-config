@@ -48,7 +48,7 @@
     ppsspp
     rpcs3
     ryujinx
-    yuzu-mainline
+    yuzu-early-access
 
   ];
 }
