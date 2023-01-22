@@ -3,15 +3,15 @@
     #main_mod=SUPER
     gaps_in=15
     gaps_out=20
-    border_size=2.7
+    border_size=3.7
     col.active_border=0xffAAAAAA
     col.inactive_border=0xff666666
-    cursor_inactive_timeout=4
+    #cursor_inactive_timeout=4
   }
 
   monitor=eDP-1,preferred,auto,1
   decoration {
-    active_opacity=0.88
+    active_opacity=0.92
     inactive_opacity=0.68
     fullscreen_opacity=1.0
     rounding=5
@@ -56,19 +56,29 @@
 
   misc {
     no_vfr=false
+    
   }
 
+  binds {
+    workspace_back_and_forth = true
+  }
   input {
     kb_layout=us
     touchpad {
       disable_while_typing=true
     }
+    touchdevice {
+      output=eDP-1
+    }
+#    tablet {
+#      output=eDP-1
+#    }
   }
 
   device:wacom-hid-49c8-finger {
       output=eDP-1
       enabled=true
-    }
+  }
   device:wacom-hid-49c8-pen {
     output=eDP-1
     enabled=true
@@ -83,6 +93,7 @@
   exec-once=mako
   exec-once=swayidle -w
   exec-once=wl-paste --watch cliphist store
+  exec-once=hyprpaper
 
   # Mouse binding
   bindm=SUPER,mouse:272,movewindow

@@ -6,7 +6,7 @@
   imports = [
     # If you want to use modules your own flake exports (from modules/nixos):
     # outputs.nixosModules.example
-
+    inputs.hyprland.nixosModules.default
     # Or modules from other flakes (such as nixos-hardware):
     inputs.hardware.nixosModules.common-cpu-amd
     #inputs.hardware.nixosModules.common-gpu-amd
@@ -100,6 +100,7 @@
   services.flatpak.enable = true;
   programs = {
     light.enable = true;
+    hyprland.enable = true;
     mtr.enable = true;
   };
 

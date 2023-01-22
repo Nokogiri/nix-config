@@ -9,8 +9,10 @@ in {
   services.openssh = {
     enable = true;
     # Harden
-    passwordAuthentication = false;
-    permitRootLogin = "no";
+    settings = {
+      passwordAuthentication = false;
+      permitRootLogin = "no";
+    };
     # Automatically remove stale sockets
     extraConfig = ''
       StreamLocalBindUnlink yes
