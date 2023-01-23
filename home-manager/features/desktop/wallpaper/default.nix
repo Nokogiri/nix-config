@@ -1,3 +1,1 @@
-{
-  xdg.dataFile."wallpaper".source = ./pictures;
-}
+{ xdg.dataFile."wallpaper".source = ./pictures; }

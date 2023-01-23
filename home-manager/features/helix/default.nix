@@ -1,6 +1,6 @@
 {
   xdg.configFile."helix/themes".source = ./themes;
-  programs.helix = { 
+  programs.helix = {
     enable = true;
     settings = {
       theme = "catppuccin_frappe";
@@ -14,9 +14,7 @@
         normal = "block";
         select = "underline";
       };
-      editor.indent-guides = {
-        render =true;
-      };
-    }; 
+      editor.indent-guides = { render = true; };
+    };
   };
 }

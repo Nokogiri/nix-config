@@ -88,7 +88,7 @@ in {
           { app_id = "org.kde.kdeconnect-indicator"; }
           { app_id = "mpv"; }
           { title = "File Operation Progress"; }
-          
+
         ];
         modifier = "Mod4";
       };

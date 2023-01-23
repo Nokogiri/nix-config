@@ -23,9 +23,11 @@
 
   home.packages = with pkgs; [
     libnotify
+    libsForQt5.polkit-kde-agent
     (let
       python-packages-plus = python-packages:
         with python-packages; [
+          pygobject3
           isort
           evdev
           jinja2

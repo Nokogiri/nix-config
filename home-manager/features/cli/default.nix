@@ -13,7 +13,7 @@
     ./zsh.nix
   ];
 
-  home.sessionVariables = { 
+  home.sessionVariables = {
     PATH = "$PATH:$HOME/.local/bin";
     EDITOR = "${pkgs.helix}/bin/hx";
   };

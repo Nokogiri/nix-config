@@ -27,9 +27,10 @@
     vkquake
     yquake2
     yquake2-all-games
-    
+
     # emulation
     cemu
+    config.nur.repos.kira-bruneau.bcml # botw mod loader
     citra-canary
     dolphin-emu-beta
     #dolphin-emu-primehack

@@ -6,7 +6,8 @@
     inputs.hyprland.homeManagerModules.default
   ];
 
-  home.packages = [ pkgs.hyprpaper ];
+  home.packages =
+    [ pkgs.hyprpaper inputs.hyprpicker.packages.${system}.hyprpicker ];
 
   programs = {
     fish.loginShellInit = ''
@@ -27,7 +28,7 @@
   };
 
   programs.waybar = {
-#    package = [ inputs.hyprland.packages."x86_64-linux".waybar-hyprland ];
+    #    package = [ inputs.hyprland.packages."x86_64-linux".waybar-hyprland ];
     systemd = {
       enable = true;
       target = "hyprland-session.target";
@@ -36,6 +37,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    package = inputs.hyprland.packages.${pkgs.system}.default;
     xwayland = {
       enable = true;
       hidpi = false;

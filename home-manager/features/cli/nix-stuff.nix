@@ -1,6 +1,5 @@
-{ pkgs, ...}:
-{
-  home.packages = with pkgs;[
+{ pkgs, ... }: {
+  home.packages = with pkgs; [
     rnix-lsp
     nixfmt
     nix-diff
