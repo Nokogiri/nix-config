@@ -20,6 +20,7 @@
     ../common/optional/bluetooth.nix
     ../common/optional/desktop.nix
     ../common/optional/fonts.nix
+    ../common/optional/fprintd.nix
     ../common/optional/networkmanager.nix
     ../common/optional/pipewire.nix
     ../common/optional/quietboot.nix
@@ -28,6 +29,7 @@
     ../common/optional/sane.nix
     ../common/optional/steam.nix
     ../common/optional/systemd-boot.nix
+    ../common/optional/virtualbox.nix
     ../common/optional/xdg-portal.nix
 
     ../common/users/nokogiri.nix
@@ -75,6 +77,7 @@
     amdctl
     lm_sensors
     exfatprogs
+    libsForQt5.polkit-kde-agent
     ];
 
   hardware = {
