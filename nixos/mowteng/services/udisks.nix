@@ -7,9 +7,7 @@
       enable = true;
       settings = {
         "mount_options.conf" = {
-          "defaults" = {
-            ntfs_defaults = "uid=$UID,gid=$GID";
-          };
+          "defaults" = { ntfs_defaults = "uid=$UID,gid=$GID"; };
           "/dev/disk/by-uuid/542cd982-4845-4dbf-adad-de6536caf0e6" = {
             defaults = "compress-force=zstd:6";
           };

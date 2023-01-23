@@ -1,6 +1,6 @@
 {
   networking.firewall = {
-    trustedInterfaces = [ "calvin" "wlan0"];
+    trustedInterfaces = [ "calvin" "wlan0" ];
     allowedUDPPortRanges = [{ # kdeconnect
       from = 1714;
       to = 1764;

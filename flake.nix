@@ -18,6 +18,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # NUR
+    nur.url = "github:nix-community/NUR";
     #  firefox addons
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";

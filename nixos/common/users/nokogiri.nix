@@ -22,6 +22,7 @@ in {
       "jellyfin"
       "uinput"
       "rtkit"
+      "vboxusers"
     ];
 
     openssh.authorizedKeys.keys = [

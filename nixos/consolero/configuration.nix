@@ -55,13 +55,17 @@
 
   boot = {
     cleanTmpDir = true;
-    extraModulePackages = with config.boot.kernelPackages; [  ];
+    extraModulePackages = with config.boot.kernelPackages; [ ];
     kernelPackages = pkgs.linuxPackages_zen;
   };
 
   #environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
 
-  environment.systemPackages = with pkgs; [ lm_sensors exfatprogs nvtop-nvidia ];
+  environment.systemPackages = with pkgs; [
+    lm_sensors
+    exfatprogs
+    nvtop-nvidia
+  ];
   hardware = {
     wirelessRegulatoryDatabase = true;
     nvidia = {

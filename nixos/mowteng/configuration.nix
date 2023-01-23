@@ -29,7 +29,6 @@
     ../common/optional/sane.nix
     ../common/optional/steam.nix
     ../common/optional/systemd-boot.nix
-    ../common/optional/virtualbox.nix
     ../common/optional/xdg-portal.nix
 
     ../common/users/nokogiri.nix
@@ -78,7 +77,7 @@
     lm_sensors
     exfatprogs
     libsForQt5.polkit-kde-agent
-    ];
+  ];
 
   hardware = {
     opengl = {
