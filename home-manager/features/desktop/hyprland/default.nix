@@ -7,7 +7,7 @@
   ];
 
   home.packages =
-    [ pkgs.hyprpaper inputs.hyprpicker.packages.${system}.hyprpicker ];
+    [ pkgs.hyprpaper inputs.hyprpicker.packages."x86_64-linux".hyprpicker ];
 
   programs = {
     fish.loginShellInit = ''

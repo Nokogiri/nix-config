@@ -3,6 +3,8 @@
     with pkgs; {
       colloid-icon-theme =
         colloid-icon-theme.override { colorVariants = [ "teal" ]; };
+      catppuccin-gtk = 
+        catppuccin-gtk.override { accents = [ "teal" ]; variant = "frappe" ; tweaks = [ "rimless" ]; size = "compact"; };
     };
   home.packages = with pkgs;
     [
@@ -26,8 +28,9 @@
   gtk = {
     enable = true;
     cursorTheme = {
-      package = pkgs.colloid-cursors;
-      name = "Colloid-dark-Cursors";
+      #package = pkgs.colloid-cursors;
+      package = pkgs.catppuccin-cursors.frappeDark;
+      name = "Catppuccin-Frappe-Dark-Cursors";
     };
     font = {
       name = "FiraCode Nerd Font";
@@ -38,9 +41,17 @@
       name = "Colloid-teal-dark";
     };
     theme = {
-      package = pkgs.catppuccin-gtk-frappe-teal;
-      name = "Catppuccin-Frappe-Teal";
+      package = pkgs.catppuccin-gtk;
+      name = "Catppuccin-Frappe-Compact-Teal-Dark";
     };
+    gtk2 = {
+      extraConfig = ''
+        gtk-toolbar-style=GTK_TOOLBAR_ICONS
+        gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
+        gtk-button-images=0
+        gtk-menu-images=0
+        '';
+      };
     gtk3 = {
       extraConfig = {
         gtk-button-images = false;

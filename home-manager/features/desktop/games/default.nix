@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }: {
 
   imports = [ ./steam.nix ./wine.nix ];
   home.packages = with pkgs; [
@@ -49,8 +49,8 @@
     pcsx2
     ppsspp
     rpcs3
-    ryujinx
-    yuzu-early-access
+    #ryujinx
+    #yuzu-early-access
 
   ];
 }
