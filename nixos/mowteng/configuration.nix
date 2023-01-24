@@ -27,7 +27,6 @@
     ../common/optional/resolved.nix
     ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
-    ../common/optional/steam.nix
     ../common/optional/systemd-boot.nix
     ../common/optional/xdg-portal.nix
 
@@ -63,10 +62,6 @@
       turbostat
     ];
     kernelPackages = pkgs.linuxPackages_latest;
-    #kernelPatches = [{
-    #  name = "d3cold-fix";
-    #  patch = ./patches/d3cold.patch;
-    #}];
     kernelParams = [ "amd_pstate=passive" ];
   };
 
@@ -93,13 +88,11 @@
     powertop.enable = false;
   };
 
-  #services.xserver.enable = true;
-  #services.xserver.displayManager.sddm.enable = true;
-  #services.xserver.desktopManager.plasma5.enable = true;
-  #services.power-profiles-daemon.enable = false;
-
   services.fwupd.enable = true;
   services.flatpak.enable = true;
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
+  
   programs = {
     light.enable = true;
     hyprland.enable = true;

@@ -2,9 +2,6 @@
 # You can build them using 'nix build .#example' or (legacy) 'nix-build -A example'
 { pkgs ? (import ../nixpkgs.nix) { } }: {
   amdctl = pkgs.callPackage ./amdctl { };
-  catppuccin-gtk-frappe-teal =
-    pkgs.callPackage ./catppuccin-gtk-frappe-teal { };
-  colloid-cursors = pkgs.callPackage ./colloid-cursors { };
   iio-sensor-proxy = pkgs.callPackage ./iio-sensor-proxy { };
   mailctl = pkgs.callPackage ./mailctl { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };

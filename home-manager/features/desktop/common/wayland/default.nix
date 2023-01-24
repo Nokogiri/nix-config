@@ -18,6 +18,8 @@
     imv
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qt5ct
+    #libsForQt5.lightly
+    lightly-qt
     slurp
     swaybg
     swayidle

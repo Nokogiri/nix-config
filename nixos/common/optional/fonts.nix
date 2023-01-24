@@ -26,9 +26,9 @@
       enable = true;
       antialias = true;
       defaultFonts = {
-        serif = [ "Cascadia Code" ];
-        sansSerif = [ "Cascadia Code" ];
-        monospace = [ "Cascadia Mono" ];
+        serif = [ "Cascadia Code SemiLight" ];
+        sansSerif = [ "Cascadia Code SemiLight" ];
+        monospace = [ "Cascadia Mono SemiLight" ];
         emoji = [ "Twitter Color Emoji" ];
       };
     };

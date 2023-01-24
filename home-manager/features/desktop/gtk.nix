@@ -1,15 +1,4 @@
 { pkgs, inputs, config, ... }: {
-  nixpkgs.config.packageOverrides = pkgs:
-    with pkgs; {
-      colloid-icon-theme =
-        colloid-icon-theme.override { colorVariants = [ "teal" ]; };
-      catppuccin-gtk = catppuccin-gtk.override {
-        accents = [ "teal" ];
-        variant = "frappe";
-        tweaks = [ "rimless" ];
-        size = "compact";
-      };
-    };
   home.packages = with pkgs;
     [
       (pkgs.writeTextFile {
@@ -32,21 +21,25 @@
   gtk = {
     enable = true;
     cursorTheme = {
-      #package = pkgs.colloid-cursors;
-      package = pkgs.catppuccin-cursors.frappeDark;
-      name = "Catppuccin-Frappe-Dark-Cursors";
+      package = pkgs.catppuccin-cursors.frappeSky;
+      name = "Catppuccin-Frappe-Sky-Cursors";
     };
     font = {
-      name = "FiraCode Nerd Font";
+      name = "CaskaydiaCove Nerd Font SemiLight";
       size = 12;
     };
     iconTheme = {
-      package = pkgs.colloid-icon-theme;
-      name = "Colloid-teal-dark";
+      package = pkgs.papirus-icon-theme.override { color = "teal"; };
+      name = "Papirus";
     };
     theme = {
-      package = pkgs.catppuccin-gtk;
-      name = "Catppuccin-Frappe-Compact-Teal-Dark";
+      name = "Catppuccin-Frappe-Compact-Sky-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "sky" ];
+        variant = "frappe";
+        tweaks = [ "rimless" ];
+        size = "compact";
+      };
     };
     gtk2 = {
       extraConfig = ''
