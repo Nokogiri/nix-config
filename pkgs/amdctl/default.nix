@@ -22,6 +22,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/kevinlekiller/amdctl";
     platforms = platforms.linux;
     maintainers = with maintainers; [ nokogiri ];
-      };
+  };
 }
 

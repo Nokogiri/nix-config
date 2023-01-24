@@ -3,8 +3,12 @@
     with pkgs; {
       colloid-icon-theme =
         colloid-icon-theme.override { colorVariants = [ "teal" ]; };
-      catppuccin-gtk = 
-        catppuccin-gtk.override { accents = [ "teal" ]; variant = "frappe" ; tweaks = [ "rimless" ]; size = "compact"; };
+      catppuccin-gtk = catppuccin-gtk.override {
+        accents = [ "teal" ];
+        variant = "frappe";
+        tweaks = [ "rimless" ];
+        size = "compact";
+      };
     };
   home.packages = with pkgs;
     [
@@ -50,8 +54,8 @@
         gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
         gtk-button-images=0
         gtk-menu-images=0
-        '';
-      };
+      '';
+    };
     gtk3 = {
       extraConfig = {
         gtk-button-images = false;

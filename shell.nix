@@ -5,6 +5,6 @@
   default = pkgs.mkShell {
     # Enable experimental features without having to specify the argument
     NIX_CONFIG = "experimental-features = nix-command flakes";
-    nativeBuildInputs = with pkgs; [ neovim nix home-manager git sops gnupg ];
+    nativeBuildInputs = with pkgs; [ neovim nix home-manager git sops gnupg nixpkgs-fmt ];
   };
 }
