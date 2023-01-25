@@ -1,13 +1,11 @@
 { config, pkgs, ... }: {
   imports = [
     ./avizo.nix
-    #./foot.nix
     ./fuzzel.nix
     ./gammastep.nix
     ./kitty.nix
     ./mako.nix
     ./waybar.nix
-    ./wezterm.nix
     ./wofi.nix
   ];
 
