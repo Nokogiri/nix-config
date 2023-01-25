@@ -1,7 +1,7 @@
 {
   services = {
   gnome-keyring = {
-    enable = true;
+    enable = false;
     components = [ "secrets" ];
   };
   gpg-agent = {
