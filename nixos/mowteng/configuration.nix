@@ -92,7 +92,7 @@
   services.flatpak.enable = true;
   services.gvfs.enable = true;
   services.tumbler.enable = true;
-  
+
   programs = {
     light.enable = true;
     hyprland.enable = true;

@@ -12,6 +12,7 @@ in {
       shuffle
       hidePodcasts
       fullAppDisplay
+      fullScreen
     ];
   };
 }

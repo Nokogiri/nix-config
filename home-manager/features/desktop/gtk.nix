@@ -30,7 +30,7 @@
     };
     iconTheme = {
       package = pkgs.papirus-icon-theme.override { color = "teal"; };
-      name = "Papirus";
+      name = "Papirus-Dark";
     };
     theme = {
       name = "Catppuccin-Frappe-Compact-Sky-Dark";

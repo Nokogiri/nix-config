@@ -49,8 +49,8 @@
     pcsx2
     ppsspp
     rpcs3
-    #ryujinx
-    #yuzu-early-access
+    ryujinx
+    yuzu-early-access
 
   ];
 }
