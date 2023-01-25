@@ -1,14 +1,14 @@
 {
   services = {
   gnome-keyring = {
-    enable = false;
+    enable = true;
     components = [ "secrets" ];
   };
   gpg-agent = {
     enable = true;
-    pinentryFlavor = "gnome3";
-    enableSshSupport = true;
-    enableZshIntegration = true;
+    pinentryFlavor = "gtk2";
+    enableSshSupport = false;
+    enableZshIntegration = false;
     defaultCacheTtl = 60480000;
     defaultCacheTtlSsh = 60480000;
     maxCacheTtl = 60480000;
