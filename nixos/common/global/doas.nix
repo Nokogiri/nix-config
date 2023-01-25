@@ -12,7 +12,7 @@
         }
         {
           users = [ "nokogiri" ];
-          noPass = true;
+          noPass = false;
           keepEnv = true;
           persist = false;
         }
