@@ -4,7 +4,7 @@ let addons = inputs.firefox-addons.packages.${pkgs.system};
 in {
 
   imports = [ ./ff2mpv.json.nix ./ff2mpv.py.nix ];
-
+  home.packages = [ pkgs.ff2mpv ];
   programs.firefox = {
     enable = true;
     extensions = with addons; [
