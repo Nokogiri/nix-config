@@ -6,7 +6,7 @@
       enable = true;
       packages = [ pkgs.gcr ];
     };
-    gnome.gnome-keyring.enable = true;
+    #gnome.gnome-keyring.enable = true;
     printing.enable = true;
     # mount external to /media like normal people
     udev.extraRules = ''
