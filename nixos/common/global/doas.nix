@@ -14,7 +14,7 @@
           users = [ "nokogiri" ];
           noPass = false;
           keepEnv = true;
-          persist = false;
+          persist = true;
         }
       ];
     };

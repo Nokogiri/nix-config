@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   imports = [
     ./firefox
+    ./gpg-agent.nix
     ./kdeconnect.nix
     ./mpv.nix
     ./pavucontrol.nix
