@@ -1,6 +1,9 @@
 {
   services = {
-  gnome-keyring.enable = true;
+  gnome-keyring = {
+    enable = true;
+    components = [ "secrets" ];
+  };
   gpg-agent = {
     enable = true;
     pinentryFlavor = "gnome3";
