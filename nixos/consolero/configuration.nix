@@ -25,7 +25,7 @@
     ../common/optional/quietboot.nix
     ../common/optional/resolved.nix
     ../common/optional/sane.nix
-    ../common/optional/steam.nix
+    #../common/optional/steam.nix
     ../common/optional/systemd-boot.nix
     ../common/optional/xdg-portal.nix
 
