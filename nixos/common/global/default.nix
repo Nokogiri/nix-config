@@ -4,11 +4,12 @@
     #inputs.impermanence.nixosModules.impermanence
     inputs.home-manager.nixosModules.home-manager
     ./doas.nix
+    ./fish.nix
     ./locale.nix
     ./nix.nix
     ./openssh.nix
     ./sops.nix
-    ./zsh.nix
+    #./zsh.nix
   ]; # ++ (builtins.attrValues outputs.nixosModules);
 
   home-manager = {

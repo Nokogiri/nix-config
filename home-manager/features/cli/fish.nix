@@ -1,6 +1,9 @@
 { pkgs, ...}:{
   programs.fish = {
     enable = true;
+    functions = {
+      fish_greeting = "";
+    };
     plugins = [
       {
         name = "fzf";

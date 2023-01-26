@@ -6,7 +6,7 @@
   };
   gpg-agent = {
     enable = true;
-    pinentryFlavor = "gtk2";
+    pinentryFlavor = "qt";
     enableSshSupport = false;
     enableZshIntegration = false;
     defaultCacheTtl = 60480000;
