@@ -31,7 +31,7 @@
     hyprwm-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
     # emcas pgtk
-    emacs-overlay.url = "github:nix-community/emacs-overlay";
+    #emacs-overlay.url = "github:nix-community/emacs-overlay";
 
     # spotify++
     spicetify-nix.url = "github:the-argus/spicetify-nix";
