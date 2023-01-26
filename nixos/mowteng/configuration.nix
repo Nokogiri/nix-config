@@ -23,6 +23,7 @@
     ../common/optional/resolved.nix
     ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
+#    ../common/optional/steam.nix
     ../common/optional/systemd-boot.nix
     ../common/optional/xdg-portal.nix
 
@@ -72,7 +73,7 @@
   hardware = {
     opengl = {
       enable = true;
-      extraPackages = with pkgs; [ amdvlk vaapiVdpau ];
+      extraPackages = with pkgs; [ vaapiVdpau ];
       driSupport = true;
       driSupport32Bit = true;
     };

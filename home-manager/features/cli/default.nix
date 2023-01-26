@@ -11,7 +11,7 @@
     ./ranger.nix
     ./ssh.nix
     ./starship.nix
-    ./zsh.nix
+    #./zsh.nix
   ];
 
   home.sessionVariables = {

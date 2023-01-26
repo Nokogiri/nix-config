@@ -7,8 +7,9 @@
     ./features/desktop/gtk.nix
     ./features/desktop/media
     ./features/helix
-    #    ./features/desktop/sway
+    #./features/desktop/sway
     ./features/desktop/hyprland
+    
     # Or modules exported from other flakes (such as nix-colors):
     inputs.nix-colors.homeManagerModules.default
     inputs.nur.nixosModules.nur
