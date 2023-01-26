@@ -6,12 +6,12 @@
       enable = true;
       packages = [ pkgs.gcr ];
     };
-    gnome.gnome-keyring.enable = true;
+    #gnome.gnome-keyring.enable = true;
+    fwupd.enable = true;
+    flatpak.enable = true;
+    gvfs.enable = true;
     printing.enable = true;
-    # mount external to /media like normal people
-    udev.extraRules = ''
-      ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"
-    '';
+    tumbler.enable = true;
     udisks2.enable = true;
     upower.enable = true;
   };

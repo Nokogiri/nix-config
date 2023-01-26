@@ -4,12 +4,8 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
 
   imports = [
-    # If you want to use modules your own flake exports (from modules/nixos):
-    # outputs.nixosModules.example
     inputs.hyprland.nixosModules.default
-    # Or modules from other flakes (such as nixos-hardware):
     inputs.hardware.nixosModules.common-cpu-amd
-    #inputs.hardware.nixosModules.common-gpu-amd
     inputs.hardware.nixosModules.common-pc-ssd
 
     ./hardware-configuration.nix
@@ -18,7 +14,7 @@
 
     ../common/optional/avahi.nix
     ../common/optional/bluetooth.nix
-    ../common/optional/desktop.nix
+    ../common/optional/desktop-wlr.nix
     ../common/optional/fonts.nix
     ../common/optional/fprintd.nix
     ../common/optional/networkmanager.nix
@@ -59,7 +55,6 @@
     extraModulePackages = with config.boot.kernelPackages; [
       zenpower
       cpupower
-      turbostat
     ];
     kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [ "amd_pstate=passive" ];
@@ -88,14 +83,8 @@
     powertop.enable = false;
   };
 
-  services.fwupd.enable = true;
-  services.flatpak.enable = true;
-  services.gvfs.enable = true;
-  services.tumbler.enable = true;
-
   programs = {
     light.enable = true;
-    hyprland.enable = true;
     mtr.enable = true;
   };
 
