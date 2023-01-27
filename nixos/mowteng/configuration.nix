@@ -23,7 +23,6 @@
     ../common/optional/resolved.nix
     ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
-#    ../common/optional/steam.nix
     ../common/optional/systemd-boot.nix
     ../common/optional/xdg-portal.nix
 
@@ -87,10 +86,6 @@
   programs = {
     light.enable = true;
     mtr.enable = true;
-    #gnupg.agent = {
-    #  enable = true;
-    #  pinentryFlavor = "qt";
-    #};
   };
 
   location = {

@@ -10,10 +10,13 @@
 
   fonts.fonts = with pkgs; [
     nerdfonts
+    cantarell-fonts
     cascadia-code
     dejavu_fonts
     unifont
     twemoji-color-font
+    noto-fonts
+    noto-fonts-emoji
     noto-fonts-cjk-sans
     weather-icons
   ];
