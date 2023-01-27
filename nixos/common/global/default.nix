@@ -27,7 +27,6 @@
 
   programs.fuse.userAllowOther = true;
   programs.git.enable = true;
-  #programs.gnupg.agent.enable = true;
   hardware.enableRedistributableFirmware = true;
 
   # Increase open file limit for sudoers
