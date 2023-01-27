@@ -87,10 +87,10 @@
   programs = {
     light.enable = true;
     mtr.enable = true;
-    gnupg.agent = {
-      enable = true;
-      pinentryFlavor = "qt";
-    };
+    #gnupg.agent = {
+    #  enable = true;
+    #  pinentryFlavor = "qt";
+    #};
   };
 
   location = {

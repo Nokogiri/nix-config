@@ -6,7 +6,7 @@
   };
   gpg-agent = {
     enable = true;
-    pinentryFlavor = "qt";
+    pinentryFlavor = "gnome3";
     enableSshSupport = false;
     enableZshIntegration = false;
     defaultCacheTtl = 60480000;
