@@ -51,8 +51,12 @@
 
   home.packages = with pkgs; [
     inputs.hyprpicker.packages.${system}.hyprpicker
-    xfce.thunar
-    transmission-remote-gtk
+    gnome.nautilus
+    nautilus-open-any-terminal
+    #xfce.thunar
+    #transmission-gtk
+    #transmission-remote-gtk
+    transmission-qt
   ];
 
   # Enable home-manager and git

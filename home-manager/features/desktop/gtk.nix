@@ -16,16 +16,20 @@
           gsettings set $gnome_schema cursor-theme '${config.gtk.cursorTheme.name}'
         '';
       })
+      pkgs.adwaita-qt
+      pkgs.adwaita-qt6
+      pkgs.qgnomeplatform
+      pkgs.qgnomeplatform-qt6
     ];
 
   gtk = {
     enable = true;
     cursorTheme = {
-      package = pkgs.catppuccin-cursors.frappeSky;
-      name = "Catppuccin-Frappe-Sky-Cursors";
+      package = pkgs.catppuccin-cursors.macchiatoSky;
+      name = "Catppuccin-Macchiato-Sky-Cursors";
     };
     font = {
-      name = "CaskaydiaCove Nerd Font SemiLight";
+      name = "CaskaydiaCove Nerd Font";
       size = 12;
     };
     iconTheme = {
@@ -33,10 +37,12 @@
       name = "Papirus-Dark";
     };
     theme = {
-      name = "Catppuccin-Frappe-Compact-Sky-Dark";
+      #name = "adw-gtk3-dark";
+      #package = pkgs.adw-gtk3;
+      name = "Catppuccin-Macchiato-Compact-Sky-Dark";
       package = pkgs.catppuccin-gtk.override {
         accents = [ "sky" ];
-        variant = "frappe";
+        variant = "macchiato";
         tweaks = [ "rimless" ];
         size = "compact";
       };
