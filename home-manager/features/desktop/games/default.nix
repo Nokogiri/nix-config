@@ -32,8 +32,10 @@
     cemu
     #config.nur.repos.kira-bruneau.bcml # botw mod loader
     citra-canary
-    dolphin-emu-beta
+    #dolphin-emu-beta
+    dolphinEmuMaster
     #dolphin-emu-primehack
+    retroarch
     libretro.beetle-pce-fast
     libretro.beetle-psx
     libretro.beetle-psx-hw

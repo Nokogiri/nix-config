@@ -14,10 +14,6 @@
     glib.bin
     grim
     imv
-    libsForQt5.qtstyleplugin-kvantum
-    libsForQt5.qt5ct
-    #libsForQt5.lightly
-    lightly-qt
     slurp
     swaybg
     swayidle
@@ -28,6 +24,7 @@
   ];
 
   home.sessionVariables = {
+    BEMENU_BACKEND = "wayland";
     MOZ_ENABLE_WAYLAND = 1;
     QT_QPA_PLATFORM = "wayland;xcb";
     QT_QPA_PLATFORMTHEME = "qt5ct";

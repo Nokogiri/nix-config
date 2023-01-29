@@ -3,7 +3,6 @@
     ./firefox
     ./gpg-agent.nix
     ./kdeconnect.nix
-    ./mpv.nix
     ./pavucontrol.nix
     ./playerctl.nix
     ./spotify.nix
@@ -14,12 +13,7 @@
 
   home.sessionVariables = {
     BROWSER = "${pkgs.firefox}/bin/firefox";
-    TDESKTOP_DISABLE_GTK_INTEGRATION = "1";
-    CLUTTER_BACKEND = "wayland";
-    BEMENU_BACKEND = "wayland";
-    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     NO_AT_BRIDGE = "1";
-    WINIT_UNIX_BACKEND = "wayland";
   };
 
   home.packages = with pkgs; [

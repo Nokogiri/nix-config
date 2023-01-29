@@ -88,8 +88,9 @@
     # Startup
     exec-once=~/.nix-profile/libexec/polkit-kde-authentication-agent-1
     #exec=swaybg -i /home/nokogiri/.config/wallpaper/wall-05.png --mode fill
-    exec-once=swww init
-    exec-once=swww img ~/.local/share/wallpaper/Totoro.webp --transition-step 128 --transition-fps 60 --transition-type outer --transition-pos top-left
+    #exec-once=swww init
+    #exec-once=swww img ~/.local/share/wallpaper/Totoro.webp --transition-step 128 --transition-fps 60 --transition-type outer --transition-pos top-left
+    exec-once=~/.local/bin/swwwi
     exec-once=mako
     exec-once=swayidle -w
     exec-once=wl-paste --watch cliphist store

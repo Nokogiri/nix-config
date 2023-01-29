@@ -16,17 +16,15 @@
           gsettings set $gnome_schema cursor-theme '${config.gtk.cursorTheme.name}'
         '';
       })
-      pkgs.adwaita-qt
-      pkgs.adwaita-qt6
-      pkgs.qgnomeplatform
-      pkgs.qgnomeplatform-qt6
-    ];
+      libsForQt5.qtstyleplugin-kvantum
+      libsForQt5.qt5ct
+   ];
 
   gtk = {
     enable = true;
     cursorTheme = {
-      package = pkgs.catppuccin-cursors.macchiatoSky;
-      name = "Catppuccin-Macchiato-Sky-Cursors";
+      package = pkgs.catppuccin-cursors.frappeDark;
+      name = "Catppuccin-Frappe-Dark-Cursors";
     };
     font = {
       name = "CaskaydiaCove Nerd Font";
@@ -37,14 +35,11 @@
       name = "Papirus-Dark";
     };
     theme = {
-      #name = "adw-gtk3-dark";
-      #package = pkgs.adw-gtk3;
-      name = "Catppuccin-Macchiato-Compact-Sky-Dark";
+     name = "Catppuccin-Frappe-Standard-Sky-Dark";
       package = pkgs.catppuccin-gtk.override {
         accents = [ "sky" ];
-        variant = "macchiato";
-        tweaks = [ "rimless" ];
-        size = "compact";
+        variant = "frappe";
+        size = "standard";
       };
     };
     gtk2 = {

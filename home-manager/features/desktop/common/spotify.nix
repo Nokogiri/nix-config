@@ -6,13 +6,12 @@ in {
   programs.spicetify = {
     enable = true;
     theme = spicePkgs.themes.catppuccin-frappe;
-    colorScheme = "teal";
+    colorScheme = "sky";
     enabledCustomApps = with spicePkgs.apps; [ marketplace lyrics-plus ];
     enabledExtensions = with spicePkgs.extensions; [
       shuffle
       hidePodcasts
       fullAppDisplay
-      fullScreen
     ];
   };
 }
