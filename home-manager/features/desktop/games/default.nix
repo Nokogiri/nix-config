@@ -21,7 +21,7 @@
     gzdoom
     minetest
     openmw
-    #RBDOOM-3-BFG
+    RBDOOM-3-BFG
     solarus
     sm64ex
     vkquake
