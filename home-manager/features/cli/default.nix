@@ -11,7 +11,6 @@
     ./ranger.nix
     ./ssh.nix
     ./starship.nix
-    #./zsh.nix
   ];
 
   home.sessionVariables = {
@@ -25,6 +24,7 @@
 
     tmux
     # archive stuff
+    p7zip
     unzip
     unrar
     # misc
@@ -39,6 +39,7 @@
     btop # same
     dfc # better df
     mediainfo
+    gdu
     ncdu # TUI disk usage
     exa # Better ls
     ripgrep # Better grep

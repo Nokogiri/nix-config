@@ -62,12 +62,7 @@
 
   environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
 
-  environment.systemPackages = with pkgs; [
-    amdctl
-    lm_sensors
-    exfatprogs
-    libsForQt5.polkit-kde-agent
-  ];
+  environment.systemPackages = with pkgs; [ amdctl lm_sensors exfatprogs ];
 
   hardware = {
     opengl = {

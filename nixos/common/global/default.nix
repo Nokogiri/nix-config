@@ -9,8 +9,7 @@
     ./nix.nix
     ./openssh.nix
     ./sops.nix
-    #./zsh.nix
-  ]; # ++ (builtins.attrValues outputs.nixosModules);
+  ];
 
   home-manager = {
     useUserPackages = true;

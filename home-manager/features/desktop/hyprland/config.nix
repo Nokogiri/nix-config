@@ -6,6 +6,7 @@
       border_size=3.7
       col.active_border=0xffAAAAAA
       col.inactive_border=0xff666666
+      no_cursor_warps=true
       #cursor_inactive_timeout=4
     }
 
@@ -55,6 +56,8 @@
     }
 
     misc {
+      disable_hyprland_logo=true
+      disable_splash_rendering=true
       no_vfr=false
       
     }

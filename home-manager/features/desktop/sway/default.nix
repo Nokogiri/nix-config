@@ -3,7 +3,11 @@ let cfg = config.wayland.windowManager.sway.config;
 in {
   imports = [ ./config.nix ../common ../common/wayland ../wallpaper ];
 
-  home.packages = with pkgs; [ swaybg inputs.hyprpicker.packages."x86_64-linux".hyprpicker config.nur.repos.misterio.swayfader ];
+  home.packages = with pkgs; [
+    swaybg
+    inputs.hyprpicker.packages."x86_64-linux".hyprpicker
+    config.nur.repos.misterio.swayfader
+  ];
 
   programs = {
     fish.loginShellInit = ''

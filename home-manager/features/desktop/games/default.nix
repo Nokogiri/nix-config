@@ -4,7 +4,7 @@
   home.packages = with pkgs; [
 
     # general
-    gamemode
+    #gamemode
     gamescope
     heroic
     mangohud
@@ -15,9 +15,10 @@
 
     # native packaged games
 
-    zeroad
+    #zeroad
     airshipper # veloren
     eduke32
+    dhewm3
     gzdoom
     minetest
     openmw
