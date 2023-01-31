@@ -40,19 +40,19 @@
     dfc # better df
     mediainfo
     gdu
-    ncdu # TUI disk usage
+    #ncdu # TUI disk usage
     exa # Better ls
     ripgrep # Better grep
     fd # Better find
     file
     #toybox # toying around
-    httpie # Better curl
+    #httpie # Better curl
     jq # JSON pretty printer and manipulator
     #trekscii # Cute startrek cli printer
     tealdeer
     ps_mem
 
-    nix-zsh-completions
+    #nix-zsh-completions
     nix-stray-roots
   ];
 }
