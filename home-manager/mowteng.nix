@@ -6,6 +6,7 @@
     ./features/desktop/games
     ./features/desktop/gtk.nix
     ./features/desktop/media
+    ./features/desktop/eww
     ./features/helix
     #./features/desktop/sway
     ./features/desktop/hyprland

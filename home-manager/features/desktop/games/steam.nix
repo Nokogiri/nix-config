@@ -8,6 +8,8 @@
           with pkgs; [
             libgdiplus
             gamescope
+            glib.bin
+            gsettings-desktop-schemas
             mangohud
             xorg.libXcursor
             xorg.libXi
