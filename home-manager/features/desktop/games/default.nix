@@ -8,7 +8,7 @@
     gamescope
     heroic
     mangohud
-    moonlight-qt
+    #moonlight-qt
     portmod
     prismlauncher
     steam
