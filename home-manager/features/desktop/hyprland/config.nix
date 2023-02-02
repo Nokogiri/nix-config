@@ -249,6 +249,6 @@
     windowrulev2 = workspace 3 silent,class:^(mpv)$
     #windowrulev2 = fullscreen,opaque,noblur,forceinput,class:^(.gamescope-wrapped)$
     windowrulev2 = workspace 7 silent,class:^(Spotify)$
-    windowrulev2 = fullscreen,opaque,noblur,class:^(.org.jellyfin.jellyfinmediaplayer)$
+    windowrulev2 = fullscreen,opaque,noblur,class:^(.org.jellyfin.)$
     #blurls=waybar
 ''
