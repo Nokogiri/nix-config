@@ -1,6 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
+  sops.defaultSopsFile = ../../common/secrets.yaml;
   sops.secrets = {
     wg_private = { };
     "wg_psk/consolero" = { };
