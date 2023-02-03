@@ -4,6 +4,5 @@
   ./nginx.nix
   ./rclone.nix
   ./services.nix
-  ./wireguard.nix
   ];
 }

@@ -15,6 +15,7 @@
     ../common/optional/avahi.nix
     ../common/optional/docker.nix
     ../common/optional/resolved.nix
+    ../common/optional/wireguard-server.nix
     ../common/users/nokogiri.nix
 
     ./local
