@@ -53,6 +53,8 @@
     ppsspp
     rpcs3
     ryujinx
+    dotnetCorePackages.sdk_7_0
+    #dotnetCorePackages.runtime_7_0
     yuzu-early-access
 
   ];

@@ -14,7 +14,7 @@
     pkgs.callPackage ./plymouth-spinner-monochrome { };
   RBDOOM-3-BFG = pkgs.callPackage ./RBDOOM-3-BFG { };
   RBDOOM-3-BFG-vk = pkgs.callPackage ./RBDOOM-3-BFG-vk { };
-  #ryujinx = pkgs.callPackage ./ryujinx { };
+  ryujinx = pkgs.callPackage ./ryujinx { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
   swww = pkgs.callPackage ./swww { };
 }

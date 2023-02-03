@@ -3,6 +3,7 @@
     enable = true;
     extraConfig = ''
        return {
+        front_end = "OpenGL",
         color_scheme = "Catppuccin Frappe",
         font_size = 13.0 ,
         font = wezterm.font_with_fallback {

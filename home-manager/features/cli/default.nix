@@ -58,5 +58,7 @@
 
     #nix-zsh-completions
     nix-stray-roots
+    nix-prefetch-git
+    common-updater-scripts
   ];
 }
