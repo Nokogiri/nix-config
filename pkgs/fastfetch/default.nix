@@ -20,7 +20,7 @@
 , zstd
 , rpm
 , imagemagick
-#, imagemagick6
+, imagemagick6
 , chafa
 , libglvnd
 , mesa
@@ -46,7 +46,7 @@ clangStdenv.mkDerivation rec {
   buildInputs = [ pciutils ] ++ [ vulkan-loader libffi ] ++ [ wayland ]
     ++ (with xorg; [ libxcb libXau libXdmcp ]) ++ (with xorg; [ libXrandr libXext ])
     ++ [ glib ] ++ [ pcre2 util-linux libselinux libsepol pcre ] ++ [ dconf dbus xfce.xfconf ]
-    ++ [ sqlite zstd ] ++ [ rpm imagemagick chafa libglvnd mesa ]
+    ++ [ sqlite zstd ] ++ [ rpm imagemagick imagemagick6 chafa libglvnd mesa ]
     ++ [ ocl-icd opencl-headers cjson ];
 
   NIX_CFLAGS_COMPILE = [

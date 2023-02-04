@@ -9,6 +9,7 @@
       pinentryFlavor = "gnome3";
       enableSshSupport = false;
       enableZshIntegration = false;
+      enableFishIntegration = true;
       defaultCacheTtl = 60480000;
       defaultCacheTtlSsh = 60480000;
       maxCacheTtl = 60480000;
