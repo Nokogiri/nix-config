@@ -4,6 +4,7 @@
 
   services.phpfpm.pools.foodwiki = {
     user = "nokogiri";
+    group = "users";
     settings = {
       pm = "dynamic";
       "listen.owner" = config.services.nginx.user;

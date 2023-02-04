@@ -30,6 +30,7 @@
 
   services.phpfpm.pools.general = {
     user = "nokogiri";
+    group = "users";
     settings = {
       pm = "dynamic";
       "listen.owner" = config.services.nginx.user;
