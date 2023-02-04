@@ -42,13 +42,7 @@
           publicKey = "PIofiSw2cfcn23NlGC6uJocthPIJqwXB6dUnh4fWwhY=";
           presharedKeyFile = config.sops.secrets."wg_psk/mowteng".path;
         }
-        {
-          # hassio
-          allowedIPs = [ "10.200.200.6/32" "10.200.200.0/24" ];
-          publicKey = "o0kQD7EjWYwU6rtDmLjVNy9f5IAfKk1HNRMnY6axNRw=";
-          presharedKeyFile = config.sops.secrets."wg_psk/hassio".path;
-        }
-        {
+       {
           # kathi
           allowedIPs = [ "10.200.200.4/32" "10.200.200.0/24" ];
           publicKey = "KH6v0VRW9o4bzfnE1IRI6/e7lAlU52SkKCp22SXon2Y=";
