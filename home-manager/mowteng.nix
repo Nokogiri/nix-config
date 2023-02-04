@@ -41,6 +41,9 @@
       allowUnfree = true;
       # Workaround for https://github.com/nix-community/home-manager/issues/2942
       allowUnfreePredicate = (_: true);
+      permittedInsecurePackages = [
+                "imagemagick-6.9.12-68"
+              ];
     };
   };
 
@@ -52,6 +55,7 @@
 
   home.packages = with pkgs; [
     inputs.hyprpicker.packages.${system}.hyprpicker
+    fastfetch
     #gnome.nautilus
     #nautilus-open-any-terminal
     xfce.thunar
