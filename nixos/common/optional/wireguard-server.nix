@@ -1,9 +1,9 @@
 { config, pkgs, lib, ... }:
 
 {
-  sops.defaultSopsFile = ../../common/secrets.yaml;
+  #sops.defaultSopsFile = ../../common/secrets.yaml;
   sops.secrets = {
-    wg_private = { };
+    "wg_private/calvin" = { };
     "wg_psk/consolero" = { };
     "wg_psk/frankenbook" = { };
     "wg_psk/hassio" = { };
@@ -22,7 +22,7 @@
     wg0 = {
       ips = [ "10.200.200.1/24" ];
       listenPort = 51871;
-      privateKeyFile = config.sops.secrets.wg_private.path;
+      privateKeyFile = config.sops.secrets."wg_private/calvin".path;
 
       peers = [
         {

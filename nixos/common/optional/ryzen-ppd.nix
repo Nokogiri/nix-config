@@ -33,7 +33,7 @@
     # Settings that are applied when using a battery as the power source.
     [battery]
     # Power profile. Default: low-power
-    profile = low-power
+    profile = battery
     # Rate in seconds at which a profile is applied. Default: 32
     update_rate_s = 32
     # ACPI platform profile. Default: low-power

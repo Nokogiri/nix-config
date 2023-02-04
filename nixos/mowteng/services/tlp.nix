@@ -4,10 +4,10 @@
     settings = {
       MAX_LOST_WORK_SECS_ON_AC = "15";
       MAX_LOST_WORK_SECS_ON_BAT = "60";
-      CPU_SCALING_GOVERNOR_ON_AC = "ondemand";
-      CPU_SCALING_GOVERNOR_ON_BAT = "conservative";
+      CPU_SCALING_GOVERNOR_ON_AC = "schedutil";
+      CPU_SCALING_GOVERNOR_ON_BAT = "schedutil";
       CPU_SCALING_MIN_FREQ_ON_AC = "400000";
-      CPU_SCALING_MAX_FREQ_ON_AC = "4500000";
+      CPU_SCALING_MAX_FREQ_ON_AC = "4000000";
       CPU_SCALING_MIN_FREQ_ON_BAT = "400000";
       CPU_SCALING_MAX_FREQ_ON_BAT = "2000000";
       CPU_BOOST_ON_AC = "1";
@@ -21,7 +21,7 @@
       DISK_APM_CLASS_DENYLIST = "usb ieee1394";
       SATA_LINKPWR_ON_AC = "med_power_with_dipm max_performance";
       SATA_LINKPWR_ON_BAT = "min_power";
-      AHCI_RUNTIME_PM_ON_AC = "on";
+      AHCI_RUNTIME_PM_ON_AC = "auto";
       AHCI_RUNTIME_PM_ON_BAT = "auto";
       RADEON_DPM_PERF_LEVEL_ON_AC = "auto";
       RADEON_DPM_PERF_LEVEL_ON_BAT = "auto";
