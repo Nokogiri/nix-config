@@ -5,8 +5,7 @@
   sops.secrets = {
     "wg_private/calvin" = { };
     "wg_psk/consolero" = { };
-    "wg_psk/frankenbook" = { };
-    "wg_psk/hassio" = { };
+    "wg_psk/homeassistant" = { };
     "wg_psk/kathi" = { };
     "wg_psk/mowteng" = { };
     "wg_psk/mrpig" = { };
@@ -32,10 +31,10 @@
           presharedKeyFile = config.sops.secrets."wg_psk/consolero".path;
         }
         {
-          # frankenbook
+          # homeassistant
           allowedIPs = [ "10.200.200.2/32" "10.200.200.0/24" ];
           publicKey = "40RkpFdcTlk+AWc9XC/yhWsnwDJKIhEY7t5z3meFJkQ=";
-          presharedKeyFile = config.sops.secrets."wg_psk/frankenbook".path;
+          presharedKeyFile = config.sops.secrets."wg_psk/homeassistant".path;
         }
         {
           # mowteng
