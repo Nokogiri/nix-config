@@ -8,6 +8,7 @@
     # outputs.homeManagerModules.example
 
     ./global
+    ./features/cli-optional/gpg-agent.nix
     #./features/desktop/common
     #./features/desktop/games
     #./features/desktop/hyprland
