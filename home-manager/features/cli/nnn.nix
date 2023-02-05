@@ -6,8 +6,8 @@
       src = (pkgs.fetchFromGitHub {
         owner = "jarun";
         repo = "nnn";
-        rev = "v4.7";
-        sha256 = "sha256-ttG0aEqMlNyJaMhcVfrxbxlrhr1GSydrV58CYSq4CTM=";
+        rev = "70204a2d0fccd96264e0a6a66ab22e58f5ccafa5"; #04.02.2023
+        sha256 = "sha256-XVPcA8odPdyBoS7p+uZvg8nTtmcpJyVZXRIPzLlxXVY=";
       }) + "/plugins";
       mappings = {
         p = "preview-tui";
