@@ -7,12 +7,13 @@
   boot = {
     plymouth = {
       enable = true;
-      theme = "spinner-monochrome";
-      themePackages = [
-        (pkgs.plymouth-spinner-monochrome.override {
-          inherit (config.boot.plymouth) logo;
-        })
-      ];
+      theme = "catppuccin-frappe";
+      themePackages = [ pkgs.plymouth-catppuccin-frappe ];
+      # [
+      #  (pkgs.plymouth-catppuccin-frappe.override {
+      #    inherit (config.boot.plymouth) logo;
+      #  })
+      #];
     };
     loader.timeout = 0;
     kernelParams = [

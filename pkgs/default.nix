@@ -12,6 +12,8 @@
   pass-wofi = pkgs.callPackage ./pass-wofi { };
   plymouth-spinner-monochrome =
     pkgs.callPackage ./plymouth-spinner-monochrome { };
+  plymouth-catppuccin-frappe = 
+    pkgs.callPackage ./plymouth-catppuccin-frappe { };
   RBDOOM-3-BFG = pkgs.callPackage ./RBDOOM-3-BFG { };
   RBDOOM-3-BFG-vk = pkgs.callPackage ./RBDOOM-3-BFG-vk { };
   ryujinx = pkgs.callPackage ./ryujinx { };

@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }: {
   programs.nnn = {
     enable = true;
     package = pkgs.nnn.override ({ withNerdIcons = true; });
@@ -13,5 +13,8 @@
         p = "preview-tui";
       };
     };
+  };
+  home.sessionVariables = {
+    NNN_PREVIEWDIR = "${config.home.sessionVariables.XDG_CACHE_HOME}/nnn/previews";
   };
 }
