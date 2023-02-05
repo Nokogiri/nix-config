@@ -6,7 +6,7 @@
     ./kitty.nix
     ./mako.nix
     ./waybar.nix
-    ./wezterm.nix
+    #./wezterm.nix
     ./wofi.nix
   ];
 
@@ -16,7 +16,7 @@
     grim
     imv
     slurp
-    swaybg
+    #swaybg
     swayidle
     swaylock-effects
     swww

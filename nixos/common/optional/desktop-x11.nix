@@ -6,7 +6,6 @@
       enable = true;
       packages = [ pkgs.gcr ];
     };
-    #gnome.gnome-keyring.enable = true;
     fwupd.enable = true;
     flatpak.enable = true;
     gvfs.enable = true;

@@ -25,7 +25,8 @@
         scrollback_pager_history_size = 0;
         wheel_scroll_multiplier = 5;
         mouse_hide_wait = 3;
-
+        enabled_layouts = "*";
+        
         # Cursor settings
         cursor = "#00bcd4";
         cursor_text_color = "#00bcd4";
@@ -91,7 +92,7 @@
         remember_window_size = true;
         initial_window_width = 800;
         initial_window_height = 900;
-        enabled_layouts = "tall:bias=50;full_size=1;mirrored=false";
+        #enabled_layouts = "tall:bias=50;full_size=1;mirrored=false";
         window_resize_step_cells = 2;
         window_resize_step_lines = 2;
         window_border_width = 1;
@@ -103,7 +104,7 @@
         bell_border_color = "#ff5a00";
         inactive_text_alpha = 1;
         resize_debounce_time = "0.1";
-        resize_draw_strategy = "static";
+        resize_draw_strategy = "scale";
 
         # Opacity settings
         background_opacity = "0.94";
