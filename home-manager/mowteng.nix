@@ -55,9 +55,10 @@
 
   home.packages = with pkgs; [
     inputs.hyprpicker.packages.${system}.hyprpicker
-    fastfetch
+    #fastfetch
     #gnome.nautilus
     #nautilus-open-any-terminal
+    nitch
     xfce.thunar
     #transmission-gtk
     #transmission-remote-gtk

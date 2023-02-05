@@ -54,6 +54,7 @@
     cleanTmpDir = true;
     extraModulePackages = with config.boot.kernelPackages; [
       zenpower
+      turbostat
       cpupower
     ];
     kernelPackages = pkgs.linuxPackages_latest;

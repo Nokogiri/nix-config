@@ -3,7 +3,7 @@
 { pkgs ? (import ../nixpkgs.nix) { } }: {
   amdctl = pkgs.callPackage ./amdctl { };
   cemu = pkgs.callPackage ./cemu { };
-  fastfetch = pkgs.callPackage ./fastfetch { };
+  #fastfetch = pkgs.callPackage ./fastfetch { };
   heroic-unwrapped = pkgs.callPackage ./heroic { };
   heroic = pkgs.callPackage ./heroic/fhsenv.nix { };
   iio-sensor-proxy = pkgs.callPackage ./iio-sensor-proxy { };
