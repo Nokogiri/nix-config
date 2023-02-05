@@ -6,7 +6,7 @@ let
 in {
   imports = [ inputs.sops-nix.nixosModules.sops ];
 
-  sops = { 
+  sops = {
     age.sshKeyPaths = [ key.path ];
     defaultSopsFile = ../secrets.yaml;
   };

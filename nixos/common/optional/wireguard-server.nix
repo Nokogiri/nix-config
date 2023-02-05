@@ -42,7 +42,7 @@
           publicKey = "PIofiSw2cfcn23NlGC6uJocthPIJqwXB6dUnh4fWwhY=";
           presharedKeyFile = config.sops.secrets."wg_psk/mowteng".path;
         }
-       {
+        {
           # kathi
           allowedIPs = [ "10.200.200.4/32" "10.200.200.0/24" ];
           publicKey = "KH6v0VRW9o4bzfnE1IRI6/e7lAlU52SkKCp22SXon2Y=";

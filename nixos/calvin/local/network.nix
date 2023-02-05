@@ -1,5 +1,5 @@
- {
-   networking = {
+{
+  networking = {
     hostName = "calvin";
     useDHCP = false;
     firewall = { trustedInterfaces = [ "wg0" ]; };

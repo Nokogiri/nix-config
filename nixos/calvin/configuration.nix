@@ -35,9 +35,7 @@
     config = { allowUnfree = true; };
   };
 
-  networking = {
-    hostName = "calvin";
-  };
+  networking = { hostName = "calvin"; };
 
   boot = { cleanTmpDir = true; };
 
@@ -51,9 +49,7 @@
 
   hardware = { };
 
-  powerManagement = {
-    cpuFreqGovernor = "performance";
-  };
+  powerManagement = { cpuFreqGovernor = "performance"; };
 
   programs = {
     gnupg.agent.enable = true;
