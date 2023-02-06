@@ -7,7 +7,7 @@ in {
   home.packages = [ pkgs.ff2mpv ];
   programs.firefox = {
     enable = true;
-    extensions = with addons; [
+    profiles.nokogiri.extensions = with addons; [
       vimium
       ublock-origin
       tree-style-tab
