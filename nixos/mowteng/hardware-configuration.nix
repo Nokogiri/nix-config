@@ -4,7 +4,7 @@
 
   boot = {
     extraModprobeConfig = ''
-      options hid_xpadneo ff_connect_notify=0 quirks=30:03:c8:25:e8:80+7
+      options hid_xpadneo ff_connect_notify=0 quirks=e4:17:d8:45:f4:77:7,16
       blacklist pcspkr
       options usb-storage quirks=090c:1000:,152d:0578:u,0bc2:2322:u
       #options iwlwifi power_save=1 power_level=5
