@@ -16,5 +16,6 @@
   };
   home.sessionVariables = {
     NNN_PREVIEWDIR = "${config.home.sessionVariables.XDG_CACHE_HOME}/nnn/previews";
+    BAT_THEME = "Catppuccin-frappe";
   };
 }
