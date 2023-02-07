@@ -61,7 +61,7 @@
         tab_bar_min_tabs = 1;
         tab_switch_strategy = "previous";
         tab_fade = "0.25 0.5 0.75 1";
-        tab_separator = "";
+        #tab_separator = "";
         tab_activity_symbol = "none";
         tab_powerline_style = "angled";
         active_tab_font_style = "bold";
@@ -97,7 +97,7 @@
         window_resize_step_lines = 2;
         window_border_width = 1;
         draw_minimal_borders = true;
-        window_margin_width = 1;
+        window_margin_width = 0;
         single_window_margin_width = -1000;
         window_padding_width = 0;
         placement_strategy = "center";

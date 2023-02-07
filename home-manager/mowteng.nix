@@ -2,6 +2,7 @@
   imports = [
     ./global
     ./features/cli/nix-stuff.nix
+    ./features/cli-optional/nnn-desktop.nix
     ./features/desktop/common
     ./features/desktop/games
     ./features/desktop/gtk.nix
