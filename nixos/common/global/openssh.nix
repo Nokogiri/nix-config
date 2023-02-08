@@ -12,13 +12,14 @@ in {
     settings = {
       passwordAuthentication = false;
       permitRootLogin = "no";
+      gatewayPorts = "clientspecified";
     };
     # Automatically remove stale sockets
     extraConfig = ''
       StreamLocalBindUnlink yes
     '';
     # Allow forwarding ports to everywhere
-    gatewayPorts = "clientspecified";
+    #gatewayPorts = "clientspecified";
 
     hostKeys = [{
       path = "/etc/ssh/ssh_host_ed25519_key";
