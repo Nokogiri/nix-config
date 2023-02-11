@@ -9,8 +9,8 @@
     ./features/desktop/media
     ./features/desktop/eww
     ./features/helix
-    #./features/desktop/sway
-    ./features/desktop/hyprland
+    ./features/desktop/sway
+    #./features/desktop/hyprland
 
     # Or modules exported from other flakes (such as nix-colors):
     inputs.nix-colors.homeManagerModules.default
