@@ -11,7 +11,7 @@
       #extraConfig = ''
       #  include ./theme.conf
       #'';
-      theme = "Catppuccin-Frappe";
+      theme = "Catppuccin-Mocha";
       settings = {
         # General settings
         kitty_mod = "ctrl+shift";

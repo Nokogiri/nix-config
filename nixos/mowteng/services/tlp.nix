@@ -33,9 +33,9 @@
       SOUND_POWER_SAVE_ON_AC = "1";
       SOUND_POWER_SAVE_ON_BAT = "1";
       SOUND_POWER_SAVE_CONTROLLER = "Y";
-      PCIE_ASPM_ON_AC = "default";
-      PCIE_ASPM_ON_BAT = "default";
-      RUNTIME_PM_ON_AC = "on";
+      PCIE_ASPM_ON_AC = "powersupersave";
+      PCIE_ASPM_ON_BAT = "powersupersave";
+      RUNTIME_PM_ON_AC = "auto";
       RUNTIME_PM_ON_BAT = "auto";
       USB_AUTOSUSPEND = "1";
       USB_DENYLIST = "152d:0578";
