@@ -23,7 +23,7 @@
     enable = true;
     cursorTheme = {
       package = pkgs.catppuccin-cursors.frappeDark;
-      name = "Catppuccin-Frappe-Dark-Cursors";
+      name = "Catppuccin-Mocha-Dark-Cursors";
     };
     font = {
       name = "CaskaydiaCove Nerd Font";
@@ -34,10 +34,10 @@
       name = "Papirus-Dark";
     };
     theme = {
-      name = "Catppuccin-Frappe-Standard-Sky-Dark";
+      name = "Catppuccin-Mocha-Standard-Sky-Dark";
       package = pkgs.catppuccin-gtk.override {
         accents = [ "sky" ];
-        variant = "frappe";
+        variant = "mocha";
         size = "standard";
       };
     };
