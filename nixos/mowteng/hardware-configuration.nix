@@ -12,7 +12,7 @@
     '';
     initrd = {
       availableKernelModules = [ "nvme" "xhci_pci" "ahci" ];
-      kernelModules = [ "amdgpu" "mt7921e" ];
+      kernelModules = [ "amdgpu" ];
     };
     kernelModules = [ "kvm-amd" "zenpower" ];
     loader.efi.efiSysMountPoint = "/boot";
@@ -21,42 +21,19 @@
 
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-uuid/faaa7f5b-84cb-4fe4-b204-4089702f8dc8";
+      device = "/dev/disk/by-uuid/b465287b-b5cb-4fce-98fb-bb8a407f2f62";
       fsType = "btrfs";
-      options = [ "subvol=root" "compress=zstd:6" ];
-    };
-
-    "/nix" = {
-      device = "/dev/disk/by-uuid/faaa7f5b-84cb-4fe4-b204-4089702f8dc8";
-      fsType = "btrfs";
-      options = [ "subvol=nix" "compress=zstd:6" "noatime" ];
+      options = [ "compress-force=zstd:12" ];
     };
 
     "/home" = {
-      device = "/dev/disk/by-uuid/623581cb-fdde-420b-ab2b-c2a0a8228fe4";
+      device = "/dev/disk/by-uuid/a2c1b7e0-55e2-4ae5-bd09-a3434b5b6ea9";
       fsType = "btrfs";
-      options = [ "subvol=home" "compress=zstd:6" ];
+      options = [ "compress=zstd:6" ];
     };
 
-    "/home/Games" = {
-      device = "/dev/disk/by-uuid/623581cb-fdde-420b-ab2b-c2a0a8228fe4";
-      fsType = "btrfs";
-      options = [ "subvol=games" "compress=zstd:6" ];
-    };
-
-    "/var/lib" = {
-      device = "/dev/disk/by-uuid/faaa7f5b-84cb-4fe4-b204-4089702f8dc8";
-      fsType = "btrfs";
-      options = [ "subvol=var/lib" ];
-    };
-
-    "/var/log" = {
-      device = "/dev/disk/by-uuid/faaa7f5b-84cb-4fe4-b204-4089702f8dc8";
-      fsType = "btrfs";
-      options = [ "subvol=var/log" ];
-    };
     "/boot" = {
-      device = "/dev/disk/by-uuid/67B9-6ED6";
+      device = "/dev/disk/by-uuid/8C9D-013B";
       fsType = "vfat";
       options = [
         "fmask=0022"
@@ -70,7 +47,7 @@
   };
 
   swapDevices = [{
-    device = "/dev/disk/by-uuid/b6b88dbb-ad22-4746-ba8a-a1c32b3a184f";
+    device = "/dev/disk/by-uuid/93ae631f-7897-4c18-afd6-95d17c14ae2c";
     priority = 100;
   }];
 
