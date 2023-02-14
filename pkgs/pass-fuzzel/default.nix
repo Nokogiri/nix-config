@@ -11,7 +11,7 @@
 , findutils
 , gnused
 , coreutils
-, hyprland
+, sway
 }:
 
 with lib;
@@ -40,7 +40,7 @@ stdenv.mkDerivation {
           findutils
           gnused
           coreutils
-          hyprland
+          sway
         ]
       }"
   '';
