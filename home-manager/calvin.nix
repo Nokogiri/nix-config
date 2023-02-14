@@ -9,12 +9,6 @@
 
     ./global
     ./features/cli-optional/gpg-agent.nix
-    #./features/desktop/common
-    #./features/desktop/games
-    #./features/desktop/hyprland
-    #./features/desktop/sway
-    #./features/desktop/wireless
-
     # Or modules exported from other flakes (such as nix-colors):
     inputs.nix-colors.homeManagerModules.default
 
@@ -31,11 +25,6 @@
       outputs.overlays.additions
 
       # Or overlays exported from other flakes:
-      #inputs.neovim-nightly-overlay.overlay
-      #inputs.nix-gaming.overlays.default
-      #inputs.hyprland.nixosModules.default
-      #neovim-nightly-overlay.overlays.default
-
       # Or define it inline, for example:
       # (final: prev: {
       #   hi = final.hello.overrideAttrs (oldAttrs: {

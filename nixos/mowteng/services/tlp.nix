@@ -20,8 +20,8 @@
       DISK_APM_LEVEL_ON_BAT = "128 128";
       DISK_APM_CLASS_DENYLIST = "usb ieee1394";
       SATA_LINKPWR_ON_AC = "med_power_with_dipm max_performance";
-      SATA_LINKPWR_ON_BAT = "min_power";
-      AHCI_RUNTIME_PM_ON_AC = "auto";
+      SATA_LINKPWR_ON_BAT = "med_power_with_dipm min_power";
+      AHCI_RUNTIME_PM_ON_AC = "on";
       AHCI_RUNTIME_PM_ON_BAT = "auto";
       RADEON_DPM_PERF_LEVEL_ON_AC = "auto";
       RADEON_DPM_PERF_LEVEL_ON_BAT = "auto";
@@ -33,9 +33,9 @@
       SOUND_POWER_SAVE_ON_AC = "1";
       SOUND_POWER_SAVE_ON_BAT = "1";
       SOUND_POWER_SAVE_CONTROLLER = "Y";
-      PCIE_ASPM_ON_AC = "powersupersave";
+      PCIE_ASPM_ON_AC = "default";
       PCIE_ASPM_ON_BAT = "powersupersave";
-      RUNTIME_PM_ON_AC = "auto";
+      RUNTIME_PM_ON_AC = "on";
       RUNTIME_PM_ON_BAT = "auto";
       USB_AUTOSUSPEND = "1";
       USB_DENYLIST = "152d:0578";

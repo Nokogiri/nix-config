@@ -4,8 +4,8 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
 
   imports = [
-    inputs.hyprland.nixosModules.default
     inputs.hardware.nixosModules.common-cpu-amd
+    inputs.hardware.nixosModules.common-gpu-amd
     inputs.hardware.nixosModules.common-pc-ssd
 
     ./hardware-configuration.nix
@@ -68,7 +68,8 @@
   hardware = {
     opengl = {
       enable = true;
-      extraPackages = with pkgs; [ vaapiVdpau ];
+      extraPackages = with pkgs; [ amdvlk ];
+      extraPackages32 = with pkgs; [ driversi686Linux.amdvlk ];
       driSupport = true;
       driSupport32Bit = true;
     };

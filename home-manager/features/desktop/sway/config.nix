@@ -4,6 +4,7 @@ let cfg = config.wayland.windowManager.sway.config;
 in {
   wayland.windowManager.sway = {
     enable = true;
+    #package = pkgs.swayfx;
     extraSessionCommands = ''
       export XDG_SESSION_TYPE=wayland
       export XDG_SESSION_DESKTOP=sway

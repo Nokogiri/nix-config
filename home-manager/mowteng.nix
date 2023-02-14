@@ -10,12 +10,10 @@
     ./features/desktop/eww
     ./features/helix
     ./features/desktop/sway
-    #./features/desktop/hyprland
 
     # Or modules exported from other flakes (such as nix-colors):
     inputs.nix-colors.homeManagerModules.default
     inputs.nur.nixosModules.nur
-    #inputs.hyprland.nixosModules.default
     inputs.spicetify-nix.homeManagerModule
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
@@ -27,7 +25,6 @@
       # If you want to use overlays your own flake exports (from overlays dir):
       outputs.overlays.modifications
       outputs.overlays.additions
-
       # Or overlays exported from other flakes:
       # Or define it inline, for example:
       # (final: prev: {

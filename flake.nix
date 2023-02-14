@@ -21,14 +21,14 @@
     # NUR
     nur.url = "github:nix-community/NUR";
     #  firefox addons
-    firefox-addons = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #firefox-addons = {
+    #  url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
 
     # hyprland
-    hyprland.url = "github:hyprwm/hyprland/main";
-    hyprwm-contrib.url = "github:hyprwm/contrib";
+    #hyprland.url = "github:hyprwm/hyprland/main";
+    #hyprwm-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
     # emcas pgtk
     #emacs-overlay.url = "github:nix-community/emacs-overlay";

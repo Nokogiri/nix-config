@@ -6,7 +6,7 @@
         scripts = [
           pkgs.mpvScripts.mpris
           pkgs.mpvScripts.sponsorblock
-          pkgs.mpvScripts.simple-mpv-webui
+          #pkgs.mpvScripts.simple-mpv-webui
         ];
       };
     };

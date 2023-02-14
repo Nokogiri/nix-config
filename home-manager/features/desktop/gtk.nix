@@ -22,8 +22,8 @@
   gtk = {
     enable = true;
     cursorTheme = {
-      package = pkgs.catppuccin-cursors.frappeDark;
-      name = "Catppuccin-Mocha-Dark-Cursors";
+      package = pkgs.catppuccin-cursors.macchiatoDark;
+      name = "Catppuccin-Macchiato-Dark-Cursors";
     };
     font = {
       name = "CaskaydiaCove Nerd Font";
@@ -34,10 +34,10 @@
       name = "Papirus-Dark";
     };
     theme = {
-      name = "Catppuccin-Mocha-Standard-Sky-Dark";
+      name = "Catppuccin-Macchiato-Standard-Sky-Dark";
       package = pkgs.catppuccin-gtk.override {
         accents = [ "sky" ];
-        variant = "mocha";
+        variant = "macchiato";
         size = "standard";
       };
     };
@@ -59,4 +59,11 @@
       };
     };
   };
+
+  home.file.".icons/default/index.theme".text = ''
+    [Icon Theme]
+    Name=Default
+    Comment=Default Cursor Theme
+    Inherits=${config.gtk.cursorTheme.name}
+  '';
 }

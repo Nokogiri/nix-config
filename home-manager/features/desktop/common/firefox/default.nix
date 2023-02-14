@@ -1,24 +1,24 @@
-{ pkgs, lib, inputs, ... }:
+{ config, pkgs, lib, ... }:
 
-let addons = inputs.firefox-addons.packages.${pkgs.system};
-in {
+{
 
   imports = [ ./ff2mpv.json.nix ./ff2mpv.py.nix ];
   home.packages = [ pkgs.ff2mpv ];
   programs.firefox = {
     enable = true;
-    profiles.nokogiri.extensions = with addons; [
+    profiles.nokogiri.extensions = with config.nur.repos.rycee.firefox-addons; [#addons; [
       vimium
       ublock-origin
       tree-style-tab
       stylus
       sponsorblock
       refined-github
-      #nur.repos.rycee.onetab
+      onetab
       netflix-1080p
       gopass-bridge
       ff2mpv
       darkreader
+      auto-tab-discard
     ];
     profiles.nokogiri = {
       name = "nokogiri";
