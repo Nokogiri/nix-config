@@ -26,7 +26,7 @@
         wheel_scroll_multiplier = 5;
         mouse_hide_wait = 3;
         enabled_layouts = "*";
-        
+
         # Cursor settings
         cursor = "#00bcd4";
         cursor_text_color = "#00bcd4";

@@ -1,4 +1,6 @@
-{ lib, stdenv, fetchFromGitHub
+{ lib
+, stdenv
+, fetchFromGitHub
 , addOpenGLRunpath
 , wrapGAppsHook
 , cmake
@@ -107,13 +109,15 @@ stdenv.mkDerivation rec {
     runHook postInstall
   '';
 
-  preFixup = let
-    libs = [ vulkan-loader ] ++ cubeb.passthru.backendLibs;
-  in ''
-    gappsWrapperArgs+=(
-      --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath libs}"
-    )
-  '';
+  preFixup =
+    let
+      libs = [ vulkan-loader ] ++ cubeb.passthru.backendLibs;
+    in
+    ''
+      gappsWrapperArgs+=(
+        --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath libs}"
+      )
+    '';
 
   passthru.updateScript = nix-update-script { };
 

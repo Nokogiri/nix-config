@@ -1,5 +1,4 @@
-{ pkgs, ...}:
-{
+{ pkgs, ... }: {
   programs.nnn = {
     extraPackages = with pkgs; [
       djvulibre

@@ -9,9 +9,9 @@
     jack.enable = true;
   };
   #environment.etc = {
-    #"wireplumber/main.lua.d/51-disable-suspension.lua".text = ''
-    #  table.insert (alsa_monitor.rules, {
-    #      matches = {
+  #"wireplumber/main.lua.d/51-disable-suspension.lua".text = ''
+  #  table.insert (alsa_monitor.rules, {
+  #      matches = {
   #        {
   #          -- Matches all sources.
   #          { "node.name", "matches", "alsa_input.*" },

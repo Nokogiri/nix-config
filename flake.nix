@@ -109,12 +109,11 @@
       nixosConfigurations = {
         consolero = nixpkgs.lib.nixosSystem {
           modules = [ ./nixos/consolero/configuration.nix ]
-          ++ (builtins.attrValues nixosModules);
+            ++ (builtins.attrValues nixosModules);
           specialArgs = { inherit inputs outputs; };
         };
       };
 
-      
       nixosConfigurations = {
         calvin = nixpkgs.lib.nixosSystem {
           modules = [ ./nixos/calvin/configuration.nix ]
@@ -136,7 +135,7 @@
           ];
         };
       };
-      
+
       homeConfigurations = {
         "nokogiri@homeassistant" = home-manager.lib.homeManagerConfiguration {
           pkgs =
