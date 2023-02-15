@@ -23,7 +23,7 @@
     "/" = {
       device = "/dev/disk/by-uuid/b465287b-b5cb-4fce-98fb-bb8a407f2f62";
       fsType = "btrfs";
-      options = [ "compress-force=zstd:12" ];
+      options = [ "compress=zstd:6" ];
     };
 
     "/home" = {
