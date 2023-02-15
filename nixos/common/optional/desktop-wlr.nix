@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  programs = { dconf.enable = true; };
+  programs = { dconf.enable = true; hyprland.enable = true; };
 
   services = {
     dbus = {

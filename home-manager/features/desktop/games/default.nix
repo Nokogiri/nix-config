@@ -8,8 +8,8 @@
     gamescope
     heroic
     mangohud
-    #moonlight-qt
-    portmod
+    moonlight-qt
+    #portmod
     prismlauncher
     steam
 
@@ -22,7 +22,7 @@
     gzdoom
     minetest
     openmw
-    RBDOOM-3-BFG
+    RBDOOM-3-BFG-vk
     solarus
     sm64ex
     vkquake

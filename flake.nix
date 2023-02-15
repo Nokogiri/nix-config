@@ -27,8 +27,8 @@
     #};
 
     # hyprland
-    #hyprland.url = "github:hyprwm/hyprland/main";
-    #hyprwm-contrib.url = "github:hyprwm/contrib";
+    hyprland.url = "github:hyprwm/hyprland/main";
+    hyprwm-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
     # emcas pgtk
     #emacs-overlay.url = "github:nix-community/emacs-overlay";

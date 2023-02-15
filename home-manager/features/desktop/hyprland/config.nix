@@ -58,10 +58,13 @@
     misc {
       disable_hyprland_logo=true
       disable_splash_rendering=true
-      no_vfr=false
+      vfr=true
       
     }
 
+    debug {
+      overlay=false
+    }
     binds {
       workspace_back_and_forth = true
     }

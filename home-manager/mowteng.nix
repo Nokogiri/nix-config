@@ -9,12 +9,15 @@
     ./features/desktop/media
     ./features/desktop/eww
     ./features/helix
-    ./features/desktop/sway
+    #:./features/desktop/sway
+    ./features/desktop/hyprland
 
     # Or modules exported from other flakes (such as nix-colors):
     inputs.nix-colors.homeManagerModules.default
+    #inputs.hyprland.nixosModules.default
     inputs.nur.nixosModules.nur
-    inputs.spicetify-nix.homeManagerModule
+    #inputs.hyprland.nixosModules.default
+    #inputs.spicetify-nix.homeManagerModule
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
   ];
@@ -54,6 +57,7 @@
     #fastfetch
     #gnome.nautilus
     #nautilus-open-any-terminal
+    jre8
     nitch
     xfce.thunar
     #transmission-gtk

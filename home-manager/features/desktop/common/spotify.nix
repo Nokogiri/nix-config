@@ -2,7 +2,7 @@
 let spicePkgs = inputs.spicetify-nix.packages.${pkgs.system}.default;
 in {
 
-  home.packages = [ pkgs.spotifywm ];
+  #home.packages = [ pkgs.spotifywm ];
   programs.spicetify = {
     enable = true;
     theme = spicePkgs.themes.catppuccin-frappe;

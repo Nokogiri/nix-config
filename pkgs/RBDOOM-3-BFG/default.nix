@@ -41,7 +41,7 @@ stdenv.mkDerivation rec {
     -DUSE_SYSTEM_ZLIB=ON \
     -DUSE_SYSTEM_LIBPNG=ON \
     -DUSE_SYSTEM_LIBJPEG=OFF \
-    -DUSE_SYSTEM_LIBGLEW=ON \
+    -DUSE_SYSTEM_LIBGLEW=OFF \
     -DUSE_SYSTEM_RAPIDJSON=ON \
     ../neo
   '';

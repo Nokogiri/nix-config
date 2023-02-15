@@ -5,8 +5,9 @@
 
   imports = [
     inputs.hardware.nixosModules.common-cpu-amd
-    inputs.hardware.nixosModules.common-gpu-amd
+    #inputs.hardware.nixosModules.common-gpu-amd
     inputs.hardware.nixosModules.common-pc-ssd
+    inputs.hyprland.nixosModules.default
 
     ./hardware-configuration.nix
 
@@ -57,7 +58,8 @@
       turbostat
       cpupower
     ];
-    kernelPackages = pkgs.linuxPackages_latest;
+    #kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_zen;
     kernelParams = [ "amd_pstate=passive" ];
   };
 
@@ -68,8 +70,8 @@
   hardware = {
     opengl = {
       enable = true;
-      extraPackages = with pkgs; [ amdvlk ];
-      extraPackages32 = with pkgs; [ driversi686Linux.amdvlk ];
+      #extraPackages = with pkgs; [ amdvlk ];
+      #extraPackages32 = with pkgs; [ driversi686Linux.amdvlk ];
       driSupport = true;
       driSupport32Bit = true;
     };
@@ -85,6 +87,7 @@
     mtr.enable = true;
   };
 
+  services = { power-profiles-daemon.enable = false; };
   location = {
     latitude = 50.9787;
     longitude = 11.03283;

@@ -1,5 +1,8 @@
 { pkgs, ... }: {
 
+  imports = [
+    ./spotifyd.nix
+  ];
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
       mpv = mpv.override {
@@ -10,7 +13,7 @@
         ];
       };
     };
-  home.packages = with pkgs; [ jellyfin-media-player mpv spotify-player ];
+  home.packages = with pkgs; [ jellyfin-media-player mpv spotify-player spotify-qt ];
 
   xdg.desktopEntries."umpv" = {
     exec = "";
