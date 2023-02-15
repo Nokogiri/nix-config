@@ -33,6 +33,11 @@
       fsType = "btrfs";
       options = [ "compress=zstd:9" ];
     };
+    "/data/DATA1.5TB0" = {
+      device = "/dev/disk/by-uuid/3b5dfdc9-dcb3-4ab2-84a0-cb68f81d6d1a";
+      fsType = "btrfs";
+      options = [ "compress=zstd:9" ];
+    };
     "/data/DATA1.5TB1" = {
       device = "/dev/disk/by-uuid/ba6897f8-523d-4666-91ea-126b070f6595";
       fsType = "btrfs";
