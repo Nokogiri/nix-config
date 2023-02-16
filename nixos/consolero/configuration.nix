@@ -81,10 +81,10 @@
     };
   };
 
-  powerManagement = {
-    cpuFreqGovernor = "ondemand";
-    powertop.enable = false;
-  };
+  #powerManagement = {
+  #  cpuFreqGovernor = "ondemand";
+  #  powertop.enable = false;
+  #};
 
   services.fwupd.enable = true;
 

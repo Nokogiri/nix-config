@@ -61,7 +61,7 @@
   hardware = { };
 
   powerManagement = {
-    cpuFreqGovernor = "ondemand";
+    cpuFreqGovernor = "schedutil";
     powertop.enable = false;
   };
 
