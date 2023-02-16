@@ -28,7 +28,6 @@
   };
 
   programs.waybar = {
-    #    package = [ inputs.hyprland.packages."x86_64-linux".waybar-hyprland ];
     systemd = {
       enable = true;
       target = "hyprland-session.target";

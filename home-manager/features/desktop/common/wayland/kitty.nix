@@ -6,7 +6,7 @@
       enable = true;
       font = {
         name = "CaskaydiaCove Nerd Font Mono";
-        size = 13;
+        size = 11;
       };
       #extraConfig = ''
       #  include ./theme.conf
