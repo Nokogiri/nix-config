@@ -18,7 +18,7 @@
       rounding=5
       blur=true
       blur_size=6
-      blur_passes=3
+      blur_passes=2
       blur_new_optimizations=true
       blur_ignore_opacity=true
       drop_shadow=true
