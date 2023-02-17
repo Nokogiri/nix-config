@@ -12,13 +12,13 @@
 
     monitor=eDP-1,preferred,auto,1
     decoration {
-      active_opacity=0.92
-      inactive_opacity=0.68
+      active_opacity=1.0
+      inactive_opacity=0.9
       fullscreen_opacity=1.0
-      rounding=5
+      rounding=8
       blur=true
-      blur_size=6
-      blur_passes=2
+      blur_size=3
+      blur_passes=1
       blur_new_optimizations=true
       blur_ignore_opacity=true
       drop_shadow=true

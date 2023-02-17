@@ -10,13 +10,14 @@
       with config.nur.repos.rycee.firefox-addons; [ # addons; [
         vimium
         ublock-origin
-        tree-style-tab
-        stylus
+        #tree-style-tab
+        #stylus
         sponsorblock
         refined-github
         onetab
         netflix-1080p
         gopass-bridge
+        firefox-color
         ff2mpv
         darkreader
         auto-tab-discard
