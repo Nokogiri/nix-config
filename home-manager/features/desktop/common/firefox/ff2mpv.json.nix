@@ -3,7 +3,7 @@
     {
       "name": "ff2mpv",
       "description": "ff2mpv's external manifest",
-      "path": "/home/nokogiri/.local/bin/ff2mpv.py",
+      "path": "/home/nokogiri/.nix-profile/bin/ff2mpv.py",
       "type": "stdio",
       "allowed_extensions": ["ff2mpv@yossarian.net"]
     }

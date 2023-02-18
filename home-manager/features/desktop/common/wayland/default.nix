@@ -18,7 +18,9 @@
     #swaybg
     swayidle
     swaylock-effects
-    swww
+    config.nur.repos.aleksana.swww
+    config.nur.repos.aleksana.yofi
+    #swww
     wl-clipboard
     wlr-randr
   ];

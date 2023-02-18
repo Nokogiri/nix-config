@@ -2,7 +2,7 @@
 
 {
 
-  imports = [ ./ff2mpv.json.nix ./ff2mpv.py.nix ];
+  imports = [ ./ff2mpv.json.nix ];
   home.packages = [ pkgs.ff2mpv ];
   programs.firefox = {
     enable = true;

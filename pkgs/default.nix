@@ -3,8 +3,8 @@
 { pkgs ? (import ../nixpkgs.nix) { } }: {
   amdctl = pkgs.callPackage ./amdctl { };
   cemu = pkgs.callPackage ./cemu { };
-  heroic-unwrapped = pkgs.callPackage ./heroic { };
-  heroic = pkgs.callPackage ./heroic/fhsenv.nix { };
+  #heroic-unwrapped = pkgs.callPackage ./heroic { };
+  #heroic = pkgs.callPackage ./heroic/fhsenv.nix { };
   iio-sensor-proxy = pkgs.callPackage ./iio-sensor-proxy { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   pass-fuzzel = pkgs.callPackage ./pass-fuzzel { };
@@ -17,5 +17,5 @@
   RBDOOM-3-BFG-vk = pkgs.callPackage ./RBDOOM-3-BFG-vk { };
   ryujinx = pkgs.callPackage ./ryujinx { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
-  swww = pkgs.callPackage ./swww { };
+  #swww = pkgs.callPackage ./swww { };
 }

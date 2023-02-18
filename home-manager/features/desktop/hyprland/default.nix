@@ -4,6 +4,7 @@
     ../common/wayland
     ../wallpaper
     inputs.hyprland.homeManagerModules.default
+    ./config.nix
   ];
 
   home.packages =
@@ -42,6 +43,6 @@
       hidpi = false;
     };
     recommendedEnvironment = true;
-    extraConfig = (import ./config.nix);
+    #extraConfig = (import ./config.nix);
   };
 }
