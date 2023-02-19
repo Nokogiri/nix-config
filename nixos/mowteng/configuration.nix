@@ -19,7 +19,7 @@
     ../common/optional/distrobox.nix
     ../common/optional/fonts.nix
     ../common/optional/fprintd.nix
-    ../common/optional/libvirt.nix
+    #../common/optional/libvirt.nix
     ../common/optional/networkmanager.nix
     ../common/optional/pipewire.nix
     ../common/optional/quietboot.nix
@@ -27,7 +27,7 @@
     ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
     ../common/optional/systemd-boot.nix
-    ../common/optional/virtualbox.nix
+    #../common/optional/virtualbox.nix
     ../common/optional/xdg-portal.nix
 
     ../common/users/nokogiri.nix
