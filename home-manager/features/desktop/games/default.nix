@@ -1,29 +1,32 @@
 { pkgs, config, ... }: {
 
-  imports = [ ./steam.nix ./wine.nix ];
+  imports = [
+    #./steam.nix 
+    ./wine.nix
+  ];
   home.packages = with pkgs; [
 
     # general
     #gamemode
     gamescope
-    heroic
+    #heroic
     mangohud
-    moonlight-qt
+    #moonlight-qt
     #portmod
     prismlauncher
-    steam
+    #steam
 
     # native packaged games
 
     #zeroad
     airshipper # veloren
     eduke32
-    dhewm3
+    #dhewm3
     gzdoom
-    minetest
+    #minetest
     openmw
-    RBDOOM-3-BFG-vk
-    solarus
+    #RBDOOM-3-BFG-vk
+    #solarus
     sm64ex
     vkquake
     yquake2
@@ -49,12 +52,10 @@
     libretro.play
     libretro.snes9x
     libretro.swanstation
-    pcsx2
+    #pcsx2
     ppsspp
     rpcs3
     ryujinx
-    dotnetCorePackages.sdk_7_0
-    #dotnetCorePackages.runtime_7_0
     yuzu-early-access
 
   ];

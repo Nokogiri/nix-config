@@ -18,7 +18,7 @@
             xorg.libXScrnSaver
             libpng
             gtk3
-            gtk3-x11 
+            gtk3-x11
             libgdiplus
             zlib
             libpulseaudio

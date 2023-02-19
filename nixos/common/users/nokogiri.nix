@@ -21,6 +21,7 @@ in {
       "deluge"
       "jellyfin"
       "uinput"
+      "podman"
       "rtkit"
       "vboxusers"
     ];
