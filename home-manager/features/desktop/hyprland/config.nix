@@ -252,10 +252,11 @@
         bind=SUPERSHIFT,9,movetoworkspacesilent,09
 
         windowrulev2 = workspace 3 silent,class:^(mpv)$
+        windowrulev2 = dimaround,class:^(wofi)$,title:^(drun)$
         #windowrulev2 = fullscreen,opaque,noblur,forceinput,class:^(.gamescope-wrapped)$
         windowrulev2 = workspace 7 silent,class:^(Spotify)$
         windowrulev2 = fullscreen,opaque,noblur,class:^(.org.jellyfin.)$
-        #blurls=waybar
+        blurls=waybar
     '';
   };
 }

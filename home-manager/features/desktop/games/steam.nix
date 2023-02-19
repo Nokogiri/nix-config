@@ -11,11 +11,16 @@
             glib.bin
             gsettings-desktop-schemas
             mangohud
+            mono
             xorg.libXcursor
             xorg.libXi
             xorg.libXinerama
             xorg.libXScrnSaver
             libpng
+            gtk3
+            gtk3-x11 
+            libgdiplus
+            zlib
             libpulseaudio
             libvorbis
             stdenv.cc.cc.lib

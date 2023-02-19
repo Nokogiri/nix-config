@@ -58,7 +58,7 @@
       turbostat
       cpupower
     ];
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_lqx;
     kernelParams = [ "amd_pstate=passive" ];
   };
 
@@ -87,6 +87,9 @@
   };
 
   services = { power-profiles-daemon.enable = false; };
+#  services.xserver.enable = true;
+#  services.xserver.displayManager.sddm.enable = true;
+#  services.xserver.desktopManager.plasma5.enable = true;
   location = {
     latitude = 50.9787;
     longitude = 11.03283;

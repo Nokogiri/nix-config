@@ -24,8 +24,8 @@
     waybar = prev.waybar.overrideAttrs (oldAttrs: rec {
       patches = (oldAttrs.patches or [ ]) ++ [ ./waybar-hyprland.patch ];
     });
-    yt-dlp = prev.yt-dlp.overrideAttrs (oldAttrs: rec {
-      patches = (oldAttrs.patches or [ ]) ++ [ ./yt-dlp.patch ];
-    });
+    #yt-dlp = prev.yt-dlp.overrideAttrs (oldAttrs: rec {
+    #  patches = (oldAttrs.patches or [ ]) ++ [ ./yt-dlp.patch ];
+    #});
   };
 }

@@ -11,7 +11,7 @@
       };
     };
     temperature = {
-      day = 5700;
+      day = 6500;
       night = 4500;
     };
   };
