@@ -1,20 +1,15 @@
 { pkgs, config, ... }: {
 
-  imports = [
+  #imports = [
     #./steam.nix 
-    ./wine.nix
-  ];
+    #./wine.nix
+  #];
   home.packages = with pkgs; [
 
     # general
-    #gamemode
     gamescope
-    #heroic
     mangohud
-    #moonlight-qt
-    #portmod
     prismlauncher
-    #steam
 
     # native packaged games
 
@@ -25,7 +20,6 @@
     gzdoom
     #minetest
     openmw
-    #RBDOOM-3-BFG-vk
     #solarus
     sm64ex
     vkquake
@@ -36,9 +30,7 @@
     cemu
     #config.nur.repos.kira-bruneau.bcml # botw mod loader
     citra-canary
-    #dolphin-emu-beta
     dolphinEmuMaster
-    #dolphin-emu-primehack
     retroarch
     libretro.beetle-pce-fast
     libretro.beetle-psx
@@ -52,7 +44,6 @@
     libretro.play
     libretro.snes9x
     libretro.swanstation
-    #pcsx2
     ppsspp
     rpcs3
     ryujinx

@@ -51,11 +51,11 @@
           animation=workspaces,1,2,easeout,slide
         }
 
-        dwindle {
-          col.group_border_active=0xffEEEEEE
-          col.group_border=0xff999999
-          split_width_multiplier=1.35
-        }
+        #dwindle {
+        #  col.group_border_active=0xffEEEEEE
+          #col.group_border=0xff999999
+        #  split_width_multiplier=1.35
+        #}
 
         misc {
           disable_hyprland_logo=true

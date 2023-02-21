@@ -6,6 +6,10 @@
       steam = steam.override {
         extraPkgs = pkgs:
           with pkgs; [
+            gst_all_1.gst-vaapi
+            gst_all_1.gst-plugins-good
+            gst_all_1.gst-plugins-bad
+            gst_all_1.gst-plugins-ugly
             libgdiplus
             gamescope
             glib.bin
@@ -16,6 +20,8 @@
             xorg.libXi
             xorg.libXinerama
             xorg.libXScrnSaver
+            xorg.libXdmcp
+            xorg.libXau
             libpng
             gtk3
             gtk3-x11
