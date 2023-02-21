@@ -5,7 +5,7 @@
     ./kdeconnect.nix
     ./pavucontrol.nix
     ./playerctl.nix
-    #./spotify.nix
+    ./spotify.nix
     ./thunderbird.nix
     ./udisks.nix
     ./youtube.nix
