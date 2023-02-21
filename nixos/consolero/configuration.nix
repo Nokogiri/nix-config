@@ -19,7 +19,7 @@
     ../common/optional/avahi.nix
     ../common/optional/bluetooth.nix
     #../common/optional/desktop.nix
-    ../common/optional/distrobox.nix
+    ../common/optional/distrobox-nvidia.nix
     ../common/optional/fonts.nix
     ../common/optional/networkmanager.nix
     ../common/optional/pipewire.nix

@@ -50,7 +50,7 @@
     homeDirectory = "/home/nokogiri";
   };
 
-  home.packages = with pkgs; [ gparted ];
+  home.packages = with pkgs; [ gparted xorg.xhost ];
 
   # Enable home-manager and git
   programs = {
