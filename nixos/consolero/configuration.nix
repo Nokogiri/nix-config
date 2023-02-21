@@ -56,7 +56,7 @@
   boot = {
     cleanTmpDir = true;
     extraModulePackages = with config.boot.kernelPackages; [ ];
-    kernelPackages = pkgs.linuxPackages_zen;
+    kernelPackages = pkgs.linuxPackages_lqx;
   };
 
   #environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
