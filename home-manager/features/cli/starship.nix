@@ -9,6 +9,11 @@
     settings = {
       format = "$all";
       add_newline = false;
+      character = {
+        success_symbol = "[[♥](green) ❯](maroon)";
+        error_symbol = "[❯](red)";
+        vicmd_symbol = "[❮](green)";
+      };
       battery = { disabled = true; };
       palette = "catppuccin_${flavour}";
     } // builtins.fromTOML (builtins.readFile (pkgs.fetchFromGitHub {

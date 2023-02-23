@@ -61,7 +61,7 @@
       turbostat
       cpupower
     ];
-    kernelPackages = pkgs.linuxPackages_lqx;
+    kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [ "amd_pstate=passive" ];
   };
 

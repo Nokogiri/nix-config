@@ -59,6 +59,7 @@
     #nautilus-open-any-terminal
     jre8
     nitch
+    mesa-demos
     xfce.thunar
     #transmission-gtk
     #transmission-remote-gtk
