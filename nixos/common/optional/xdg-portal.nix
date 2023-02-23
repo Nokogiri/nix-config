@@ -2,7 +2,8 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    xdgOpenUsePortal = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    lxqt.enable = true;
+    xdgOpenUsePortal = false;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.lxqt.xdg-desktop-portal-lxqt pkgs.xdg-desktop-portal-gnome ];
   };
 }
