@@ -22,5 +22,5 @@ rustPlatform.buildRustPackage rec {
   buildInputs = [ gtk4 greetd.greetd ];
 
   doCheck = false;
-  
+
 }

@@ -4,13 +4,13 @@
     gtklock = {
       name = "gtklock";
       text = ''
-      auth            sufficient      pam_unix.so try_first_pass likeauth nullok
-      auth            sufficient      pam_fprintd.so
-      auth include login
+        auth            sufficient      pam_unix.so try_first_pass likeauth nullok
+        auth            sufficient      pam_fprintd.so
+        auth include login
       '';
     };
   };
-  environment.systemPackages = with pkgs; [ gtklock ];  
+  environment.systemPackages = with pkgs; [ gtklock ];
   programs = {
     dconf.enable = true;
     hyprland = {

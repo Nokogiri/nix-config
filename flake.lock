@@ -75,11 +75,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1677346766,
-        "narHash": "sha256-0+smV3LldkVIRkD4cSfcVsJxxSB9NaRO56ze5Q8+hdo=",
+        "lastModified": 1677363591,
+        "narHash": "sha256-hSP+adSLxnOMUVxb+Y+Xiv8eoruw+JnjntZyRLATeo8=",
         "owner": "hyprwm",
         "repo": "hyprland",
-        "rev": "cf566b59ce980790bc60dac8adf4df9ec8bcf9f9",
+        "rev": "edd0a141de56cb71dc46ffdaf70fe0ccd950b136",
         "type": "github"
       },
       "original": {
@@ -295,28 +295,13 @@
         "type": "github"
       }
     },
-    "nixpkgs_6": {
-      "locked": {
-        "lastModified": 1655043425,
-        "narHash": "sha256-A+oT+aQGhW5lXy8H0cqBLsYtgcnT5glmGOXWQDcGw6I=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "914ef51ffa88d9b386c71bdc88bffc5273c08ada",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "ref": "nixos-unstable",
-        "type": "indirect"
-      }
-    },
     "nur": {
       "locked": {
-        "lastModified": 1677361502,
-        "narHash": "sha256-LKwDLGyFEU7M+nYAzemvuZTVfo8lujFd5JSBWxuiQJk=",
+        "lastModified": 1677365085,
+        "narHash": "sha256-XdrOSAABhkmMM3tDuFOHnGxQ8A0833oLXK9BsBWFWSE=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "f86fd886eb8f3dc7948b6f8cd72de1fe1b5d80c6",
+        "rev": "3ef7891781ff7c4961e6b01b45529cffe865a8d0",
         "type": "github"
       },
       "original": {
@@ -336,8 +321,7 @@
         "nix-minecraft": "nix-minecraft",
         "nixpkgs": "nixpkgs_5",
         "nur": "nur",
-        "sops-nix": "sops-nix",
-        "spicetify-nix": "spicetify-nix"
+        "sops-nix": "sops-nix"
       }
     },
     "sops-nix": {
@@ -358,24 +342,6 @@
       "original": {
         "owner": "mic92",
         "repo": "sops-nix",
-        "type": "github"
-      }
-    },
-    "spicetify-nix": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_6"
-      },
-      "locked": {
-        "lastModified": 1675736383,
-        "narHash": "sha256-fjQmN3pYGstBNHCFdmPzDf1/Dt04v3b7+/w4cQ4gkKo=",
-        "owner": "the-argus",
-        "repo": "spicetify-nix",
-        "rev": "ec85c2a2f5d1035142b8e383cc77b68bb0b9ebc8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "the-argus",
-        "repo": "spicetify-nix",
         "type": "github"
       }
     },

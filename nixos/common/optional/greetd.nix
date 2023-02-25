@@ -4,14 +4,16 @@ let
   greetd = "${pkgs.greetd.greetd}/bin/greetd";
   gtkgreet = "${pkgs.greetd.gtkgreet}/bin/gtkgreet";
   greeting = "%{pkgs.regreet}/bin/regreet";
-  
-  sway-kiosk = command: "${pkgs.sway}/bin/sway --config ${pkgs.writeText "kiosk.config" ''
-    output * bg #000000 solid_color
-    exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
-    exec "${command}; ${pkgs.sway}/bin/swaymsg exit"
-  ''}";
-in
-{
+
+  sway-kiosk = command:
+    "${pkgs.sway}/bin/sway --config ${
+      pkgs.writeText "kiosk.config" ''
+        output * bg #000000 solid_color
+        exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+        exec "${command}; ${pkgs.sway}/bin/swaymsg exit"
+      ''
+    }";
+in {
   environment.systemPackages = with pkgs; [ sway cage regreet ];
   services.greetd = {
     enable = true;

@@ -2,44 +2,26 @@
   description = "Your new nix config";
 
   inputs = {
-    # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    # Home manager
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    # Hardware?
     hardware.url = "github:nixos/nixos-hardware";
 
-    # secret stuff
     sops-nix = {
       url = "github:mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # NUR
     nur.url = "github:nix-community/NUR";
-    #  firefox addons
-    #firefox-addons = {
-    #  url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
 
-    # hyprland
     hyprland.url = "github:hyprwm/hyprland/main";
     hyprwm-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
-    # emcas pgtk
-    #emacs-overlay.url = "github:nix-community/emacs-overlay";
 
-    # spotify++
-    spicetify-nix.url = "github:the-argus/spicetify-nix";
-
-    # minecraft nix-style
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
-    # Shameless plug: looking for a way to nixify your themes and make
-    # everything match nicely? Try nix-colors!
+
     nix-colors.url = "github:misterio77/nix-colors";
   };
 
@@ -47,11 +29,7 @@
     let
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
-        #"aarch64-linux"
-        #"i686-linux"
         "x86_64-linux"
-        #"aarch64-darwin"
-        #"x86_64-darwin"
       ];
     in rec {
       # Your custom packages
@@ -75,21 +53,6 @@
       # These are usually stuff you would upstream into home-manager
       homeManagerModules = import ./modules/home-manager;
 
-      # NixOS configuration entrypoint
-      # Available through 'nixos-rebuild --flake .#your-hostname'
-      #nixosConfigurations = let
-      #  mkHost = system: hostname:
-      #    nixpkgs.lib.nixosSystem {
-      #      #pkgs = packages.${system};#legacyPackages.${system};
-      #      modules = [ ./nixos/${hostname}/configuration.nix ]
-      #        ++ (builtins.attrValues nixosModules);
-      #        specialArgs = { inherit inputs outputs; };
-      #    };
-      #in {
-      #  calvin = mkHost "x86_64-linux" "calvin";
-      #  homeassistant = mkHost "x86_64-linux" "homeassistant";
-      #  mowteng = mkHost "x86_64-linux" "mowteng";
-      #};
       nixosConfigurations = {
         mowteng = nixpkgs.lib.nixosSystem {
           modules = [ ./nixos/mowteng/configuration.nix ]
