@@ -5,6 +5,7 @@
     ./fish.nix
     ./fzf.nix
     ./git.nix
+    ./gpg-agent.nix
     ./lsd.nix
     ./nix-index.nix
     ./nnn.nix

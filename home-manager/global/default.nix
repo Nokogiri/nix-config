@@ -4,9 +4,8 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
     ../features/cli
-    ../features/cli-optional/gpg-agent.nix
     ../../colors
-        inputs.nix-colors.homeManagerModules.default
+    inputs.nix-colors.homeManagerModules.default
   ];
 
   nixpkgs = {

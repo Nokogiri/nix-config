@@ -3,9 +3,9 @@
     ./firefox
     ./gpg-agent.nix
     ./kdeconnect.nix
+    ./nnn-desktop.nix
     ./pavucontrol.nix
     ./playerctl.nix
-    #./spotify.nix
     ./thunderbird.nix
     ./udisks.nix
     ./youtube.nix
