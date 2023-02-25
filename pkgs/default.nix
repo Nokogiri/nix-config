@@ -15,6 +15,7 @@
     pkgs.callPackage ./plymouth-catppuccin-frappe { };
   plymouth-catppuccin-macchiato =
     pkgs.callPackage ./plymouth-catppuccin-macchiato { };
+  regreet = pkgs.callPackage ./regreet { };
   RBDOOM-3-BFG = pkgs.callPackage ./RBDOOM-3-BFG { };
   RBDOOM-3-BFG-vk = pkgs.callPackage ./RBDOOM-3-BFG-vk { };
   ryujinx = pkgs.callPackage ./ryujinx { };

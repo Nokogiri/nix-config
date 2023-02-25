@@ -29,13 +29,13 @@
 
 buildDotnetModule rec {
   pname = "ryujinx";
-  version = "1.1.626"; # Based off of the official github actions builds: https://github.com/Ryujinx/Ryujinx/actions/workflows/release.yml
+  version = "1.1.643"; # Based off of the official github actions builds: https://github.com/Ryujinx/Ryujinx/actions/workflows/release.yml
 
   src = fetchFromGitHub {
     owner = "Ryujinx";
     repo = "Ryujinx";
-    rev = "7aa430f1a51fd793971992b4454540975222b848";
-    sha256 = "0grhxqkijnf3d4z8qvkvdkfqpqwpw7g46bh674gigyr74q9s72cl";
+    rev = "9b1cc2cec6135602efc5dc5afa45ed3db261eb42";
+    sha256 = "04bxmnc61jfq3rlmvz1ywncys0fm3b2m3ip4fx35f69sq9z3yddc";
   };
 
   dotnet-sdk = dotnetCorePackages.sdk_7_0;
@@ -79,16 +79,16 @@ buildDotnetModule rec {
     SDL2
   ];
 
-  patches = [
-    ./appdir.patch # Ryujinx attempts to write to the nix store. This patch redirects it to "~/.config/Ryujinx" on Linux.
-  ];
+  #patches = [
+  #  ./appdir.patch # Ryujinx attempts to write to the nix store. This patch redirects it to "~/.config/Ryujinx" on Linux.
+  #];
 
   projectFile = "Ryujinx.sln";
   testProjectFile = "Ryujinx.Tests/Ryujinx.Tests.csproj";
   doCheck = true;
 
   dotnetFlags = [
-    "/p:ExtraDefineConstants=DISABLE_UPDATER"
+    "/p:ExtraDefineConstants=FORCE_EXTERNAL_BASE_DIR"
   ];
 
   executables = [

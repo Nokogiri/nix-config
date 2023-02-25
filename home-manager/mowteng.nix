@@ -9,17 +9,11 @@
     ./features/desktop/media
     ./features/desktop/eww
     ./features/helix
-    #./features/desktop/sway
     ./features/desktop/hyprland
 
-    # Or modules exported from other flakes (such as nix-colors):
     inputs.nix-colors.homeManagerModules.default
-    #inputs.hyprland.nixosModules.default
     inputs.nur.nixosModules.nur
-    #inputs.hyprland.nixosModules.default
     inputs.spicetify-nix.homeManagerModule
-    # You can also split up your configuration and import pieces of it here:
-    # ./nvim.nix
   ];
 
   nixpkgs = {
@@ -42,7 +36,6 @@
       allowUnfree = true;
       # Workaround for https://github.com/nix-community/home-manager/issues/2942
       allowUnfreePredicate = (_: true);
-      permittedInsecurePackages = [ "imagemagick-6.9.12-68" ];
     };
   };
 
@@ -54,15 +47,7 @@
 
   home.packages = with pkgs; [
     inputs.hyprpicker.packages.${system}.hyprpicker
-    #fastfetch
-    #gnome.nautilus
-    #nautilus-open-any-terminal
-    jre8
-    nitch
-    mesa-demos
     xfce.thunar
-    #transmission-gtk
-    #transmission-remote-gtk
     transmission-qt
   ];
 

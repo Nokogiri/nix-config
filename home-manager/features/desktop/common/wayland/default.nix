@@ -15,12 +15,10 @@
     grim
     imv
     slurp
-    #swaybg
     swayidle
     swaylock-effects
     config.nur.repos.aleksana.swww
     config.nur.repos.aleksana.yofi
-    #swww
     wl-clipboard
     wlr-randr
   ];

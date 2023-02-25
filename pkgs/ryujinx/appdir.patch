@@ -2,13 +2,13 @@ diff --git a/Ryujinx.Common/ReleaseInformation.cs b/Ryujinx.Common/ReleaseInform
 index 35890406..cca77163 100644
 --- a/Ryujinx.Common/ReleaseInformation.cs
 +++ b/Ryujinx.Common/ReleaseInformation.cs
-@@ -42,12 +42,14 @@ namespace Ryujinx.Common
+@@ -48,13 +48,13 @@ namespace Ryujinx.Common
 
          public static string GetBaseApplicationDirectory()
          {
 -            if (IsFlatHubBuild())
 -            {
-+            //if (IsFlatHubBuild())
++            //if (IsFlatHubBuild() || OperatingSystem.IsMacOS())
 +            //{
 +                // This needs to be a mutable path, while CurrentDomain.BaseDirectory refers to the nix store.
 +                // AppDataManager.BaseDirPath refers to ".config/Ryujinx" on Linux.
