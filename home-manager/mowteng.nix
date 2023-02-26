@@ -10,7 +10,6 @@
     ./features/helix
     ./features/desktop/hyprland
 
-    inputs.nix-colors.homeManagerModules.default
     inputs.nur.nixosModules.nur
   ];
 

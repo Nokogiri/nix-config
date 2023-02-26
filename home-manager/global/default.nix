@@ -4,7 +4,7 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
     ../features/cli
-    ../../colors
+    ../colors
     inputs.nix-colors.homeManagerModules.default
   ];
 

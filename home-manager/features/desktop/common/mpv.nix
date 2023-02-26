@@ -5,7 +5,7 @@
       mpv = mpv.override { scripts = [ pkgs.mpvScripts.mpris ]; };
     };
 
-  home.packages = with pkgs; [ mpv ];
+  home.packages = with pkgs; [ mpv celluloid ];
 
   xdg.desktopEntries."umpv" = {
     exec = "";

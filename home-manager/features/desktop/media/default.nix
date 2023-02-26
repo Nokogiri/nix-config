@@ -14,6 +14,7 @@
   home.packages = with pkgs; [
     jellyfin-media-player
     mpv
+    ncspot
     spotify-player
     spotify-qt
   ];

@@ -3,6 +3,7 @@
   imports = [
     #inputs.impermanence.nixosModules.impermanence
     inputs.home-manager.nixosModules.home-manager
+    ./console.nix
     ./doas.nix
     ./fish.nix
     ./locale.nix

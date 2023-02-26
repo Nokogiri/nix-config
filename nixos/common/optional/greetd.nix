@@ -1,28 +1,13 @@
 { pkgs, ... }:
-let
-  user = "nokogiri";
-  greetd = "${pkgs.greetd.greetd}/bin/greetd";
-  gtkgreet = "${pkgs.greetd.gtkgreet}/bin/gtkgreet";
-  greeting = "%{pkgs.regreet}/bin/regreet";
-
-  sway-kiosk = command:
-    "${pkgs.sway}/bin/sway --config ${
-      pkgs.writeText "kiosk.config" ''
-        output * bg #000000 solid_color
-        exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
-        exec "${command}; ${pkgs.sway}/bin/swaymsg exit"
-      ''
-    }";
+let user = "nokogiri";
 in {
-  environment.systemPackages = with pkgs; [ sway cage regreet ];
   services.greetd = {
     enable = true;
     settings = {
       default_session = {
-        command = sway-kiosk "${gtkgreet} -l -c '$SHELL -l'";
-        #command = "cage -s -- regreet";
-        inherit user;
-        #user = "greeter";
+        command =
+          "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd '$SHELL -l'";
+        user = "greeter";
       };
       #initial_session = {
       #  command = "$SHELL -l";
