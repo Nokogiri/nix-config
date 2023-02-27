@@ -2,11 +2,8 @@
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
 
 { inputs, outputs, lib, config, pkgs, ... }: {
-  imports = [
-    ../features/cli
-    ../colors
-    inputs.nix-colors.homeManagerModules.default
-  ];
+  imports =
+    [ ../features/cli ../colors inputs.nix-colors.homeManagerModules.default ];
 
   nixpkgs = {
     overlays = [
