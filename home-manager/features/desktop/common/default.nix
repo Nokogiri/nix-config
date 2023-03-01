@@ -9,6 +9,7 @@
     ./thunderbird.nix
     ./udisks.nix
     ./youtube.nix
+    ./zathura.nix
   ];
 
   home.sessionVariables = {

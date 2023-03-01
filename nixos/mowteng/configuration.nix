@@ -11,7 +11,6 @@
     ./hardware-configuration.nix
 
     ../common/global
-
     ../common/optional/avahi.nix
     ../common/optional/bluetooth.nix
     ../common/optional/desktop-wlr.nix

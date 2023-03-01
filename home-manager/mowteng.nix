@@ -13,11 +13,7 @@
     inputs.nur.nixosModules.nur
   ];
 
-  home.packages = with pkgs; [
-    inputs.hyprpicker.packages.${system}.hyprpicker
-    xfce.thunar
-    transmission-qt
-  ];
+  home.packages = with pkgs; [ xfce.thunar transmission-qt ];
 
   programs = { password-store.enable = true; };
 }

@@ -3,7 +3,7 @@
 
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports =
-    [ ../features/cli ../colors inputs.nix-colors.homeManagerModules.default ];
+    [ ../features/cli ../colors inputs.nix-colors.homeManagerModules.default inputs.sops-nix.homeManagerModules.sops ];
 
   nixpkgs = {
     overlays = [

@@ -13,6 +13,7 @@
         }
 
         monitor=eDP-1,preferred,auto,1
+        monitor=,preferred,auto,1
         decoration {
           active_opacity=1.0
           inactive_opacity=0.9
@@ -116,6 +117,7 @@
         bind=SUPER,b,exec,firefox
 
         bind=SUPER,p,exec,wofi -S drun -x 10 -y 10 -W 25% -H 60%
+        bind,XF86HomePage,exec,wofi -S drun -x 10 -y 10 -W 25% -H 60%
         bind=SUPER,d,exec,hyprfuzzel
         bind=SUPER,i,exec,cliphist list | fuzzel -d -w 96 | cliphist decode | wl-copy
         bind=,Scroll_Lock,exec,pass-wofi # fn+k
@@ -202,9 +204,9 @@
         bind=SUPERCONTROL,k,focusmonitor,u
         bind=SUPERCONTROL,j,focusmonitor,d
 
-        bind=SUPERCONTROL,1,focusmonitor,DP-1
-        bind=SUPERCONTROL,2,focusmonitor,DP-2
-        bind=SUPERCONTROL,3,focusmonitor,DP-3
+        bind=SUPERCONTROL,1,focusmonitor,eDP-1
+        bind=SUPERCONTROL,2,focusmonitor,DP-1
+        
 
         bind=SUPERCONTROLSHIFT,left,movewindow,mon:l
         bind=SUPERCONTROLSHIFT,right,movewindow,mon:r

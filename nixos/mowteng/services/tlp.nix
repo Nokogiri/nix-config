@@ -4,7 +4,7 @@
     settings = {
       MAX_LOST_WORK_SECS_ON_AC = "15";
       MAX_LOST_WORK_SECS_ON_BAT = "60";
-      CPU_SCALING_GOVERNOR_ON_AC = "ondemand";
+      CPU_SCALING_GOVERNOR_ON_AC = "conservative";
       CPU_SCALING_GOVERNOR_ON_BAT = "conservative";
       CPU_SCALING_MIN_FREQ_ON_AC = "400000";
       CPU_SCALING_MAX_FREQ_ON_AC = "4000000";

@@ -1,9 +1,4 @@
 { pkgs, config, ... }: {
-
-  #imports = [
-  #./steam.nix 
-  #./wine.nix
-  #];
   home.packages = with pkgs; [
 
     # general
@@ -28,7 +23,6 @@
 
     # emulation
     cemu
-    #config.nur.repos.kira-bruneau.bcml # botw mod loader
     citra-canary
     dolphinEmuMaster
     retroarch
@@ -47,7 +41,7 @@
     ppsspp
     rpcs3
     ryujinx
-    yuzu-early-access
+    yuzu-mainline
 
   ];
 }
