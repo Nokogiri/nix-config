@@ -42,6 +42,5 @@
       hidpi = false;
     };
     recommendedEnvironment = true;
-    #extraConfig = (import ./config.nix);
   };
 }

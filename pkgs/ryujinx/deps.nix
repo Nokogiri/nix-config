@@ -33,7 +33,7 @@
   (fetchNuGet { pname = "HarfBuzzSharp.NativeAssets.Win32"; version = "2.8.2.1-preview.108"; sha256 = "0n6ymn9jqms3mk5hg0ar4y9jmh96myl6q0jimn7ahb1a8viq55k1"; })
   (fetchNuGet { pname = "JetBrains.Annotations"; version = "10.3.0"; sha256 = "1grdx28ga9fp4hwwpwv354rizm8anfq4lp045q4ss41gvhggr3z8"; })
   (fetchNuGet { pname = "jp2masa.Avalonia.Flexbox"; version = "0.2.0"; sha256 = "1abck2gad29mgf9gwqgc6wr8iwl64v50n0sbxcj1bcxgkgndraiq"; })
-  (fetchNuGet { pname = "LibHac"; version = "0.17.0"; sha256 = "06ar4yv9mbvi42fpzs8g6j5yqrk1nbn5zssbh2k08sx3s757gd6f"; })
+  (fetchNuGet { pname = "LibHac"; version = "0.18.0"; sha256 = "19d5fqdcws0730580jlda6pdddprxcrhw7b3ybiiglabsr7bmgdv"; })
   (fetchNuGet { pname = "MicroCom.CodeGenerator.MSBuild"; version = "0.10.4"; sha256 = "1bdgy6g15d1mln1xpvs6sy0l2zvfs4hxw6nc3qm16qb8hdgvb73y"; })
   (fetchNuGet { pname = "MicroCom.Runtime"; version = "0.10.4"; sha256 = "0ccbzp0d01dcahm7ban7xyh1rk7k2pkml3l5i7s85cqk5lnczpw2"; })
   (fetchNuGet { pname = "Microsoft.CodeAnalysis.Analyzers"; version = "2.9.6"; sha256 = "18mr1f0wpq0fir8vjnq0a8pz50zpnblr7sabff0yqx37c975934a"; })

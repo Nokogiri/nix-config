@@ -2,6 +2,8 @@
   console = {
     useXkbConfig = true;
     earlySetup = false;
+    font = "${pkgs.terminus_font}/share/consolefonts/ter-v20b.psf.gz";
+    packages = [ pkgs.terminus_font ];
   };
 
   boot = {
