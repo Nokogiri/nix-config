@@ -2,7 +2,6 @@
   wayland.windowManager.hyprland = {
     extraConfig = ''
       general {
-        #main_mod=SUPER
         gaps_in=15
         gaps_out=20
         border_size=3.7
@@ -72,7 +71,11 @@
         workspace_back_and_forth = true
       }
       input {
-        kb_layout=us
+        kb_layout=us,de
+        kb_variant=altgr-intl,
+        kb_options=grp:alt_space_toggle
+
+        follow_mouse=1
         touchpad {
           disable_while_typing=true
         }

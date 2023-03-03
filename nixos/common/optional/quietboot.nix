@@ -1,14 +1,14 @@
 { pkgs, config, ... }: {
   console = {
     useXkbConfig = true;
-    earlySetup = false;
+    earlySetup = true;
     font = "${pkgs.terminus_font}/share/consolefonts/ter-v20b.psf.gz";
     packages = [ pkgs.terminus_font ];
   };
 
   boot = {
     plymouth = {
-      enable = true;
+      enable = false;
       theme = "catppuccin-macchiato";
       themePackages = [ pkgs.plymouth-catppuccin-macchiato ];
       # [

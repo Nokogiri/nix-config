@@ -3,7 +3,7 @@
 {
 
   imports = [ ./ff2mpv.json.nix ];
-  home.packages = [ pkgs.ff2mpv ];
+  home.packages = [ pkgs.ff2mpv pkgs.gopass-jsonapi ];
   programs.firefox = {
     enable = true;
     profiles.nokogiri.extensions =
