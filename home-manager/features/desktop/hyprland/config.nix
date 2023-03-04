@@ -257,6 +257,7 @@
       windowrulev2 = workspace 7 silent,class:^(Spotify)$
       windowrulev2 = fullscreen,opaque,noblur,class:^(.org.jellyfin.)$
       blurls=waybar
+      blurls=wofi
     '';
   };
 }

@@ -4,7 +4,7 @@
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
       nerdfonts = nerdfonts.override {
-        fonts = [ "CascadiaCode" "FiraMono" "FiraCode" "IBMPlexMono" "iA-Writer" "Iosevka" "SourceCodePro" ];
+        fonts = [ "CascadiaCode" "FiraMono" "FiraCode" "IBMPlexMono" "iA-Writer" "Iosevka" "SourceCodePro" "JetBrainsMono" ];
       };
     };
 

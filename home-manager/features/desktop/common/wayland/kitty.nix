@@ -6,8 +6,8 @@
       enable = true;
       font = {
         #name = "CaskaydiaCove Nerd Font Mono";
-        name = "BlexMono Nerd Font Mono";
-        size = 12;
+        name = "IosevkaTerm NF";
+        size = 13;
       };
       #extraConfig = ''
       #  include ./theme.conf

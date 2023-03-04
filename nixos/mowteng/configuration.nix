@@ -87,8 +87,8 @@
   };
 
   services = { power-profiles-daemon.enable = false; };
-  services.xserver.displayManager.sessionPackages =
-    [ inputs.hyprland.packages.${pkgs.system}.default ];
+  #services.xserver.displayManager.sessionPackages =
+  #  [ inputs.hyprland.packages.${pkgs.system}.default ];
   location = {
     latitude = 50.9787;
     longitude = 11.03283;
