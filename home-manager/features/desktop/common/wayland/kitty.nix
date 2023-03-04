@@ -5,7 +5,8 @@
     kitty = {
       enable = true;
       font = {
-        name = "CaskaydiaCove Nerd Font Mono";
+        #name = "CaskaydiaCove Nerd Font Mono";
+        name = "BlexMono Nerd Font Mono";
         size = 12;
       };
       #extraConfig = ''

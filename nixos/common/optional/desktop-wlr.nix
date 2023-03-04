@@ -13,10 +13,16 @@
   environment.systemPackages = with pkgs; [ gtklock ];
   programs = {
     dconf.enable = true;
-    hyprland = {
-      enable = true;
-      package = inputs.hyprland.packages.${pkgs.system}.default;
-    };
+    #hyprland = {
+    #  enable = true;
+    #  package = inputs.hyprland.packages.${pkgs.system}.default; #.override ({
+      #  hidpiXWayland = false;
+      #});
+    #  xwayland = {
+    #    enable = true;
+    #    hidpi = false;
+    #  };
+    #};
   };
 
   services = {
