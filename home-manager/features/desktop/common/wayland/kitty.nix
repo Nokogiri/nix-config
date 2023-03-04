@@ -6,12 +6,10 @@
       enable = true;
       font = {
         #name = "CaskaydiaCove Nerd Font Mono";
-        name = "IosevkaTerm NF";
-        size = 13;
+        #name = "IosevkaTerm NF";
+        name = "JetBrainsMono Nerd Font Mono";
+        size = 12;
       };
-      #extraConfig = ''
-      #  include ./theme.conf
-      #'';
       theme = "Catppuccin-Macchiato";
       settings = {
         # General settings

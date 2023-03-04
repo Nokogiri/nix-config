@@ -75,7 +75,7 @@
         kb_variant=altgr-intl,
         kb_options=grp:alt_space_toggle
 
-        follow_mouse=1
+        #follow_mouse=1
         touchpad {
           disable_while_typing=true
         }
