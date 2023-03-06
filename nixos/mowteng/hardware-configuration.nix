@@ -16,14 +16,28 @@
     };
     kernelModules = [ "kvm-amd" "zenpower" ];
     loader.efi.efiSysMountPoint = "/boot";
-    supportedFilesystems = [ "btrfs" ];
+    supportedFilesystems = [ "btrfs" "zfs" ];
   };
 
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-uuid/b465287b-b5cb-4fce-98fb-bb8a407f2f62";
-      fsType = "btrfs";
-      options = [ "compress=zstd:6" ];
+      device = "mowteng/nixos/root";
+      fsType = "zfs";
+    };
+    
+    "/var/lib" = {
+      device = "mowteng/nixos/var/lib";
+      fsType = "zfs";
+    };
+  
+    "/var/log" = {
+      device = "mowteng/nixos/var/log";
+      fsType = "zfs";
+    };
+    
+    "/nix" =
+    { device = "mowteng/nixos/nix";
+      fsType = "zfs";
     };
 
     "/home" = {
