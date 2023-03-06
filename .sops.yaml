@@ -15,3 +15,7 @@ creation_rules:
         - *homeassistant
         - *mowteng
         - *nokogiri
+  - path_regex: home-manager/global/secrets.ya?ml$
+    key_groups:
+      - age:
+        - *nokogiri

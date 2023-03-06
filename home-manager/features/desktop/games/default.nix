@@ -43,5 +43,6 @@
     ryujinx
     yuzu-mainline
 
+    #wineWowPackages.stableFull
   ];
 }

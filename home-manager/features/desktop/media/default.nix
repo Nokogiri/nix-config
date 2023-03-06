@@ -15,6 +15,8 @@
     jellyfin-media-player
     mpv
     ncspot
+    spot
+    psst
     spotify-player
     spotify-qt
   ];

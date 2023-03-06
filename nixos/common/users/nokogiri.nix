@@ -1,8 +1,10 @@
-{ pkgs, config, lib, outputs, ... }:
+{ pkgs, config, lib, inputs, outputs, ... }:
 let
   ifTheyExist = groups:
     builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in {
+#  imports = [ inputs.home-manager.nixosModules.home-manager ];
+  
   users.mutableUsers = true;
   users.users.nokogiri = {
     description = "It'sa Me Nokogiri...a!";
@@ -37,9 +39,20 @@ in {
   #    sopsFile = ../secrets.yaml;
   #    neededForUsers = true;
   #  };
-
+  #home-manager = {
+    #useUserPackages = true;
+    #useGlobalPkgs = true;
+  
   #home-manager.users.nokogiri =
   #  import ../../../home-manager/mowteng.nix;
+  #home-manager = {
+    #useGlobalPkgs = true;
+ #   extraSpecialArgs = { inherit inputs outputs; };
+  #  users = {
+     # Import your home-manager configuration
+  #    nokogiri = import ../../../home-manager/${config.networking.hostName}.nix;
+  #  };
+  #};
 
   services.geoclue2.enable = true;
   #security.pam.services = { swaylock = { }; };
