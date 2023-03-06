@@ -3,12 +3,14 @@
 
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
+    ./sops.nix
     ../features/cli
     ../colors
     inputs.nix-colors.homeManagerModules.default
     inputs.sops-nix.homeManagerModules.sops
   ];
-
+  #home-manager.useGlobalPkgs = true;
+  #home-manager.useUserPackages = true;
   nixpkgs = {
     overlays = [
       outputs.overlays.modifications
