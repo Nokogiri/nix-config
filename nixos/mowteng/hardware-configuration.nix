@@ -40,10 +40,12 @@
       fsType = "zfs";
     };
 
-    "/home" = {
-      device = "/dev/disk/by-uuid/a2c1b7e0-55e2-4ae5-bd09-a3434b5b6ea9";
-      fsType = "btrfs";
-      options = [ "compress=zstd:6" ];
+    "/home/nokogiri" = {
+      #device = "/dev/disk/by-uuid/a2c1b7e0-55e2-4ae5-bd09-a3434b5b6ea9";
+      #fsType = "btrfs";
+      #options = [ "compress=zstd:6" ];
+      device = "mowteng/home/nokogiri";
+      fsType = "zfs";
     };
 
     "/boot" = {

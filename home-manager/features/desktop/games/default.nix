@@ -1,10 +1,12 @@
 { pkgs, config, ... }: {
+  imports = [ ./steam.nix ];
   home.packages = with pkgs; [
 
     # general
     gamescope
     mangohud
     prismlauncher
+    heroic
 
     # native packaged games
 

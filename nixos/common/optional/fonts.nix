@@ -4,7 +4,7 @@
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
       nerdfonts = nerdfonts.override {
-        fonts = [ "CascadiaCode" "FiraMono" "FiraCode" "iA-Writer" "Iosevka" "JetBrainsMono" ];
+        fonts = [ "CascadiaCode" "FiraMono" "FiraCode" "JetBrainsMono" ];
       };
     };
 
@@ -13,7 +13,6 @@
     cascadia-code
     dejavu_fonts
     jetbrains-mono
-    terminus_font
     twemoji-color-font
     noto-fonts
     noto-fonts-cjk-sans

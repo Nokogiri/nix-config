@@ -4,10 +4,10 @@
     extraConfig = ''
       return {
        front_end = "OpenGL",
-       color_scheme = "Catppuccin Frappe",
-       font_size = 13.0 ,
+       color_scheme = "Catppuccin Macchiato",
+       font_size = 12.0 ,
        font = wezterm.font_with_fallback {
-           'CaskaydiaCove Nerd Font Mono',
+           'JetBrainsMono Nerd Font Mono',
          },
        warn_about_missing_glyphs = false,
        enable_wayland = true,

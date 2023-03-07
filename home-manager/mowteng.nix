@@ -13,7 +13,7 @@
     inputs.nur.nixosModules.nur
   ];
 
-  home.packages = with pkgs; [ xfce.thunar transmission-qt ];
+  home.packages = with pkgs; [ xfce.thunar transmission-remote-gtk ];
 
   programs = { password-store.enable = true; };
 }
