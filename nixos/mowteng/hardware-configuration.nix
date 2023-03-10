@@ -16,7 +16,7 @@
     };
     kernelModules = [ "kvm-amd" "zenpower" ];
     loader.efi.efiSysMountPoint = "/boot";
-    supportedFilesystems = [ "btrfs" "zfs" ];
+    supportedFilesystems = [ "zfs" ];
   };
 
   fileSystems = {
@@ -41,9 +41,6 @@
     };
 
     "/home/nokogiri" = {
-      #device = "/dev/disk/by-uuid/a2c1b7e0-55e2-4ae5-bd09-a3434b5b6ea9";
-      #fsType = "btrfs";
-      #options = [ "compress=zstd:6" ];
       device = "mowteng/home/nokogiri";
       fsType = "zfs";
     };
@@ -75,9 +72,9 @@
   hardware = {
     cpu.amd.updateMicrocode = true;
     sensor.iio.enable = true;
+    steam-hardware.enable = true;
     uinput.enable = true;
     xpadneo.enable = true;
-
   };
 
   services.zfs = {
