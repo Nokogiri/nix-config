@@ -21,6 +21,10 @@
         ff2mpv
         #darkreader
         auto-tab-discard
+      ]
+    #profiles.nokogiri.extensions = 
+      ++ [
+        sidebery
       ];
     profiles.nokogiri = {
       name = "nokogiri";

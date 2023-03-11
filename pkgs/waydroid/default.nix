@@ -1,6 +1,7 @@
 { lib
 , fetchFromGitHub
 , python3Packages
+, dbus
 , dnsmasq
 , gawk
 , getent
@@ -31,6 +32,7 @@ python3Packages.buildPythonApplication rec {
 
   buildInputs = [
     gtk3
+    dbus
   ];
 
   nativeBuildInputs = [
@@ -39,6 +41,7 @@ python3Packages.buildPythonApplication rec {
   ];
 
   propagatedBuildInputs = with python3Packages; [
+    dbus-python
     gbinder-python
     pyclip
     pygobject3
@@ -63,6 +66,8 @@ python3Packages.buildPythonApplication rec {
 
     wrapPythonProgramsIn $out/lib/waydroid/ "${lib.concatStringsSep " " [
       "$out"
+      dbus
+      python3Packages.dbus-python
       python3Packages.gbinder-python
       python3Packages.pygobject3
       python3Packages.pyclip

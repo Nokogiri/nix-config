@@ -69,8 +69,8 @@
   hardware = {
     opengl = {
       enable = true;
-      extraPackages = with pkgs; [ amdvlk ];
-      extraPackages32 = with pkgs; [ driversi686Linux.amdvlk ];
+      extraPackages = with pkgs; [ amdvlk mangohud ];
+      extraPackages32 = with pkgs; [ driversi686Linux.amdvlk mangohud ];
       driSupport = true;
       driSupport32Bit = true;
     };
@@ -86,9 +86,6 @@
     mtr.enable = true;
   };
 
-  services = { power-profiles-daemon.enable = false; };
-  #services.xserver.displayManager.sessionPackages =
-  #  [ inputs.hyprland.packages.${pkgs.system}.default ];
   location = {
     latitude = 50.9787;
     longitude = 11.03283;

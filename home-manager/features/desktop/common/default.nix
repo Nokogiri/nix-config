@@ -24,6 +24,7 @@
       python-packages-plus = python-packages:
         with python-packages; [
           pygobject3
+          dbus-python
           isort
           evdev
           jinja2
@@ -33,6 +34,7 @@
           requests
           unidecode
           setuptools
+          tqdm
         ];
       python-with-packages-plus = python3.withPackages python-packages-plus;
     in python-with-packages-plus)
