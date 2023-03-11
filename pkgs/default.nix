@@ -21,5 +21,7 @@
   ryujinx = pkgs.callPackage ./ryujinx { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
   waydroid = pkgs.callPackage ./waydroid {};
+  sway-unwrapped = pkgs.callPackage ./sway {};
+  sway = pkgs.callPackage ./sway/wrapper.nix {};
   #swww = pkgs.callPackage ./swww { };
 }
