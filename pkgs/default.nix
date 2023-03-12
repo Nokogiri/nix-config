@@ -3,6 +3,7 @@
 { pkgs ? (import ../nixpkgs.nix) { } }: {
   amdctl = pkgs.callPackage ./amdctl { };
   cemu = pkgs.callPackage ./cemu { };
+  gamescope = pkgs.callPackage ./gamescope {};
   #heroic-unwrapped = pkgs.callPackage ./heroic { };
   #heroic = pkgs.callPackage ./heroic/fhsenv.nix { };
   iio-sensor-proxy = pkgs.callPackage ./iio-sensor-proxy { };
@@ -21,7 +22,5 @@
   ryujinx = pkgs.callPackage ./ryujinx { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
   waydroid = pkgs.callPackage ./waydroid {};
-  sway-unwrapped = pkgs.callPackage ./sway {};
-  sway = pkgs.callPackage ./sway/wrapper.nix {};
   #swww = pkgs.callPackage ./swww { };
 }

@@ -4,7 +4,7 @@ let cfg = config.wayland.windowManager.sway.config;
 in {
   wayland.windowManager.sway = {
     enable = true;
-    #package = pkgs.swayfx;
+    #package = inputs.nixpkgs-wayland.sway-unwrapped;
     extraSessionCommands = ''
       export XDG_SESSION_TYPE=wayland
       export XDG_SESSION_DESKTOP=sway
@@ -88,7 +88,7 @@ in {
           { app_id = ".blueman-manager-wrapped"; }
           { app_id = "nm-connection-editor"; }
           { app_id = "org.kde.kdeconnect-indicator"; }
-          { app_id = "mpv"; }
+          #{ app_id = "mpv"; }
           { title = "File Operation Progress"; }
 
         ];

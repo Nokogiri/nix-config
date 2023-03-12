@@ -12,7 +12,7 @@ in {
   programs = {
     fish.loginShellInit = ''
       if test (tty) = "/dev/tty1"
-        exec sway &> /dev/null
+        exec systemd-cat --identifier=sway sway &> /dev/null
       end
     '';
     zsh.loginExtra = ''

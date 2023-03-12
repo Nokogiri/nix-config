@@ -84,10 +84,10 @@
         }
       }
 
-      device:wacom-hid-49c8-finger {
-          output=eDP-1
-          enabled=true
-      }
+      #device:wacom-hid-49c8-finger {
+      #    output=eDP-1
+      #    enabled=true
+      #}
       device:wacom-hid-49c8-pen {
         output=eDP-1
         enabled=true

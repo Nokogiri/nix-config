@@ -25,6 +25,7 @@
     ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
     ../common/optional/systemd-boot.nix
+    ../common/optional/waydroid.nix
     ../common/optional/xdg-portal.nix
 
     ../common/users/nokogiri.nix
