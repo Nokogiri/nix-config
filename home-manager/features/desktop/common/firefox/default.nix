@@ -21,6 +21,7 @@
     #profiles.nokogiri.extensions = 
       ++ [
         sidebery
+        config.nur.repos.bandithedoge.firefoxAddons.betterviewer
       ];
     profiles.nokogiri = {
       name = "nokogiri";
