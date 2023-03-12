@@ -3,7 +3,6 @@
 { pkgs ? (import ../nixpkgs.nix) { } }: {
   amdctl = pkgs.callPackage ./amdctl { };
   cemu = pkgs.callPackage ./cemu { };
-  gamescope = pkgs.callPackage ./gamescope {};
   #heroic-unwrapped = pkgs.callPackage ./heroic { };
   #heroic = pkgs.callPackage ./heroic/fhsenv.nix { };
   iio-sensor-proxy = pkgs.callPackage ./iio-sensor-proxy { };
@@ -16,11 +15,9 @@
     pkgs.callPackage ./plymouth-catppuccin-frappe { };
   plymouth-catppuccin-macchiato =
     pkgs.callPackage ./plymouth-catppuccin-macchiato { };
-  regreet = pkgs.callPackage ./regreet { };
   RBDOOM-3-BFG = pkgs.callPackage ./RBDOOM-3-BFG { };
   RBDOOM-3-BFG-vk = pkgs.callPackage ./RBDOOM-3-BFG-vk { };
   ryujinx = pkgs.callPackage ./ryujinx { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
   waydroid = pkgs.callPackage ./waydroid {};
-  #swww = pkgs.callPackage ./swww { };
 }

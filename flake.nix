@@ -13,11 +13,6 @@
       url = "github:mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-#    nixpkgs-wayland  = {
-#      url = "github:nix-community/nixpkgs-wayland"; 
-      #inputs.nixpkgs.follows = "nixpkgs";
-      #inputs.master.follows = "master";
-#    };
     nur.url = "github:nix-community/NUR";
 
     hyprland.url = "github:hyprwm/hyprland/main";
