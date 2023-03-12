@@ -15,8 +15,8 @@
     };
     nur.url = "github:nix-community/NUR";
 
-    hyprland.url = "github:hyprwm/hyprland/main";
-    hyprwm-contrib.url = "github:hyprwm/contrib";
+    #hyprland.url = "github:hyprwm/hyprland/main";
+    #hyprwm-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
 
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
