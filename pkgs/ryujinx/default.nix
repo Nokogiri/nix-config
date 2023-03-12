@@ -29,13 +29,13 @@
 
 buildDotnetModule rec {
   pname = "ryujinx";
-  version = "1.1.651"; # Based off of the official github actions builds: https://github.com/Ryujinx/Ryujinx/actions/workflows/release.yml
+  version = "1.1.659"; # Based off of the official github actions builds: https://github.com/Ryujinx/Ryujinx/actions/workflows/release.yml
 
   src = fetchFromGitHub {
     owner = "Ryujinx";
     repo = "Ryujinx";
-    rev = "f0562b9c75308c8cfcaa2458dfd37ac42751a374";
-    sha256 = "1bkfncms8lagxhpnafyahrghzvpklsgxddqq7w1wzjzyxp6pxc51";
+    rev = "c09c0c002d5bb12218bbecc02d39de84ae773793";
+    sha256 = "0d9j1cnj1zi5k42kjlvwarn3ybvysbbgamz4yss8d5gzlb39l9la";
   };
 
   dotnet-sdk = dotnetCorePackages.sdk_7_0;
@@ -88,7 +88,7 @@ buildDotnetModule rec {
   doCheck = true;
 
   dotnetFlags = [
-    "/p:ExtraDefineConstants=FORCE_EXTERNAL_BASE_DIR"
+    "/p:ExtraDefineConstants=DISABLE_UPDATER%2CFORCE_EXTERNAL_BASE_DIR"
   ];
 
   executables = [
