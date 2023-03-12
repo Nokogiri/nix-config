@@ -36,7 +36,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.default; #.override ({
+    package = inputs.hyprland.packages.${pkgs.system}.default; # .override ({
     #  hidpiXWayland = false;
     #});
     xwayland = {

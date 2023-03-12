@@ -10,16 +10,16 @@
     ./features/helix
     #./features/desktop/hyprland
     ./features/desktop/sway
-
+    ./features/mopidy
     inputs.nur.nixosModules.nur
   ];
 
-#  nixpkgs = {
-#    overlays = [
-#      inputs.nixpkgs-wayland.overlay
-#    ];
-#  };
-   
+  #  nixpkgs = {
+  #    overlays = [
+  #      inputs.nixpkgs-wayland.overlay
+  #    ];
+  #  };
+
   home.packages = with pkgs; [ xfce.thunar transmission-remote-gtk ];
 
   programs = { password-store.enable = true; };

@@ -6,8 +6,8 @@
   home.packages = [ pkgs.ff2mpv pkgs.gopass-jsonapi ];
   programs.firefox = {
     enable = true;
-    profiles.nokogiri.extensions =
-      with config.nur.repos.rycee.firefox-addons; [ # addons; [
+    profiles.nokogiri.extensions = with config.nur.repos.rycee.firefox-addons;
+      [ # addons; [
         vimium
         ublock-origin
         sponsorblock
@@ -18,11 +18,8 @@
         #darkreader
         auto-tab-discard
       ]
-    #profiles.nokogiri.extensions = 
-      ++ [
-        sidebery
-        config.nur.repos.bandithedoge.firefoxAddons.betterviewer
-      ];
+      #profiles.nokogiri.extensions = 
+      ++ [ sidebery config.nur.repos.bandithedoge.firefoxAddons.betterviewer ];
     profiles.nokogiri = {
       name = "nokogiri";
       path = "nokogiri";
