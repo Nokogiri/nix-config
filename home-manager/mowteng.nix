@@ -8,8 +8,8 @@
     ./features/desktop/media
     ./features/desktop/eww
     ./features/helix
-    ./features/desktop/hyprland
-    #./features/desktop/sway
+    #./features/desktop/hyprland
+    ./features/desktop/sway
     #./features/mopidy
     inputs.nur.nixosModules.nur
   ];
