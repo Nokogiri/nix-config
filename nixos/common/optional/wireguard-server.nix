@@ -5,7 +5,7 @@
   sops.secrets = {
     "wg_private/calvin" = { };
     "wg_psk/consolero" = { };
-    "wg_psk/homeassistant" = { };
+    #"wg_psk/homeassistant" = { };
     "wg_psk/kathi" = { };
     "wg_psk/mowteng" = { };
     "wg_psk/mrpig" = { };
@@ -13,7 +13,7 @@
   };
 
   networking.nat.enable = true;
-  networking.nat.externalInterface = "eth0";
+  networking.nat.externalInterface = "enp1s0f0";
   networking.nat.internalInterfaces = [ "wg0" ];
   networking.firewall = { allowedUDPPorts = [ 51871 ]; };
 
@@ -30,12 +30,12 @@
           publicKey = "ayew5N9nQFBl25vJHg5DOwOzVQAmJ2DS6wghNAwqtCg=";
           presharedKeyFile = config.sops.secrets."wg_psk/consolero".path;
         }
-        {
-          # homeassistant
-          allowedIPs = [ "10.200.200.2/32" "10.200.200.0/24" ];
-          publicKey = "40RkpFdcTlk+AWc9XC/yhWsnwDJKIhEY7t5z3meFJkQ=";
-          presharedKeyFile = config.sops.secrets."wg_psk/homeassistant".path;
-        }
+        #{
+        #  # homeassistant
+        #  allowedIPs = [ "10.200.200.2/32" "10.200.200.0/24" ];
+        #  publicKey = "40RkpFdcTlk+AWc9XC/yhWsnwDJKIhEY7t5z3meFJkQ=";
+        #  presharedKeyFile = config.sops.secrets."wg_psk/homeassistant".path;
+        #}
         {
           # mowteng
           allowedIPs = [ "10.200.200.3/32" "10.200.200.0/24" ];
