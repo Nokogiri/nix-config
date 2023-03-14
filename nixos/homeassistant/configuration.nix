@@ -22,7 +22,8 @@
     ../common/optional/podman.nix
     ../common/optional/resolved.nix
     ../common/optional/systemd-network.nix
-    ../common/optional/systemd-wireguard.nix
+    #../common/optional/systemd-wireguard.nix
+    ../common/optional/wireguard-server.nix
     ../common/users/nokogiri.nix
 
     ./podman

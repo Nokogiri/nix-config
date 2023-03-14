@@ -14,11 +14,11 @@
 
   networking.nat.enable = true;
   networking.nat.externalInterface = "enp1s0f0";
-  networking.nat.internalInterfaces = [ "wg0" ];
+  networking.nat.internalInterfaces = [ "haos" ];
   networking.firewall = { allowedUDPPorts = [ 51871 ]; };
 
   networking.wireguard.interfaces = {
-    wg0 = {
+    haos = {
       ips = [ "10.200.200.1/24" ];
       listenPort = 51871;
       privateKeyFile = config.sops.secrets."wg_private/calvin".path;
