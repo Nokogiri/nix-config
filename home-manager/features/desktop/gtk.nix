@@ -17,15 +17,11 @@
     })
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qt5ct
-    adwaita-qt
-    adwaita-qt6
-    adw-gtk3
-    
   ];
-  
+
   qt.style.name = "adwaita-dark";
   qt.style.package = "adwaita-qt";
-  
+
   gtk = {
     enable = true;
     cursorTheme = {
@@ -41,14 +37,12 @@
       name = "Papirus-Dark";
     };
     theme = {
-      name = "adw-gtk3";
-      #package = pkgs
-    #  name = "Catppuccin-Macchiato-Standard-Sky-Dark";
-    #  package = pkgs.catppuccin-gtk.override {
-    #    accents = [ "sky" ];
-    #    variant = "macchiato";
-    #    size = "standard";
-    #  };
+      name = "Catppuccin-Macchiato-Standard-Sky-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "sky" ];
+        variant = "macchiato";
+        size = "standard";
+      };
     };
     gtk2 = {
       extraConfig = ''

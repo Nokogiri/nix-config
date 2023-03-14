@@ -10,24 +10,20 @@
       '';
     };
   };
-  environment.systemPackages = with pkgs; [ gtklock adw-gtk3];
+  environment.systemPackages = with pkgs; [
+    gtklock
+    (catppuccin-gtk.override {
+      accents = [ "sky" ];
+      variant = "macchiato";
+      size = "standard";
+    })
+    (papirus-icon-theme.override { color = "teal"; })
+  ];
 
   gtk.iconCache.enable = true;
   qt.platformTheme = "qt5ct";
   qt.style = "adwaita-dark";
-  programs = {
-    dconf.enable = true;
-    #hyprland = {
-    #  enable = true;
-    #  package = inputs.hyprland.packages.${pkgs.system}.default; #.override ({
-      #  hidpiXWayland = false;
-      #});
-    #  xwayland = {
-    #    enable = true;
-    #    hidpi = false;
-    #  };
-    #};
-  };
+  programs = { dconf.enable = true; };
 
   services = {
     dbus = {

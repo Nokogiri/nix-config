@@ -24,19 +24,19 @@
       device = "mowteng/nixos/root";
       fsType = "zfs";
     };
-    
+
     "/var/lib" = {
       device = "mowteng/nixos/var/lib";
       fsType = "zfs";
     };
-  
+
     "/var/log" = {
       device = "mowteng/nixos/var/log";
       fsType = "zfs";
     };
-    
-    "/nix" =
-    { device = "mowteng/nixos/nix";
+
+    "/nix" = {
+      device = "mowteng/nixos/nix";
       fsType = "zfs";
     };
 

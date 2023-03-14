@@ -7,7 +7,7 @@
     inputs.hardware.nixosModules.common-cpu-amd
     inputs.hardware.nixosModules.common-pc-ssd
     inputs.hyprland.nixosModules.default
-    
+
     ./hardware-configuration.nix
 
     ../common/global
