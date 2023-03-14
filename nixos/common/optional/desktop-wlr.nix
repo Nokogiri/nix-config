@@ -10,7 +10,11 @@
       '';
     };
   };
-  environment.systemPackages = with pkgs; [ gtklock ];
+  environment.systemPackages = with pkgs; [ gtklock adw-gtk3];
+
+  gtk.iconCache.enable = true;
+  qt.platformTheme = "qt5ct";
+  qt.style = "adwaita-dark";
   programs = {
     dconf.enable = true;
     #hyprland = {
