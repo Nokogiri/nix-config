@@ -1,4 +1,4 @@
-{
+{config, ...}:{
   sops.secrets.ovh_dns = {
     sopsFile = ../../common/secrets.yaml;
     owner = "acme";
@@ -25,6 +25,20 @@
       };
     };
   };
+    services.phpfpm.pools.general = {
+    user = "nokogiri";
+    group = "users";
+    settings = {
+      pm = "dynamic";
+      "listen.owner" = config.services.nginx.user;
+      "pm.max_children" = 32;
+      "pm.start_servers" = 2;
+      "pm.min_spare_servers" = 2;
+      "pm.max_spare_servers" = 4;
+      "pm.max_requests" = 500;
+    };
+  };
+  
   services.nginx = {
     enable = true;
     user = "nokogiri";
@@ -33,6 +47,29 @@
       forceSSL = true;
       locations."/" = {
         proxyPass = "http://192.168.178.57:8123";
+        extraConfig = "proxy_redirect off;"
+          + "proxy_set_header Range $http_range;"
+          + "proxy_set_header If-Range $http_if_range;"
+          + "proxy_set_header X-Real-IP $remote_addr;"
+          + "proxy_set_header Host $host;"
+          + "proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;"
+          + "proxy_set_header X-Forwarded-Protocol $scheme;"
+          + "proxy_http_version 1.1;"
+          + "proxy_set_header Upgrade $http_upgrade;"
+          + ''proxy_set_header Connection "upgrade";'';
+      };
+    };
+    virtualHosts."git.fishoeder.net" = {
+      useACMEHost = "fishoeder.net";
+      forceSSL = true;
+      root = "/srv/www/git";
+    };
+
+    virtualHosts."media.fishoeder.net" = {
+      useACMEHost = "fishoeder.net";
+      forceSSL = true;
+      locations."/" = {
+        proxyPass = "http://10.200.200.1:8096";
         extraConfig = "proxy_redirect off;"
           + "proxy_set_header Range $http_range;"
           + "proxy_set_header If-Range $http_if_range;"

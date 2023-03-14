@@ -1,4 +1,4 @@
 {
-  imports = [ ./esphome.nix ./homeassistant.nix ];
+  imports = [ ./esphome.nix ./homeassistant.nix ./pihole.nix ];
   virtualisation.oci-containers.backend = "podman";
 }
