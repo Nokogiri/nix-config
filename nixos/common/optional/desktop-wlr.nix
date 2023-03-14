@@ -22,7 +22,7 @@
 
   gtk.iconCache.enable = true;
   qt.platformTheme = "qt5ct";
-  qt.style = "adwaita-dark";
+  qt.style = "kvantum-dark";
   programs = { dconf.enable = true; };
 
   services = {
