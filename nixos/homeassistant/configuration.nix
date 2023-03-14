@@ -17,14 +17,12 @@
     ../common/global
 
     ../common/optional/avahi.nix
-    #../common/optional/docker.nix
-    ../common/optional/docker-zfs.nix
     ../common/optional/grub-efi.nix
     ../common/optional/mbpfan.nix
+    ../common/optional/podman.nix
     ../common/optional/resolved.nix
     ../common/optional/systemd-network.nix
     ../common/optional/systemd-wireguard.nix
-    #../common/optional/libvirt.nix
     ../common/users/nokogiri.nix
 
     ./podman
