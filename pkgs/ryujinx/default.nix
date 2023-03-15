@@ -29,13 +29,13 @@
 
 buildDotnetModule rec {
   pname = "ryujinx";
-  version = "1.1.662"; # Based off of the official github actions builds: https://github.com/Ryujinx/Ryujinx/actions/workflows/release.yml
+  version = "1.1.665"; # Based off of the official github actions builds: https://github.com/Ryujinx/Ryujinx/actions/workflows/release.yml
 
   src = fetchFromGitHub {
     owner = "Ryujinx";
     repo = "Ryujinx";
-    rev = "6e9bd4de138e6ddedef3d38d711d161a0e400d5c";
-    sha256 = "0cmqkj12mjiirf21lvd9fql6ppyhc515agilaxlxgvkpc20sq18x";
+    rev = "da073fce6127243fcd93b736cde951c4e835e508";
+    sha256 = "0zbww3mhmmakfaqh8q1bzn7liz4i85kmkz967jqbnlq90w0a7i3f";
   };
 
   dotnet-sdk = dotnetCorePackages.sdk_7_0;
@@ -79,10 +79,6 @@ buildDotnetModule rec {
     SDL2
   ];
 
-  #patches = [
-  #  ./appdir.patch # Ryujinx attempts to write to the nix store. This patch redirects it to "~/.config/Ryujinx" on Linux.
-  #];
-
   projectFile = "Ryujinx.sln";
   testProjectFile = "Ryujinx.Tests/Ryujinx.Tests.csproj";
   doCheck = true;
@@ -113,11 +109,11 @@ buildDotnetModule rec {
     mkdir -p $out/share/{applications,icons/hicolor/scalable/apps,mime/packages}
     pushd ${src}/distribution/
 
-    install -D ./linux/Ryujinx.desktop $out/share/applications/ryujinx.desktop
+    install -D ./linux/Ryujinx.desktop $out/share/applications/Ryujinx.desktop
     install -D ./linux/mime/Ryujinx.xml $out/share/mime/packages/ryujinx-mime.xml
     install -D ./misc/Logo.svg $out/share/icons/hicolor/scalable/apps/ryujinx.svg
 
-    substituteInPlace $out/share/applications/ryujinx.desktop \
+    substituteInPlace $out/share/applications/Ryujinx.desktop \
       --replace "Exec=Ryujinx" "Exec=$out/bin/Ryujinx"
 
     ln -s $out/bin/Ryujinx $out/bin/ryujinx
