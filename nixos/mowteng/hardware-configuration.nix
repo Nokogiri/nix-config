@@ -17,6 +17,7 @@
     kernelModules = [ "kvm-amd" "zenpower" ];
     loader.efi.efiSysMountPoint = "/boot";
     supportedFilesystems = [ "zfs" ];
+    zfs.enableUnstable = true;
   };
 
   fileSystems = {
