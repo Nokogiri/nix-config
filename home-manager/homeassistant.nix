@@ -1,1 +1,1 @@
-{ imports = [ ./global ./features/helix ]; }
+{ imports = [ ./global ./features/helix ./features/cli/nix-stuff.nix ]; }

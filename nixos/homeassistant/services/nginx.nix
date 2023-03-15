@@ -1,4 +1,4 @@
-{config, ...}:{
+{ config, ... }: {
   sops.secrets.ovh_dns = {
     sopsFile = ../../common/secrets.yaml;
     owner = "acme";
@@ -25,7 +25,7 @@
       };
     };
   };
-    services.phpfpm.pools.general = {
+  services.phpfpm.pools.general = {
     user = "nokogiri";
     group = "users";
     settings = {
@@ -38,7 +38,7 @@
       "pm.max_requests" = 500;
     };
   };
-  
+
   services.nginx = {
     enable = true;
     user = "nokogiri";

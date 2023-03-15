@@ -81,7 +81,7 @@
     fsType = "zfs";
     options = [ "zfsutil" "X-mount.mkdir" ];
   };
-    swapDevices =
+  swapDevices =
     [{ device = "/dev/disk/by-uuid/8638fc3c-846e-49ea-9307-5194a729e74c"; }];
 
   fileSystems."/boot" = {

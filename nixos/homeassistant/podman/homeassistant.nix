@@ -3,7 +3,7 @@
     homeassistant = {
       image = "ghcr.io/home-assistant/home-assistant:stable";
       autoStart = true;
-      volumes = [ 
+      volumes = [
         "/var/lib/pods/homeassistant/config:/config"
         "/etc/localtime:/etc/localtime:ro"
       ];
@@ -12,9 +12,7 @@
         PUID = "1000";
         PGID = "1000";
       };
-      extraOptions = [
-        "--network=host"
-      ];
+      extraOptions = [ "--network=host" ];
     };
   };
 }

@@ -3,14 +3,12 @@
     esphome-pod = {
       image = "esphome/esphome";
       autoStart = true;
-      volumes = [ 
+      volumes = [
         "/var/lib/volumes/esphome/config:/config"
         "/var/lib/volumes/esphome/cache:/cache"
         "/etc/localtime:/etc/localtime:ro"
       ];
-      extraOptions = [
-        "--network=host"
-      ];
+      extraOptions = [ "--network=host" ];
     };
   };
 }
