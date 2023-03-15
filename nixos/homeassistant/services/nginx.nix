@@ -1,4 +1,6 @@
 { config, ... }: {
+  imports = [ (./sites/foodwiki.nix) ];
+
   sops.secrets.ovh_dns = {
     sopsFile = ../../common/secrets.yaml;
     owner = "acme";
