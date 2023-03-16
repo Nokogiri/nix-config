@@ -14,7 +14,7 @@
         "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
         "nookogiri.cachix.org-1:tKY3HBn6Xhuqys5EcQRl1u+sKualOXFzCs9Q6qEXR+o="
         "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
-        "cache.fishoeder.net:8sm+e/IVzGKaoZMz+WgcaawdbymOhKqmsIy3tx27CEjUx+xDlKN4sumkLjYaZHSvRurnv1nzE077DgurNl8KBw=="
+        "cache.fishoeder.net:5MTPZY5syB/YtPbY2NGlM6Cr57Jal0xmcScx9/LOsxY="
       ];
       trusted-users = [ "root" "@wheel" ];
       auto-optimise-store = lib.mkDefault true;
