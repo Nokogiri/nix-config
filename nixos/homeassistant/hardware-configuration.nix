@@ -23,7 +23,7 @@
     };
     kernelModules = [ "kvm-intel" ];
     kernelParams = [
-      "acpi_backlight=vendor"
+      "acpi_backlight=video"
       "intremap=off"
       "i915.fastboot=1"
       "i915.enable_fbc=1"
