@@ -7,12 +7,14 @@
         "https://hyprland.cachix.org"
         "https://nookogiri.cachix.org"
         "https://nixpkgs-wayland.cachix.org"
+        "https://cache.fishoeder.net"
       ];
       trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
         "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
         "nookogiri.cachix.org-1:tKY3HBn6Xhuqys5EcQRl1u+sKualOXFzCs9Q6qEXR+o="
         "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
+        "cache.fishoeder.net:8sm+e/IVzGKaoZMz+WgcaawdbymOhKqmsIy3tx27CEjUx+xDlKN4sumkLjYaZHSvRurnv1nzE077DgurNl8KBw=="
       ];
       trusted-users = [ "root" "@wheel" ];
       auto-optimise-store = lib.mkDefault true;
