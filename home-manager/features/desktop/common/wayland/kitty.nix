@@ -10,7 +10,7 @@
         name = "JetBrainsMono Nerd Font Mono";
         size = 12;
       };
-      theme = "Catppuccin-Macchiato";
+      theme = "Catppuccin-Mocha";
       settings = {
         # General settings
         kitty_mod = "ctrl+shift";

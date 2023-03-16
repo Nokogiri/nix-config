@@ -26,7 +26,6 @@
       "acpi_backlight=vendor"
       "intremap=off"
       "i915.fastboot=1"
-      "i915.enable_guc=2"
       "i915.enable_fbc=1"
       "i915_enable_rc6=7"
       "noibrs"
@@ -42,6 +41,7 @@
       "tsx_async_abort=off"
       "mitigations=off"
       "sdhci.debug_quirks2=4"
+      "mitigations=off"
     ];
     supportedFilesystems = [ "zfs" ];
   };
