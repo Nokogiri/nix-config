@@ -14,14 +14,15 @@
     gtklock
     (catppuccin-gtk.override {
       accents = [ "sky" ];
-      variant = "macchiato";
+      variant = "mocha";
       size = "standard";
+      tweaks = [ "rimless" ];
     })
     (papirus-icon-theme.override { color = "teal"; })
   ];
 
   gtk.iconCache.enable = true;
-  qt.platformTheme = "qt5ct";
+  qt.platformTheme = "gtk3";
   qt.style = "kvantum-dark";
   programs = { dconf.enable = true; };
 

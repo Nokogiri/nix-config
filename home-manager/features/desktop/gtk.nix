@@ -19,14 +19,14 @@
     libsForQt5.qt5ct
   ];
 
-  qt.style.name = "adwaita-dark";
-  qt.style.package = "adwaita-qt";
+  qt.style.name = "kvantum-dark";
+  qt.style.package = "libsForQt5.qtstyleplugin-kvantum";
 
   gtk = {
     enable = true;
     cursorTheme = {
-      package = pkgs.catppuccin-cursors.macchiatoDark;
-      name = "Catppuccin-Macchiato-Dark-Cursors";
+      package = pkgs.catppuccin-cursors.mochaDark;
+      name = "Catppuccin-Mocha-Dark-Cursors";
     };
     font = {
       name = "CaskaydiaCove Nerd Font";
@@ -37,10 +37,11 @@
       name = "Papirus-Dark";
     };
     theme = {
-      name = "Catppuccin-Macchiato-Standard-Sky-Dark";
+      name = "Catppuccin-Mocha-Standard-Sky-Dark";
       package = pkgs.catppuccin-gtk.override {
         accents = [ "sky" ];
-        variant = "macchiato";
+        variant = "mocha";
+        tweaks = ["rimless"];
         size = "standard";
       };
     };
