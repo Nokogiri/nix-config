@@ -53,6 +53,7 @@
   (fetchNuGet { pname = "Microsoft.IdentityModel.JsonWebTokens"; version = "6.27.0"; sha256 = "103qvpahmn1x8yxj0kc920s27xbyjr15z8lf5ikrsrikalb5yjx9"; })
   (fetchNuGet { pname = "Microsoft.IdentityModel.Logging"; version = "6.27.0"; sha256 = "1c3b0bkmxa24bvzi16jc7lc1nifqcq4jg7ild973bb8mivicagzv"; })
   (fetchNuGet { pname = "Microsoft.IdentityModel.Tokens"; version = "6.27.0"; sha256 = "0h51vdcz6pkv4ky2ygba4vks56rskripqb3fjz95ym0l0xg20s1a"; })
+  (fetchNuGet { pname = "Microsoft.IO.RecyclableMemoryStream"; version = "2.3.2"; sha256 = "115bm7dljchr7c02hiv1r3l21r22wpml1j26fyn2amaflaihpq4l"; })
   (fetchNuGet { pname = "Microsoft.NET.Test.Sdk"; version = "17.5.0"; sha256 = "00gz2i8kx4mlq1ywj3imvf7wc6qzh0bsnynhw06z0mgyha1a21jy"; })
   (fetchNuGet { pname = "Microsoft.NETCore.Platforms"; version = "1.0.1"; sha256 = "01al6cfxp68dscl15z7rxfw9zvhm64dncsw09a1vmdkacsa2v6lr"; })
   (fetchNuGet { pname = "Microsoft.NETCore.Platforms"; version = "1.1.0"; sha256 = "08vh1r12g6ykjygq5d3vq09zylgb84l63k49jc4v8faw9g93iqqm"; })
@@ -273,6 +274,6 @@
   (fetchNuGet { pname = "System.Xml.ReaderWriter"; version = "4.0.11"; sha256 = "0c6ky1jk5ada9m94wcadih98l6k1fvf6vi7vhn1msjixaha419l5"; })
   (fetchNuGet { pname = "System.Xml.XDocument"; version = "4.0.11"; sha256 = "0n4lvpqzy9kc7qy1a4acwwd7b7pnvygv895az5640idl2y9zbz18"; })
   (fetchNuGet { pname = "Tmds.DBus"; version = "0.9.0"; sha256 = "0vvx6sg8lxm23g5jvm5wh2gfs95mv85vd52lkq7d1b89bdczczf3"; })
-  (fetchNuGet { pname = "UnicornEngine.Unicorn"; version = "2.0.2-rc1-f7c841d"; sha256 = "1fxvv77hgbblb14xwdpk231cgm5b3wl0li1ksx2vswxi9n758hrk"; })
+  (fetchNuGet { pname = "UnicornEngine.Unicorn"; version = "2.0.2-rc1-fb78016"; sha256 = "1r43b5fd5q8xq8b5nk11jsz2gnm96dh7sxc0rrv2p605ivz7icin"; })
   (fetchNuGet { pname = "XamlNameReferenceGenerator"; version = "1.5.1"; sha256 = "11sld5a9z2rdglkykvylghka7y37ny18naywpgpxp485m9bc63wc"; })
 ]
