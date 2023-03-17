@@ -1,7 +1,7 @@
 {
   virtualisation.oci-containers.containers = {
     esphome-pod = {
-      image = "esphome/esphome";
+      image = "ghcr.io/esphome/esphome";
       autoStart = true;
       volumes = [
         "/var/lib/volumes/esphome/config:/config"

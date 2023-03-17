@@ -1,7 +1,7 @@
 {
   virtualisation.oci-containers.containers = {
     calibre-web = {
-      image = "linuxserver/calibre-web";
+      image = "ghcr.io/linuxserver/calibre-web";
       autoStart = true;
       volumes = [
         "/var/lib/pods/calibre-web/calibre-data:/config"
