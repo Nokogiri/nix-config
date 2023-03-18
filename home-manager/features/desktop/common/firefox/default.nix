@@ -10,7 +10,7 @@
       [ # addons; [
         vimium
         ublock-origin
-        sponsorblock
+        #sponsorblock
         onetab
         gopass-bridge
         firefox-color
@@ -19,7 +19,12 @@
         auto-tab-discard
       ]
       #profiles.nokogiri.extensions = 
-      ++ [ sidebery config.nur.repos.bandithedoge.firefoxAddons.betterviewer ];
+      ++ 
+      [
+        sidebery
+        config.nur.repos.bandithedoge.firefoxAddons.betterviewer
+        config.nur.repos.bandithedoge.firefoxAddons.sponsorblock
+      ];
     profiles.nokogiri = {
       name = "nokogiri";
       path = "nokogiri";
