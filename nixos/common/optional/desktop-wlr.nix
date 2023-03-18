@@ -19,6 +19,8 @@
       tweaks = [ "rimless" ];
     })
     (papirus-icon-theme.override { color = "teal"; })
+    rose-pine-gtk-theme
+    rose-pine-icon-theme
   ];
 
   gtk.iconCache.enable = true;

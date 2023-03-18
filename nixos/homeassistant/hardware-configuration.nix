@@ -7,6 +7,7 @@
     consoleLogLevel = 3;
     extraModprobeConfig = ''
       options hid_apple fnmode=2 swap_fn_leftctrl=1 iso_layout=0
+      options usb-storage quirks=090c:1000:,152d:0578:u,0bc2:2322:u
     '';
     initrd = {
       availableKernelModules = [
