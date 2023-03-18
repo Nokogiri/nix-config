@@ -1,6 +1,6 @@
 { pkgs, ... }: {
 
-  imports = [ ./spotifyd.nix ];
+  imports = [ ./spotifyd.nix ./spotify.nix ];
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
       mpv = mpv.override {

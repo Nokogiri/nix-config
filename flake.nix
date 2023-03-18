@@ -19,6 +19,11 @@
     hyprwm-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
 
+    spicetify-nix = {
+      url = github:the-argus/spicetify-nix;
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
     nix-colors.url = "github:misterio77/nix-colors";
