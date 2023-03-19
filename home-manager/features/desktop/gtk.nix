@@ -26,8 +26,8 @@
   gtk = {
     enable = true;
     cursorTheme = {
-      package = pkgs.catppuccin-cursors.mochaDark;
-      name = "Catppuccin-Mocha-Dark-Cursors";
+      package = pkgs.catppuccin-cursors.macchiatoDark;
+      name = "Catppuccin-Macchiato-Dark-Cursors";
     };
     font = {
       name = "FiraCode Nerd Font";
@@ -40,14 +40,14 @@
       #name = "Papirus-Dark";
     };
     theme = {
-      name = "rose-pine-moon";
-      package = pkgs.rose-pine-gtk-theme;
-      #package = pkgs.catppuccin-gtk.override {
-      #  accents = [ "sky" ];
-      #  variant = "mocha";
-      #  tweaks = ["rimless"];
-      #  size = "standard";
-      #};
+      name = "Catppuccin-MAcchiato-Standard-Teal-Dark";
+      #package = pkgs.rose-pine-gtk-theme;
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "teal" ];
+        variant = "macchiato";
+        tweaks = ["rimless"];
+        size = "standard";
+      };
     };
     gtk2 = {
       extraConfig = ''
