@@ -4,13 +4,15 @@
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
       nerdfonts = nerdfonts.override {
-        fonts = [ "CascadiaCode" "FiraMono" "FiraCode" "JetBrainsMono" ];
+        fonts = [ "FiraMono" "FiraCode" "JetBrainsMono" ];
       };
     };
 
   fonts.fonts = with pkgs; [
     nerdfonts
-    cascadia-code
+    fira
+    fira-code
+    fira-mono
     dejavu_fonts
     jetbrains-mono
     twemoji-color-font
@@ -27,9 +29,9 @@
       enable = true;
       antialias = true;
       defaultFonts = {
-        serif = [ "Cascadia Code SemiLight" ];
-        sansSerif = [ "Cascadia Code SemiLight" ];
-        monospace = [ "Cascadia Mono SemiLight" ];
+        serif = [ "FiraCode Nerd Font" ];
+        sansSerif = [ "FiraCode Nerd Font" ];
+        monospace = [ "FiraCode Nerd Font Mono" ];
         emoji = [ "Twitter Color Emoji" ];
       };
     };

@@ -16,6 +16,7 @@
       '';
     })
     libsForQt5.qtstyleplugin-kvantum
+
     libsForQt5.qt5ct
   ];
 
@@ -29,21 +30,24 @@
       name = "Catppuccin-Mocha-Dark-Cursors";
     };
     font = {
-      name = "CaskaydiaCove Nerd Font";
+      name = "FiraCode Nerd Font";
       size = 12;
     };
     iconTheme = {
-      package = pkgs.papirus-icon-theme.override { color = "teal"; };
-      name = "Papirus-Dark";
+      package = pkgs.rose-pine-icon-theme;
+      name = "rose-pine-moon";
+      #package = pkgs.papirus-icon-theme.override { color = "teal"; };
+      #name = "Papirus-Dark";
     };
     theme = {
-      name = "Catppuccin-Mocha-Standard-Sky-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "sky" ];
-        variant = "mocha";
-        tweaks = ["rimless"];
-        size = "standard";
-      };
+      name = "rose-pine-moon";
+      package = pkgs.rose-pine-gtk-theme;
+      #package = pkgs.catppuccin-gtk.override {
+      #  accents = [ "sky" ];
+      #  variant = "mocha";
+      #  tweaks = ["rimless"];
+      #  size = "standard";
+      #};
     };
     gtk2 = {
       extraConfig = ''
@@ -59,7 +63,7 @@
         gtk-menu-images = false;
         gtk-enable-event-sounds = false;
         gtk-enable-animations = true;
-        gtk-application-prefer-dark-theme = true;
+        gtk-application-prefer-dark-theme = false;
       };
     };
   };
