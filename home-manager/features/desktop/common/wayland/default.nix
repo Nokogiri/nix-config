@@ -5,6 +5,7 @@
     ./gammastep.nix
     ./kitty.nix
     ./mako.nix
+    ./obs-studio.nix
     ./waybar.nix
     ./wofi.nix
   ];

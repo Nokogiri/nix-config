@@ -1,5 +1,5 @@
-{pkgs, ...}:{
-  environment.systemPackages = with pkgs; [ librespot ];  
+{ pkgs, ... }: {
+  environment.systemPackages = with pkgs; [ librespot ];
   services.snapserver = {
     enable = true;
     tcp.enable = true;

@@ -26,7 +26,10 @@
   gtk.iconCache.enable = true;
   qt.platformTheme = "gtk3";
   qt.style = "kvantum-dark";
-  programs = { dconf.enable = true; };
+  programs = {
+    dconf.enable = true;
+    hyprland.enable = true;
+  };
 
   services = {
     dbus = {

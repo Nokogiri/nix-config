@@ -6,7 +6,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    jack.enable = false;
+    jack.enable = true;
   };
   #environment.etc = {
   #"wireplumber/main.lua.d/51-disable-suspension.lua".text = ''
