@@ -17,6 +17,7 @@
     ../common/global
 
     ../common/optional/avahi.nix
+    ../common/optional/gitolite.nix
     ../common/optional/grub-efi.nix
     ../common/optional/mbpfan.nix
     ../common/optional/podman.nix
