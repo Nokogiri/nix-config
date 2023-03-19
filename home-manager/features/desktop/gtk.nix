@@ -40,7 +40,7 @@
       #name = "Papirus-Dark";
     };
     theme = {
-      name = "Catppuccin-MAcchiato-Standard-Teal-Dark";
+      name = "Catppuccin-Macchiato-Standard-Teal-Dark";
       #package = pkgs.rose-pine-gtk-theme;
       package = pkgs.catppuccin-gtk.override {
         accents = [ "teal" ];
