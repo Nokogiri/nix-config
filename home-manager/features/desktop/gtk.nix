@@ -45,7 +45,7 @@
       package = pkgs.catppuccin-gtk.override {
         accents = [ "teal" ];
         variant = "macchiato";
-        tweaks = ["rimless"];
+        tweaks = [ "rimless" ];
         size = "standard";
       };
     };

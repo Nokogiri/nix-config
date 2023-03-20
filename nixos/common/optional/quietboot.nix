@@ -8,7 +8,7 @@
 
   boot = {
     plymouth = {
-      enable = false;
+      enable = true;
       theme = "catppuccin-macchiato";
       themePackages = [ pkgs.plymouth-catppuccin-macchiato ];
       # [

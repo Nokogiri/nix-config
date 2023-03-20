@@ -19,8 +19,7 @@
         auto-tab-discard
       ]
       #profiles.nokogiri.extensions = 
-      ++ 
-      [
+      ++ [
         sidebery
         config.nur.repos.bandithedoge.firefoxAddons.betterviewer
         config.nur.repos.bandithedoge.firefoxAddons.sponsorblock

@@ -255,12 +255,12 @@ in {
       ### Appearance
       # window corner radius in px
       corner_radius 10
-      
+
       shadows on
       shadows_on_csd off
       shadow_blur_radius 20
       shadow_color #0000007F
-      
+
       # inactive window fade amount. 0.0 = no dimming, 1.0 = fully dimmed
       #dim_inactive 0.2
       #d#im_inactive_colors.unfocused #000000FF
