@@ -14,6 +14,7 @@
             gamescope
             glib.bin
             gsettings-desktop-schemas
+            fribidi
             mangohud
             mono
             xorg.libXcursor
