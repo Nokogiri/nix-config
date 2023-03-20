@@ -31,6 +31,21 @@
         "type": "github"
       }
     },
+    "flake-utils_2": {
+      "locked": {
+        "lastModified": 1676283394,
+        "narHash": "sha256-XX2f9c3iySLCw54rJ/CZs+ZK6IQy7GXNY4nSOyu2QG4=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "3db36a8b464d0c4532ba1c7dda728f4576d6d073",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
     "hardware": {
       "locked": {
         "lastModified": 1679224149,
@@ -75,11 +90,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1679277046,
-        "narHash": "sha256-5E/Cd1PdYwN0bfR3dyyTQ2Wu5ADK3pg/Z+viAtfaP70=",
+        "lastModified": 1679329354,
+        "narHash": "sha256-pVVl5sserTtBHgEGpCTle3m05p+Gz/F9ApClxEH/EA8=",
         "owner": "hyprwm",
         "repo": "hyprland",
-        "rev": "d23bbd1687a5413fb7f2c08b67692d4e64f8efef",
+        "rev": "5ffe5dd5942945993f165dd7ca6de2cd0b5ac47b",
         "type": "github"
       },
       "original": {
@@ -297,11 +312,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1679309270,
-        "narHash": "sha256-pEiq5/Ok2LzN+SWb0/OeUToeV4u5VVzVhGlmFCq5ud8=",
+        "lastModified": 1679341557,
+        "narHash": "sha256-cMj6zzH0cUdd2nMLvplQDO5cfViZB33WApPHtKVDHXI=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "dbd64b667e36864478a39e2e78f467f2f66d3590",
+        "rev": "d7a59b9f787b1ded42c76969ae3c720024687a24",
         "type": "github"
       },
       "original": {
@@ -346,18 +361,36 @@
         "type": "github"
       }
     },
+    "spicetify-cli": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1677851665,
+        "narHash": "sha256-C5J+OJjoiPOo/scVd48lTBJKKWial3TCkCIDBSerO+4=",
+        "owner": "spicetify",
+        "repo": "spicetify-cli",
+        "rev": "c9d8068d58d8c45f961ca42edcea47d7be904164",
+        "type": "github"
+      },
+      "original": {
+        "owner": "spicetify",
+        "repo": "spicetify-cli",
+        "type": "github"
+      }
+    },
     "spicetify-nix": {
       "inputs": {
+        "flake-utils": "flake-utils_2",
         "nixpkgs": [
           "nixpkgs"
-        ]
+        ],
+        "spicetify-cli": "spicetify-cli"
       },
       "locked": {
-        "lastModified": 1675736383,
-        "narHash": "sha256-fjQmN3pYGstBNHCFdmPzDf1/Dt04v3b7+/w4cQ4gkKo=",
+        "lastModified": 1679341592,
+        "narHash": "sha256-OcGvl8or6R9kn/atpRcQK9Svi30IVkWEdgo2abRFkHo=",
         "owner": "the-argus",
         "repo": "spicetify-nix",
-        "rev": "ec85c2a2f5d1035142b8e383cc77b68bb0b9ebc8",
+        "rev": "624c1070948b2bfbfcc4c9bcf9a940a6bd565293",
         "type": "github"
       },
       "original": {
