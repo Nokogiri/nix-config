@@ -14,7 +14,7 @@
     ../common/optional/avahi.nix
     ../common/optional/bluetooth.nix
     ../common/optional/desktop-wlr.nix
-    ../common/optional/distrobox.nix
+    #../common/optional/distrobox.nix
     ../common/optional/fonts.nix
     ../common/optional/fprintd.nix
     ../common/optional/greetd.nix
@@ -25,7 +25,7 @@
     ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
     ../common/optional/systemd-boot.nix
-    ../common/optional/waydroid.nix
+    #../common/optional/waydroid.nix
     ../common/optional/xdg-portal.nix
 
     ../common/users/nokogiri.nix
