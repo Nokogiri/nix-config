@@ -33,21 +33,11 @@
       size = 12;
     };
     iconTheme = {
-      package = pkgs.rose-pine-icon-theme;
-      name = "rose-pine-moon";
-      #package = pkgs.papirus-icon-theme.override { color = "teal"; };
-      #name = "Papirus-Dark";
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme.override { color = "teal"; };
     };
     theme = {
       name = "Fluent-round-teal-Dark-compact";
-      #name = "Catppuccin-Macchiato-Standard-Teal-Dark";
-      #package = pkgs.rose-pine-gtk-theme;
-      #package = pkgs.catppuccin-gtk.override {
-      #  accents = [ "teal" ];
-      #  variant = "macchiato";
-      #  tweaks = [ "rimless" ];
-      #  size = "standard";
-      #};
     };
     gtk2 = {
       extraConfig = ''
