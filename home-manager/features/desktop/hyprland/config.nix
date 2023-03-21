@@ -17,14 +17,14 @@
         active_opacity=1.0
         inactive_opacity=0.9
         fullscreen_opacity=1.0
-        rounding=8
+        rounding=10
         blur=true
         blur_size=6
-        blur_passes=3
+        blur_passes=2
         blur_new_optimizations=true
         blur_ignore_opacity=true
         drop_shadow=true
-        shadow_range=12
+        shadow_range=18
         shadow_offset=3 3
         col.shadow=0x44000000
         col.shadow_inactive=0x66000000
