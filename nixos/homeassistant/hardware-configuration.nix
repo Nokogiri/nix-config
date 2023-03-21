@@ -45,7 +45,7 @@
       "sdhci.debug_quirks2=4"
       "mitigations=off"
     ];
-    supportedFilesystems = [ "zfs" ];
+    supportedFilesystems = [ "zfs" "btrfs" ];
   };
 
   fileSystems."/" = {
