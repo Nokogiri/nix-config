@@ -41,7 +41,7 @@
     #});
     xwayland = {
       enable = true;
-      hidpi = true;
+      hidpi = false;
     };
     recommendedEnvironment = true;
   };
