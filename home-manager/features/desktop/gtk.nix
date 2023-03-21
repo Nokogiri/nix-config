@@ -16,7 +16,6 @@
       '';
     })
     libsForQt5.qtstyleplugin-kvantum
-
     libsForQt5.qt5ct
   ];
 
@@ -40,14 +39,15 @@
       #name = "Papirus-Dark";
     };
     theme = {
-      name = "Catppuccin-Macchiato-Standard-Teal-Dark";
+      name = "Fluent-round-teal-Dark-compact";
+      #name = "Catppuccin-Macchiato-Standard-Teal-Dark";
       #package = pkgs.rose-pine-gtk-theme;
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "teal" ];
-        variant = "macchiato";
-        tweaks = [ "rimless" ];
-        size = "standard";
-      };
+      #package = pkgs.catppuccin-gtk.override {
+      #  accents = [ "teal" ];
+      #  variant = "macchiato";
+      #  tweaks = [ "rimless" ];
+      #  size = "standard";
+      #};
     };
     gtk2 = {
       extraConfig = ''

@@ -18,6 +18,13 @@
       size = "standard";
       tweaks = [ "rimless" ];
     })
+    (fluent-gtk-theme.override {
+      colorVariants = [ "dark" ];
+      themeVariants = [ "teal" ];
+      tweaks = [ "noborder" "round" "square" "blur" ];
+    })
+    fluent-icon-theme
+    orchis-theme
     (papirus-icon-theme.override { color = "teal"; })
     rose-pine-gtk-theme
     rose-pine-icon-theme
