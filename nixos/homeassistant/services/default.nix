@@ -1,5 +1,6 @@
 {
   imports = [
+    ./cgit.nix
     ./firewall.nix
     ./nginx.nix
     ./nix-serve.nix
