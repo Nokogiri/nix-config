@@ -22,28 +22,39 @@
 
   fileSystems = {
     "/" = {
-      device = "mowteng/nixos/root";
-      fsType = "zfs";
+      device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
+      fsType = "btrfs";
+      options = [ "subvol=@" "compress=zstd" ];
     };
 
     "/var/lib" = {
-      device = "mowteng/nixos/var/lib";
-      fsType = "zfs";
+      device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
+      fsType = "btrfs";
+      options = [ "subvol=@var_lib" "compress=zstd" ];
     };
 
     "/var/log" = {
-      device = "mowteng/nixos/var/log";
-      fsType = "zfs";
+      device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
+      fsType = "btrfs";
+      options = [ "subvol=@var_log" "compress=zstd" ];
     };
 
     "/nix" = {
-      device = "mowteng/nixos/nix";
-      fsType = "zfs";
+      device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
+      fsType = "btrfs";
+      options = [ "subvol=@nix" "compress=zstd" ];
     };
 
     "/home/nokogiri" = {
-      device = "mowteng/home/nokogiri";
-      fsType = "zfs";
+      device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
+      fsType = "btrfs";
+      options = [ "subvol=@nokogiri" "compress=zstd" ];
+    };
+    
+    "/home/nokogiri/Games" = {
+      device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
+      fsType = "btrfs";
+      options = [ "subvol=@Games" "compress=zstd" ];
     };
 
     "/boot" = {
