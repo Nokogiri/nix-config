@@ -61,6 +61,11 @@
           + ''proxy_set_header Connection "upgrade";'';
       };
     };
+    virtualHosts."files.fishoeder.net" = {
+      useACMEHost = "fishoeder.net";
+      forceSSL = true;
+      root = "/srv/www/files";
+    };
     virtualHosts."git.fishoeder.net" = {
       useACMEHost = "fishoeder.net";
       forceSSL = true;
