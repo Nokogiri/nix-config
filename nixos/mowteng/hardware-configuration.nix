@@ -16,8 +16,7 @@
     };
     kernelModules = [ "kvm-amd" "zenpower" ];
     loader.efi.efiSysMountPoint = "/boot";
-    supportedFilesystems = [ "zfs" "btrfs" ];
-    zfs.enableUnstable = true;
+    supportedFilesystems = [ "btrfs" ];
   };
 
   fileSystems = {
@@ -87,11 +86,6 @@
     steam-hardware.enable = true;
     uinput.enable = true;
     xpadneo.enable = true;
-  };
-
-  services.zfs = {
-    autoScrub.enable = true;
-    trim.enable = true;
   };
 
   sound.enable = true;
