@@ -251,9 +251,7 @@
 
       windowrulev2 = workspace 3 silent,class:^(mpv)$
       windowrulev2 = workspace 6 silent,class:^(Steam)$
-      windowrulev2 = dimaround,class:^(mpv)$
-      #windowrulev2 = float,title:^(Planet Explorers)$
-      #windowrulev2 = fullscreen,opaque,noblur,forceinput,class:^(.gamescope-wrapped)$
+      windowrulev2 = fullscreen,opaque,noblur,forceinput,class:^(.gamescope-wrapped)$
       windowrulev2 = workspace 7 silent,class:^(Spotify)$
       windowrulev2 = fullscreen,opaque,noblur,class:^(gamescope)$
       blurls=waybar
