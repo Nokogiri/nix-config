@@ -21,14 +21,14 @@ assert trayEnabled -> systemdSupport && dbusSupport;
 let sd-bus-provider = if systemdSupport then "libsystemd" else "basu"; in
 
 stdenv.mkDerivation rec {
-  pname = "sway-unwrapped";
-  version = "1.8.1";
+  pname = "swayfx-unwrapped";
+  version = "0.2";
 
   src = fetchFromGitHub {
     owner = " WillPower3309";
     repo = "swayfx";
-    rev = version;
-    hash = "sha256-nVy7GdAnheWhjevcCPE407xWSLN8F4Le0uq2RDwv/Zc=";
+    rev = "7d5d7a3022eb17835cea7af7290b1a5d2fe4b03a";
+    hash = "sha256-tMoiwFO/AVTV7GoGMSu3XQimFnK8vv3yzf+D41kTJoE=";
   };
 
   patches = [

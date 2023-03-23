@@ -37,7 +37,7 @@
       package = pkgs.papirus-icon-theme.override { color = "teal"; };
     };
     theme = {
-      name = "Fluent-round-teal-Dark-compact";
+      name = "Orchis-Dark";
     };
     gtk2 = {
       extraConfig = ''
