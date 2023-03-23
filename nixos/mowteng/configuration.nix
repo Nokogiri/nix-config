@@ -70,8 +70,8 @@
   hardware = {
     opengl = {
       enable = true;
-      extraPackages = with pkgs; [ amdvlk mangohud ];
-      extraPackages32 = with pkgs; [ driversi686Linux.amdvlk mangohud ];
+      extraPackages = with pkgs; [ mangohud ];
+      extraPackages32 = with pkgs; [ mangohud ];
       driSupport = true;
       driSupport32Bit = true;
     };
