@@ -36,9 +36,7 @@
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme.override { color = "indigo"; };
     };
-    theme = {
-      name = "Catppuccin-Mocha-Standard-Mauve-Dark";
-    };
+    theme = { name = "Catppuccin-Mocha-Standard-Mauve-Dark"; };
     gtk2 = {
       extraConfig = ''
         gtk-toolbar-style=GTK_TOOLBAR_ICONS

@@ -1,4 +1,4 @@
-{ pkgs, ... }:{
+{ pkgs, ... }: {
   services.cgit."git.fishoeder.net" = {
     package = pkgs.cgit-pink;
     enable = true;
@@ -21,7 +21,8 @@
       root-desc = "Git?";
       root-title = "Git?";
       remove-suffix = true;
-      clone-url = "https://codeberg.org/Nokogiri/$CGIT_REPO_URL https://git.fishoeder.net/$CGIT_REPO_URL";
+      clone-url =
+        "https://codeberg.org/Nokogiri/$CGIT_REPO_URL https://git.fishoeder.net/$CGIT_REPO_URL";
       css = "https://files.fishoeder.net/css/custom.css";
       enable-follow-links = true;
       enable-git-config = true;
