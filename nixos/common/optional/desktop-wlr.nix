@@ -18,10 +18,15 @@
       size = "standard";
       tweaks = [ "rimless" ];
     })
+    (catppuccin-kvantum.override {
+      accent = "Mauve";
+      variant = "Mocha";
+    })
     orchis-theme
     (papirus-icon-theme.override { color = "indigo"; })
   ];
 
+  environment.pathsToLink = [ "/share/Kvantum" ];
   gtk.iconCache.enable = true;
   qt.platformTheme = "gtk3";
   qt.style = "kvantum-dark";
