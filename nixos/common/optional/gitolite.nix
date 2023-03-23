@@ -9,6 +9,7 @@
     extraGitoliteRc = ''
       $RC{GIT_CONFIG_KEYS} = '.*';
       push( @{$RC{ENABLE}}, 'cgit' );
+      push( @{$RC{ENABLE}}, 'symbolic-ref');
     '';
   };
 }
