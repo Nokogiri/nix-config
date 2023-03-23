@@ -10,6 +10,7 @@
            'JetBrainsMono Nerd Font Mono',
          },
        warn_about_missing_glyphs = false,
+       enable_kitty_graphics = true,
        enable_wayland = true,
        default_cursor_style = "BlinkingUnderline",
        window_background_opacity = 0.95,
