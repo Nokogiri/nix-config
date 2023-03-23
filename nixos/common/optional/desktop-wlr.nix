@@ -22,13 +22,15 @@
       accent = "Mauve";
       variant = "Mocha";
     })
-    orchis-theme
-    (papirus-icon-theme.override { color = "indigo"; })
+    (catppuccin-papirus-folders.override {
+      accent = "mauve";
+      flavor = "mocha";
+    })
   ];
 
   environment.pathsToLink = [ "/share/Kvantum" ];
   gtk.iconCache.enable = true;
-  qt.platformTheme = "gtk3";
+  #qt.platformTheme = "gtk3";
   qt.style = "kvantum-dark";
   programs = {
     dconf.enable = true;

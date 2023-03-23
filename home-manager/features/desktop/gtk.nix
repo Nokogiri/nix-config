@@ -34,7 +34,10 @@
     };
     iconTheme = {
       name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme.override { color = "indigo"; };
+      package = pkgs.catppuccin-papirus-folders.override {
+        accent = "mauve";
+        flavor = "mocha";
+      };
     };
     theme = { name = "Catppuccin-Mocha-Standard-Mauve-Dark"; };
     gtk2 = {
