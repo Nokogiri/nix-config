@@ -18,8 +18,9 @@
     };
     settings = {
       root-desc = "Git?";
+      root-title = "Git?";
       remove-suffix = true;
-      clone-url = "https://github.com/Nokogiri/$CGIT_REPO_URL git@git.fishoeder.net:$CGIT_REPO_URL";
+      clone-url = "https://codeberg.org/Nokogiri/$CGIT_REPO_URL git://git@git.fishoeder.net:$CGIT_REPO_URL";
       css = "https://files.fishoeder.net/css/custom.css";
       enable-follow-links = true;
       enable-git-config = true;
