@@ -5,8 +5,6 @@
     kitty = {
       enable = true;
       font = {
-        #name = "CaskaydiaCove Nerd Font Mono";
-        #name = "IosevkaTerm NF";
         name = "JetBrainsMono Nerd Font Mono";
         size = 12;
       };
