@@ -13,21 +13,13 @@
   environment.systemPackages = with pkgs; [
     gtklock
     (catppuccin-gtk.override {
-      accents = [ "sky" ];
+      accents = [ "mauve" ];
       variant = "mocha";
       size = "standard";
       tweaks = [ "rimless" ];
     })
-    (fluent-gtk-theme.override {
-      colorVariants = [ "dark" ];
-      themeVariants = [ "teal" ];
-      tweaks = [ "noborder" "round" "square" "blur" ];
-    })
-    fluent-icon-theme
     orchis-theme
-    (papirus-icon-theme.override { color = "teal"; })
-    rose-pine-gtk-theme
-    rose-pine-icon-theme
+    (papirus-icon-theme.override { color = "indigo"; })
   ];
 
   gtk.iconCache.enable = true;

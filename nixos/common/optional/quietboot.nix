@@ -9,8 +9,8 @@
   boot = {
     plymouth = {
       enable = true;
-      theme = "catppuccin-macchiato";
-      themePackages = [ pkgs.plymouth-catppuccin-macchiato ];
+      theme = "catppuccin-mocha";
+      themePackages = [ pkgs.plymouth-catppuccin-mocha ];
       # [
       #  (pkgs.plymouth-catppuccin-frappe.override {
       #    inherit (config.boot.plymouth) logo;

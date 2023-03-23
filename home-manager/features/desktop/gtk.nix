@@ -34,10 +34,10 @@
     };
     iconTheme = {
       name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme.override { color = "teal"; };
+      package = pkgs.papirus-icon-theme.override { color = "indigo"; };
     };
     theme = {
-      name = "Orchis-Dark";
+      name = "Catppuccin-Mocha-Standard-Mauve-Dark";
     };
     gtk2 = {
       extraConfig = ''

@@ -2,22 +2,22 @@
   console = {
 
     colors = [
-      "24273A"
-      "ED8796"
-      "A6DA95"
-      "EED49f"
-      "8AADF4"
-      "F5BDE6"
-      "8BD5CA"
-      "CAD3F5"
-      "5B6078"
-      "ED8796"
-      "A6DA95"
-      "EED49f"
-      "8AADF4"
-      "F5BDE6"
-      "8BD5CA"
-      "A5ADCB"
+      "1E1E2E"
+      "F38BA8"
+      "A6E3A1"
+      "F9E2AF"
+      "89B4FA"
+      "F5C2E7"
+      "94E2D5"
+      "BAC2DE"
+      "585B70"
+      "F38BA8"
+      "A6E3A1"
+      "F9E2AF"
+      "89B4FA"
+      "F5C2E7"
+      "94E2D5"
+      "A6ADC8"
     ];
   };
 }
