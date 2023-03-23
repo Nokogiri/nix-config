@@ -14,7 +14,7 @@
         path = "/var/lib/gitolite/repositories/nixpkgs.git";
         desc = "fork of https://github.com/NixOS/nixpkgs";
         owner = "nokogiri";
-        clone-url = "https://github.com/NixOS/nixpkgs";
+        clone-url = "https://github.com/Nokogiri/nixpkgs";
       };
     };
     settings = {
