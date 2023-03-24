@@ -19,8 +19,8 @@
         fullscreen_opacity=1.0
         rounding=10
         blur=true
-        blur_size=3
-        blur_passes=1
+        blur_size=2
+        blur_passes=2
         blur_new_optimizations=true
         blur_ignore_opacity=true
         drop_shadow=true
@@ -97,7 +97,7 @@
 
       # Startup
       exec-once=~/.nix-profile/libexec/polkit-kde-authentication-agent-1
-      exec-once=~/.local/bin/swwwi
+      #exec-once=~/.local/bin/swwwi
       exec-once=mako
       exec-once=swayidle -w
       exec-once=wl-paste --watch cliphist store
