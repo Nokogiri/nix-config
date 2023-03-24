@@ -241,6 +241,7 @@ in {
         { command = "wl-paste --watch cliphist store"; }
         { command = "avizo-service"; }
         { command = "nm-applet --indicator"; }
+        { command = "/home/nokogiri/.local/bin/swwwi"; }
       ];
       terminal = "kitty";
       window = { border = 1; };
