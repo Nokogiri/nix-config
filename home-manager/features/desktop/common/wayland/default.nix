@@ -19,7 +19,6 @@
     slurp
     swayidle
     swaylock-effects
-    config.nur.repos.aleksana.swww
     wl-clipboard
     wlr-randr
   ];

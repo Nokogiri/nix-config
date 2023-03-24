@@ -23,6 +23,5 @@
   RBDOOM-3-BFG-vk = pkgs.callPackage ./RBDOOM-3-BFG-vk { };
   #ryujinx = pkgs.callPackage ./ryujinx { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
-  #sway-unwrapped = pkgs.callPackage ./swayfx {};
   waydroid = pkgs.callPackage ./waydroid {};
 }
