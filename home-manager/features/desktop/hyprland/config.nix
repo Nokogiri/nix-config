@@ -20,7 +20,7 @@
         rounding=10
         blur=true
         blur_size=2
-        blur_passes=2
+        blur_passes=1
         blur_new_optimizations=true
         blur_ignore_opacity=true
         drop_shadow=true
@@ -61,12 +61,11 @@
         disable_hyprland_logo=true
         disable_splash_rendering=true
         vfr=true
-        
       }
 
       debug {
         overlay=false
-        disable_logs=true
+        disable_logs=false
       }
       binds {
         workspace_back_and_forth = true
@@ -78,7 +77,7 @@
 
         #follow_mouse=1
         touchpad {
-          disable_while_typing=true
+          disable_while_typing=false
         }
         touchdevice {
           output=eDP-1
@@ -97,7 +96,7 @@
 
       # Startup
       exec-once=~/.nix-profile/libexec/polkit-kde-authentication-agent-1
-      #exec-once=~/.local/bin/swwwi
+      exec-once=wpaperd
       exec-once=mako
       exec-once=swayidle -w
       exec-once=wl-paste --watch cliphist store
@@ -255,8 +254,8 @@
       windowrulev2 = fullscreen,opaque,noblur,forceinput,class:^(.gamescope-wrapped)$
       windowrulev2 = workspace 7 silent,class:^(Spotify)$
       windowrulev2 = fullscreen,opaque,noblur,class:^(gamescope)$
-      blurls=waybar
-      blurls=wofi
+      #blurls=waybar
+      #blurls=wofi
     '';
   };
 }
