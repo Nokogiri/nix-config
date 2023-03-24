@@ -4,7 +4,7 @@
     extraConfig = ''
       return {
        front_end = "OpenGL",
-       color_scheme = "Catppuccin Macchiato",
+       color_scheme = "Catppuccin Mocha",
        font_size = 12.0 ,
        font = wezterm.font_with_fallback {
            'JetBrainsMono Nerd Font Mono',

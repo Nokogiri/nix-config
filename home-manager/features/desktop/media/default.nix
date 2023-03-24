@@ -12,6 +12,7 @@
       };
     };
   home.packages = with pkgs; [
+    ani-cli
     jellyfin-media-player
     mpv
     spotify-player
