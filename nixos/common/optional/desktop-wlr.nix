@@ -13,17 +13,17 @@
   environment.systemPackages = with pkgs; [
     gtklock
     (catppuccin-gtk.override {
-      accents = [ "mauve" ];
+      accents = [ "maroon" ];
       variant = "mocha";
       size = "standard";
       tweaks = [ "rimless" ];
     })
     (catppuccin-kvantum.override {
-      accent = "Mauve";
+      accent = "Maroon";
       variant = "Mocha";
     })
     (catppuccin-papirus-folders.override {
-      accent = "mauve";
+      accent = "maroon";
       flavor = "mocha";
     })
   ];

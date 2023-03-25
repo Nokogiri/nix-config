@@ -35,11 +35,11 @@
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.catppuccin-papirus-folders.override {
-        accent = "mauve";
+        accent = "maroon";
         flavor = "mocha";
       };
     };
-    theme = { name = "Catppuccin-Mocha-Standard-Mauve-Dark"; };
+    theme = { name = "Catppuccin-Mocha-Standard-Maroon-Dark"; };
     gtk2 = {
       extraConfig = ''
         gtk-toolbar-style=GTK_TOOLBAR_ICONS
