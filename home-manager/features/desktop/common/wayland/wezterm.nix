@@ -3,7 +3,7 @@
     enable = true;
     extraConfig = ''
       return {
-       front_end = "OpenGL",
+       front_end = "WebGpu",
        color_scheme = "Catppuccin Mocha",
        font_size = 12.0 ,
        font = wezterm.font_with_fallback {
