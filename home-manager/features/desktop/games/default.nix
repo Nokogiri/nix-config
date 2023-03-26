@@ -13,11 +13,8 @@
     #zeroad
     airshipper # veloren
     eduke32
-    #dhewm3
     gzdoom
-    #minetest
     openmw
-    #solarus
     sm64ex
     vkquake
     yquake2
