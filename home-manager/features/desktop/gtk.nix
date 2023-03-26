@@ -39,7 +39,7 @@
         flavor = "mocha";
       };
     };
-    theme = { name = "Catppuccin-Mocha-Standard-Peach-Dark"; };
+    theme = { name = "Catppuccin-Mocha-Standard-Mauve-Dark"; };
     gtk2 = {
       extraConfig = ''
         gtk-toolbar-style=GTK_TOOLBAR_ICONS
