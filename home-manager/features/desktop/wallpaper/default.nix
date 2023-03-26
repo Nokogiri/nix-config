@@ -10,7 +10,7 @@
     apply-shadow = true
 
     [eDP-1]
-    path = "/home/nokogiri/.local/share/wallpaper/Street.webp"
+    path = "/home/nokogiri/.local/share/wallpaper/greencastle.webp"
     apply-shadow = true
   '';
 }
