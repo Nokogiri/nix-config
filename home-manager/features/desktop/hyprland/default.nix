@@ -10,7 +10,7 @@
   home.packages = with pkgs; [
     inputs.hyprpicker.packages."x86_64-linux".hyprpicker
     wpaperd
-      ];
+  ];
 
   programs = {
     fish.loginShellInit = ''

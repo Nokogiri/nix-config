@@ -18,7 +18,8 @@
       };
       iio-hyprland = {
         path = "/var/lib/gitolite/repositories/iio-hyprland.git";
-        desc = "Personal fork of https://github.com/JeanSchoeller/iio-hyprland Listens to iio-sensor-proxy and automatically changes Hyprland output orientation";
+        desc =
+          "Personal fork of https://github.com/JeanSchoeller/iio-hyprland Listens to iio-sensor-proxy and automatically changes Hyprland output orientation";
         owner = "nokogiri";
       };
     };
