@@ -16,6 +16,11 @@
         owner = "nokogiri";
         clone-url = "https://github.com/Nokogiri/nixpkgs";
       };
+      iio-hyprland = {
+        path = "/var/lib/gitolite/repositories/iio-hyprland.git";
+        desc = "Personal fork of https://github.com/JeanSchoeller/iio-hyprland Listens to iio-sensor-proxy and automatically changes Hyprland output orientation";
+        owner = "nokogiri";
+      };
     };
     settings = {
       root-desc = "Git?";
