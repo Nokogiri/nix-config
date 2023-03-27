@@ -20,7 +20,7 @@
   #    ];
   #  };
 
-  home.packages = with pkgs; [ xfce.thunar transmission-remote-gtk snapcast ];
+  home.packages = with pkgs; [ xfce.thunar transmission-remote-gtk snapcast dwarfs fuse-overlayfs psmisc ];
 
   programs = { password-store.enable = true; };
 }
