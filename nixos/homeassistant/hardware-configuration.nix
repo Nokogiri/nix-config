@@ -83,6 +83,12 @@
     fsType = "zfs";
     options = [ "zfsutil" "X-mount.mkdir" ];
   };
+
+  fileSystems."/media/extHDD" = {
+    device = "/dev/disk/by-uuid/10a2e8f7-656f-414a-bddf-e3d5e6a6d7a0";
+    fsType = "btrfs";
+    options = [ "compress-force=zstd" "noatime" ];
+  };
   swapDevices =
     [{ device = "/dev/disk/by-uuid/8638fc3c-846e-49ea-9307-5194a729e74c"; }];
 
