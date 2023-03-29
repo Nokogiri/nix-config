@@ -24,4 +24,5 @@
   #ryujinx = pkgs.callPackage ./ryujinx { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
   waydroid = pkgs.callPackage ./waydroid {};
+  qtstyleplugin-kvantum-qt6 = pkgs.qt6Packages.callPackage ./qtstyleplugin-kvantum { };
 }

@@ -12,6 +12,7 @@
   };
   environment.systemPackages = with pkgs; [
     gtklock
+    qtstyleplugin-kvantum-qt6
     (catppuccin-gtk.override {
       accents = [ "mauve" ];
       variant = "mocha";
