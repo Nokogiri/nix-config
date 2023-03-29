@@ -85,8 +85,7 @@
     light.enable = true;
     mtr.enable = true;
   };
-  services.slimserver.enable = true;
-
+  
   location = {
     latitude = 50.9787;
     longitude = 11.03283;
