@@ -27,6 +27,12 @@ in {
       accent = kAccent;
       variant = kFlavor;
     })
+    (catppuccin-gtk.override {
+      accents = [ gAccent ];
+      variant = gFlavor;
+      size = "standard";
+      tweaks = [ "rimless" ];
+    })
   ];
 
   qt.style.name = "kvantum-dark";
