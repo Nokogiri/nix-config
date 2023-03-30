@@ -1,8 +1,8 @@
 { pkgs, inputs, ... }: let
   gTheme = "Catppuccin-Mocha-Standard-Flamingo-Dark";
-  gAccent = "flamingo";
+  gAccent = "mauve";
   gFlavor = "mocha";
-  kAccent = "flaming";
+  kAccent = "Mauve";
   kFlavor = "Mocha";
 in {
 

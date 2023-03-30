@@ -1,8 +1,8 @@
 { pkgs, inputs, config, ... }: let
   gTheme = "Catppuccin-Mocha-Standard-Flamingo-Dark";
-  gAccent = "flamingo";
+  gAccent = "mauve";
   gFlavor = "mocha";
-  kAccent = "flaming";
+  kAccent = "Mauve";
   kFlavor = "Mocha";
 in {
   home.packages = with pkgs; [
@@ -50,13 +50,7 @@ in {
       };
     };
     theme = {
-      name = gTheme; 
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ gAccent ];
-        variant = gFlavor;
-        size = "standard";
-        tweaks = "rimless";
-      };
+      name = "Catppuccin-Mocha-Standard-Mauve-Dark"; 
     };
     gtk2 = {
       extraConfig = ''
@@ -78,6 +72,12 @@ in {
   };
 
   home.file.".icons/default/index.theme".text = ''
+    [Icon Theme]
+    Name=Default
+    Comment=Default Cursor Theme
+    Inherits=${config.gtk.cursorTheme.name}
+  '';
+  home.file.".local/share/icons/default/index.theme".text = ''
     [Icon Theme]
     Name=Default
     Comment=Default Cursor Theme
