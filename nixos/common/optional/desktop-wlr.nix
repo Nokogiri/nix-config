@@ -1,4 +1,10 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }: let
+  gTheme = "Catppuccin-Mocha-Standard-Flamingo-Dark";
+  gAccent = "flamingo";
+  gFlavour = "mocha";
+  kAccent = "flaming";
+  kFlavour = "Mocha";
+in {
 
   security.pam.services = {
     gtklock = {
@@ -14,18 +20,18 @@
     gtklock
     qtstyleplugin-kvantum-qt6
     (catppuccin-gtk.override {
-      accents = [ "mauve" ];
-      variant = "mocha";
+      accents = [ gAccent ];
+      variant = gFlavor;
       size = "standard";
       tweaks = [ "rimless" ];
     })
     (catppuccin-kvantum.override {
-      accent = "Mauve";
-      variant = "Mocha";
+      accent = kAccent;
+      variant = kFlavor;
     })
     (catppuccin-papirus-folders.override {
-      accent = "mauve";
-      flavor = "mocha";
+      accent = gAccent;
+      flavor = gFlavor;
     })
   ];
 

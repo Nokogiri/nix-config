@@ -1,4 +1,10 @@
-{ pkgs, inputs, config, ... }: {
+{ pkgs, inputs, config, ... }: let
+  gTheme = "Catppuccin-Mocha-Standard-Flamingo-Dark";
+  gAccent = "flamingo";
+  gFlavour = "mocha";
+  kAccent = "flaming";
+  kFlavour = "Mocha";
+in {
   home.packages = with pkgs; [
     (pkgs.writeTextFile {
       name = "configure-gtk";
@@ -17,11 +23,15 @@
     })
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qt5ct
+    (catppuccin-kvantum.override {
+      accent = kAccent;
+      variant = kFlavor;
+    })
   ];
 
   qt.style.name = "kvantum-dark";
   qt.style.package = "libsForQt5.qtstyleplugin-kvantum";
-
+  
   gtk = {
     enable = true;
     cursorTheme = {
@@ -35,11 +45,19 @@
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.catppuccin-papirus-folders.override {
-        accent = "mauve";
-        flavor = "mocha";
+        accent = gAccent;
+        flavor = gFlavour;
       };
     };
-    theme = { name = "Catppuccin-Mocha-Standard-Mauve-Dark"; };
+    theme = {
+      name = gTheme; 
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ gAccent ];
+        variant = gFlavor;
+        size = "standard";
+        tweaks = "rimless";
+      };
+    };
     gtk2 = {
       extraConfig = ''
         gtk-toolbar-style=GTK_TOOLBAR_ICONS
@@ -50,8 +68,8 @@
     };
     gtk3 = {
       extraConfig = {
-        gtk-button-images = false;
-        gtk-menu-images = false;
+        gtk-button-images = true;
+        gtk-menu-images = true;
         gtk-enable-event-sounds = false;
         gtk-enable-animations = true;
         gtk-application-prefer-dark-theme = false;
