@@ -1,9 +1,9 @@
 { pkgs, inputs, config, ... }: let
   gTheme = "Catppuccin-Mocha-Standard-Flamingo-Dark";
   gAccent = "flamingo";
-  gFlavour = "mocha";
+  gFlavor = "mocha";
   kAccent = "flaming";
-  kFlavour = "Mocha";
+  kFlavor = "Mocha";
 in {
   home.packages = with pkgs; [
     (pkgs.writeTextFile {
@@ -46,7 +46,7 @@ in {
       name = "Papirus-Dark";
       package = pkgs.catppuccin-papirus-folders.override {
         accent = gAccent;
-        flavor = gFlavour;
+        flavor = gFlavor;
       };
     };
     theme = {

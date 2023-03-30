@@ -1,9 +1,9 @@
 { pkgs, inputs, ... }: let
   gTheme = "Catppuccin-Mocha-Standard-Flamingo-Dark";
   gAccent = "flamingo";
-  gFlavour = "mocha";
+  gFlavor = "mocha";
   kAccent = "flaming";
-  kFlavour = "Mocha";
+  kFlavor = "Mocha";
 in {
 
   security.pam.services = {
