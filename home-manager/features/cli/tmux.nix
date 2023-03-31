@@ -3,6 +3,7 @@
     enable = true;
     baseIndex = 1;
     clock24 = true;
+    escapeTime = 0;
     extraConfig = ''
       set -ga terminal-overrides ",xterm-kitty:Tc"
       bind-key a last-window
@@ -13,10 +14,8 @@
       set-option -g status-position top
 
       set-option -g repeat-time 0
-
-      # Removes ESC delay
-      set -sg escape-time 0
     '';
+    newSession = true;
     prefix = "C-a";
     plugins = with pkgs; [
       {
@@ -25,6 +24,7 @@
       }
       tmuxPlugins.cpu
     ];
+    shortcut = "a";
     terminal = "tmux-256color";
   };
 }

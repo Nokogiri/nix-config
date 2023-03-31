@@ -23,6 +23,8 @@
       }
     ];
     shellAbbrs = {
+
+      ipa = "ip -color -brief a";
       ls = "exa";
       n = "nix";
       nd = "nix develop -c $SHELL";
