@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [ rclone ];
-  systemd.user.services = {
+  systemd.services = {
     rclone-nokogiri = {
       enable = true;
       description =
@@ -13,13 +13,14 @@
       wantedBy = [ "default.target" ];
       serviceConfig = {
         Type = "notify";
+        User = "nokogiri";
         ExecStart = ''
           ${pkgs.rclone}/bin/rclone mount \
-                    --config=%h/.config/rclone/rclone.conf \
+                    --config=/home/nokogiri/.config/rclone/rclone.conf \
                     --vfs-cache-mode full \
                     --vfs-cache-max-size 256M \
                     --log-level INFO \
-                    --log-file /tmp/rclone-%i.log \
+                    --log-file /tmp/rclone-nokogiri.log \
                     --umask 002 \
                     --allow-other \
                     --allow-non-empty \
@@ -42,13 +43,14 @@
       wantedBy = [ "default.target" ];
       serviceConfig = {
         Type = "notify";
+        User = "nokogiri";
         ExecStart = ''
           ${pkgs.rclone}/bin/rclone mount \
-                    --config=%h/.config/rclone/rclone.conf \
+                    --config=/home/nokogiri/.config/rclone/rclone.conf \
                     --vfs-cache-mode full \
                     --vfs-cache-max-size 256M \
                     --log-level INFO \
-                    --log-file /tmp/rclone-%i.log \
+                    --log-file /tmp/rclone-lyria.log \
                     --umask 002 \
                     --allow-other \
                     --allow-non-empty \
@@ -72,13 +74,14 @@
       wantedBy = [ "default.target" ];
       serviceConfig = {
         Type = "notify";
+        User = "nokogiri";
         ExecStart = ''
           ${pkgs.rclone}/bin/rclone mount \
-                    --config=%h/.config/rclone/rclone.conf \
+                    --config=/home/nokogiri/.config/rclone/rclone.conf \
                     --vfs-cache-mode full \
                     --vfs-cache-max-size 256M \
                     --log-level INFO \
-                    --log-file /tmp/rclone-%i.log \
+                    --log-file /tmp/rclone-guntheria.log \
                     --umask 002 \
                     --allow-other \
                     --allow-non-empty \
@@ -103,13 +106,14 @@
       wantedBy = [ "default.target" ];
       serviceConfig = {
         Type = "notify";
+        User = "nokogiri";
         ExecStart = ''
           ${pkgs.rclone}/bin/rclone mount \
-                    --config=%h/.config/rclone/rclone.conf \
+                    --config=/home/nokogiri/.config/rclone/rclone.conf \
                     --vfs-cache-mode full \
                     --vfs-cache-max-size 256M \
                     --log-level INFO \
-                    --log-file /tmp/rclone-%i.log \
+                    --log-file /tmp/rclone-markus.log \
                     --umask 002 \
                     --allow-other \
                     --allow-non-empty \
@@ -132,13 +136,14 @@
       wantedBy = [ "default.target" ];
       serviceConfig = {
         Type = "notify";
+        User = "nokogiri";
         ExecStart = ''
           ${pkgs.rclone}/bin/rclone mount \
-                    --config=%h/.config/rclone/rclone.conf \
+                    --config=/home/nokogiri/.config/rclone/rclone.conf \
                     --vfs-cache-mode full \
                     --vfs-cache-max-size 256M \
                     --log-level INFO \
-                    --log-file /tmp/rclone-%i.log \
+                    --log-file /tmp/rclone-kenny.log \
                     --umask 002 \
                     --allow-other \
                     --allow-non-empty \
@@ -161,13 +166,14 @@
       wantedBy = [ "default.target" ];
       serviceConfig = {
         Type = "notify";
+        User = "nokogiri";
         ExecStart = ''
           ${pkgs.rclone}/bin/rclone mount \
-                    --config=%h/.config/rclone/rclone.conf \
+                    --config=/home/nokogiri/.config/rclone/rclone.conf \
                     --vfs-cache-mode full \
                     --vfs-cache-max-size 256M \
                     --log-level INFO \
-                    --log-file /tmp/rclone-%i.log \
+                    --log-file /tmp/rclone-hildi.log \
                     --umask 002 \
                     --allow-other \
                     --allow-non-empty \
