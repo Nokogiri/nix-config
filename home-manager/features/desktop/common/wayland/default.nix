@@ -7,7 +7,7 @@
     ./kitty.nix
     ./mako.nix
     ./obs-studio.nix
-    #./wezterm.nix
+    ./wezterm.nix
     ./waybar.nix
     ./wofi.nix
   ];
