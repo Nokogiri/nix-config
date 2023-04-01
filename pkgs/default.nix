@@ -7,6 +7,9 @@
   #heroic = pkgs.callPackage ./heroic/fhsenv.nix { };
   iio-sensor-proxy = pkgs.callPackage ./iio-sensor-proxy { };
   #lf-sixel = pkgs.callPackage ./lf-sixel { };
+  mpv-unwrapped = pkgs.callPackage ./mpv { };
+  wrapMpv = pkgs.callPackage ./mpv/wrapper.nix { };
+  mpv = pkgs.wrapMpv pkgs.mpv-unwrapped { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   pass-fuzzel = pkgs.callPackage ./pass-fuzzel { };
   pass-wofi = pkgs.callPackage ./pass-wofi { };
