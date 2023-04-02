@@ -12,6 +12,7 @@
   securityType = "user";
   extraConfig = ''
     workgroup = WORKGROUP
+    multicast dns register = yes
     server string = smbnix
     netbios name = smbnix
     security = user 
