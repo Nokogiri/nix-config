@@ -37,18 +37,26 @@
         bezier=easeout,0.5, 1, 0.89, 1
         bezier=easeinout,0.45, 0, 0.55, 1
 
-        animation=windowsIn,1,3,easeout,slide
-        animation=windowsOut,1,3,easein,slide
-        animation=windowsMove,1,3,easeout
+        #animation=windowsIn,1,3,easeout,slide
+        #animation=windowsOut,1,3,easein,slide
+        #animation=windowsMove,1,3,easeout
 
-        animation=fadeIn,1,3,easeout
-        animation=fadeOut,1,3,easein
-        animation=fadeSwitch,1,3,easeout
-        animation=fadeShadow,1,3,easeout
-        animation=fadeDim,1,3,easeout
-        animation=border,1,3,easeout
+        bezier = myBezier, 0.05, 0.9, 0.1, 1.05
+        animation = windows, 1, 3, myBezier
+        animation = windowsOut, 1, 3, default, popin 10%
+        animation = border, 1, 5, default
+        animation = borderangle, 1, 4, default
+        animation = fade, 1, 3, default
+        animation = workspaces, 1, 2, default
+        
+        #animation=fadeIn,1,3,easeout
+        #animation=fadeOut,1,3,easein
+        #animation=fadeSwitch,1,3,easeout
+        #animation=fadeShadow,1,3,easeout
+        #animation=fadeDim,1,3,easeout
+        #animation=border,1,3,easeout
 
-        animation=workspaces,1,2,easeout,slide
+        #animation=workspaces,1,2,easeout,slide
       }
 
       #dwindle {
