@@ -18,4 +18,15 @@
       userServices = true;
     };
   };
+  environment.etc."avahi/services/smb.service".text = ''
+  <?xml version="1.0" standalone="no"?>
+  <!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+  <service-group>
+    <name replace-wildcards="yes">%h</name> ## Display Name
+    <service>
+        <type>_smb._tcp</type>
+        <port>445</port>
+    </service>
+  </service-group>
+  '';
 }
