@@ -60,6 +60,7 @@
     ];
     kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [ "amd_pstate=passive" "mitigations=off" ];
+    tmpOnTmpfs = true;
   };
 
   environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
