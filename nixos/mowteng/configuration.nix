@@ -64,8 +64,14 @@
 
   environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
 
-  environment.systemPackages = with pkgs; [ amdctl lm_sensors exfatprogs ];
+  environment.systemPackages = with pkgs; [ amdctl cifs-utils lm_sensors exfatprogs ];
 
+  fileSystems."/media/haos" = {
+      device = "//192.168.178.57/public";
+      fsType = "cifs";
+      options = ["x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s,uid=1000,gid=100"];
+  };
+  
   hardware = {
     opengl = {
       enable = true;

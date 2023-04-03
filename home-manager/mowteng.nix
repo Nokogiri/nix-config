@@ -8,9 +8,8 @@
     ./features/desktop/media
     ./features/desktop/eww
     ./features/helix
-    ./features/desktop/hyprland
-    #./features/desktop/sway
-    #./features/mopidy
+#    ./features/desktop/hyprland
+    ./features/desktop/sway
     inputs.nur.nixosModules.nur
   ];
 
@@ -20,7 +19,7 @@
   #    ];
   #  };
 
-  home.packages = with pkgs; [ xfce.thunar transmission-remote-gtk snapcast dwarfs fuse-overlayfs psmisc xplr ];
+  home.packages = with pkgs; [ xfce.thunar transmission-remote-gtk snapcast dwarfs fuse-overlayfs psmisc ];
 
   programs = { password-store.enable = true; };
 }
