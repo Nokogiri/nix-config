@@ -37,7 +37,7 @@
     libretro.play
     libretro.ppsspp
     libretro.snes9x
-    libretro.swanstation
+    #libretro.swanstation
     ppsspp
     rpcs3
     ryujinx

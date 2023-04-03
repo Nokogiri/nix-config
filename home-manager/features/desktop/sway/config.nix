@@ -9,6 +9,10 @@ in {
       export XDG_SESSION_TYPE=wayland
       export XDG_SESSION_DESKTOP=sway
       export XDG_CURRENT_DESKTOP=sway
+
+      export FADE_TIME=0.5
+      export ALT_FADE_TIME=0.2
+      export CON_INAC=0.8
       #export WLR_RENDERER=vulkan
     '';
     wrapperFeatures = {
