@@ -47,7 +47,7 @@ in {
   #      enable = true;
   #      hidpi = false;
   #    };
-    };
+  #  };
   };
 
   services = {
