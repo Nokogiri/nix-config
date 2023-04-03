@@ -243,9 +243,10 @@ in {
           always = true;
         }
         { command = "wl-paste --watch cliphist store"; }
-        { command = "avizo-service"; }
-        { command = "nm-applet --indicator"; }
-        { command = "/home/nokogiri/.local/bin/swwwi"; }
+        #{ command = "avizo-service"; }
+        #{ command = "nm-applet --indicator"; }
+        { command = "wpaperd"; }
+        { command = "swayfader"; }
       ];
       terminal = "kitty";
       window = { border = 1; };
