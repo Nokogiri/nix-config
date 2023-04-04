@@ -14,6 +14,7 @@
     ../common/optional/avahi.nix
     ../common/optional/bluetooth.nix
     ../common/optional/desktop-wlr.nix
+    ../common/optional/distrobox.nix
     ../common/optional/fonts.nix
     ../common/optional/fprintd.nix
     ../common/optional/greetd.nix
