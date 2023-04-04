@@ -49,11 +49,11 @@ in {
       colors = {
         background = "#ffffff";
         focused = {
-          border = "#8abeb7";
-          background = "#8abeb7";
+          border = "#cba6f7";
+          background = "#cba6f7";
           text = "#1d1f21";
           indicator = "#8abeb7";
-          childBorder = "#8abeb7";
+          childBorder = "#cba6f7";
         };
         focusedInactive = {
           border = "#282a2e";
@@ -70,8 +70,8 @@ in {
           childBorder = "#1d1f21";
         };
         unfocused = {
-          border = "#282a2e";
-          background = "#1d1f21";
+          border = "#1e1e2e";
+          background = "#1e1e2e";
           text = "#c5c8c6";
           indicator = "#282a2e";
           childBorder = "#282a2e";
