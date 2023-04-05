@@ -22,6 +22,7 @@
   plymouth-catppuccin-mocha =
     pkgs.callPackage ./plymouth-catppuccin-mocha { };
   openmw = pkgs.libsForQt5.callPackage ./openmw { };
+  openmw-unstable = pkgs.libsForQt5.callPackage ./openmw-unstable { };
   portmod = pkgs.callPackage ./portmod {};
   RBDOOM-3-BFG = pkgs.callPackage ./RBDOOM-3-BFG { };
   RBDOOM-3-BFG-vk = pkgs.callPackage ./RBDOOM-3-BFG-vk { };

@@ -99,6 +99,9 @@
     longitude = 11.03283;
   };
 
+  services.xserver.enable = true;
+  services.xserver.videoDrivers = [ "amdgpu" ];
+
   services.logind.extraConfig = ''
     RuntimeDirectorySize=8G
   '';

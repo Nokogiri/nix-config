@@ -1,12 +1,13 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
     ./global
+#    ./features/desktop/bspwm
     ./features/cli/nix-stuff.nix
     ./features/desktop/common
     ./features/desktop/games
     ./features/desktop/gtk.nix
     ./features/desktop/media
-    ./features/desktop/eww
+    #./features/desktop/eww
     ./features/helix
     ./features/desktop/hyprland
 #    ./features/desktop/sway
@@ -19,7 +20,7 @@
   #    ];
   #  };
 
-  home.packages = with pkgs; [ xfce.thunar transmission-remote-gtk snapcast dwarfs fuse-overlayfs psmisc ];
+  home.packages = with pkgs; [ xfce.thunar transmission-remote-gtk snapcast dwarfs fuse-overlayfs ];
 
   programs = { password-store.enable = true; };
 }
