@@ -9,7 +9,7 @@
 , openscenegraph
 , mygui
 , bullet
-, ffmpeg
+, ffmpeg_4
 , boost
 , SDL2
 , unshield
@@ -90,7 +90,7 @@ mkDerivation rec {
     SDL2
     boost
     bullet_openmw
-    ffmpeg
+    ffmpeg_4
     libXt
     mygui
     openal
@@ -105,6 +105,7 @@ mkDerivation rec {
   cmakeFlags = [
     # as of 0.46, openmw is broken with GLVND
     "-DOpenGL_GL_PREFERENCE=LEGACY"
+    "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
     "-DOPENMW_USE_SYSTEM_RECASTNAVIGATION=1"
   ] ++ lib.optionals stdenv.isDarwin [
     "-DOPENMW_OSX_DEPLOYMENT=ON"
