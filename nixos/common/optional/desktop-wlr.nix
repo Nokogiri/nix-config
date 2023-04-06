@@ -1,4 +1,5 @@
-{ pkgs, inputs, ... }: let
+{ pkgs, inputs, ... }:
+let
   gTheme = "Catppuccin-Mocha-Standard-Flamingo-Dark";
   gAccent = "mauve";
   gFlavor = "mocha";

@@ -3,6 +3,7 @@
     ./firefox
     ./gpg-agent.nix
     ./kdeconnect.nix
+    ./kitty.nix
     ./nnn-desktop.nix
     ./pavucontrol.nix
     ./playerctl.nix

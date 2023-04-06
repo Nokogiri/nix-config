@@ -242,7 +242,9 @@ in {
           command = "configure-gtk";
           always = true;
         }
-        { command = "wl-paste --watch cliphist store"; }
+        {
+          command = "wl-paste --watch cliphist store";
+        }
         #{ command = "avizo-service"; }
         #{ command = "nm-applet --indicator"; }
         { command = "wpaperd"; }

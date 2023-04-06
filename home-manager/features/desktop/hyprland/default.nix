@@ -7,9 +7,8 @@
     ./config.nix
   ];
 
-  home.packages = with pkgs; [
-    inputs.hyprpicker.packages."x86_64-linux".hyprpicker
-  ];
+  home.packages = with pkgs;
+    [ inputs.hyprpicker.packages."x86_64-linux".hyprpicker ];
 
   programs = {
     fish.loginShellInit = ''

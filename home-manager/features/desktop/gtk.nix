@@ -1,4 +1,5 @@
-{ pkgs, inputs, config, ... }: let
+{ pkgs, inputs, config, ... }:
+let
   gTheme = "Catppuccin-Mocha-Standard-Flamingo-Dark";
   gAccent = "mauve";
   gFlavor = "mocha";
@@ -37,7 +38,7 @@ in {
 
   qt.style.name = "kvantum-dark";
   qt.style.package = "libsForQt5.qtstyleplugin-kvantum";
-  
+
   gtk = {
     enable = true;
     cursorTheme = {
@@ -55,9 +56,7 @@ in {
         flavor = gFlavor;
       };
     };
-    theme = {
-      name = "Catppuccin-Mocha-Standard-Mauve-Dark"; 
-    };
+    theme = { name = "Catppuccin-Mocha-Standard-Mauve-Dark"; };
     gtk2 = {
       extraConfig = ''
         gtk-toolbar-style=GTK_TOOLBAR_ICONS
@@ -75,6 +74,13 @@ in {
         gtk-application-prefer-dark-theme = false;
       };
     };
+  };
+
+  home.pointerCursor = {
+    x11.enable = true;
+    name = "Catppuccin-Macchiato-Dark-Cursors";
+    package = pkgs.catppuccin-cursors.macchiatoDark;
+    x11.defaultCursor = "left_ptr";
   };
 
   home.file.".icons/default/index.theme".text = ''
