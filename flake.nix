@@ -23,9 +23,9 @@
     
     nur.url = "github:nix-community/NUR";
 
-    hyprland.url = "github:hyprwm/hyprland/main";
-    hyprwm-contrib.url = "github:hyprwm/contrib";
-    hyprpicker.url = "github:hyprwm/hyprpicker";
+    #hyprland.url = "github:hyprwm/hyprland/main";
+    #hyprwm-contrib.url = "github:hyprwm/contrib";
+    #hyprpicker.url = "github:hyprwm/hyprpicker";
 
     spicetify-nix = {
       url = github:the-argus/spicetify-nix;
