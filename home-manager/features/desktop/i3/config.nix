@@ -11,7 +11,7 @@ in {
     fonts = {
       names = [ "FiraCode Nerd Font" ];
       style = "Regular";
-      size = 11.0;
+      size = 13.0;
     };
     gaps = {
       inner = 3;
@@ -21,7 +21,7 @@ in {
     };
     keybindings = {
       "${cfg.modifier}+Return" = "exec ${cfg.terminal}";
-      "${cfg.modifier}+p" = "exec wofi --show drun";
+      "${cfg.modifier}+p" = "exec rofi -show drun";
 
       # basic internals
       "${cfg.modifier}+Shift+q" = "kill";
@@ -105,7 +105,13 @@ in {
     };
     menu = "${pkgs.rofi}/bin/rofi -show drun";
     modifier = "Mod4";
-    startup = [{ command = "xsetroot -cursor_name left_ptr"; }];
+    startup = [
+      { command = "xsetroot -cursor_name left_ptr"; }
+      {
+        command =
+          "${pkgs.feh}/bin/feh --no-fehbg --bg-scale ${config.xdg.dataHome}/wallpaper/Street.webp";
+      }
+    ];
     terminal = "kitty";
     window = { border = 1; };
     workspaceAutoBackAndForth = true;
