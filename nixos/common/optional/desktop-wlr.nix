@@ -42,13 +42,13 @@ in {
   qt.style = "kvantum-dark";
   programs = {
     dconf.enable = true;
-    hyprland = {
-      enable = true;
-      xwayland = {
-        enable = true;
-        hidpi = false;
-      };
-    };
+    #hyprland = {
+    #  enable = true;
+    #  xwayland = {
+    #    enable = true;
+    #    hidpi = false;
+    #  };
+    #};
   };
 
   services = {
