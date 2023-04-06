@@ -12,7 +12,7 @@
       settings = {
         # General settings
         kitty_mod = "ctrl+shift";
-        linux_display_server = "wayland";
+        linux_display_server = "auto";
         touch_scroll_multiplier = "6.0";
         wayland_titlebar_color = "system";
         hide_window_decorations = true;

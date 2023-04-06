@@ -17,7 +17,7 @@
     #../common/optional/distrobox.nix
     ../common/optional/fonts.nix
     ../common/optional/fprintd.nix
-    ../common/optional/greetd.nix
+    #../common/optional/greetd.nix
     #../common/optional/libvirt.nix
     ../common/optional/networkmanager.nix
     ../common/optional/pipewire.nix
@@ -100,7 +100,10 @@
   };
 
   services.xserver.enable = true;
+  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.windowManager.bspwm.enable = true;
   services.xserver.videoDrivers = [ "amdgpu" ];
+  services.xserver.libinput.enable = true;
 
   services.logind.extraConfig = ''
     RuntimeDirectorySize=8G

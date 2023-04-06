@@ -1,7 +1,7 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
     ./global
-#    ./features/desktop/bspwm
+    ./features/desktop/bspwm
     ./features/cli/nix-stuff.nix
     ./features/desktop/common
     ./features/desktop/games
