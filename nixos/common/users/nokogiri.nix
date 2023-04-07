@@ -26,6 +26,7 @@ in {
       "podman"
       "rtkit"
       "vboxusers"
+      "input"
     ];
 
     openssh.authorizedKeys.keys = [

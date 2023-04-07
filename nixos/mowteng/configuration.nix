@@ -6,7 +6,7 @@
   imports = [
     inputs.hardware.nixosModules.common-cpu-amd
     inputs.hardware.nixosModules.common-pc-ssd
-    #inputs.hyprland.nixosModules.default
+    inputs.hyprland.nixosModules.default
 
     ./hardware-configuration.nix
 
@@ -17,6 +17,7 @@
     ../common/optional/distrobox.nix
     ../common/optional/fonts.nix
     ../common/optional/fprintd.nix
+    ../common/optional/greetd.nix
     ../common/optional/networkmanager.nix
     ../common/optional/pipewire.nix
     ../common/optional/quietboot.nix

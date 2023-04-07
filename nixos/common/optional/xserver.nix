@@ -1,7 +1,7 @@
 { pkgs, ... }:{
   services.xserver = {
     displayManager.sddm = {
-      enable = true;
+      enable = false;
     };
     enable = true;
     enableTCP = true;
