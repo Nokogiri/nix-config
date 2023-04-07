@@ -22,7 +22,7 @@
 
     # emulation
     cemu
-    citra-canary
+    #citra-canary
     dolphinEmuMaster
     retroarch
     libretro.beetle-pce-fast
