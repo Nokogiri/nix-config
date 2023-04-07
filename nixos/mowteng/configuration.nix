@@ -14,6 +14,7 @@
     ../common/optional/avahi.nix
     ../common/optional/bluetooth.nix
     ../common/optional/desktop-common.nix
+    ../common/optional/distrobox.nix
     ../common/optional/fonts.nix
     ../common/optional/fprintd.nix
     ../common/optional/networkmanager.nix
@@ -24,6 +25,7 @@
     ../common/optional/sane.nix
     ../common/optional/systemd-boot.nix
     ../common/optional/xdg-portal.nix
+    ../common/optional/xserver.nix
 
     ../common/users/nokogiri.nix
 
@@ -96,6 +98,7 @@
   programs = {
     light.enable = true;
     mtr.enable = true;
+    sway.enable = true;
   };
 
   location = {
@@ -103,14 +106,7 @@
     longitude = 11.03283;
   };
 
-  services.xserver.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.windowManager.bspwm.enable = true;
-  services.xserver.windowManager.i3.enable = true;
-  services.xserver.videoDrivers = [ "amdgpu" ];
-  services.xserver.libinput.enable = true;
-
-  services.logind.extraConfig = ''
+    services.logind.extraConfig = ''
     RuntimeDirectorySize=8G
   '';
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion

@@ -5,7 +5,7 @@ in {
 
   home.packages = with pkgs; [
     swaybg
-    inputs.hyprpicker.packages."x86_64-linux".hyprpicker
+    #inputs.hyprpicker.packages."x86_64-linux".hyprpicker
     config.nur.repos.misterio.swayfader
   ];
 

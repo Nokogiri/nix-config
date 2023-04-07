@@ -11,7 +11,7 @@
     ./features/helix
     #./features/desktop/hyprland
     ./features/desktop/i3
-    #./features/desktop/sway
+    ./features/desktop/sway
     inputs.nur.nixosModules.nur
   ];
 
