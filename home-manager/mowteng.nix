@@ -10,7 +10,7 @@
     #./features/desktop/eww
     ./features/helix
     ./features/desktop/hyprland
-    ./features/desktop/i3
+    #./features/desktop/i3
     #./features/desktop/sway
     inputs.nur.nixosModules.nur
   ];
