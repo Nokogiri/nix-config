@@ -1,14 +1,10 @@
-{ pkgs, ... }:{
+{ pkgs, ... }: {
   services.xserver = {
-    displayManager.sddm = {
-      enable = false;
-    };
+    displayManager.sddm = { enable = false; };
     enable = true;
     enableTCP = true;
     layout = "us,de";
-    libinput = {
-      enable = true;
-    };
+    libinput = { enable = true; };
     videoDrivers = [ "amdgpu" ];
     wacom.enable = true;
     windowManager.i3.enable = true;

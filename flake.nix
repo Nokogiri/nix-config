@@ -35,6 +35,8 @@
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
     nix-colors.url = "github:misterio77/nix-colors";
+
+    extest.url = "github:Nokogiri/extest";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -42,6 +44,7 @@
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
         "x86_64-linux"
+        "i686-linux"
       ];
     in rec {
       # Your custom packages

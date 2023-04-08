@@ -26,7 +26,7 @@
     ../common/optional/sane.nix
     ../common/optional/systemd-boot.nix
     ../common/optional/xdg-portal.nix
-    ../common/optional/xserver.nix
+    #../common/optional/xserver.nix
 
     ../common/users/nokogiri.nix
 
@@ -107,7 +107,7 @@
     longitude = 11.03283;
   };
 
-    services.logind.extraConfig = ''
+  services.logind.extraConfig = ''
     RuntimeDirectorySize=8G
   '';
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion

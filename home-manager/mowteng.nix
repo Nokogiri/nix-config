@@ -15,11 +15,12 @@
     inputs.nur.nixosModules.nur
   ];
 
-  #  nixpkgs = {
-  #    overlays = [
+#    nixpkgs = {
+#      overlays = [
+#        inputs.extest.packages.x86_64-linux
   #      inputs.nixpkgs-wayland.overlay
-  #    ];
-  #  };
+#      ];
+#    };
 
   home.packages = with pkgs; [
     xfce.thunar

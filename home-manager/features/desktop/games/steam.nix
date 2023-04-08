@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }:
+{ pkgs, lib, config, inputs, ... }:
 
 {
   nixpkgs.config.packageOverrides = pkgs:
@@ -38,8 +38,26 @@
             gst_all_1.gst-plugins-ugly
             gst_all_1.gst-plugins-bad
             xdg-user-dirs
+            inputs.extest.packages.x86_64-linux.default
           ];
       };
     };
-  home.packages = with pkgs; [ steam steam-run steam-rom-manager ];
+  home.packages = with pkgs; [ steam steam-run steam-rom-manager 
+    (pkgs.writeTextFile {
+      name = "steam-extest";
+      destination = "/bin/steam-extest";
+      executable = true;
+      text = ''
+        LD_PRELOAD=${inputs.extest.packages.x86_64-linux.default}/lib/libextest.so steam
+      '';
+    })
+    ];
+
+  
+  xdg.desktopEntries = {
+    "steam-extest" = {
+      exec = "steam-extest";
+      name = "Steam extest";
+    };
+  };
 }
