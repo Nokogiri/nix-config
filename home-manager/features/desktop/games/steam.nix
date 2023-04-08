@@ -57,7 +57,7 @@
   xdg.desktopEntries = {
     "steam-extest" = {
       exec = "steam-extest";
-      name = "Steam";
+      name = "Steam Extest";
       icon = "steam";
       type = "Application";
     };
