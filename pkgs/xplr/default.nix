@@ -16,7 +16,7 @@ rustPlatform.buildRustPackage rec {
   cargoSha256 = "sha256-0JJpGSOwayPB3cn7OpBjsOiK4WQNbil3gYrfkqG2cS8=";
 
   doCheck = false;
-  
+
   meta = with lib; {
     description = "A hackable, minimal, fast TUI file explorer";
     homepage = "https://xplr.dev";

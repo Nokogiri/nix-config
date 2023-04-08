@@ -59,22 +59,22 @@ stdenv.mkDerivation rec {
   '';
 
   buildPhase = ''
-  #cmake -B build5
-  #make -C build5
+    #cmake -B build5
+    #make -C build5
 
-  mkdir -p build && cd build
-  cmake .. -DENABLE_QT5=OFF
-  make
-  #cmake -B build6 -DENABLE_QT5=OFF
-  #make -C build6
+    mkdir -p build && cd build
+    cmake .. -DENABLE_QT5=OFF
+    make
+    #cmake -B build6 -DENABLE_QT5=OFF
+    #make -C build6
   '';
 
   installPhase = ''
-  #DESTDIR=$out make install
-  mkdir -p $out/lib/qt-6/plugins/styles
-  cp style/libkvantum.so $out/lib/qt-6/plugins/styles/libkvantum.so
+    #DESTDIR=$out make install
+    mkdir -p $out/lib/qt-6/plugins/styles
+    cp style/libkvantum.so $out/lib/qt-6/plugins/styles/libkvantum.so
   '';
-  
+
   passthru.updateScript = gitUpdater {
     rev-prefix = "V";
   };

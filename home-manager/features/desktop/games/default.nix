@@ -22,7 +22,6 @@
 
     # emulation
     cemu
-    #citra-canary
     dolphinEmuMaster
     retroarch
     libretro.beetle-pce-fast
@@ -42,7 +41,5 @@
     rpcs3
     ryujinx
     yuzu-mainline
-
-    #wineWowPackages.stableFull
   ];
 }
