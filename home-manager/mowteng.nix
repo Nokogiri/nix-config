@@ -28,8 +28,6 @@
     snapcast
     dwarfs
     fuse-overlayfs
-    chromium
-    brave
   ];
 
   programs = { password-store.enable = true; };
