@@ -5,6 +5,7 @@
   #cemu = pkgs.callPackage ./cemu { };
   #heroic-unwrapped = pkgs.callPackage ./heroic { };
   #heroic = pkgs.callPackage ./heroic/fhsenv.nix { };
+  iio-hyprland = pkgs.callPackage ./iio-hyprland { };
   iio-sensor-proxy = pkgs.callPackage ./iio-sensor-proxy { };
   #lf-sixel = pkgs.callPackage ./lf-sixel { };
   #mpv-unwrapped = pkgs.callPackage ./mpv { };
