@@ -1,4 +1,7 @@
 # iio-hyprland
+
+:warning: Modified to work with a Inspiron 7425 ONLY :warning:
+
 A fork of okeri/iio-sway for Hyprland
 
 Listens to iio-sensor-proxy and automatically changes Hyprland output orientation
