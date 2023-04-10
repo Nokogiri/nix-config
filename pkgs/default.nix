@@ -11,6 +11,8 @@
   #wrapMpv = pkgs.callPackage ./mpv/wrapper.nix { };
   #mpv = pkgs.wrapMpv pkgs.mpv-unwrapped { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
+  nwg-bar = pkgs.callPackage ./nwg-bar { };
+  nwg-panel = pkgs.callPackage ./nwg-panel { };
   pass-fuzzel = pkgs.callPackage ./pass-fuzzel { };
   pass-wofi = pkgs.callPackage ./pass-wofi { };
   plymouth-spinner-monochrome =
