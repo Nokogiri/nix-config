@@ -1,4 +1,4 @@
-{ lib, config, inputs, ... }: {
+{ lib, config, inputs, pkgs, ... }: {
   wayland.windowManager.hyprland = {
     extraConfig = ''
       general {
@@ -103,11 +103,12 @@
 
 
       # Startup
-      exec-once=~/.nix-profile/libexec/polkit-kde-authentication-agent-1
-      exec-once=wpaperd
-      exec-once=mako
-      exec-once=swayidle -w
-      exec-once=wl-paste --watch cliphist store
+      exec-once=${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1
+      exec-once=${pkgs.wpaperd}/bin/wpaperd
+      exec-once=${pkgs.mako}/bin/mako
+      # exec-once=swayidle -w
+      exec-once=${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store
+      exec-once=${pkgs.iio-hyprland}/bin/iio-hyprland
 
       # Mouse binding
       bindm=SUPER,mouse:272,movewindow
