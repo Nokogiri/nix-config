@@ -89,10 +89,10 @@ in {
     Comment=Default Cursor Theme
     Inherits=${config.gtk.cursorTheme.name}
   '';
-  home.file.".local/share/icons/default/index.theme".text = ''
-    [Icon Theme]
-    Name=Default
-    Comment=Default Cursor Theme
-    Inherits=${config.gtk.cursorTheme.name}
-  '';
+  #home.file.".local/share/icons/default/index.theme".text = ''
+  #  [Icon Theme]
+  #  Name=Default
+  #  Comment=Default Cursor Theme
+  #  Inherits=${config.gtk.cursorTheme.name}
+  #'';
 }
