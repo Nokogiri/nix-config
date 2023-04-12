@@ -18,8 +18,6 @@
     ani-cli
     jellyfin-media-player
     mpv
-    spotify-player
-    spotify-qt
   ];
 
   xdg.desktopEntries."umpv" = {

@@ -53,9 +53,9 @@ in {
   services = {
     dbus = {
       enable = true;
-      packages = [ pkgs.gcr ];
+      #packages = [ pkgs.gcr ];
     };
-    fwupd.enable = true;
+    #fwupd.enable = true;
     flatpak.enable = true;
     gvfs.enable = true;
     printing.enable = true;
