@@ -108,7 +108,7 @@
       exec-once=${pkgs.mako}/bin/mako
       # exec-once=swayidle -w
       exec-once=${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store
-      exec-once=${pkgs.iio-hyprland}/bin/iio-hyprland
+      #exec-once=${pkgs.iio-hyprland}/bin/iio-hyprland
 
       # Mouse binding
       bindm=SUPER,mouse:272,movewindow

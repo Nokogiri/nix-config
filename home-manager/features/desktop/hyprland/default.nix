@@ -5,12 +5,13 @@
     ../wallpaper
     inputs.hyprland.homeManagerModules.default
     ./config.nix
+    ./iio-hyprland.nix
   ];
 
   home.packages = with pkgs;
     [ 
       inputs.hyprpicker.packages."x86_64-linux".hyprpicker
-      iio-hyprland
+      #iio-hyprland
     ];
 
   programs = {
@@ -40,10 +41,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    #package = inputs.hyprland.packages.${pkgs.system}.default; # .override ({
-    #  hidpiXWayland = false;
-    #});
-    xwayland = {
+     xwayland = {
       enable = true;
       hidpi = false;
     };
