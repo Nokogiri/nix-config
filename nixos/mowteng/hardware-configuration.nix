@@ -23,25 +23,25 @@
     "/" = {
       device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
       fsType = "btrfs";
-      options = [ "subvol=@" "compress=zstd" ];
+      options = [ "subvol=nixos/root" "compress=zstd" ];
     };
 
     "/var/lib" = {
       device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
       fsType = "btrfs";
-      options = [ "subvol=@var_lib" "compress=zstd" ];
+      options = [ "subvol=nixos/lib" "compress=zstd" ];
     };
 
     "/var/log" = {
       device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
       fsType = "btrfs";
-      options = [ "subvol=@var_log" "compress=zstd" ];
+      options = [ "subvol=nixos/log" "compress=zstd" ];
     };
 
     "/nix" = {
       device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
       fsType = "btrfs";
-      options = [ "subvol=@nix" "compress=zstd" ];
+      options = [ "subvol=nixos/store" "compress=zstd" ];
     };
 
     "/home/nokogiri" = {
