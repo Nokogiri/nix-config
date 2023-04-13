@@ -6,7 +6,6 @@
   imports = [
     inputs.hardware.nixosModules.common-cpu-amd
     inputs.hardware.nixosModules.common-pc-ssd
-    #inputs.hyprland.nixosModules.default
 
     ./hardware-configuration.nix
 
@@ -38,7 +37,7 @@
       outputs.overlays.additions
 
       (self: super: {
-          mangohud = inputs.masterpkgs.mangohud;
+          mangohud = inputs.masterpkgs.legacyPackages.x86_64-linux.mangohud;
         })
 
       # Or define it inline, for example:
@@ -88,8 +87,8 @@
   hardware = {
     opengl = {
       enable = true;
-      #extraPackages = with pkgs; [ mangohud ];
-      #extraPackages32 = with pkgs; [ mangohud ];
+      extraPackages = with pkgs; [ mangohud ];
+      extraPackages32 = with pkgs; [ mangohud ];
       driSupport = true;
       driSupport32Bit = true;
     };
