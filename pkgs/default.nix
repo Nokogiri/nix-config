@@ -2,15 +2,9 @@
 # You can build them using 'nix build .#example' or (legacy) 'nix-build -A example'
 { pkgs ? (import ../nixpkgs.nix) { } }: {
   amdctl = pkgs.callPackage ./amdctl { };
-  #cemu = pkgs.callPackage ./cemu { };
-  #heroic-unwrapped = pkgs.callPackage ./heroic { };
-  #heroic = pkgs.callPackage ./heroic/fhsenv.nix { };
+  cemu = pkgs.callPackage ./cemu { };
   iio-hyprland = pkgs.callPackage ./iio-hyprland { };
   iio-sensor-proxy = pkgs.callPackage ./iio-sensor-proxy { };
-  #lf-sixel = pkgs.callPackage ./lf-sixel { };
-  #mpv-unwrapped = pkgs.callPackage ./mpv { };
-  #wrapMpv = pkgs.callPackage ./mpv/wrapper.nix { };
-  #mpv = pkgs.wrapMpv pkgs.mpv-unwrapped { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   nwg-bar = pkgs.callPackage ./nwg-bar { };
   nwg-panel = pkgs.callPackage ./nwg-panel { };
