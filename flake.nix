@@ -44,8 +44,7 @@
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
         "x86_64-linux"
-        "i686-linux"
-      ];
+        ];
     in rec {
       # Your custom packages
       # Acessible through 'nix build', 'nix shell', etc
@@ -84,30 +83,5 @@
         };
       };
 
-      # Standalone home-manager configuration entrypoint
-      # Available through 'home-manager --flake .#your-username@your-hostname'
-      homeConfigurations = {
-        "nokogiri@mowteng" = home-manager.lib.homeManagerConfiguration {
-          pkgs =
-            nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-          extraSpecialArgs = { inherit inputs outputs; };
-          modules = [
-            # > Our main home-manager configuration file <
-            ./home-manager/mowteng.nix
-          ];
-        };
-      };
-
-      homeConfigurations = {
-        "nokogiri@homeassistant" = home-manager.lib.homeManagerConfiguration {
-          pkgs =
-            nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-          extraSpecialArgs = { inherit inputs outputs; };
-          modules = [
-            # > Our main home-manager configuration file <
-            ./home-manager/homeassistant.nix
-          ];
-        };
-      };
     };
 }
