@@ -37,6 +37,10 @@
     overlays = [
       outputs.overlays.additions
 
+      (self: super: {
+          mangohud = inputs.masterpkgs.mangohud;
+        })
+
       # Or define it inline, for example:
       # (final: prev: {
       #   hi = final.hello.overrideAttrs (oldAttrs: {
@@ -84,8 +88,8 @@
   hardware = {
     opengl = {
       enable = true;
-      extraPackages = with pkgs; [ mangohud ];
-      extraPackages32 = with pkgs; [ mangohud ];
+      #extraPackages = with pkgs; [ mangohud ];
+      #extraPackages32 = with pkgs; [ mangohud ];
       driSupport = true;
       driSupport32Bit = true;
     };

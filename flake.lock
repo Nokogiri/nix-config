@@ -147,11 +147,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1681327135,
-        "narHash": "sha256-eJ+nJ0nhA23b4EN0SY3VwWDYwdrJ0YtiUNVaPoHJ7vE=",
+        "lastModified": 1681395658,
+        "narHash": "sha256-ObDYZHUG3wmJfzISVRJ3VXqqYc8GRsOKC1qybJ/OIj0=",
         "owner": "hyprwm",
         "repo": "hyprland",
-        "rev": "985764c8db01ff8f23461ed860eaacf3d52ee813",
+        "rev": "33d06fb0e5033412638edec5a8d78cbec844132a",
         "type": "github"
       },
       "original": {
@@ -215,6 +215,22 @@
       "original": {
         "owner": "hyprwm",
         "repo": "contrib",
+        "type": "github"
+      }
+    },
+    "masterpkgs": {
+      "locked": {
+        "lastModified": 1681406691,
+        "narHash": "sha256-zGXjOCgcRlB3xLmojO2WfkRMfW3xBDfaYWQaGKMxsmg=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "d6481fa812edd78d21a610c2acce77f74bc1dcae",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "master",
+        "repo": "nixpkgs",
         "type": "github"
       }
     },
@@ -368,11 +384,11 @@
     },
     "nixpkgs_6": {
       "locked": {
-        "lastModified": 1681217261,
-        "narHash": "sha256-RbxCHWN3Vhyv/WEsXcJlDwF7bpvZ9NxDjfSouQxXEKo=",
+        "lastModified": 1681303793,
+        "narHash": "sha256-JEdQHsYuCfRL2PICHlOiH/2ue3DwoxUX7DJ6zZxZXFk=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "3fb8eedc450286d5092e4953118212fa21091b3b",
+        "rev": "fe2ecaf706a5907b5e54d979fbde4924d84b65fc",
         "type": "github"
       },
       "original": {
@@ -384,11 +400,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1681328758,
-        "narHash": "sha256-/NFZxPLC0Aa90ix6AZBE8YvNGB27vh72yhZCFrwfVss=",
+        "lastModified": 1681400886,
+        "narHash": "sha256-+EqaogySwmo7wcK7K7lB7Yj6FcLJ6sGcl47yBI5wQIY=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "c597d73a06cb4a8c8af38a4a47786ea362bcefcb",
+        "rev": "9df608a6abeb3767cec38a8e33cf7d012ce7f500",
         "type": "github"
       },
       "original": {
@@ -405,6 +421,7 @@
         "hyprland": "hyprland",
         "hyprpicker": "hyprpicker",
         "hyprwm-contrib": "hyprwm-contrib",
+        "masterpkgs": "masterpkgs",
         "nix-colors": "nix-colors",
         "nix-minecraft": "nix-minecraft",
         "nixpkgs": "nixpkgs_6",

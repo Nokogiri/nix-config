@@ -8,8 +8,8 @@ buildPythonApplication rec {
   src = fetchFromGitHub {
     owner = "nokogiri";
     repo = pname;
-    rev = version;
-    sha256 = "REU7i5O9MyogPo0w6UsRjokSoMUmhy8q8xuMRdZhXPg=";
+    rev = "master";
+    sha256 = "sha256-w3Nq14QJkI68E4WH0gEiyp9ZQ01mLu8uWH8icy1w6Sc=";
   };
 
   propagatedBuildInputs = [

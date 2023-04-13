@@ -27,7 +27,7 @@
     };
     Service = {
       Type = "simple";
-      ExecStart = "%h/.nix-profile/bin/udisksd";
+      ExecStart = "/etc/profiles/per-user/nokogiri/bin/udisksd";
       Restart = "on-failure";
     };
     Install = { WantedBy = [ "default.target" ]; };

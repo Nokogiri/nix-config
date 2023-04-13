@@ -7,7 +7,7 @@
 
     # general
     gamescope
-    mangohud
+    #mangohud
     prismlauncher
     heroic
 

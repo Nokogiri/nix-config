@@ -15,6 +15,9 @@
     overlays = [
       outputs.overlays.modifications
       outputs.overlays.additions
+      (self: super: {
+          mangohud = inputs.masterpkgs.legacyPackages.x86_64-linux.mangohud;
+        })
 
       # Or overlays exported from other flakes:
       # Or define it inline, for example:

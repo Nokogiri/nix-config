@@ -14,7 +14,7 @@
             gamescope
             glib.bin
             gsettings-desktop-schemas
-            mangohud
+            #mangohud
             mono
             xorg.libXcursor
             xorg.libXi
