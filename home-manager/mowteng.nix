@@ -3,6 +3,7 @@
     ./global
     ./features/cli/nix-stuff.nix
     ./features/desktop/common
+    ./features/desktop/eww
     ./features/desktop/games
     ./features/desktop/gtk.nix
     ./features/desktop/media
@@ -10,13 +11,6 @@
     ./features/desktop/hyprland
     inputs.nur.nixosModules.nur
   ];
-
-  #    nixpkgs = {
-  #      overlays = [
-  #        inputs.extest.packages.x86_64-linux
-  #      inputs.nixpkgs-wayland.overlay
-  #      ];
-  #    };
 
   home.packages = with pkgs; [
     xfce.thunar
