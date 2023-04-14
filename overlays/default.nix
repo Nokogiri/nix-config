@@ -1,4 +1,5 @@
 # This file defines overlays
+{ inputs, ... }:
 {
   # This one brings our custom packages from the 'pkgs' directory
   additions = final: _prev: import ../pkgs { pkgs = final; };
@@ -24,7 +25,7 @@
     waybar = prev.waybar.overrideAttrs (oldAttrs: rec {
       patches = (oldAttrs.patches or [ ]) ++ [ ./waybar-hyprland.patch ];
     });
-    #mangohud = inputs.masterpkgs.legacyPackages.x86_64-linux.mangohud;
+    mangohud = inputs.masterpkgs.legacyPackages.x86_64-linux.mangohud;
     #yt-dlp = prev.yt-dlp.overrideAttrs (oldAttrs: rec {
     #  patches = (oldAttrs.patches or [ ]) ++ [ ./yt-dlp.patch ];
     #});
