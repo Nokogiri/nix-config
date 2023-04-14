@@ -35,6 +35,9 @@
   nixpkgs = {
     overlays = [
       outputs.overlays.additions
+      outputs.overlays.modifications
+      #outputs.overlays.master-pkgs
+    
 
       #(self: super: {
       #    mangohud = inputs.masterpkgs.legacyPackages.x86_64-linux.mangohud;

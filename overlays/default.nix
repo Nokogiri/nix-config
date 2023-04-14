@@ -30,4 +30,8 @@
     #  patches = (oldAttrs.patches or [ ]) ++ [ ./yt-dlp.patch ];
     #});
   };
+
+  master-pkgs = self: super: {
+    mangohud = inputs.masterpkgs.legacyPackages.x86_64-linux.mangohud;
+  };
 }
