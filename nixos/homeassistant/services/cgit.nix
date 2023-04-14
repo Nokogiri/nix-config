@@ -22,6 +22,11 @@
           "Personal fork of https://github.com/JeanSchoeller/iio-hyprland Listens to iio-sensor-proxy and automatically changes Hyprland output orientation";
         owner = "nokogiri";
       };
+      ryzen-ppd = {
+        path = "/var/lib/gitolite/repositories/ryzen-ppd.git";
+        desc = "Power management daemon for AMD Ryzen Mobile processors.";
+        owner = "nokogiri";
+      };
     };
     settings = {
       root-desc = "Git?";
