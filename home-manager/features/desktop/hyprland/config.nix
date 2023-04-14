@@ -110,6 +110,8 @@
       exec-once=${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store
       #exec-once=${pkgs.iio-hyprland}/bin/iio-hyprland
 
+      layerrule = blur, launcher
+
       # Mouse binding
       bindm=SUPER,mouse:272,movewindow
       bindm=SUPER,mouse:273,resizewindow

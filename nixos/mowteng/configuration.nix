@@ -36,9 +36,9 @@
     overlays = [
       outputs.overlays.additions
 
-      (self: super: {
-          mangohud = inputs.masterpkgs.legacyPackages.x86_64-linux.mangohud;
-        })
+      #(self: super: {
+      #    mangohud = inputs.masterpkgs.legacyPackages.x86_64-linux.mangohud;
+      #  })
 
       # Or define it inline, for example:
       # (final: prev: {
