@@ -3,6 +3,7 @@
 { pkgs ? (import ../nixpkgs.nix) { } }: {
   amdctl = pkgs.callPackage ./amdctl { };
   cemu = pkgs.callPackage ./cemu { };
+  #heroic-unwrapped = pkgs.callPackage ./heroic { };
   iio-hyprland = pkgs.callPackage ./iio-hyprland { };
   iio-sensor-proxy = pkgs.callPackage ./iio-sensor-proxy { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };

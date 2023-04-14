@@ -15,7 +15,7 @@
             glib.bin
             gsettings-desktop-schemas
             fribidi
-            #mangohud
+            mangohud
             mono
             xorg.libXcursor
             xorg.libXi
