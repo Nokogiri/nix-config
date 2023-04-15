@@ -4,7 +4,7 @@
     ./fuzzel.nix
     ./gammastep.nix
     ./mako.nix
-    ./obs-studio.nix
+    #./obs-studio.nix
     ./waybar.nix
     #./wofi.nix
   ];
