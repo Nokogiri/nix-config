@@ -35,13 +35,13 @@ in {
     #passwordFile = config.sops.secrets.nokogiri-password.path;
     packages = [ pkgs.home-manager ];
   };
-  home-manager = {
-    extraSpecialArgs = { inherit inputs outputs; };
-    users = {
+  #home-manager = {
+  #  extraSpecialArgs = { inherit inputs outputs; };
+  #  users = {
       # Import your home-manager configuration
-      nokogiri = import ../../../home-manager/${config.networking.hostName}.nix;
-    };
-  };
+  #    nokogiri = import ../../../home-manager/${config.networking.hostName}.nix;
+  #  };
+  #};
   services.geoclue2.enable = true;
   #security.pam.services = { swaylock = { }; };
 }
