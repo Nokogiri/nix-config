@@ -25,7 +25,10 @@
     
     nur.url = "github:nix-community/NUR";
 
-    hyprland.url = "github:hyprwm/hyprland/main";
+    hyprland = {
+      url = "github:hyprwm/hyprland/main";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     hyprwm-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
 

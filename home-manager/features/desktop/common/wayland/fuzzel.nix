@@ -7,7 +7,7 @@
       destination = "/bin/hyprfuzzel";
       executable = true;
       text = ''
-        ${pkgs.fuzzel}/bin/fuzzel --log-level=error --show-actions -w 45 -l 25 --layer=overlay  
+        ${pkgs.fuzzel}/bin/fuzzel --log-level=error -w 45 -l 25 --layer=overlay  
       '';
     })
   ];
@@ -31,6 +31,8 @@
     horizontal-pad=10
     vertical-pad=10
     inner-pad=10
+    line-height=18
+
     
     [colors]
     background=303446aa

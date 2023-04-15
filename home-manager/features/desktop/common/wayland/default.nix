@@ -6,7 +6,7 @@
     ./mako.nix
     ./obs-studio.nix
     ./waybar.nix
-    ./wofi.nix
+    #./wofi.nix
   ];
 
   home.packages = with pkgs; [

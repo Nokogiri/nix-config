@@ -9,6 +9,7 @@
     ./features/desktop/media
     ./features/helix
     ./features/desktop/hyprland
+#    ./features/desktop/sway
     inputs.nur.nixosModules.nur
   ];
 
