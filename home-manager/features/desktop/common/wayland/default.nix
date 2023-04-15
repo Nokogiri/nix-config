@@ -32,7 +32,7 @@
 
   systemd.user.sessionVariables = {
     PATH =
-      "/run/wrappers/bin:/etc/profiles/per-user/nokogiri/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin";
+      "/run/wrappers/bin:/home/nokogiri/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin";
     QT_QPA_PLATFORM = "${config.home.sessionVariables.QT_QPA_PLATFORM}";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
