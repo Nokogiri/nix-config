@@ -50,7 +50,7 @@
     hostId = "2d3a30d6";
   };
 
-  boot = { cleanTmpDir = true; };
+  boot = { tmp.cleanOnBoot = true; };
 
   environment.systemPackages = with pkgs; [
     brightnessctl

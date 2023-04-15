@@ -59,7 +59,9 @@
   };
 
   boot = {
-    cleanTmpDir = true;
+    tmp = { 
+      cleanOnBoot = true;
+    };
     extraModulePackages = with config.boot.kernelPackages; [
       zenpower
       turbostat
@@ -67,7 +69,7 @@
     ];
     kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [ "amd_pstate=passive" "mitigations=off" ];
-    tmpOnTmpfs = true;
+    #tmpOnTmpfs = true;
   };
 
   environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
