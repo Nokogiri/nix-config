@@ -34,7 +34,7 @@
 
   programs.waybar = {
     systemd = {
-      enable = true;
+      enable = false;
       target = "hyprland-session.target";
     };
   };
