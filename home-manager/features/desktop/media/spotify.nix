@@ -5,7 +5,7 @@ in {
   #home.packages = [ pkgs.spotifywm ];
   programs.spicetify = {
     enable = true;
-    theme = spicePkgs.themes.catppuccin-frappe;
+    theme = spicePkgs.themes.catppuccin-mocha;
     colorScheme = "sky";
     enabledCustomApps = with spicePkgs.apps; [ marketplace lyrics-plus ];
     enabledExtensions = with spicePkgs.extensions; [
