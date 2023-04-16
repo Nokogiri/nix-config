@@ -21,7 +21,7 @@
     #persistence = {
     #  "/persist".directories = [ "/var/lib/systemd" "/var/log" "/srv" ];
     #};
-    enableAllTerminfo = true;
+    enableAllTerminfo = false;
     pathsToLink = [ "/share/nix-direnv" "/share/zsh" "/share/bash-completion" ];
   };
 
