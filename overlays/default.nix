@@ -22,9 +22,9 @@
       # Add term option, rename de to desktop, add scheme option
       patches = (oldAttrs.patches or [ ]) ++ [ ./pfetch.patch ];
     });
-    #waybar = prev.waybar.overrideAttrs (oldAttrs: rec {
-    #  patches = (oldAttrs.patches or [ ]) ++ [ ./waybar-hyprland.patch ];
-    #});
+    waybar = prev.waybar.overrideAttrs (oldAttrs: rec {
+      patches = (oldAttrs.patches or [ ]) ++ [ ./waybar-hyprland.patch ];
+    });
     mangohud = inputs.masterpkgs.legacyPackages.x86_64-linux.mangohud;
     #yt-dlp = prev.yt-dlp.overrideAttrs (oldAttrs: rec {
     #  patches = (oldAttrs.patches or [ ]) ++ [ ./yt-dlp.patch ];
