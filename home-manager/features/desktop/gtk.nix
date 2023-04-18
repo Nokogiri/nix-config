@@ -78,6 +78,8 @@ in {
 
   home.pointerCursor = {
     x11.enable = true;
+    gtk.enable = true;
+    size = 32;
     name = "Catppuccin-Macchiato-Dark-Cursors";
     package = pkgs.catppuccin-cursors.macchiatoDark;
     x11.defaultCursor = "left_ptr";
