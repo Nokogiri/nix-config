@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }: {
   home.packages = with pkgs;
     [
       (pkgs.writeTextFile {
@@ -27,7 +27,7 @@
     };
     Service = {
       Type = "simple";
-      ExecStart = "/home/${config.home.username}/bin/udisksd";
+      ExecStart = "/home/${config.home.username}/.nix-profile/bin/udisksd";
       Restart = "on-failure";
     };
     Install = { WantedBy = [ "default.target" ]; };
