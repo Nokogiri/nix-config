@@ -17,6 +17,7 @@
     xfce.thunar
     transmission-remote-gtk
     snapcast
+    spotify-player
     dwarfs
     fuse-overlayfs
   ];
