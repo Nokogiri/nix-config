@@ -217,22 +217,6 @@
         "type": "github"
       }
     },
-    "masterpkgs": {
-      "locked": {
-        "lastModified": 1681886132,
-        "narHash": "sha256-IT1Ce5l5UVTJw2nVMCWEwHRCfA0FBEtUgezhQY5/e/8=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "8ef336e870e3795a112bd9ea28a5cb945a981c1d",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "master",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nix-colors": {
       "inputs": {
         "base16-schemes": "base16-schemes",
@@ -420,7 +404,6 @@
         "hyprland": "hyprland",
         "hyprpicker": "hyprpicker",
         "hyprwm-contrib": "hyprwm-contrib",
-        "masterpkgs": "masterpkgs",
         "nix-colors": "nix-colors",
         "nix-minecraft": "nix-minecraft",
         "nixpkgs": "nixpkgs_6",
