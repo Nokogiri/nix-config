@@ -27,6 +27,11 @@
         desc = "Power management daemon for AMD Ryzen Mobile processors.";
         owner = "nokogiri";
       };
+      catppuccin = {
+        path = "/var/lib/gitolite/repositories/catppuccin.git";
+        desc = "Catppuccin in one place for me";
+        owner = "nokogiri";
+      };
     };
     settings = {
       root-desc = "Git?";
