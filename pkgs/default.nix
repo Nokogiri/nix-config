@@ -28,6 +28,7 @@
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
   spotify-player = pkgs.callPackage ./spotify-player { };
   waydroid = pkgs.callPackage ./waydroid { };
+  wttrbar = pkgs.callPackage ./wttrbar { };
   qtstyleplugin-kvantum-qt6 = pkgs.qt6Packages.callPackage ./qtstyleplugin-kvantum { };
   xplr = pkgs.callPackage ./xplr { };
 }
