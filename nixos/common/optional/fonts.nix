@@ -17,6 +17,7 @@
     jetbrains-mono
     twemoji-color-font
     noto-fonts
+    noto-fonts-emoji
     noto-fonts-cjk-sans
     weather-icons
   ];
@@ -32,7 +33,7 @@
         serif = [ "FiraCode Nerd Font" ];
         sansSerif = [ "FiraCode Nerd Font" ];
         monospace = [ "FiraCode Nerd Font Mono" ];
-        emoji = [ "Twitter Color Emoji" ];
+        emoji = [ "Noto Color Emoji" ];
       };
     };
   };
