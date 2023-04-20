@@ -20,6 +20,7 @@
     spotify-player
     dwarfs
     fuse-overlayfs
+    config.nur.repos.foolnotion.qt6ct
   ];
 
   programs = { password-store.enable = true; };
