@@ -10,12 +10,12 @@
       docRoot = "${pkgs.snapcast}/share/snapserver/snapweb";
     };
     streams = {
-      "AllSpotify" = {
+      "Spotify" = {
         type = "librespot";
         location = "${pkgs.librespot}/bin/librespot";
         codec = "flac";
       };
-      "KucheSPotify" = {
+      "Kueche" = {
         type = "librespot";
         location = "${pkgs.librespot}/bin/librespot";
         codec = "flac";
