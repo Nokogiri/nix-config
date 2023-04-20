@@ -3,7 +3,7 @@
   imports = [
     ./spotify-player.nix 
     #./spotifyd.nix 
-  #  ./spotify.nix 
+    ./spotify.nix 
   ];
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
