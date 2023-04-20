@@ -15,11 +15,11 @@
         location = "${pkgs.librespot}/bin/librespot";
         codec = "flac";
       };
-      "Kueche" = {
-        type = "librespot";
-        location = "${pkgs.librespot}/bin/librespot";
-        codec = "flac";
-      };
+      #"Kueche" = {
+      #  type = "librespot";
+      #  location = "${pkgs.librespot}/bin/librespot";
+      #  codec = "flac";
+      #};
     };
   };
 }
