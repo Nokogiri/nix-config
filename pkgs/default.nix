@@ -3,6 +3,7 @@
 { pkgs ? (import ../nixpkgs.nix) { } }: {
   amdctl = pkgs.callPackage ./amdctl { };
   cemu = pkgs.callPackage ./cemu { };
+  citra-canary = pkgs.callPackage ./citra { branch = "canary"; };
   #heroic-unwrapped = pkgs.callPackage ./heroic { };
   iio-hyprland = pkgs.callPackage ./iio-hyprland { };
   iio-sensor-proxy = pkgs.callPackage ./iio-sensor-proxy { };
