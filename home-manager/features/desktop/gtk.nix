@@ -1,9 +1,9 @@
 { pkgs, inputs, config, ... }:
 let
-  gTheme = "Catppuccin-Mocha-Standard-Flamingo-Dark";
-  gAccent = "mauve";
+  gTheme = "Catppuccin-Mocha-Standard-Rosewater-Dark";
+  gAccent = "rosewater";
   gFlavor = "mocha";
-  kAccent = "Mauve";
+  kAccent = "Rosewater";
   kFlavor = "Mocha";
 in {
   home.packages = with pkgs; [
@@ -34,9 +34,13 @@ in {
       size = "standard";
       tweaks = [ "rimless" ];
     })
+#    libsForQt5.lightly
+    lightly-qt
   ];
 
   qt.style.name = "kvantum-dark";
+  #qt.style.name = "adwaita-dark";
+  #qt.platformTheme = "gnome";
   qt.style.package = "libsForQt5.qtstyleplugin-kvantum";
 
   gtk = {
@@ -56,7 +60,7 @@ in {
         flavor = gFlavor;
       };
     };
-    theme = { name = "Catppuccin-Mocha-Standard-Mauve-Dark"; };
+    theme = { name = "Catppuccin-Mocha-Standard-Rosewater-Dark"; };
     gtk2 = {
       extraConfig = ''
         gtk-toolbar-style=GTK_TOOLBAR_ICONS
