@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   xdg.configFile."bat/themes/Catppuccin-mocha.tmTheme".source =
-    ./bat-Catppuccin-mocha.tmTheme;
+    ./Catppuccin-mocha.tmTheme;
   programs.bat = {
     enable = true;
     config.theme = "Catppuccin-mocha";
