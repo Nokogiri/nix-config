@@ -9,6 +9,7 @@
         size = 12;
       };
       theme = "Catppuccin-Mocha";
+      #theme = "Nord";
       settings = {
         # General settings
         kitty_mod = "ctrl+shift";
