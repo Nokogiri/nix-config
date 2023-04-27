@@ -1,60 +1,32 @@
-(include "./modules/bluetooth.yuck")
-(include "./modules/bright.yuck")
-(include "./modules/clock.yuck")
-(include "./modules/music.yuck")
-(include "./modules/net.yuck")
-(include "./modules/sys.yuck")
-(include "./modules/variables.yuck")
-(include "./modules/volume.yuck")
-(include "./modules/workspaces.yuck")
-(include "./modules/launcher.yuck")
+(defvar     bluetooth       "{}")
+(defvar     network         "{}")
+(defvar     media           "{}")
+(defvar     media_positions "{}")
+(defvar     battery         "{}")
+(defvar     notifications   "{}")
+(defvar     apps            "{}")
 
-(include "./windows/calendar.yuck")
-(include "./windows/music.yuck")
-(include "./windows/osd.yuck")
-(include "./windows/system-menu.yuck")
+(deflisten  window      `scripts/hyprland window`)
+(deflisten  workspaces  `scripts/hyprland workspaces`)
 
+(defpoll    volume      :interval "3s" :initial "{}" `scripts/volume get`)
+(defpoll    theme       :interval "3s" :initial "{}" `scripts/theme get`)
+(defpoll    power       :interval "3s" :initial "{}" `scripts/power get`)
+(defpoll    night_light :interval "3s" :initial "{}" `scripts/night_light get`)
+(defpoll    brightness  :interval "3s" :initial "{}" `scripts/brightness get`)
 
-(defwidget left []
-  (box
-    :space-evenly false
-    :halign "start"
-    (launcher)
-    (workspaces)))
+(defpoll    events      :interval "3s" :initial "[]" `scripts/todo --eww`)
+(defpoll    weather     :interval "3m" :initial "[]" `scripts/weather`)
 
-(defwidget right []
-  (box
-    :space-evenly false
-    :halign "end"
-    (bright)
-    (volume-module)
-    (bluetooth)
-    (net)
-    (label :class "seperator" :text "|")
-    (sys)
-    (label :class "seperator" :text "|")
-    (clock_module)))
+(defpoll    panel_clock :interval "5s" `date "+%H:%M  |  %b. %d. %A"`)
+(defpoll    hour        :interval "5s" `date "+%H"`)
+(defpoll    minutes     :interval "5s" `date "+%M"`)
+(defpoll    date        :interval "5s" `date "+%b. %d. %A"`)
+(defpoll    uptime      :interval "60s" "uptime | awk '{print $3}' | tr ',' ' '")
 
-(defwidget center []
-  (box
-    :space-evenly false
-    :halign "center"
-    (music-module)))
+(defvar real_name "Demeter")
+(defvar user_name "@Aylur")
 
-(defwidget bar []
-  (centerbox
-    :class "bar"
-    (left)
-    (center)
-    (right)))
-
-(defwindow bar
-    :monitor 0
-    :geometry (geometry :x "0%"
-      :y "1%"
-      :width "96%"
-      :height "36px"
-      :anchor "top center")
-    :stacking "fg"
-    :exclusive true
-  (bar))
+(include "./yuck/widgets.yuck")
+(include "./yuck/windows.yuck")
+(include "./setups/leftbar.yuck")
