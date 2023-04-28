@@ -4,7 +4,8 @@ let cfg = config.wayland.windowManager.sway.config;
 in {
   wayland.windowManager.sway = {
     enable = true;
-    #package = inputs.nixpkgs-wayland.sway-unwrapped;
+    #package = inputs.nixpkgs-wayland.sway-unwrapped
+    #package = pkgs.swayfx;
     extraSessionCommands = ''
       export XDG_SESSION_TYPE=wayland
       export XDG_SESSION_DESKTOP=sway
