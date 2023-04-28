@@ -263,7 +263,8 @@
 
       windowrulev2 = workspace 2 silent,class:^(firefox)$
       windowrulev2 = workspace 3 silent,class:^(mpv)$
-      windowrulev2 = workspace 6 silent,class:^(Steam)$
+      #windowrulev2 = workspace 6 silent,class:^(steamwebhelper)$
+      windowrulev2 = workspace 6 silent,opaque,noblur,class:^(steamwebhelper)$
       windowrulev2 = fullscreen,opaque,noblur,forceinput,class:^(.gamescope-wrapped)$
       windowrulev2 = workspace 7 silent,class:^(Spotify)$
       windowrulev2 = fullscreen,opaque,noblur,class:^(gamescope)$

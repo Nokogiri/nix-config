@@ -4,7 +4,7 @@
     #./udev.nix
     ./steamcontroller.nix
     ./tmpfiles.nix
-    #./tlp.nix
+    ./tlp.nix
     ./firewall.nix
   ];
 }
