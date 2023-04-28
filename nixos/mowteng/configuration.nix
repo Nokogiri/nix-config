@@ -110,6 +110,8 @@
     sway.enable = true;
   };
 
+  services.xserver.desktopManager.plasma5.enable = true;
+  services.power-profiles-daemon.enable = true;  
   location = {
     latitude = 50.9787;
     longitude = 11.03283;

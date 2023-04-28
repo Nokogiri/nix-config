@@ -10,7 +10,7 @@
     ./features/helix
 #    ./features/desktop/hyprland
     ./features/desktop/sway
-    inputs.nur.nixosModules.nur
+   inputs.nur.nixosModules.nur
   ];
 
   home.packages = with pkgs; [
