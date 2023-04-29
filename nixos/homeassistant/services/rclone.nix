@@ -156,36 +156,36 @@
         Environment = [ "PATH=/run/wrappers/bin/:$PATH" ];
       };
     };
-    rclone-hildi = {
-      enable = true;
-      description =
-        "rclone: Remote FUSE filesystem for cloud storage config hildi";
-      documentation = [ "man:rclone(1)" ];
-      after = [ "network-online.target" ];
-      wants = [ "network-online.target" ];
-      wantedBy = [ "default.target" ];
-      serviceConfig = {
-        Type = "notify";
-        User = "nokogiri";
-        ExecStart = ''
-          ${pkgs.rclone}/bin/rclone mount \
-                    --config=/home/nokogiri/.config/rclone/rclone.conf \
-                    --vfs-cache-mode full \
-                    --vfs-cache-max-size 256M \
-                    --log-level INFO \
-                    --log-file /tmp/rclone-hildi.log \
-                    --umask 002 \
-                    --allow-other \
-                    --allow-non-empty \
-                    --dir-cache-time 48h \
-                    --poll-interval 5m \
-                    --gid 989 \
-                    hildi:Media /media/cloud/Media/hildi
-        '';
-        ExecStop = "/run/wrappers/bin/fusermount -u /media/cloud/Media/hildi";
-        Environment = [ "PATH=/run/wrappers/bin/:$PATH" ];
-      };
-    };
+    #rclone-hildi = {
+    #  enable = true;
+    #  description =
+    #    "rclone: Remote FUSE filesystem for cloud storage config hildi";
+    ##  documentation = [ "man:rclone(1)" ];
+    #  after = [ "network-online.target" ];
+    #  wants = [ "network-online.target" ];
+    #  wantedBy = [ "default.target" ];
+    #  serviceConfig = {
+    #    Type = "notify";
+    #    User = "nokogiri";
+    #    ExecStart = ''
+    #      ${pkgs.rclone}/bin/rclone mount \
+    #                --config=/home/nokogiri/.config/rclone/rclone.conf \
+     #               --vfs-cache-mode full \
+     #               --vfs-cache-max-size 256M \
+     #               --log-level INFO \
+     ##               --log-file /tmp/rclone-hildi.log \
+     #               --umask 002 \
+     #               --allow-other \
+     #               --allow-non-empty \
+     #               --dir-cache-time 48h \
+     #               --poll-interval 5m \
+     #               --gid 989 \
+     #               hildi:Media /media/cloud/Media/hildi
+     #   '';
+     #  ExecStop = "/run/wrappers/bin/fusermount -u /media/cloud/Media/hildi";
+     #   Environment = [ "PATH=/run/wrappers/bin/:$PATH" ];
+     # };
+    #};
   };
 }
 
