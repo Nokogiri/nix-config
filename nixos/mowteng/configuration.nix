@@ -79,6 +79,7 @@
     cifs-utils
     lm_sensors
     exfatprogs
+    usbmuxd
   ];
 
   fileSystems."/media/haos" = {
