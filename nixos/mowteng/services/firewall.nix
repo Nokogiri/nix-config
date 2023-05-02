@@ -6,7 +6,7 @@
       to = 1764;
     }];
 
-    allowedTCPPorts = [ 5201 27036 6969 ];
+    allowedTCPPorts = [ 5201 27036 6969 27015];
     allowedTCPPortRanges = [
       { # kdeconnect
         from = 1714;
