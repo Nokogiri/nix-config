@@ -25,7 +25,7 @@
   portmod = pkgs.callPackage ./portmod { };
   RBDOOM-3-BFG = pkgs.callPackage ./RBDOOM-3-BFG { };
   RBDOOM-3-BFG-vk = pkgs.callPackage ./RBDOOM-3-BFG-vk { };
-  ryujinx = pkgs.callPackage ./ryujinx { };
+  #ryujinx = pkgs.callPackage ./ryujinx { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
   spotify-player = pkgs.callPackage ./spotify-player { };
   waydroid = pkgs.callPackage ./waydroid { };

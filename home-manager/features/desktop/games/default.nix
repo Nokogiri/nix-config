@@ -8,7 +8,7 @@
     # general
     gamescope
     mangohud
-    prismlauncher
+    #prismlauncher
     heroic
 
     # native packaged games
