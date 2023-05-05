@@ -69,7 +69,7 @@
       cpupower
     ];
     kernelPackages = pkgs.linuxPackages_latest;
-    kernelParams = [ "amd_pstate=passive" "mitigations=off" ];
+    kernelParams = [ "amd_pstate=active" "mitigations=off" ];
     #tmpOnTmpfs = true;
   };
 
