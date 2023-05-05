@@ -78,6 +78,7 @@
   environment.systemPackages = with pkgs; [
     amdctl
     cifs-utils
+    libimobiledevice
     lm_sensors
     exfatprogs
     usbmuxd
