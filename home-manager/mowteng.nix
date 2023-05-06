@@ -20,6 +20,7 @@
     spotify-player
     dwarfs
     fuse-overlayfs
+    pass2csv
     config.nur.repos.foolnotion.qt6ct
   ];
 
