@@ -7,6 +7,7 @@
     ./nnn-desktop.nix
     ./pavucontrol.nix
     ./playerctl.nix
+    ./rbw.nix
     ./thunderbird.nix
     ./udisks.nix
     ./youtube.nix
