@@ -3,11 +3,16 @@
   #networking.firewall.allowedUDPPorts = [ 5353 ];
   services.avahi = {
     enable = true;
-    #allowInterfaces = [ "enp1s0f0" ];
+    ipv6 = false;
+    ipv4 = true;
+    allowInterfaces = [ "wlan0" ];
     hostName = "${config.networking.hostName}";
     extraServiceFiles = {
       ssh = "${pkgs.avahi}/etc/avahi/services/ssh.service";
     };
+    #extraConfig = ''
+    #  disallow-other-stacks=yes
+    #'';
     nssmdns = true;
     openFirewall = true;
     publish = {
