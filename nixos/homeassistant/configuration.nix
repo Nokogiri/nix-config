@@ -23,7 +23,7 @@
     ../common/optional/mbpfan.nix
     ../common/optional/podman.nix
     ../common/optional/resolved.nix
-    ../common/optional/systemd-network.nix
+    #../common/optional/systemd-network.nix
     #../common/optional/systemd-wireguard.nix
     ../common/optional/vaultwarden.nix
     ../common/optional/wireguard-server.nix
