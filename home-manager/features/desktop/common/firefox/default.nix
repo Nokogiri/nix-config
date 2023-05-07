@@ -7,15 +7,14 @@
   programs.firefox = {
     enable = true;
     profiles.nokogiri.extensions = with config.nur.repos.rycee.firefox-addons;
-      [ # addons; [
+      [ 
         vimium
         ublock-origin
-        #sponsorblock
         onetab
-        gopass-bridge
+        #gopass-bridge
         firefox-color
         ff2mpv
-        #darkreader
+        bitwarden
         auto-tab-discard
       ]
       #profiles.nokogiri.extensions = 

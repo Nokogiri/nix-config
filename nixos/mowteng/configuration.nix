@@ -17,7 +17,7 @@
     ../common/optional/fonts.nix
     ../common/optional/fprintd.nix
     ../common/optional/greetd.nix
-    ../common/optional/libvirt.nix
+    #../common/optional/libvirt.nix
     ../common/optional/networkmanager.nix
     ../common/optional/pipewire.nix
     ../common/optional/quietboot.nix
