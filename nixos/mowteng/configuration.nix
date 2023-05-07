@@ -26,7 +26,6 @@
     ../common/optional/sane.nix
     ../common/optional/systemd-boot.nix
     ../common/optional/xdg-portal.nix
-    #../common/optional/xserver.nix
 
     ../common/users/nokogiri.nix
 
