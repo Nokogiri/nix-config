@@ -3,7 +3,7 @@
   #networking.firewall.allowedUDPPorts = [ 5353 ];
   services.avahi = {
     enable = true;
-    #interfaces = [ "wlan0" ];
+    #allowInterfaces = [ "enp1s0f0" ];
     hostName = "${config.networking.hostName}";
     extraServiceFiles = {
       ssh = "${pkgs.avahi}/etc/avahi/services/ssh.service";

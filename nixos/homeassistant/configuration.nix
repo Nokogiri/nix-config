@@ -19,6 +19,7 @@
     ../common/optional/avahi.nix
     ../common/optional/gitolite.nix
     ../common/optional/grub-efi.nix
+    ../common/optional/libvirt-headless.nix
     ../common/optional/mbpfan.nix
     ../common/optional/podman.nix
     ../common/optional/resolved.nix
