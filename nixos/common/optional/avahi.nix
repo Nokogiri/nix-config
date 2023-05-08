@@ -3,7 +3,7 @@
   #networking.firewall.allowedUDPPorts = [ 5353 ];
   services.avahi = {
     enable = true;
-    ipv6 = false;
+    ipv6 = true;
     ipv4 = true;
     allowInterfaces = [ "wlan0" ];
     hostName = "${config.networking.hostName}";
