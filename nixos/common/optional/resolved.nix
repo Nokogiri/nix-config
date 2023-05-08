@@ -1,10 +1,10 @@
 {
   services.resolved = {
     enable = true;
+    domains = [ "home.arpa" ];
+    llmnr = "false";
     extraConfig = ''
-      Domains=home.arpa
       MulticastDNS=resolve
-      LLMNR=resolvee
     '';
   };
 }

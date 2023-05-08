@@ -8,8 +8,11 @@
   systemd.network.networks."20-wlan" = {
     matchConfig.Name = [ "wl*" ];
     DHCP = "yes";
-    #extraConfig = ''
-    #  MulticastDNS=true
-    #'';
+    dns = [ "192.168.178.254" ];
+    extraConfig = ''
+      LinkLocalAddressing=ipv4
+      IPv6AcceptRA=no
+      MulticastDNS=true
+    '';
   };
 }
