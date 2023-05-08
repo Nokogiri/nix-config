@@ -12,7 +12,7 @@
   #};
   systemd.network.netdevs."qbridge" = {
     netdevConfig = {
-      MACAddress = "42:3d:f9:ea:a9:e4";
+      MACAddress = "68:5b:35:95:d3:8b";
       Name = "br0";
       Kind = "bridge";
       };
@@ -23,14 +23,17 @@
   };
   systemd.network.networks."qbridge" = {
     matchConfig.Name = [ "br0" ];
-    DHCP = "no";
-    address = [ "192.168.178.57/24" ];
-    gateway = [ "192.168.178.1" ];
-    dns = [ "192.168.178.254" ];
-    extraConfig = ''
-      IPv6AcceptRA=no
-      LinkLocalAddressing=ipv4
-      MulticastDNS = "yes";
-    '';
+    DHCP = "yes";
+    #address = [ "192.168.178.57/24" ];
+    #gateway = [ "192.168.178.1" ];
+    #dns = [ "192.168.178.254" ];
+    dhcpV4Config = {
+      UseDomains = true;
+    };
+    networkConfig = {
+      LinkLocalAddressing="ipv4";
+      IPv6AcceptRA="no";
+      MulticastDNS=true;
+    };
   };
 }
