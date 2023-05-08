@@ -16,7 +16,7 @@
 
     ../common/global
 
-#    ../common/optional/avahi.nix
+    ../common/optional/avahi.nix
     ../common/optional/gitolite.nix
     ../common/optional/grub-efi.nix
     ../common/optional/libvirt-headless.nix
