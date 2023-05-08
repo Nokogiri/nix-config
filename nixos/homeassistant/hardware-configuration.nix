@@ -105,6 +105,11 @@
     ];
   };
 
+  zramSwap = {
+    enable = true;
+    priority = 5;
+  };
+
   hardware = {
     cpu.intel.updateMicrocode =
       lib.mkDefault config.hardware.enableRedistributableFirmware;

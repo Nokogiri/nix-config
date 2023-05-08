@@ -28,6 +28,8 @@
     gateway = [ "192.168.178.1" ];
     dns = [ "192.168.178.254" ];
     extraConfig = ''
+      IPv6AcceptRA=no
+      LinkLocalAddressing=ipv4
       MulticastDNS = "yes";
     '';
   };
