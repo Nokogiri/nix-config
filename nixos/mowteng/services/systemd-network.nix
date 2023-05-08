@@ -9,10 +9,13 @@
     matchConfig.Name = [ "wl*" ];
     DHCP = "yes";
     dns = [ "192.168.178.254" ];
-    extraConfig = ''
-      LinkLocalAddressing=ipv4
-      IPv6AcceptRA=no
-      MulticastDNS=true
-    '';
+    dhcpV4Config = {
+      UseDomains = true;
+    };
+    networkConfig = {
+      LinkLocalAddressing="ipv4";
+      IPv6AcceptRA="no";
+      MulticastDNS=true;
+    };
   };
 }
