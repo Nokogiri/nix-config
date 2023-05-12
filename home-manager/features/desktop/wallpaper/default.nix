@@ -8,7 +8,7 @@
     apply-shadow = true
 
     [eDP-1]
-    path = "/home/nokogiri/.local/share/wallpaper/Ring.webp"
+    path = "/home/nokogiri/.local/share/wallpaper/Cyan_cat.webp"
     apply-shadow = true
   '';
 }
