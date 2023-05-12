@@ -2,7 +2,7 @@
   home.packages = with pkgs; [
     rofi-rbw
     pinentry
-    wofi
+    #wofi
   ];
   programs.rbw = {
     enable = true;
