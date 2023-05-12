@@ -31,7 +31,7 @@
     #});
   };
 
-  master-pkgs = self: super: {
-    mangohud = inputs.masterpkgs.legacyPackages.x86_64-linux.mangohud;
-  };
+  #master-pkgs = self: super: {
+  #  mangohud = inputs.masterpkgs.legacyPackages.x86_64-linux.mangohud;
+  #};
 }
