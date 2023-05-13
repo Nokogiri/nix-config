@@ -93,11 +93,11 @@
         #enabled_layouts = "tall:bias=50;full_size=1;mirrored=false";
         window_resize_step_cells = 2;
         window_resize_step_lines = 2;
-        window_border_width = 1;
+        window_border_width = 3;
         draw_minimal_borders = true;
         window_margin_width = 0;
-        single_window_margin_width = -1000;
-        window_padding_width = 0;
+        single_window_margin_width = "-1";
+        window_padding_width = "3 12";
         placement_strategy = "center";
         bell_border_color = "#ff5a00";
         inactive_text_alpha = 1;

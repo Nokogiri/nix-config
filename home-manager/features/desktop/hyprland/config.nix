@@ -2,9 +2,9 @@
   wayland.windowManager.hyprland = {
     extraConfig = ''
       general {
-        gaps_in=15
-        gaps_out=20
-        border_size=3.7
+        gaps_in=7
+        gaps_out=10
+        border_size=2
         col.active_border=0xffAAAAAA
         col.inactive_border=0xff666666
         no_cursor_warps=true
@@ -17,7 +17,7 @@
         active_opacity=1.0
         inactive_opacity=0.9
         fullscreen_opacity=1.0
-        rounding=10
+        rounding=6
         blur=true
         blur_size=2
         blur_passes=1
