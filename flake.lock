@@ -128,11 +128,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1683929392,
-        "narHash": "sha256-qJddrb/bgS58AXAv25iv5xJ+69G5g7FAYCWec1lLnW0=",
+        "lastModified": 1683986074,
+        "narHash": "sha256-+sU3057hb7sy3NHrOX2uLrBY6wVz8TcNWyciGwKcqe0=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "eec22729990ddf53d1e45e74624ddf667cdbe11b",
+        "rev": "e0026e16a5beff80f641e4edca318e654baa5a9b",
         "type": "github"
       },
       "original": {
@@ -235,6 +235,26 @@
       "original": {
         "owner": "misterio77",
         "repo": "nix-colors",
+        "type": "github"
+      }
+    },
+    "nix-index-database": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1683638468,
+        "narHash": "sha256-tQEaGZfZ2Hpw+XIVEHaJ8FaF1yNQyMDDhUyIQ7LTIEg=",
+        "owner": "Mic92",
+        "repo": "nix-index-database",
+        "rev": "219067a5e3cf4b9581c8b4fcfc59ecd5af953d07",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Mic92",
+        "repo": "nix-index-database",
         "type": "github"
       }
     },
@@ -385,11 +405,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1683978288,
-        "narHash": "sha256-znbCzXE7iiwhL0eDnUM75zoc55QSIKPIXMHjebDNamA=",
+        "lastModified": 1683986427,
+        "narHash": "sha256-odQBCSuvRkJCU5KU6remOKBJYOaqzrE3c/S2g593TZw=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "aa6cc737d4ee6e4f31ee9407b7575081ce85599d",
+        "rev": "93701d54462280c67637335a73dfcd7d9cfed3fb",
         "type": "github"
       },
       "original": {
@@ -407,6 +427,7 @@
         "hyprpicker": "hyprpicker",
         "hyprwm-contrib": "hyprwm-contrib",
         "nix-colors": "nix-colors",
+        "nix-index-database": "nix-index-database",
         "nix-minecraft": "nix-minecraft",
         "nixpkgs": "nixpkgs_6",
         "nur": "nur",

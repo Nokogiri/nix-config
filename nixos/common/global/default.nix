@@ -3,6 +3,7 @@
   imports = [
     #inputs.impermanence.nixosModules.impermanence
     inputs.home-manager.nixosModules.home-manager
+    inputs.nix-index-database.nixosModules.nix-index
     ./console.nix
     ./doas.nix
     ./fish.nix
@@ -27,6 +28,9 @@
 
   programs.fuse.userAllowOther = true;
   programs.git.enable = true;
+  programs.nix-index-database.comma.enable = true;
+  programs.nix-index.enableZshIntegration = false;
+  programs.nix-index.enableBashIntegration = false;
   hardware.enableRedistributableFirmware = true;
 
   # Increase open file limit for sudoers
