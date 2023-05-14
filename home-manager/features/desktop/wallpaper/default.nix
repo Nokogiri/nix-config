@@ -5,10 +5,10 @@
     [default]
     path = "/home/nokogiri/.local/share/wallpaper"
     duration = "30m"
-    apply-shadow = true
+    apply-shadow = false
 
     [eDP-1]
     path = "/home/nokogiri/.local/share/wallpaper/6.jpeg"
-    apply-shadow = true
+    apply-shadow = false
   '';
 }
