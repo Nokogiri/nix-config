@@ -23,26 +23,17 @@
     ../common/optional/mbpfan.nix
     ../common/optional/podman.nix
     ../common/optional/resolved.nix
-    #../common/optional/systemd-network.nix
-    #../common/optional/systemd-wireguard.nix
     ../common/optional/vaultwarden.nix
     ../common/optional/wireguard-server.nix
     ../common/users/nokogiri.nix
 
     ./podman
-    ./services
+    ./local
   ];
 
   nixpkgs = {
     overlays = [
       outputs.overlays.additions
-
-      # Or define it inline, for example:
-      # (final: prev: {
-      #   hi = final.hello.overrideAttrs (oldAttrs: {
-      #     patches = [ ./change-hello-to-hi.patch ];
-      #   });
-      # })
     ];
     config = { allowUnfree = true; };
   };
@@ -66,10 +57,7 @@
     enable = true;
     extraPackages = with pkgs;
       [
-        #intel-media-driver # LIBVA_DRIVER_NAME=iHD
         vaapiIntel # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
-        #vaapiVdpau
-        #libvdpau-va-gl
       ];
   };
   powerManagement = {
@@ -80,7 +68,6 @@
   programs = {
     gnupg.agent.enable = true;
     light.enable = true;
-    #mtr.enable = true;
     ssh.startAgent = true;
   };
 

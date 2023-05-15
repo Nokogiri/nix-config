@@ -26,7 +26,7 @@
 
     ../common/users/nokogiri.nix
 
-    ./services
+    ./local
   ];
 
   nixpkgs = {
@@ -42,19 +42,6 @@
     hostId = "05fc191c";
   };
 
-#  boot = {
-#    tmp = { 
-#      cleanOnBoot = true;
-#    };
-#    extraModulePackages = with config.boot.kernelPackages; [
-#      zenpower
-#      turbostat
-#      cpupower
-#    ];
-#    kernelPackages = pkgs.linuxPackages_latest;
-#    kernelParams = [ "amd_pstate=passive" "mitigations=off" "cpufreq.default_governor=ondemand"]; # "cpufreq.energy_performance_preference=balance_power" ];
-#  };
-
   environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
 
   environment.systemPackages = with pkgs; [
@@ -65,14 +52,6 @@
     exfatprogs
     usbmuxd
   ];
-
-  #fileSystems."/media/haos" = {
-  #  device = "//192.168.178.57/public";
-  #  fsType = "cifs";
-  #  options = [
-  #    "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s,uid=1000,gid=100"
-  #  ];
-  #};
 
   hardware = {
     opengl = {

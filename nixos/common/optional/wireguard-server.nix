@@ -18,14 +18,14 @@
 
   networking.wireguard.interfaces = {
     haos = {
-      ips = [ "10.200.200.1/24" ];
+      ips = [ "10.200.200.1/24" "fc00::1/120" ];
       listenPort = 51871;
       privateKeyFile = config.sops.secrets."wg/homeassistant".path;
 
       peers = [
         {
           # mowteng
-          allowedIPs = [ "10.200.200.30/32" "10.200.200.0/24" ];
+          allowedIPs = [ "10.200.200.30/32" "10.200.200.0/24" "fc00::3" "fc00::1/64"  ];
           publicKey = "CbRmUgGLZuw0Hj7uYFK4aetwePTSzMQEwNsLibFQOX4=";
           presharedKeyFile = config.sops.secrets."psk_wg/mowteng".path;
         }
