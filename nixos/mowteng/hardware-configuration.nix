@@ -61,12 +61,6 @@
       options = [ "subvol=@nokogiri" "compress=zstd" ];
     };
 
-    "/home/nokogiri/Games" = {
-      device = "/dev/disk/by-uuid/c8743301-ac42-42f6-9570-12f2f177148d";
-      fsType = "btrfs";
-      options = [ "subvol=@Games" "compress=zstd" ];
-    };
-
     "/boot" = {
       device = "/dev/disk/by-uuid/8C9D-013B";
       fsType = "vfat";
