@@ -22,6 +22,7 @@
     dwarfs
     fuse-overlayfs
     pass2csv
+    obsidian
 #    pinentry
     config.nur.repos.foolnotion.qt6ct
   ];

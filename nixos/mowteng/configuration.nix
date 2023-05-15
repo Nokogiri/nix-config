@@ -13,12 +13,9 @@
     ../common/optional/avahi.nix
     ../common/optional/bluetooth.nix
     ../common/optional/desktop-common.nix
-    #../common/optional/distrobox.nix
     ../common/optional/fonts.nix
     ../common/optional/fprintd.nix
     ../common/optional/greetd.nix
-    #../common/optional/libvirt.nix
-    #../common/optional/networkmanager.nix
     ../common/optional/pipewire.nix
     ../common/optional/quietboot.nix
     ../common/optional/resolved.nix
@@ -36,19 +33,6 @@
     overlays = [
       outputs.overlays.additions
       outputs.overlays.modifications
-      #outputs.overlays.master-pkgs
-    
-
-      #(self: super: {
-      #    mangohud = inputs.masterpkgs.legacyPackages.x86_64-linux.mangohud;
-      #})
-
-      # Or define it inline, for example:
-      # (final: prev: {
-      #   hi = final.hello.overrideAttrs (oldAttrs: {
-      #     patches = [ ./change-hello-to-hi.patch ];
-      #   });
-      # })
     ];
     config = { allowUnfree = true; };
   };
@@ -58,19 +42,18 @@
     hostId = "05fc191c";
   };
 
-  boot = {
-    tmp = { 
-      cleanOnBoot = true;
-    };
-    extraModulePackages = with config.boot.kernelPackages; [
-      zenpower
-      turbostat
-      cpupower
-    ];
-    kernelPackages = pkgs.linuxPackages_latest;
-    kernelParams = [ "amd_pstate=passive" "mitigations=off" "cpufreq.default_governor=ondemand"]; # "cpufreq.energy_performance_preference=balance_power" ];
-    #tmpOnTmpfs = true;
-  };
+#  boot = {
+#    tmp = { 
+#      cleanOnBoot = true;
+#    };
+#    extraModulePackages = with config.boot.kernelPackages; [
+#      zenpower
+#      turbostat
+#      cpupower
+#    ];
+#    kernelPackages = pkgs.linuxPackages_latest;
+#    kernelParams = [ "amd_pstate=passive" "mitigations=off" "cpufreq.default_governor=ondemand"]; # "cpufreq.energy_performance_preference=balance_power" ];
+#  };
 
   environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
 
@@ -83,13 +66,13 @@
     usbmuxd
   ];
 
-  fileSystems."/media/haos" = {
-    device = "//192.168.178.57/public";
-    fsType = "cifs";
-    options = [
-      "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s,uid=1000,gid=100"
-    ];
-  };
+  #fileSystems."/media/haos" = {
+  #  device = "//192.168.178.57/public";
+  #  fsType = "cifs";
+  #  options = [
+  #    "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s,uid=1000,gid=100"
+  #  ];
+  #};
 
   hardware = {
     opengl = {
@@ -106,11 +89,9 @@
     powertop.enable = false;
   };
 
-#  services.xserver.desktopManager.plasma5.enable = true;
   programs = {
     light.enable = true;
     mtr.enable = true;
-    sway.enable = true;
   };
 
   location = {

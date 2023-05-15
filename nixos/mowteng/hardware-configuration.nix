@@ -1,4 +1,4 @@
-{ lib, config, modulesPath, ... }: {
+{ lib, config, modulesPath, pkgs, ... }: {
 
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
@@ -10,13 +10,24 @@
       options iwlwifi power_save=1 uapsd_disable=0
       options iwlmvm power_scheme=3
     '';
+    extraModulePackages = with config.boot.kernelPackages; [
+      cpupower
+      turbostat
+      zenpower
+    ];
     initrd = {
       availableKernelModules = [ "nvme" "xhci_pci" "ahci" ];
       kernelModules = [ "amdgpu" "cpufreq_conservative" ];
     };
     kernelModules = [ "kvm-amd" "zenpower" ];
+    kernelPackages = pkgs.linuxPackages_latest;
+    # passive epp
+    kernelParams = [ "amd_pstate=passive" "mitigations=off" "cpufreq.default_governor=ondemand"];
+    # active epp
+    #kernelParams = [ "amd_pstate=active" "mitigations=off" "cpufreq/default_governor=powersave" "cpufreq.energy_performance_preference=balance_power" ];
     loader.efi.efiSysMountPoint = "/boot";
     supportedFilesystems = [ "btrfs" ];
+    tmp.cleanOnBoot = true;
   };
 
   fileSystems = {
@@ -66,6 +77,13 @@
         "iocharset=ascii"
         "shortname=mixed"
         "utf8"
+      ];
+    };
+    "/media/haos" = {
+      device = "//192.168.178.57/public";
+      fsType = "cifs";
+      options = [
+      "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s,uid=1000,gid=100"
       ];
     };
   };
