@@ -27,10 +27,12 @@
       ];
       DHCP = "no";
       dns = [ "10.200.200.1" "fc00::1" ];
-      gateway = [
-        "fc00::1"
-        "10.200.200.1"
-      ];
+      routes = [{
+        routeConfig = {
+          Destination = "10.200.200.0/24";
+          Scope = "link";
+        };
+      }];
       networkConfig = {
         IPv6AcceptRA = false;
       };
@@ -38,8 +40,12 @@
   };
   # haos (wireguard)
   sops.secrets = {
-    "psk_wg/mowteng" = { };
-    "wg/mowteng" = { };
+    "psk_wg/mowteng" = {
+      owner = config.users.users.systemd-network.name;
+    };
+    "wg/mowteng" = {
+      owner = config.users.users.systemd-network.name;
+    };
   };
   systemd.network = {
     netdevs = {
@@ -47,17 +53,17 @@
         netdevConfig = {
           Kind = "wireguard";
           Name = "haos";
-          MTUBytes = "1300";
         };
         wireguardConfig = {
           PrivateKeyFile = config.sops.secrets."wg/mowteng".path;
-          ListenPort = 9918;
+          ListenPort = 51872;
         };
         wireguardPeers = [{
           wireguardPeerConfig = {
-            PublicKey = "CbRmUgGLZuw0Hj7uYFK4aetwePTSzMQEwNsLibFQOX4=";
+            PublicKey = "FgmfBFZw9gQ7NjJJq4hoZty7BYltQHdOcZDPxHiycAs=";
             PresharedKeyFile = config.sops.secrets."psk_wg/mowteng".path;
-            AllowedIPs = [ "fc00::1/64" "10.200.200.1" ];
+            AllowedIPs = [ "fc00::/64" "10.200.200.0/24" ];
+            PersistentKeepalive = 25;
             Endpoint = "home.fishoeder.net:51871";
           };
         }];
