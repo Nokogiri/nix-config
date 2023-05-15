@@ -13,7 +13,7 @@
       UseDomains = true;
     };
     networkConfig = {
-      LinkLocalAddressing="ipv4";
+      #LinkLocalAddressing="ipv4";
       IPv6AcceptRA="no";
       MulticastDNS=true;
     };
