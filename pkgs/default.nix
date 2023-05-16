@@ -2,7 +2,7 @@
 # You can build them using 'nix build .#example' or (legacy) 'nix-build -A example'
 { pkgs ? (import ../nixpkgs.nix) { } }: {
   amdctl = pkgs.callPackage ./amdctl { };
-  cemu = pkgs.callPackage ./cemu { };
+  #cemu = pkgs.callPackage ./cemu { };
   citra-canary = pkgs.callPackage ./citra { branch = "canary"; };
   iio-hyprland = pkgs.callPackage ./iio-hyprland { };
   iio-sensor-proxy = pkgs.callPackage ./iio-sensor-proxy { };

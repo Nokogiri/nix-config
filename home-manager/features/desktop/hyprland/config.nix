@@ -262,6 +262,7 @@
       bind=SUPERSHIFT,9,movetoworkspacesilent,09
 
       windowrulev2 = workspace 2 silent,class:^(firefox)$
+      windowrulev2 = opaque,noblur,float,title:^(.*Picture-in-Picture.*)$
       windowrulev2 = workspace 3 silent,class:^(mpv)$
       #windowrulev2 = workspace 6 silent,class:^(steamwebhelper)$
       windowrulev2 = workspace 6 silent,opaque,noblur,class:^(steamwebhelper)$
