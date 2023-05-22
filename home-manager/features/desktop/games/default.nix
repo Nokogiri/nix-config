@@ -25,7 +25,7 @@
 
     # emulation
     cemu
-    citra-canary
+    #citra-canary
     dolphinEmuMaster
     retroarch
     libretro.beetle-pce-fast
@@ -42,9 +42,9 @@
     libretro.snes9x
     #libretro.swanstation
     ppsspp
-    rpcs3
-    ryujinx
-    yuzu-early-access
+    #rpcs3
+    #ryujinx
+    #yuzu-early-access
     #yuzu-mainline
   ];
 }
