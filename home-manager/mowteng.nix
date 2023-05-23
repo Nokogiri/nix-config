@@ -15,17 +15,18 @@
 
   home.packages = with pkgs; [
     xfce.thunar
-#    rbw
     transmission-remote-gtk
     snapcast
-    spotify-player
     dwarfs
     fuse-overlayfs
-    pass2csv
     obsidian
-#    pinentry
     config.nur.repos.foolnotion.qt6ct
+
+    # graphics stuff
+    inkscape
+    gimp
+    krita
   ];
 
-  programs = { password-store.enable = true; };
+  programs = { password-store.enable = false; };
 }
