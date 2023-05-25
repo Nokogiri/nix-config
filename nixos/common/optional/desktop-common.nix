@@ -38,7 +38,7 @@ in {
 
   environment.pathsToLink = [ "/share/Kvantum" ];
   gtk.iconCache.enable = true;
-  qt.style = "kvantum-dark";
+  qt.style = "adwaita-dark";
   programs = {
     dconf.enable = true;
     hyprland = {

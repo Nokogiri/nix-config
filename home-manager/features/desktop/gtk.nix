@@ -34,13 +34,12 @@ in {
       size = "standard";
       tweaks = [ "rimless" ];
     })
-#    libsForQt5.lightly
-    lightly-qt
   ];
 
-  qt.style.name = "kvantum-dark";
-  #qt.style.name = "adwaita-dark";
-  #qt.platformTheme = "gnome";
+  #qt.style.name = "kvantum-dark";
+  qt.style.name = "adwaita-dark";
+  #qt.platformTheme = "gnome";i
+  qt.style.package = "adwaita-qt";
   qt.style.package = "libsForQt5.qtstyleplugin-kvantum";
 
   gtk = {
