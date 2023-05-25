@@ -40,7 +40,7 @@ in {
   qt.style.name = "adwaita-dark";
   #qt.platformTheme = "gnome";i
   qt.style.package = "adwaita-qt";
-  qt.style.package = "libsForQt5.qtstyleplugin-kvantum";
+  #qt.style.package = "libsForQt5.qtstyleplugin-kvantum";
 
   gtk = {
     enable = true;
