@@ -38,11 +38,11 @@ in {
     })
   ];
 
-  #qt.style.name = "kvantum-dark";
-  qt.style.name = "Adwaita-Dark";
-  #qt.platformTheme = "gnome";i
-  qt.style.package = "adwaita-qt";
-  #qt.style.package = "libsForQt5.qtstyleplugin-kvantum";
+  programs.fish.shellInit = ''
+    set -U QT_PLUGIN_PATH $QT_PLUGIN_PATH:${pkgs.qtstyleplugin-kvantum-qt6}/lib/qt-6/plugins:${config.nur.repos.foolnotion.qt6ct}/lib/qt-6/plugins
+  '';
+  qt.style.name = "kvantum-dark";
+  qt.style.package = "libsForQt5.qtstyleplugin-kvantum";
 
   gtk = {
     enable = true;
