@@ -23,6 +23,8 @@ in {
       '';
     })
     libsForQt5.qtstyleplugin-kvantum
+    adwaita-qt
+    adwaita-qt6
     libsForQt5.qt5ct
     (catppuccin-kvantum.override {
       accent = kAccent;
@@ -37,7 +39,7 @@ in {
   ];
 
   #qt.style.name = "kvantum-dark";
-  qt.style.name = "adwaita-dark";
+  qt.style.name = "Adwaita-Dark";
   #qt.platformTheme = "gnome";i
   qt.style.package = "adwaita-qt";
   #qt.style.package = "libsForQt5.qtstyleplugin-kvantum";
@@ -59,7 +61,8 @@ in {
         flavor = gFlavor;
       };
     };
-    theme = { name = "Catppuccin-Mocha-Standard-Rosewater-Dark"; };
+    #theme = { name = "Catppuccin-Mocha-Standard-Rosewater-Dark"; };
+    theme = { name = "adw-gtk3-dark"; package = pkgs.adw-gtk3; };
     gtk2 = {
       extraConfig = ''
         gtk-toolbar-style=GTK_TOOLBAR_ICONS

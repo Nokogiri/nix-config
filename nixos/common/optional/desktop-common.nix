@@ -38,7 +38,7 @@ in {
 
   environment.pathsToLink = [ "/share/Kvantum" ];
   gtk.iconCache.enable = true;
-  qt.style = "adwaita-dark";
+  qt.style = "Adwaita-Dark";
   programs = {
     dconf.enable = true;
     hyprland = {
@@ -57,7 +57,7 @@ in {
     };
     #fwupd.enable = true;
     flatpak.enable = true;
-    gvfs.enable = true;
+    gvfs.enable = false;
     printing.enable = true;
     tumbler.enable = true;
     udisks2.enable = true;
