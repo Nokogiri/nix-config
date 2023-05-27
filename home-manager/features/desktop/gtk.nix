@@ -22,27 +22,27 @@ in {
         gsettings set $gnome_schema cursor-theme '${config.gtk.cursorTheme.name}'
       '';
     })
-    libsForQt5.qtstyleplugin-kvantum
+    #libsForQt5.qtstyleplugin-kvantum
     adwaita-qt
     adwaita-qt6
-    libsForQt5.qt5ct
-    (catppuccin-kvantum.override {
-      accent = kAccent;
-      variant = kFlavor;
-    })
-    (catppuccin-gtk.override {
-      accents = [ gAccent ];
-      variant = gFlavor;
-      size = "standard";
-      tweaks = [ "rimless" ];
-    })
+    #libsForQt5.qt5ct
+    #(catppuccin-kvantum.override {
+    #  accent = kAccent;
+    #  variant = kFlavor;
+    #})
+    #(catppuccin-gtk.override {
+    #  accents = [ gAccent ];
+    #  variant = gFlavor;
+    #  size = "standard";
+    #  tweaks = [ "rimless" ];
+    #})
   ];
 
-  programs.fish.shellInit = ''
-    set -U QT_PLUGIN_PATH $QT_PLUGIN_PATH:${pkgs.qtstyleplugin-kvantum-qt6}/lib/qt-6/plugins:${config.nur.repos.foolnotion.qt6ct}/lib/qt-6/plugins
-  '';
-  qt.style.name = "kvantum-dark";
-  qt.style.package = "libsForQt5.qtstyleplugin-kvantum";
+  #programs.fish.shellInit = ''
+  #  set -U QT_PLUGIN_PATH $QT_PLUGIN_PATH:${pkgs.qtstyleplugin-kvantum-qt6}/lib/qt-6/plugins:${config.nur.repos.foolnotion.qt6ct}/lib/qt-6/plugins
+  #'';
+  qt.style.name = "Adwaita-Dark";
+  #qt.style.package = "libsForQt5.qtstyleplugin-kvantum";
 
   gtk = {
     enable = true;
@@ -62,7 +62,7 @@ in {
       };
     };
     #theme = { name = "Catppuccin-Mocha-Standard-Rosewater-Dark"; };
-    theme = { name = "adw-gtk3-dark"; package = pkgs.adw-gtk3; };
+    theme = { name = "Adwaita"; };#package = pkgs.adw-gtk3; };
     gtk2 = {
       extraConfig = ''
         gtk-toolbar-style=GTK_TOOLBAR_ICONS
@@ -77,7 +77,8 @@ in {
         gtk-menu-images = true;
         gtk-enable-event-sounds = false;
         gtk-enable-animations = true;
-        gtk-application-prefer-dark-theme = false;
+        gtk-application-prefer-dark-theme = true;
+
       };
     };
   };

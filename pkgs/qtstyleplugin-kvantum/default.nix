@@ -6,15 +6,17 @@
 , cmake
 , libX11
 , libXext
-, qttools
 , wrapQtAppsHook
 , gitUpdater
-, qt6
+, qtbase
+, qtsvg
+, qttools
+, qtwayland
 }:
 
 stdenv.mkDerivation rec {
   pname = "qtstyleplugin-kvantum-qt6";
-  version = "1.0.9";
+  version = "1.0.10";
 
   src = fetchFromGitHub {
     owner = "tsujan";
@@ -26,17 +28,14 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     qmake
     cmake
-    qt6.qttools
+    qttools
     wrapQtAppsHook
   ];
 
   buildInputs = [
-    #qtbase
-    #qtsvg
-    qt6.qtbase
-    qt6.qtsvg
-    qt6.qttools
-    #qtx11extras
+    qtbase
+    qtsvg
+    qttools
     libX11
     libXext
   ];
