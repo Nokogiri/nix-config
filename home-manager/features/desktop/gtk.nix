@@ -22,27 +22,12 @@ in {
         gsettings set $gnome_schema cursor-theme '${config.gtk.cursorTheme.name}'
       '';
     })
-    #libsForQt5.qtstyleplugin-kvantum
     adwaita-qt
     adwaita-qt6
     libsForQt5.qt5ct
-    #(catppuccin-kvantum.override {
-    #  accent = kAccent;
-    #  variant = kFlavor;
-    #})
-    #(catppuccin-gtk.override {
-    #  accents = [ gAccent ];
-    #  variant = gFlavor;
-    #  size = "standard";
-    #  tweaks = [ "rimless" ];
-    #})
   ];
 
-  #programs.fish.shellInit = ''
-  #  set -U QT_PLUGIN_PATH $QT_PLUGIN_PATH:${pkgs.qtstyleplugin-kvantum-qt6}/lib/qt-6/plugins:${config.nur.repos.foolnotion.qt6ct}/lib/qt-6/plugins
-  #'';
   qt.style.name = "Adwaita-Dark";
-  #qt.style.package = "libsForQt5.qtstyleplugin-kvantum";
 
   gtk = {
     enable = true;
@@ -61,8 +46,8 @@ in {
         flavor = gFlavor;
       };
     };
-    #theme = { name = "Catppuccin-Mocha-Standard-Rosewater-Dark"; };
-    theme = { name = "Adwaita"; };#package = pkgs.adw-gtk3; };
+    #theme = { name = "Adwaita"; };#package = pkgs.adw-gtk3; };
+    theme = { name = "adw-gtk3-dark"; package = pkgs.adw-gtk3; };
     gtk2 = {
       extraConfig = ''
         gtk-toolbar-style=GTK_TOOLBAR_ICONS
@@ -98,10 +83,4 @@ in {
     Comment=Default Cursor Theme
     Inherits=${config.gtk.cursorTheme.name}
   '';
-  #home.file.".local/share/icons/default/index.theme".text = ''
-  #  [Icon Theme]
-  #  Name=Default
-  #  Comment=Default Cursor Theme
-  #  Inherits=${config.gtk.cursorTheme.name}
-  #'';
 }

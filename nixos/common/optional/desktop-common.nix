@@ -19,24 +19,12 @@ in {
   };
   environment.systemPackages = with pkgs; [
     gtklock
-    #qtstyleplugin-kvantum-qt6
-    #(catppuccin-gtk.override {
-    #  accents = [ gAccent ];
-    #  variant = gFlavor;
-    #  size = "standard";
-    #  tweaks = [ "rimless" ];
-    #})
-    #(catppuccin-kvantum.override {
-    #  accent = kAccent;
-    #  variant = kFlavor;
-    #})
     (catppuccin-papirus-folders.override {
       accent = gAccent;
       flavor = gFlavor;
     })
   ];
 
-  #environment.pathsToLink = [ "/share/Kvantum" ];
   gtk.iconCache.enable = true;
   qt.style = "Adwaita-Dark";
   programs = {
@@ -55,7 +43,6 @@ in {
       enable = true;
       packages = [ pkgs.gcr ];
     };
-    #fwupd.enable = true;
     flatpak.enable = true;
     gvfs.enable = false;
     printing.enable = true;
