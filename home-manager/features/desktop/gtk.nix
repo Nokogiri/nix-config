@@ -25,7 +25,7 @@ in {
     #libsForQt5.qtstyleplugin-kvantum
     adwaita-qt
     adwaita-qt6
-    #libsForQt5.qt5ct
+    libsForQt5.qt5ct
     #(catppuccin-kvantum.override {
     #  accent = kAccent;
     #  variant = kFlavor;
