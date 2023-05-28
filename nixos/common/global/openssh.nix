@@ -10,9 +10,9 @@ in {
     enable = true;
     # Harden
     settings = {
-      passwordAuthentication = false;
-      permitRootLogin = "no";
-      gatewayPorts = "clientspecified";
+      PasswordAuthentication = false;
+      PermitRootLogin = "no";
+      GatewayPorts = "clientspecified";
     };
     # Automatically remove stale sockets
     extraConfig = ''
