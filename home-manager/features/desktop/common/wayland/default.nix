@@ -39,7 +39,7 @@
     QT_QPA_PLATFORM = "${config.home.sessionVariables.QT_QPA_PLATFORM}";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-    #QT_QPA_PLATFORMTHEME =
-    #  "${config.home.sessionVariables.QT_QPA_PLATFORMTHEME}";
+    QT_QPA_PLATFORMTHEME =
+      "${config.home.sessionVariables.QT_QPA_PLATFORMTHEME}";
   };
 }
