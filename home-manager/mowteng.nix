@@ -3,7 +3,6 @@
     ./global
     ./features/cli/nix-stuff.nix
     ./features/desktop/common
-    ./features/desktop/eww
     ./features/desktop/games
     ./features/desktop/gtk.nix
     ./features/desktop/media

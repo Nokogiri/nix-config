@@ -8,11 +8,13 @@
         col.active_border=0xffAAAAAA
         col.inactive_border=0xff666666
         no_cursor_warps=true
+        no_border_on_floating=true
         #cursor_inactive_timeout=4
       }
 
       monitor=eDP-1,preferred,auto,1
       monitor=,preferred,auto,1
+      
       decoration {
         active_opacity=1.0
         inactive_opacity=0.9
@@ -23,7 +25,9 @@
         blur_passes=1
         blur_new_optimizations=true
         blur_ignore_opacity=true
+        blur_xray=true
         drop_shadow=true
+        
         shadow_range=18
         shadow_offset=3 3
         col.shadow=0x44000000
