@@ -46,8 +46,8 @@ in {
         flavor = gFlavor;
       };
     };
-    #theme = { name = "Adwaita"; };#package = pkgs.adw-gtk3; };
-    theme = { name = "adw-gtk3-dark"; package = pkgs.adw-gtk3; };
+    theme = { name = "Adwaita"; };#package = pkgs.adw-gtk3; };
+    #theme = { name = "adw-gtk3-dark"; package = pkgs.adw-gtk3; };
     gtk2 = {
       extraConfig = ''
         gtk-toolbar-style=GTK_TOOLBAR_ICONS
