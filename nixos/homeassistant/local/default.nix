@@ -1,6 +1,7 @@
 {
   imports = [
     ./cgit.nix
+    ./dave.nix
     ./firewall.nix
     ./nginx.nix
     ./nix-serve.nix
@@ -10,6 +11,6 @@
     ./rclone.nix
     ./jellyfin.nix
     ./transmission.nix
-    ./webdav-server-rs.nix
+    #./webdav-server-rs.nix
   ];
 }
