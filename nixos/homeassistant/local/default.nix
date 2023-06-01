@@ -10,5 +10,6 @@
     ./rclone.nix
     ./jellyfin.nix
     ./transmission.nix
+    ./webdav-server-rs.nix
   ];
 }

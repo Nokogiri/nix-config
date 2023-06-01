@@ -27,6 +27,7 @@ in {
       "rtkit"
       "vboxusers"
       "input"
+      "webdav"
     ];
 
     openssh.authorizedKeys.keys = [
