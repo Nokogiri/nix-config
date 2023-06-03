@@ -59,13 +59,13 @@ let
 in
 mkDerivation rec {
   pname = "openmw";
-  version = "48-rc9";
+  version = "48-rc10";
 
   src = fetchFromGitHub {
     owner = "OpenMW";
     repo = "openmw";
     rev = "${pname}-${version}";
-    sha256 = "sha256-3x+pwtZh+moLN3l1x5Q0rr9TKo3BMaul73ZgywrRBCk=";
+    sha256 = "sha256-BIeCVM2O/YBgRjAedxe5/NqXpYeHggn3eSnHLgZtX80=";
   };
 
   #patches = [
