@@ -23,6 +23,7 @@ in {
       accent = gAccent;
       flavor = gFlavor;
     })
+    nordzy-icon-theme
   ];
 
   gtk.iconCache.enable = true;

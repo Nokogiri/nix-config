@@ -32,19 +32,20 @@ in {
   gtk = {
     enable = true;
     cursorTheme = {
-      package = pkgs.catppuccin-cursors.macchiatoDark;
-      name = "Catppuccin-Macchiato-Dark-Cursors";
+      package = pkgs.nordzy-cursor-theme;
+      name = "Nordzy-Cursors";
     };
     font = {
       name = "FiraCode Nerd Font";
       size = 12;
     };
     iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.catppuccin-papirus-folders.override {
-        accent = gAccent;
-        flavor = gFlavor;
-      };
+      name = "Nordzy";
+      package = pkgs.nordzy-icon-theme;
+      #package = pkgs.catppuccin-papirus-folders.override {
+      #  accent = gAccent;
+      #  flavor = gFlavor;
+      #};
     };
     #theme = { name = "Adwaita"; };#package = pkgs.adw-gtk3; };
     theme = { name = "adw-gtk3-dark"; package = pkgs.adw-gtk3; };
@@ -72,8 +73,8 @@ in {
     x11.enable = true;
     gtk.enable = true;
     size = 32;
-    name = "Catppuccin-Macchiato-Dark-Cursors";
-    package = pkgs.catppuccin-cursors.macchiatoDark;
+    name = "Nordzy-Cursors";
+    package = pkgs.nordzy-cursor-theme;
     x11.defaultCursor = "left_ptr";
   };
 
