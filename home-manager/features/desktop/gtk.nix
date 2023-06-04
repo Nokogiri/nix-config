@@ -33,7 +33,7 @@ in {
     enable = true;
     cursorTheme = {
       package = pkgs.nordzy-cursor-theme;
-      name = "Nordzy-Cursors";
+      name = "Nordzy-cursors";
     };
     font = {
       name = "FiraCode Nerd Font";
@@ -73,7 +73,7 @@ in {
     x11.enable = true;
     gtk.enable = true;
     size = 32;
-    name = "Nordzy-Cursors";
+    name = "Nordzy-cursors";
     package = pkgs.nordzy-cursor-theme;
     x11.defaultCursor = "left_ptr";
   };
