@@ -40,7 +40,7 @@ in {
       size = 12;
     };
     iconTheme = {
-      name = "Nordzy";
+      name = "Nordzy-purple-dark";
       package = pkgs.nordzy-icon-theme;
       #package = pkgs.catppuccin-papirus-folders.override {
       #  accent = gAccent;

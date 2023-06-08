@@ -8,6 +8,7 @@
     ./pavucontrol.nix
     ./playerctl.nix
     ./rbw.nix
+    ./styles.nix
     ./thunderbird.nix
     ./udisks.nix
     ./youtube.nix
