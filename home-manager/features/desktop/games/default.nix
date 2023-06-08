@@ -18,7 +18,7 @@
     #airshipper # veloren
     eduke32
     gzdoom
-    openmw-unstable
+    openmw
     sm64ex
     vkquake
     yquake2
