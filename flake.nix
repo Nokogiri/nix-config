@@ -2,7 +2,7 @@
   description = "Your new nix config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
 
     #masterpkgs.url = "github:nixos/nixpkgs/master";
 
