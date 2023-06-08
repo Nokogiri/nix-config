@@ -10,6 +10,7 @@
     mangohud
     prismlauncher
     heroic
+    portmod
 
     # native packaged games
 
