@@ -90,9 +90,9 @@
     options = [ "compress-force=zstd" "noatime" "nofail" ];
   };
   swapDevices =
-    [{ device = "/dev/disk/by-uuid/8638fc3c-846e-49ea-9307-5194a729e74c"; }];
+    [{ device = "/dev/disk/by-uuid/0cd7afe0-c1e1-4d9f-8172-48f677434826"; }];
 
-  fileSystems."/boot" = {
+  fileSystems."/boot/efi" = {
     device = "/dev/disk/by-uuid/67E3-17ED";
     fsType = "vfat";
     options = [
@@ -103,6 +103,10 @@
       "shortname=mixed"
       "utf8"
     ];
+  };
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/6e0db31b-59b0-48e4-ae1e-acf978c22a66";
+    fsType = "ext4";  
   };
 
   zramSwap = {
