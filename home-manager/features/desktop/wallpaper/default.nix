@@ -8,7 +8,7 @@
     apply-shadow = false
 
     [eDP-1]
-    path = "/home/nokogiri/.local/share/wallpaper/6.jpeg"
+    path = "/home/nokogiri/.local/share/wallpaper/Totoro-dark.webp"
     apply-shadow = false
   '';
 }
