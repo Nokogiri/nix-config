@@ -56,8 +56,8 @@
   hardware = {
     opengl = {
       enable = true;
-      extraPackages = with pkgs; [ mangohud ];
-      extraPackages32 = with pkgs; [ mangohud ];
+      #extraPackages = with pkgs; [ mangohud ];
+      #extraPackages32 = with pkgs; [ mangohud ];
       driSupport = true;
       driSupport32Bit = true;
     };

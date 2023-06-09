@@ -6,6 +6,7 @@
       steam = steam.override {
         extraPkgs = pkgs:
           with pkgs; [
+            attr
             gst_all_1.gst-vaapi
             gst_all_1.gst-plugins-good
             gst_all_1.gst-plugins-bad
