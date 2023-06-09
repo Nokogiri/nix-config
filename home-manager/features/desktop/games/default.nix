@@ -41,11 +41,7 @@
     libretro.play
     libretro.ppsspp
     libretro.snes9x
-    #libretro.swanstation
     ppsspp
-    #rpcs3
-    #ryujinx
-    #yuzu-early-access
-    #yuzu-mainline
+    rpcs3
   ];
 }
