@@ -7,7 +7,6 @@
     ./git.nix
     ./gpg-agent.nix
     ./lsd.nix
-    ./nix-index.nix
     ./nnn.nix
     ./pfetch.nix
     ./ranger.nix
