@@ -13,11 +13,6 @@
 
     hardware.url = "github:nixos/nixos-hardware";
 
-    #ironbar = {
-    #  url = "github:JakeStanger/ironbar";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-    
     sops-nix = {
       url = "github:mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -26,7 +21,6 @@
     nur.url = "github:nix-community/NUR";
 
     hyprland = {
-      #url = "github:hyprwm/hyprland?rev=2df0d034bc4a18fafb3524401eeeceaa6b23e753";
       url = "github:hyprwm/hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
