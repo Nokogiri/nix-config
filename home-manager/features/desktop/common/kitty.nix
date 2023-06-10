@@ -8,7 +8,7 @@
         name = "JetBrainsMono Nerd Font Mono";
         size = 12;
       };
-      theme = "Tokyo Night Moon";
+      theme = "Tokyo Night Storm";
       #theme = "Nord";
       settings = {
         # General settings
