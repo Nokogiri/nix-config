@@ -1,10 +1,10 @@
 { pkgs, inputs, ... }:
 let
   gTheme = "Catppuccin-Mocha-Standard-Flamingo-Dark";
-  gAccent = "blue";
-  gFlavor = "mocha";
-  kAccent = "Blue";
-  kFlavor = "Mocha";
+  gAccent = "lavender";
+  gFlavor = "frappe";
+  kAccent = "Lavender";
+  kFlavor = "Frappe";
 in {
 
   security.pam.services = {
@@ -23,6 +23,13 @@ in {
       accent = gAccent;
       flavor = gFlavor;
     })
+    (catppuccin-gtk.override {
+      accents = [ gAccent ];
+      variant = gFlavor;
+      size = "standard";
+      tweaks = [ "rimless" ];
+    })
+
     nordzy-icon-theme
   ];
 

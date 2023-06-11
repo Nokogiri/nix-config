@@ -1,10 +1,10 @@
 { pkgs, inputs, config, ... }:
 let
   gTheme = "Catppuccin-Mocha-Standard-Rosewater-Dark";
-  gAccent = "blue";
-  gFlavor = "mocha";
-  kAccent = "Blue";
-  kFlavor = "Mocha";
+  gAccent = "lavender";
+  gFlavor = "frappe";
+  kAccent = "Lavender";
+  kFlavor = "Frappe";
 in {
   home.packages = with pkgs; [
     (pkgs.writeTextFile {
@@ -21,6 +21,16 @@ in {
         gsettings set $gnome_schema icon-theme '${config.gtk.iconTheme.name}'
         gsettings set $gnome_schema cursor-theme '${config.gtk.cursorTheme.name}'
       '';
+    })
+    (catppuccin-gtk.override {
+      accents = [ gAccent ];
+      variant = gFlavor;
+      size = "standard";
+      tweaks = [ "rimless" ];
+    })
+    (catppuccin-kvantum.override {
+      accent = kAccent;
+      variant = kFlavor;
     })
     adwaita-qt
     adwaita-qt6
@@ -40,15 +50,16 @@ in {
       size = 12;
     };
     iconTheme = {
-      name = "Nordzy-purple-dark";
-      package = pkgs.nordzy-icon-theme;
-      #package = pkgs.catppuccin-papirus-folders.override {
-      #  accent = gAccent;
-      #  flavor = gFlavor;
-      #};
+      name = "Papirus-Dark";
+      package = pkgs.catppuccin-papirus-folders.override {
+        accent = gAccent;
+        flavor = gFlavor;
+      };
     };
     #theme = { name = "Adwaita"; };#package = pkgs.adw-gtk3; };
-    theme = { name = "adw-gtk3-dark"; package = pkgs.adw-gtk3; };
+    #theme = { name = "adw-gtk3-dark"; package = pkgs.adw-gtk3; };
+    theme = { name = "Catppuccin-Frappe-Standard-Lavender-Dark"; };
+
     gtk2 = {
       extraConfig = ''
         gtk-toolbar-style=GTK_TOOLBAR_ICONS
