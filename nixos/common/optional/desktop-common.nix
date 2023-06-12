@@ -29,12 +29,18 @@ in {
       size = "standard";
       tweaks = [ "rimless" ];
     })
-
-    nordzy-icon-theme
+    (catppuccin-kvantum.override {
+      accent = kAccent;
+      variant = kFlavor;
+    })
   ];
 
+  environment.pathsToLink = [ "/share/Kvantum" ];
+  
   gtk.iconCache.enable = true;
-  qt.style = "Adwaita-Dark";
+  
+  qt.style = "Kvantum-Dark";
+  
   programs = {
     dconf.enable = true;
     hyprland = {

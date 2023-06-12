@@ -19,7 +19,6 @@
     dwarfs
     fuse-overlayfs
     obsidian
-    config.nur.repos.foolnotion.qt6ct
 
     # graphics stuff
     inkscape

@@ -32,12 +32,13 @@ in {
       accent = kAccent;
       variant = kFlavor;
     })
-    adwaita-qt
-    adwaita-qt6
     libsForQt5.qt5ct
+    qt6Packages.qt6ct
+    libsForQt5.qtstyleplugin-kvantum
+    qt6Packages.qtstyleplugin-kvantum
   ];
 
-  qt.style.name = "Adwaita-Dark";
+  qt.style.name = "Kvantum-Dark";
 
   gtk = {
     enable = true;
