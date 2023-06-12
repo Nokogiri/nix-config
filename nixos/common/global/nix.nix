@@ -15,14 +15,14 @@
         "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
       ];
       trusted-users = [ "root" "@wheel" ];
-      auto-optimise-store = lib.mkDefault true;
+      auto-optimise-store = lib.mkDefault false;
       experimental-features = [ "nix-command" "flakes" "repl-flake" ];
       warn-dirty = false;
     };
     package = pkgs.nixUnstable;
     gc = {
       automatic = lib.mkDefault true;
-      dates = "weekly";
+      dates = "monthly";
     };
 
     # This will add each flake input as a registry
