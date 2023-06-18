@@ -19,7 +19,7 @@
 
     };
     gitui = {
-      enable = true;
+      enable = false;
       theme = ''
         (
             selected_tab: Reset,
