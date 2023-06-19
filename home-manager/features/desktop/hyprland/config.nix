@@ -4,7 +4,7 @@
       general {
         gaps_in=7
         gaps_out=10
-        border_size=2
+        border_size=0
         col.active_border=0xffAAAAAA
         col.inactive_border=0xff666666
         no_cursor_warps=true
@@ -17,7 +17,7 @@
       
       decoration {
         active_opacity=1.0
-        inactive_opacity=0.9
+        inactive_opacity=0.8
         fullscreen_opacity=1.0
         rounding=6
         blur=true
@@ -25,7 +25,7 @@
         blur_passes=1
         blur_new_optimizations=true
         blur_ignore_opacity=true
-        blur_xray=true
+        blur_xray=false
         drop_shadow=true
         
         shadow_range=18
@@ -87,7 +87,7 @@
         kb_variant=altgr-intl,
         kb_options=grp:alt_space_toggle
 
-        #follow_mouse=1
+        follow_mouse=1
         touchpad {
           disable_while_typing=false
         }
@@ -275,6 +275,8 @@
       windowrulev2 = fullscreen,opaque,noblur,class:^(gamescope)$
       #blurls=waybar
       #blurls=wofi
+
+      #source=~/.config/hypr/plugins.conf
     '';
   };
 }

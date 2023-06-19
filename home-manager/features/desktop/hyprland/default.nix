@@ -6,12 +6,12 @@
     inputs.hyprland.homeManagerModules.default
     ./config.nix
     ./iio-hyprland.nix
+    #./plugins.nix
   ];
 
   home.packages = with pkgs;
     [ 
       inputs.hyprpicker.packages."x86_64-linux".hyprpicker
-      #iio-hyprland
     ];
 
   programs = {

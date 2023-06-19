@@ -259,6 +259,26 @@
         "type": "github"
       }
     },
+    "nix-index-database": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1687088364,
+        "narHash": "sha256-DXFIXJZ1mdTdfMcc9mt1gS3VV0LXiVOWDT7ejf2uJQw=",
+        "owner": "Mic92",
+        "repo": "nix-index-database",
+        "rev": "d626d2e15eec5641580502d852b521b7acad21cb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Mic92",
+        "repo": "nix-index-database",
+        "type": "github"
+      }
+    },
     "nix-minecraft": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -413,6 +433,7 @@
         "hyprpicker": "hyprpicker",
         "hyprwm-contrib": "hyprwm-contrib",
         "nix-colors": "nix-colors",
+        "nix-index-database": "nix-index-database",
         "nix-minecraft": "nix-minecraft",
         "nixpkgs": "nixpkgs_5",
         "nur": "nur",

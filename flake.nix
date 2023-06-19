@@ -31,13 +31,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+#    hyprplugs = {
+#      url = "github:Nokogiri/hyprplugs";
+#    };
+    
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
     nix-colors.url = "github:misterio77/nix-colors";
-    #nix-index-database = {
-    #  url = "github:Mic92/nix-index-database";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
+    nix-index-database = {
+      url = "github:Mic92/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     extest.url = "github:Nokogiri/extest";
   };
