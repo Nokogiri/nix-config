@@ -6,7 +6,7 @@
     ./mako.nix
     #./obs-studio.nix
     ./waybar.nix
-    ./wezterm.nix
+    #./wezterm.nix
     ./wofi.nix
   ];
 
