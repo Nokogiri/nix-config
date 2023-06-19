@@ -41,6 +41,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    plugins = [ inputs.hy3.packages.x86_64-linux.hy3 ];
      xwayland = {
       enable = true;
       hidpi = false;
