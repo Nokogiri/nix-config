@@ -33,13 +33,8 @@
 
     spicetify-nix = {
       url = github:the-argus/spicetify-nix;
-      #inputs.nixpkgs.follows = "nixpkgs";
     };
 
-#    hyprplugs = {
-#      url = "github:Nokogiri/hyprplugs";
-#    };
-    
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
     nix-colors.url = "github:misterio77/nix-colors";
