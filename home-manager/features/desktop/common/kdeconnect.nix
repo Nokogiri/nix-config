@@ -35,14 +35,6 @@ in {
 
   };
 
-  #  systemd.user.services = {
-  #    kdeconnect = {
-  #      Service = {
-  #        Environment = ["QT_QPA_PLATFORM=wayland-egl" "QT_QPA_PLATFORMTHEME=qt5ct"];
-  #        #Environment = "QT_QPA_PLATFORM=wayland-egl";
-  #      };
-  #    };
-  #  };
   xdg.configFile = {
     "kdeconnect-scripts/fortune.sh".source = "${script-fortune}/bin/fortune";
   };
