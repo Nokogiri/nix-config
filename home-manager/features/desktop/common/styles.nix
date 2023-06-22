@@ -1,6 +1,6 @@
 { pkgs, inputs, config, ... }:
 let
-  gTheme = "Catppuccin-Mocha-Standard-Rosewater-Dark";
+  gTheme = "Catppuccin-Frappe-Standard-Lavender-dark";
   gAccent = "lavender";
   gFlavor = "frappe";
   kAccent = "Lavender";
@@ -57,9 +57,7 @@ in {
         flavor = gFlavor;
       };
     };
-    #theme = { name = "Adwaita"; };#package = pkgs.adw-gtk3; };
-    #theme = { name = "adw-gtk3-dark"; package = pkgs.adw-gtk3; };
-    theme = { name = "Catppuccin-Frappe-Standard-Lavender-Dark"; };
+    theme = { name = "Catppuccin-Frappe-Standard-Lavender-dark"; };
 
     gtk2 = {
       extraConfig = ''

@@ -14,5 +14,5 @@
     (oa: { mesonFlags = (oa.mesonFlags or [ ]) ++ [ "-Dexperimental=true" ]; });
 
   programs.waybar = { enable = true; };
-  home.packages = [ pkgs.wttrbar ];
+  #home.packages = [ pkgs.wttrbar ];
 }

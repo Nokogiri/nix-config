@@ -14,5 +14,4 @@
   #RBDOOM-3-BFG = pkgs.callPackage ./RBDOOM-3-BFG { };
   #RBDOOM-3-BFG-vk = pkgs.callPackage ./RBDOOM-3-BFG-vk { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
-  wttrbar = pkgs.callPackage ./wttrbar { };
 }
