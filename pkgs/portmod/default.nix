@@ -18,20 +18,20 @@
 }:
 
 let
-  version = "2.5.8";
+  version = "2.6.2";
 
   src = fetchFromGitLab {
     owner = "portmod";
     repo = "Portmod";
     rev = "v${version}";
-    hash = "sha256-HhZ83NRXLIMd4lZlnzjsh01sf1GtamxN30H1kmIJ83M=";
+    hash = "sha256-ufr2guaPdCvI5JOicL/lTrT3t6UlaY1hEB2xbwzhw6A=";
   };
 
   portmod-rust = rustPlatform.buildRustPackage rec {
     inherit src version;
     pname = "portmod-rust";
 
-    cargoHash = "sha256-2SROQUwxChbKDFYfZNMDJ6yXS+s9ID7dqUB7l+nMTr8=";
+    cargoHash = "sha256-sAjgGVVjgXaWbmN/eGEvatYjkHeFTZNX1GXFcJqs3GI=";
     # cargoSha256 = "0000000000000000000000000000000000000000000000000000";
 
     nativeBuildInputs = [
