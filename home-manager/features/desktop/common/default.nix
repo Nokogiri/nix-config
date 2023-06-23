@@ -2,7 +2,6 @@
   imports = [
     ./firefox
     ./gpg-agent.nix
-    #./kdeconnect.nix
     ./kitty.nix
     ./nnn-desktop.nix
     ./pavucontrol.nix
@@ -24,25 +23,6 @@
     glib.bin
     libnotify
     libsForQt5.polkit-kde-agent
-    (let
-      python-packages-plus = python-packages:
-        with python-packages; [
-          pygobject3
-          dbus-python
-          isort
-          evdev
-          jinja2
-          nose
-          pynvim
-          pytest
-          requests
-          unidecode
-          setuptools
-          tqdm
-        ];
-      python-with-packages-plus = python3.withPackages python-packages-plus;
-    in python-with-packages-plus)
-    xournalpp
     xdg_utils
   ];
 }

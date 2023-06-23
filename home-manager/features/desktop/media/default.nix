@@ -1,8 +1,6 @@
 { pkgs, ... }: {
 
   imports = [
-    ./spotify-player.nix 
-    #./spotifyd.nix 
     ./spotify.nix 
   ];
   nixpkgs.config.packageOverrides = pkgs:
@@ -11,7 +9,6 @@
         scripts = [
           pkgs.mpvScripts.mpris
           pkgs.mpvScripts.sponsorblock
-          #pkgs.mpvScripts.simple-mpv-webui
         ];
       };
     };

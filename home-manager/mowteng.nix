@@ -20,6 +20,7 @@
     fuse-overlayfs
     obsidian
 
+    xournalpp
     # graphics stuff
     inkscape
     gimp
