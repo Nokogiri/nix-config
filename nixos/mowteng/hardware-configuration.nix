@@ -7,7 +7,7 @@
       options hid_xpadneo ff_connect_notify=0 quirks=e4:17:d8:45:f4:77:7,16
       blacklist pcspkr
       options usb-storage quirks=090c:1000:,152d:0578:u,0bc2:2322:u
-      options iwlwifi power_save=0 uapsd_disable=0
+      options iwlwifi power_save=1 power_level=5 uapsd_disable=0
       options iwlmvm power_scheme=3
     '';
     extraModulePackages = with config.boot.kernelPackages; [
@@ -24,7 +24,7 @@
     # passive epp
     kernelParams = [ "amd_pstate=passive" "mitigations=off" "cpufreq.default_governor=ondemand"];
     # active epp
-    #kernelParams = [ "amd_pstate=active" "mitigations=off" "cpufreq/default_governor=powersave" "cpufreq.energy_performance_preference=balance_power" ];
+    #kernelParams = [ "amd_pstate=active" "mitigations=off" "cpufreq.default_governor=powersave" "cpufreq.energy_performance_preference=balance_power" ];
     loader.efi.efiSysMountPoint = "/boot";
     supportedFilesystems = [ "btrfs" ];
     tmp.cleanOnBoot = true;

@@ -21,6 +21,7 @@
     ../common/optional/resolved.nix
     ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
+    ../common/optional/system76.nix
     ../common/optional/systemd-boot.nix
     ../common/optional/xdg-portal.nix
 
@@ -46,8 +47,6 @@
 
   environment.systemPackages = with pkgs; [
     amdctl
-    cifs-utils
-    libimobiledevice
     lm_sensors
     exfatprogs
     usbmuxd
