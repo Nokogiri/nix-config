@@ -27,7 +27,8 @@
     # emulation
     cemu
     citra-canary
-    yuzu
+    #yuzu
+    yuzu-early-access
     ryujinx
     dolphinEmuMaster
     retroarch
