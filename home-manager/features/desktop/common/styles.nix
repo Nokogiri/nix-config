@@ -1,10 +1,20 @@
 { pkgs, inputs, config, ... }:
 let
-  gTheme = "Catppuccin-Frappe-Standard-Lavender-dark";
-  gAccent = "lavender";
-  gFlavor = "frappe";
-  kAccent = "Lavender";
-  kFlavor = "Frappe";
+  catTheme = "Catppuccin-Frappe-Standard-Lavender-dark";
+  catppuccin-gt = pkgs.catppuccin-gtk.override {
+    accents = [ "lavender" ];
+    size = "standard";
+    tweaks = [ "rimless" ];
+    variant = "frappe";
+  };
+  catppuccin-icons = pkgs.catppuccin-papirus-folders.override {
+    accent = "lavender";
+    flavor = "frappe";    
+  };
+  catppuccin-qt = pkgs.catppuccin-kvantum.override {
+    accent = "Lavender";
+    variant = "Frappe";
+  };
 in {
   home.packages = with pkgs; [
     (pkgs.writeTextFile {
@@ -22,16 +32,8 @@ in {
         gsettings set $gnome_schema cursor-theme '${config.gtk.cursorTheme.name}'
       '';
     })
-    (catppuccin-gtk.override {
-      accents = [ gAccent ];
-      variant = gFlavor;
-      size = "standard";
-      tweaks = [ "rimless" ];
-    })
-    (catppuccin-kvantum.override {
-      accent = kAccent;
-      variant = kFlavor;
-    })
+    catppuccin-gt
+    catppuccin-qt
     libsForQt5.qt5ct
     qt6Packages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
@@ -52,13 +54,12 @@ in {
     };
     iconTheme = {
       name = "Papirus-Dark";
-      package = pkgs.catppuccin-papirus-folders.override {
-        accent = gAccent;
-        flavor = gFlavor;
-      };
+      package = catppuccin-icons;
     };
-    theme = { name = "Catppuccin-Frappe-Standard-Lavender-dark"; };
-
+    theme = { 
+      name = catTheme;
+      package = catppuccin-gt; 
+    };
     gtk2 = {
       extraConfig = ''
         gtk-toolbar-style=GTK_TOOLBAR_ICONS
@@ -78,7 +79,13 @@ in {
       };
     };
   };
-
+  home.file.".config/gtk-4.0/gtk.css".source = "${catppuccin-gt}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/gtk.css";
+  home.file.".config/gtk-4.0/gtk-dark.css".source = "${catppuccin-gt}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/gtk-dark.css";
+  home.file.".config/gtk-4.0/assets" = {
+    recursive = true;
+    source = "${catppuccin-gt}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/assets";    
+  };
+  
   home.pointerCursor = {
     x11.enable = true;
     gtk.enable = true;
