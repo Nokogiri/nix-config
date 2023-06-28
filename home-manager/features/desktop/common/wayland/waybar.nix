@@ -5,8 +5,9 @@
     waybar = pkgs.waybar.override {
       jackSupport = false;
       mpdSupport = false;
-      sndioSupport = true;
-      cavaSupport = true;
+      sndioSupport = false;
+      cavaSupport = false;
+      swaySupport = false;
     };
   };
 
