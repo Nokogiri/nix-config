@@ -7,7 +7,7 @@
   programs.firefox = {
     enable = true;
     profiles.nokogiri.extensions = with config.nur.repos.rycee.firefox-addons;
-      [ 
+      [
         vimium
         ublock-origin
         onetab

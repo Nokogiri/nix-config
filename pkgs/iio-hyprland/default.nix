@@ -24,5 +24,5 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ ninja meson pkg-config ];
 
-  
+
 }

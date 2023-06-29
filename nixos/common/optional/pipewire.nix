@@ -6,27 +6,8 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    jack.enable = true;
+    jack.enable = false;
   };
-  #environment.etc = {
-  #"wireplumber/main.lua.d/51-disable-suspension.lua".text = ''
-  #  table.insert (alsa_monitor.rules, {
-  #      matches = {
-  #        {
-  #          -- Matches all sources.
-  #          { "node.name", "matches", "alsa_input.*" },
-  #        },
-  #        {
-  #          -- Matches all sinks.
-  #          { "node.name", "matches", "alsa_output.*" },
-  #        },
-  #      },
-  #      apply_properties = {
-  #        ["session.suspend-timeout-seconds"] = 1,  -- 0 disables suspend
-  #      },
-  #    })
-  #  '';
-  #};
   environment.etc = {
     "wireplumber/bluetooth.lua.d/51-bluez-config.lua".text = ''
       bluez_monitor.properties = {

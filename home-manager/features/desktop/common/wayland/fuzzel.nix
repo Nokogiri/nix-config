@@ -26,14 +26,14 @@
     # terminal=$TERMINAL -e  # Note: you cannot actually use environment variables here
     terminal=kitty
     # launch-prefix=<not set>
-    
+
     width=35
     horizontal-pad=10
     vertical-pad=10
     inner-pad=10
     line-height=18
 
-    
+
     [colors]
     background=303446aa
     text=C6D0F5ff
@@ -43,11 +43,11 @@
     selection-match=ef9f76ff
     border=303446ff
     # border=002b36ff
-    
+
     [border]
     width=1
     radius=3
-    
+
     [dmenu]
     mode=text  # text|index
     # exit-immediately-if-empty=no

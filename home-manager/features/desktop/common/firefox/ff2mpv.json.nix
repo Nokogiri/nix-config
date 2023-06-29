@@ -1,4 +1,4 @@
-{config, ...}:{
+{ config, ... }: {
   home.file.".mozilla/native-messaging-hosts/ff2mpv.json".text = ''
     {
       "name": "ff2mpv",

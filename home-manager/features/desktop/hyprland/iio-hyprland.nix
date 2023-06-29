@@ -2,9 +2,7 @@
   home.packages = [ pkgs.iio-hyprland ];
 
   systemd.user.services.iio-hyprland = {
-    Unit = {
-      Description = "Rotate My Hyprland!";
-    };
+    Unit = { Description = "Rotate My Hyprland!"; };
     Service = {
       Type = "simple";
       ExecStart = "${pkgs.iio-hyprland}/bin/iio-hyprland";

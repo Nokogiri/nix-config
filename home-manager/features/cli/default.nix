@@ -29,7 +29,6 @@
     comma # Install and run programs by sticking a , before them
     #distrobox # Nice escape hatch, integrates docker images with my environment
 
-    
     # archive stuff
     p7zip
     unzip

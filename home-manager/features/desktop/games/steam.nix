@@ -39,9 +39,9 @@
             xdg-user-dirs
             inputs.extest.packages.x86_64-linux.default
           ];
-      extraProfile = ''
-        export GSETTINGS_SCHEMA_DIR="${gsettings-desktop-schemas}/share/gsettings-schemas/${gsettings-desktop-schemas.name}/glib-2.0/schemas/"
-      '';
+        extraProfile = ''
+          export GSETTINGS_SCHEMA_DIR="${gsettings-desktop-schemas}/share/gsettings-schemas/${gsettings-desktop-schemas.name}/glib-2.0/schemas/"
+        '';
       };
     };
   home.packages = with pkgs; [

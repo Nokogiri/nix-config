@@ -1,22 +1,13 @@
 { pkgs, ... }: {
 
-  imports = [
-    ./spotify.nix 
-  ];
+  imports = [ ./spotify.nix ];
   nixpkgs.config.packageOverrides = pkgs:
     with pkgs; {
       mpv = mpv.override {
-        scripts = [
-          pkgs.mpvScripts.mpris
-          pkgs.mpvScripts.sponsorblock
-        ];
+        scripts = [ pkgs.mpvScripts.mpris pkgs.mpvScripts.sponsorblock ];
       };
     };
-  home.packages = with pkgs; [
-    ani-cli
-    jellyfin-media-player
-    mpv
-  ];
+  home.packages = with pkgs; [ ani-cli jellyfin-media-player mpv ];
 
   xdg.desktopEntries."umpv" = {
     exec = "";

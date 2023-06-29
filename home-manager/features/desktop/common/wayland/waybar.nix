@@ -11,12 +11,8 @@
     };
   };
 
-  #programs.waybar.package = pkgs.waybar.overrideAttrs
-  #  (oa: { mesonFlags = (oa.mesonFlags or [ ]) ++ [ "-Dexperimental=true" ]; });
-
-  programs.waybar = { 
+  programs.waybar = {
     enable = true;
     package = inputs.hyprland.packages.x86_64-linux.waybar-hyprland;
-     };
-  #home.packages = [ pkgs.wttrbar ];
+  };
 }

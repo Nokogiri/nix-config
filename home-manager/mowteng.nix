@@ -9,13 +9,11 @@
     ./features/helix
     ./features/desktop/eww
     ./features/desktop/hyprland
-#    ./features/desktop/sway
-   inputs.nur.nixosModules.nur
+    #    ./features/desktop/sway
+    inputs.nur.nixosModules.nur
   ];
 
-  nixpkgs.overlays = [
-    inputs.hyprland.overlays.hyprland-extras    
-  ];
+  nixpkgs.overlays = [ inputs.hyprland.overlays.hyprland-extras ];
   home.packages = with pkgs; [
     xfce.thunar
     transmission-remote-gtk

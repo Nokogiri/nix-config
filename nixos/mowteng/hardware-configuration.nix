@@ -12,7 +12,6 @@
     '';
     extraModulePackages = with config.boot.kernelPackages; [
       cpupower
-      turbostat
       zenpower
     ];
     initrd = {

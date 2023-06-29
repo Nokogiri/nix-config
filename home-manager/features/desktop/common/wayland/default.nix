@@ -26,9 +26,9 @@
     BEMENU_BACKEND = "wayland";
     MOZ_ENABLE_WAYLAND = 1;
     QT_QPA_PLATFORM = "wayland;xcb";
-    #QT_STYLE_OVERRIDE= "Kvantum-Dark";
     QT_QPA_PLATFORMTHEME = "qt5ct";
-    QT_PLUGIN_PATH= "$QT_PLUGIN_PATH:/home/nokogiri/.nix-profile/lib/qt-6/plugins";
+    QT_PLUGIN_PATH =
+      "$QT_PLUGIN_PATH:/home/nokogiri/.nix-profile/lib/qt-6/plugins";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
     XCURSOR_SIZE = "32";

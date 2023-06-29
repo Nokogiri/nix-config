@@ -9,7 +9,7 @@ let
   };
   catppuccin-icons = pkgs.catppuccin-papirus-folders.override {
     accent = "lavender";
-    flavor = "frappe";    
+    flavor = "frappe";
   };
   catppuccin-qt = pkgs.catppuccin-kvantum.override {
     accent = "Lavender";
@@ -56,9 +56,9 @@ in {
       name = "Papirus-Dark";
       package = catppuccin-icons;
     };
-    theme = { 
+    theme = {
       name = catTheme;
-      package = catppuccin-gt; 
+      package = catppuccin-gt;
     };
     gtk2 = {
       extraConfig = ''
@@ -79,13 +79,16 @@ in {
       };
     };
   };
-  home.file.".config/gtk-4.0/gtk.css".source = "${catppuccin-gt}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/gtk.css";
-  home.file.".config/gtk-4.0/gtk-dark.css".source = "${catppuccin-gt}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/gtk-dark.css";
+  home.file.".config/gtk-4.0/gtk.css".source =
+    "${catppuccin-gt}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/gtk.css";
+  home.file.".config/gtk-4.0/gtk-dark.css".source =
+    "${catppuccin-gt}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/gtk-dark.css";
   home.file.".config/gtk-4.0/assets" = {
     recursive = true;
-    source = "${catppuccin-gt}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/assets";    
+    source =
+      "${catppuccin-gt}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/assets";
   };
-  
+
   home.pointerCursor = {
     x11.enable = true;
     gtk.enable = true;
