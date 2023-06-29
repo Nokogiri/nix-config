@@ -36,11 +36,11 @@ in {
   ];
 
   environment.pathsToLink = [ "/share/Kvantum" ];
-  
+
   gtk.iconCache.enable = true;
-  
+
   qt.style = "Kvantum-Dark";
-  
+
   programs = {
     dconf.enable = true;
     hyprland = {

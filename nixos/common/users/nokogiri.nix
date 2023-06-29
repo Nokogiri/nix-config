@@ -39,7 +39,7 @@ in {
   #home-manager = {
   #  extraSpecialArgs = { inherit inputs outputs; };
   #  users = {
-      # Import your home-manager configuration
+  # Import your home-manager configuration
   #    nokogiri = import ../../../home-manager/${config.networking.hostName}.nix;
   #  };
   #};

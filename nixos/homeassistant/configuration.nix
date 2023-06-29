@@ -32,9 +32,7 @@
   ];
 
   nixpkgs = {
-    overlays = [
-      outputs.overlays.additions
-    ];
+    overlays = [ outputs.overlays.additions ];
     config = { allowUnfree = true; };
   };
 

@@ -22,7 +22,11 @@
     kernelModules = [ "kvm-amd" "zenpower" ];
     kernelPackages = pkgs.linuxPackages_latest;
     # passive epp
-    kernelParams = [ "amd_pstate=passive" "mitigations=off" "cpufreq.default_governor=ondemand" ];
+    kernelParams = [
+      "amd_pstate=passive"
+      "mitigations=off"
+      "cpufreq.default_governor=ondemand"
+    ];
     # guided
     #kernelParams = [ "amd_pstate=guided" "mitigations=off" "cpufreq.default_governor=schedutil" ];
     # active epp

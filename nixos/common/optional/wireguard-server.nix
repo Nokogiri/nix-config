@@ -25,7 +25,8 @@
       peers = [
         {
           # mowteng
-          allowedIPs = [ "10.200.200.30/32" "10.200.200.0/24" "fc00::3" "fc00::1/64"  ];
+          allowedIPs =
+            [ "10.200.200.30/32" "10.200.200.0/24" "fc00::3" "fc00::1/64" ];
           publicKey = "CbRmUgGLZuw0Hj7uYFK4aetwePTSzMQEwNsLibFQOX4=";
           presharedKeyFile = config.sops.secrets."psk_wg/mowteng".path;
         }
@@ -41,7 +42,7 @@
           publicKey = "UXb5RaWG2lVlN13mszJMcSHhP6YZdqG+mnHRCE9zcXg=";
           presharedKeyFile = config.sops.secrets."psk_wg/kipad".path;
         }
-        { 
+        {
           # kiphone
           allowedIPs = [ "10.200.200.33/32" "10.200.200.0/24" ];
           publicKey = "pmkcv8JpotbPo+XsIMB3HDxBVqET4YsRJJVAdT2NR3w=";

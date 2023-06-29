@@ -1,7 +1,5 @@
-{ config, pkgs, ... }:{
-  sops.secrets.vaultwarden = {
-    sopsFile = ../../common/secrets.yaml;
-  };
+{ config, pkgs, ... }: {
+  sops.secrets.vaultwarden = { sopsFile = ../../common/secrets.yaml; };
   services.vaultwarden = {
     enable = true;
     backupDir = "/media/extHDD/warden";
@@ -21,6 +19,6 @@
       SMTP_SSL = true;
       SMTP_TIMEOUT = 15;
     };
-    environmentFile = config.sops.secrets.vaultwarden.path ;
+    environmentFile = config.sops.secrets.vaultwarden.path;
   };
 }

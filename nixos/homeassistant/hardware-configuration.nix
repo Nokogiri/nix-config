@@ -106,7 +106,7 @@
   };
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/6e0db31b-59b0-48e4-ae1e-acf978c22a66";
-    fsType = "ext4";  
+    fsType = "ext4";
   };
 
   zramSwap = {

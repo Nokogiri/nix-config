@@ -1,30 +1,25 @@
-{ config, ... }:{
+{ config, ... }: {
   imports = [
     ../../common/optional/systemd-network.nix
-    ../../common/optional/wireless-iwd.nix  
+    ../../common/optional/wireless-iwd.nix
   ];
   networking.useDHCP = false;
 
   # wlan0
   systemd.network.networks = {
     "20-wlan" = {
-        matchConfig.Name = [ "wl*" ];
-        DHCP = "yes";
-        dns = [ "192.168.178.254" ];
-        dhcpV4Config = {
-          UseDomains = true;
-        };
+      matchConfig.Name = [ "wl*" ];
+      DHCP = "yes";
+      dns = [ "192.168.178.254" ];
+      dhcpV4Config = { UseDomains = true; };
       networkConfig = {
-        IPv6AcceptRA="no";
-        MulticastDNS=true;
+        IPv6AcceptRA = "no";
+        MulticastDNS = true;
       };
     };
     haos = {
       matchConfig.Name = "haos";
-      address = [
-        "fc00::3/120"
-        "10.200.200.30/24"
-      ];
+      address = [ "fc00::3/120" "10.200.200.30/24" ];
       DHCP = "no";
       dns = [ "10.200.200.1" "fc00::1" ];
       routes = [{
@@ -33,19 +28,13 @@
           Scope = "link";
         };
       }];
-      networkConfig = {
-        IPv6AcceptRA = false;
-      };
+      networkConfig = { IPv6AcceptRA = false; };
     };
   };
   # haos (wireguard)
   sops.secrets = {
-    "psk_wg/mowteng" = {
-      owner = config.users.users.systemd-network.name;
-    };
-    "wg/mowteng" = {
-      owner = config.users.users.systemd-network.name;
-    };
+    "psk_wg/mowteng" = { owner = config.users.users.systemd-network.name; };
+    "wg/mowteng" = { owner = config.users.users.systemd-network.name; };
   };
   systemd.network = {
     netdevs = {
