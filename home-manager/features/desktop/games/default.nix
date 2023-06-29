@@ -44,7 +44,7 @@
     libretro.play
     libretro.ppsspp
     libretro.snes9x
-    pcsx2
+    #pcsx2
     ppsspp
     #rpcs3
   ];

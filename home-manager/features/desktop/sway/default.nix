@@ -27,8 +27,8 @@ in {
     '';
   };
 
-  programs.waybar.systemd = {
-    enable = true;
-    target = "sway-session.target";
-  };
+  #programs.waybar.systemd = {
+  #  enable = true;
+  #  target = "sway-session.target";
+  #};
 }

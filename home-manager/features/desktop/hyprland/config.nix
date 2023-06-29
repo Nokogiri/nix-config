@@ -26,7 +26,7 @@
         blur_new_optimizations=true
         blur_ignore_opacity=true
         blur_xray=false
-        drop_shadow=true
+        drop_shadow=false
         
         shadow_range=18
         shadow_offset=3 3
