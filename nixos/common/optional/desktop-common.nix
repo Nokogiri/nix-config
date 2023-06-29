@@ -60,7 +60,7 @@ in {
     flatpak.enable = true;
     gvfs.enable = false;
     printing.enable = true;
-    tumbler.enable = true;
+    #tumbler.enable = true;
     udisks2.enable = true;
     upower.enable = true;
   };
