@@ -49,7 +49,7 @@
     amdctl
     lm_sensors
     exfatprogs
-    usbmuxd
+    #usbmuxd
   ];
 
   hardware = {
