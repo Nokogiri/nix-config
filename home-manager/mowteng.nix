@@ -15,8 +15,8 @@
 
   nixpkgs.overlays = [ inputs.hyprland.overlays.hyprland-extras ];
   home.packages = with pkgs; [
-    xfce.thunar
-    transmission-remote-gtk
+    pcmanfm-qt
+    transmission-qt
     snapcast
     dwarfs
     fuse-overlayfs

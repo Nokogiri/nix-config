@@ -58,7 +58,7 @@ in {
       packages = [ pkgs.gcr ];
     };
     flatpak.enable = true;
-    gvfs.enable = false;
+    gvfs.enable = true;
     printing.enable = true;
     #tumbler.enable = true;
     udisks2.enable = true;
