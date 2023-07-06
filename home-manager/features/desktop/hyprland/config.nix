@@ -2,7 +2,7 @@
   wayland.windowManager.hyprland = {
     extraConfig = ''
       general {
-        layout=hy3
+        #layout=hy3
         
         gaps_in=7
         gaps_out=10
@@ -324,9 +324,11 @@
       bind=SUPERSHIFT,9,movetoworkspacesilent,09
 
       windowrulev2 = workspace 2 silent,class:^(firefox)$
+      windowrule = float,^(org.kde.polkit-kde-authentication-agent-1)$
+      windowrulev2 = minsize 900 280,float,opaque,noblur,class:^(.*org.kde.polkit-kde-authentication-agent-1.*)$
       windowrulev2 = opaque,noblur,float,title:^(.*Picture-in-Picture.*)$
-      windowrulev2 = workspace 3 silent,class:^(mpv)$
-      #windowrulev2 = workspace 6 silent,class:^(steamwebhelper)$
+      windowrulev2 = workspace 3 silent,opaque,noblur,class:^(mpv)$
+      windowrulev2 = workspace 6 silent,class:^(steam)$
       windowrulev2 = workspace 6 silent,opaque,noblur,class:^(steamwebhelper)$
       windowrulev2 = fullscreen,opaque,noblur,forceinput,class:^(.gamescope-wrapped)$
       windowrulev2 = workspace 7 silent,title:^(Spotify)$
@@ -334,7 +336,6 @@
       #blurls=waybar
       #blurls=wofi
 
-      #source=~/.config/hypr/plugins.conf
     '';
   };
 }

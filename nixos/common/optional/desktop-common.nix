@@ -33,6 +33,10 @@ in {
       accent = kAccent;
       variant = kFlavor;
     })
+    # maybe for dolphin?
+    libsForQt5.kio-admin
+    libsForQt5.dolphin
+    kio-fuse
   ];
 
   environment.pathsToLink = [ "/share/Kvantum" ];

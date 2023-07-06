@@ -16,6 +16,9 @@
   nixpkgs.overlays = [ inputs.hyprland.overlays.hyprland-extras ];
   home.packages = with pkgs; [
     pcmanfm-qt
+    libsForQt5.kio-admin
+    libsForQt5.dolphin
+    kio-fuse
     transmission-qt
     snapcast
     dwarfs
