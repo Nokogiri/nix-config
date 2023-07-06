@@ -8,7 +8,7 @@
     apply-shadow = false
 
     [eDP-1]
-    path = "/home/nokogiri/.local/share/wallpaper/Totoro-catppuccin.webp"
+    path = "/home/nokogiri/.local/share/wallpaper/Totoro-catppuccin_frappe.png"
     apply-shadow = false
   '';
 }

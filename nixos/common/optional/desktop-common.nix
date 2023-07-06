@@ -5,6 +5,21 @@ let
   gFlavor = "frappe";
   kAccent = "Lavender";
   kFlavor = "Frappe";
+  catTheme = "Catppuccin-Frappe-Standard-Lavender-dark";
+  catppuccin-gt = pkgs.catppuccin-gtk.override {
+    accents = [ "lavender" ];
+    size = "standard";
+    tweaks = [ "rimless" ];
+    variant = "frappe";
+  };
+  catppuccin-icons = pkgs.catppuccin-papirus-folders.override {
+    accent = "lavender";
+    flavor = "frappe";
+  };
+  catppuccin-qt = pkgs.catppuccin-kvantum.override {
+    accent = "Lavender";
+    variant = "Frappe";
+  };
 in {
 
   security.pam.services = {
@@ -19,24 +34,16 @@ in {
   };
   environment.systemPackages = with pkgs; [
     gtklock
-    (catppuccin-papirus-folders.override {
-      accent = gAccent;
-      flavor = gFlavor;
-    })
-    (catppuccin-gtk.override {
-      accents = [ gAccent ];
-      variant = gFlavor;
-      size = "standard";
-      tweaks = [ "rimless" ];
-    })
-    (catppuccin-kvantum.override {
-      accent = kAccent;
-      variant = kFlavor;
-    })
-    # maybe for dolphin?
+
+    # for dolphin?
     libsForQt5.kio-admin
-    libsForQt5.dolphin
     kio-fuse
+
+    # themepkgs 
+    nordzy-cursor-theme
+    catppuccin-gt
+    catppuccin-qt
+    catppuccin-icons
   ];
 
   environment.pathsToLink = [ "/share/Kvantum" ];

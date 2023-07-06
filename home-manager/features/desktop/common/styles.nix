@@ -32,8 +32,6 @@ in {
         gsettings set $gnome_schema cursor-theme '${config.gtk.cursorTheme.name}'
       '';
     })
-    catppuccin-gt
-    catppuccin-qt
     libsForQt5.qt5ct
     qt6Packages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
@@ -45,7 +43,6 @@ in {
   gtk = {
     enable = true;
     cursorTheme = {
-      package = pkgs.nordzy-cursor-theme;
       name = "Nordzy-cursors";
     };
     font = {
@@ -54,23 +51,21 @@ in {
     };
     iconTheme = {
       name = "Papirus-Dark";
-      package = catppuccin-icons;
     };
     theme = {
       name = catTheme;
-      package = catppuccin-gt;
     };
     gtk2 = {
       extraConfig = ''
         gtk-toolbar-style=GTK_TOOLBAR_ICONS
         gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
         gtk-button-images=0
-        gtk-menu-images=0
+        gtk-menu-images=1
       '';
     };
     gtk3 = {
       extraConfig = {
-        gtk-button-images = true;
+        gtk-button-images = false;
         gtk-menu-images = true;
         gtk-enable-event-sounds = false;
         gtk-enable-animations = true;
