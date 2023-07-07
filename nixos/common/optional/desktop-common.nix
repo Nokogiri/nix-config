@@ -38,6 +38,9 @@ in {
     # for dolphin?
     libsForQt5.kio-admin
     kio-fuse
+    libsForQt5.kdegraphics-thumbnailers
+    libsForQt5.kimageformats
+    libsForQt5.ffmpegthumbs
 
     # themepkgs 
     nordzy-cursor-theme

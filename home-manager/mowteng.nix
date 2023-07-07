@@ -17,6 +17,9 @@
   home.packages = with pkgs; [
     pcmanfm-qt
     libsForQt5.dolphin
+    libsForQt5.kdegraphics-thumbnailers
+    libsForQt5.kimageformats
+    libsForQt5.ffmpegthumbs
     transmission-qt
     snapcast
     dwarfs
