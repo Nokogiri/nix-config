@@ -16,12 +16,6 @@
 
     # for dolphin?
     libsForQt5.kio-admin
-    #libsForQt5.kio-extras
-    #kio-fuse
-    #libsForQt5.kdegraphics-thumbnailers
-    #libsForQt5.kimageformats
-    #libsForQt5.ffmpegthumbs
-    #libsForQt5.dolphin
 
     # themepkgs 
     nordzy-cursor-theme

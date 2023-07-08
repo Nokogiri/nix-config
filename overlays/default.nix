@@ -22,20 +22,20 @@
       # Add term option, rename de to desktop, add scheme option
       patches = (oldAttrs.patches or [ ]) ++ [ ./pfetch.patch ];
     });
-    myCatppuccinGTK = prev.catppuccin-gtk.overrideAttrs (oldAttrs: {
-      accents = ["lavender"];
+    myCatppuccinGTK = prev.catppuccin-gtk.override {
+      accents = [ "lavender" ];
       size = "standard";
       tweaks = [ "rimless" ];
       variant = "frappe";
-    });
-    myCatppuccinQT = prev.catppuccin-kvantum.overrideAttrs (oldAttrs: {
+    };
+    myCatppuccinQT = prev.catppuccin-kvantum.override {
       accent = "Lavender";
       variant = "Frappe";
-    });
-    myCatppuccinFolders = prev.catppuccin-papirus-folders.overrideAttrs (oldAttrs: {
+    };
+    myCatppuccinFolders = prev.catppuccin-papirus-folders.override {
       accent = "lavender";
-      variant = "frappe";      
-    });
+      flavor = "frappe";      
+    };
     #mangohud = inputs.masterpkgs.legacyPackages.x86_64-linux.mangohud;
     #yt-dlp = prev.yt-dlp.overrideAttrs (oldAttrs: rec {
     #  patches = (oldAttrs.patches or [ ]) ++ [ ./yt-dlp.patch ];
