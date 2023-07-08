@@ -15,6 +15,14 @@
 
   nixpkgs.overlays = [ inputs.hyprland.overlays.hyprland-extras ];
   home.packages = with pkgs; [
+
+    libsForQt5.kio-extras
+    kio-fuse
+    libsForQt5.kdegraphics-thumbnailers
+    libsForQt5.kimageformats
+    libsForQt5.ffmpegthumbs
+    libsForQt5.dolphin
+    
     #pcmanfm-qt
     transmission-qt
     snapcast

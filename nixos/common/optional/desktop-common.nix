@@ -1,26 +1,5 @@
 { pkgs, inputs, ... }:
-let
-  gTheme = "Catppuccin-Mocha-Standard-Flamingo-Dark";
-  gAccent = "lavender";
-  gFlavor = "frappe";
-  kAccent = "Lavender";
-  kFlavor = "Frappe";
-  catTheme = "Catppuccin-Frappe-Standard-Lavender-dark";
-  catppuccin-gt = pkgs.catppuccin-gtk.override {
-    accents = [ "lavender" ];
-    size = "standard";
-    tweaks = [ "rimless" ];
-    variant = "frappe";
-  };
-  catppuccin-icons = pkgs.catppuccin-papirus-folders.override {
-    accent = "lavender";
-    flavor = "frappe";
-  };
-  catppuccin-qt = pkgs.catppuccin-kvantum.override {
-    accent = "Lavender";
-    variant = "Frappe";
-  };
-in {
+{
 
   security.pam.services = {
     gtklock = {
@@ -37,18 +16,18 @@ in {
 
     # for dolphin?
     libsForQt5.kio-admin
-    libsForQt5.kio-extras
-    kio-fuse
-    libsForQt5.kdegraphics-thumbnailers
-    libsForQt5.kimageformats
-    libsForQt5.ffmpegthumbs
-    libsForQt5.dolphin
+    #libsForQt5.kio-extras
+    #kio-fuse
+    #libsForQt5.kdegraphics-thumbnailers
+    #libsForQt5.kimageformats
+    #libsForQt5.ffmpegthumbs
+    #libsForQt5.dolphin
 
     # themepkgs 
     nordzy-cursor-theme
-    catppuccin-gt
-    catppuccin-qt
-    catppuccin-icons
+    myCatppuccinGTK
+    myCatppuccinQT
+    myCatppuccinFolders
   ];
 
   environment.pathsToLink = [ "/share/Kvantum" "/share/kservicetypes5" "/share/kservices5" ];

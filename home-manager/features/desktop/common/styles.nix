@@ -1,20 +1,6 @@
 { pkgs, inputs, config, ... }:
 let
   catTheme = "Catppuccin-Frappe-Standard-Lavender-dark";
-  catppuccin-gt = pkgs.catppuccin-gtk.override {
-    accents = [ "lavender" ];
-    size = "standard";
-    tweaks = [ "rimless" ];
-    variant = "frappe";
-  };
-  catppuccin-icons = pkgs.catppuccin-papirus-folders.override {
-    accent = "lavender";
-    flavor = "frappe";
-  };
-  catppuccin-qt = pkgs.catppuccin-kvantum.override {
-    accent = "Lavender";
-    variant = "Frappe";
-  };
 in {
   home.packages = with pkgs; [
     (pkgs.writeTextFile {
@@ -75,13 +61,13 @@ in {
     };
   };
   home.file.".config/gtk-4.0/gtk.css".source =
-    "${catppuccin-gt}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/gtk.css";
+    "${pkgs.myCatppuccinGTK}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/gtk.css";
   home.file.".config/gtk-4.0/gtk-dark.css".source =
-    "${catppuccin-gt}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/gtk-dark.css";
+    "${pkgs.myCatppuccinGTK}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/gtk-dark.css";
   home.file.".config/gtk-4.0/assets" = {
     recursive = true;
     source =
-      "${catppuccin-gt}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/assets";
+      "${pkgs.myCatppuccinGTK}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/assets";
   };
 
   home.pointerCursor = {
