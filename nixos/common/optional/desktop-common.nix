@@ -18,9 +18,13 @@
 
     # themepkgs 
     nordzy-cursor-theme
-    myCatppuccinGTK
-    myCatppuccinQT
-    myCatppuccinFolders
+    myGTK
+    myQT
+    myFolders
+    libsForQt5.qt5ct  
+    qt6Packages.qt6ct 
+    libsForQt5.qtstyleplugin-kvantum
+    qt6Packages.qtstyleplugin-kvantum
   ];
 
   environment.pathsToLink =

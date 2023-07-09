@@ -17,6 +17,10 @@ in {
         gsettings set $gnome_schema cursor-theme '${config.gtk.cursorTheme.name}'
       '';
     })
+
+    myQT
+    myGTK
+    myFolders
     libsForQt5.qt5ct
     qt6Packages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
@@ -54,13 +58,13 @@ in {
     };
   };
   home.file.".config/gtk-4.0/gtk.css".source =
-    "${pkgs.myCatppuccinGTK}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/gtk.css";
+    "${pkgs.myGTK}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/gtk.css";
   home.file.".config/gtk-4.0/gtk-dark.css".source =
-    "${pkgs.myCatppuccinGTK}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/gtk-dark.css";
+    "${pkgs.myGTK}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/gtk-dark.css";
   home.file.".config/gtk-4.0/assets" = {
     recursive = true;
     source =
-      "${pkgs.myCatppuccinGTK}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/assets";
+      "${pkgs.myGTK}/share/themes/Catppuccin-Frappe-Standard-Lavender-dark/gtk-4.0/assets";
   };
 
   home.pointerCursor = {

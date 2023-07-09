@@ -22,17 +22,18 @@
       # Add term option, rename de to desktop, add scheme option
       patches = (oldAttrs.patches or [ ]) ++ [ ./pfetch.patch ];
     });
-    myCatppuccinGTK = prev.catppuccin-gtk.override {
+    myTheme = "Catppuccin-Frappe-Standard-Lavender-dark";
+    myGTK = prev.catppuccin-gtk.override {
       accents = [ "lavender" ];
       size = "standard";
       tweaks = [ "rimless" ];
       variant = "frappe";
     };
-    myCatppuccinQT = prev.catppuccin-kvantum.override {
+    myQT = prev.catppuccin-kvantum.override {
       accent = "Lavender";
       variant = "Frappe";
     };
-    myCatppuccinFolders = prev.catppuccin-papirus-folders.override {
+    myFolders = prev.catppuccin-papirus-folders.override {
       accent = "lavender";
       flavor = "frappe";      
     };
