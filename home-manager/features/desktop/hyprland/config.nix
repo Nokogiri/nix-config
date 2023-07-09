@@ -18,7 +18,7 @@
         hy3 {
           # disable gaps when only one window is onscreen
           no_gaps_when_only = false
- 
+
           # offset from group split direction when only one window is in a group
           group_inset = 1
 

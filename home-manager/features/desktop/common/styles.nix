@@ -1,6 +1,5 @@
 { pkgs, inputs, config, ... }:
-let
-  catTheme = "Catppuccin-Frappe-Standard-Lavender-dark";
+let catTheme = "Catppuccin-Frappe-Standard-Lavender-dark";
 in {
   home.packages = with pkgs; [
     (pkgs.writeTextFile {
@@ -28,19 +27,13 @@ in {
 
   gtk = {
     enable = true;
-    cursorTheme = {
-      name = "Nordzy-cursors";
-    };
+    cursorTheme = { name = "Nordzy-cursors"; };
     font = {
       name = "FiraCode Nerd Font";
       size = 12;
     };
-    iconTheme = {
-      name = "Papirus-Dark";
-    };
-    theme = {
-      name = catTheme;
-    };
+    iconTheme = { name = "Papirus-Dark"; };
+    theme = { name = catTheme; };
     gtk2 = {
       extraConfig = ''
         gtk-toolbar-style=GTK_TOOLBAR_ICONS

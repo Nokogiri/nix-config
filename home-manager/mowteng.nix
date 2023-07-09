@@ -22,7 +22,7 @@
     libsForQt5.kimageformats
     libsForQt5.ffmpegthumbs
     libsForQt5.dolphin
-    
+
     #pcmanfm-qt
     transmission-qt
     snapcast

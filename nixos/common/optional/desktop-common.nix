@@ -1,5 +1,4 @@
-{ pkgs, inputs, ... }:
-{
+{ pkgs, inputs, ... }: {
 
   security.pam.services = {
     gtklock = {
@@ -24,7 +23,8 @@
     myCatppuccinFolders
   ];
 
-  environment.pathsToLink = [ "/share/Kvantum" "/share/kservicetypes5" "/share/kservices5" ];
+  environment.pathsToLink =
+    [ "/share/Kvantum" "/share/kservicetypes5" "/share/kservices5" ];
 
   gtk.iconCache.enable = true;
 
