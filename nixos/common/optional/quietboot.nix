@@ -8,7 +8,7 @@
 
   boot = {
     plymouth = {
-      enable = true;
+      enable = false;
       theme = "catppuccin-mocha";
       themePackages = [ pkgs.plymouth-catppuccin-mocha ];
       # [
@@ -20,8 +20,8 @@
     loader.timeout = 0;
     kernelParams = [
       "fbcon=nodefer"
-      "quiet"
-      "splash"
+      #"quiet"
+      #"splash"
       "boot.shell_on_fail"
       "loglevel=3"
       "rd.systemd.show_status=false"
